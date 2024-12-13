@@ -1,4 +1,4 @@
-{% extends 'authen.html' %}
+{% extends 'authenreg.html' %}
 {% block content %}
     <p>{{ message }}</p>
 
@@ -9,7 +9,7 @@
     {{ form.as_p }}
         {% csrf_token %}
 
-        <button type="submit" >Se connecter</button>
+        <button type="submit" >Ajouter l'utilisateur</button>
 
     </form>
 {% endblock content %}
