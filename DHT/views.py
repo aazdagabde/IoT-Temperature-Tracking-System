@@ -103,16 +103,42 @@ def chart_data_mois(request):
     }
     return JsonResponse(data)
 
-def register(request):
-    if request.method == 'POST':
-        form = UserCreationForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return redirect('login')
-    else:
-        form = UserCreationForm()
-    return render(request, 'register.html', {'form': form})
+###############################################
+from django.shortcuts import render, redirect
+from django.contrib.auth.models import User
+from django.contrib import messages
 
+def register_view(request):
+    if request.method == 'POST':
+        username = request.POST.get('username')
+        email = request.POST.get('email')
+        first_name = request.POST.get('first_name')
+        last_name = request.POST.get('last_name')
+        password = request.POST.get('password')
+        password_confirm = request.POST.get('password_confirm')
+
+        if password != password_confirm:
+            messages.error(request, "Les mots de passe ne correspondent pas.")
+            return redirect('register_view')
+
+        try:
+            user = User.objects.create_user(
+                username=username,
+                email=email,
+                first_name=first_name,
+                last_name=last_name,
+                password=password
+            )
+            user.save()
+            messages.success(request, "Utilisateur ajouté avec succès !")
+            return redirect('login')
+        except Exception as e:
+            messages.error(request, f"Erreur : {e}")
+            return redirect('register_view')
+
+    return render(request, 'register.html')
+
+################################################
 @login_required
 def sendtele():
     token = '6662023260:AAG4z48OO9gL8A6szdxg0SOma5hv9gIII1E'
