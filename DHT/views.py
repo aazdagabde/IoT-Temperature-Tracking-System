@@ -107,8 +107,15 @@ def chart_data_mois(request):
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
+from django.http import HttpResponseForbidden
 
+@login_required
 def register_view(request):
+    # Vérifier si l'utilisateur est 'admin' ou 'admin2'
+    if request.user.username not in ["admin", "admin2"]:
+        return HttpResponseForbidden("Vous n'avez pas la permission d'accéder à cette page.")
+
     if request.method == 'POST':
         username = request.POST.get('username')
         email = request.POST.get('email')
@@ -137,6 +144,7 @@ def register_view(request):
             return redirect('register_view')
 
     return render(request, 'register.html')
+
 
 ################################################
 @login_required
