@@ -1,23 +1,13 @@
-<head>
-    {% load static %}
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <!--<link rel="stylesheet" href="{% static 'css/index.css' %}">-->
-</head>
-<body>
-    <div class="navbar navbar-expand-lg navbar-dark" style="background-image: url({% static 'images/HD.gif' %}); background-size: cover;">
-        <nav class="container">
-            <h2 class="navbar-brand">IOT</h2>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="{% url 'table' %}">Table</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{% url 'myChartTemp' %}">Chart Temp</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{% url 'myChartHum' %}">Chart Hum</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{% url 'json' %}">JSON</a></li>
-                </ul>
-            </div>
-        </nav>
+{% extends 'base.html' %}
+{% block title %}Accueil{% endblock title %}
+{% block content %}
+<div class="text-center">
+    <h1 class="mb-4">Bienvenue sur la plateforme IOT DHT11</h1>
+    <p class="lead">Surveillez la température et l'humidité en temps réel.</p>
+    <div class="mt-4">
+        <a href="{% url 'table' %}" class="btn btn-primary">Voir la Table</a>
+        <a href="{% url 'myChartTemp' %}" class="btn btn-secondary">Graphique Température</a>
+        <a href="{% url 'myChartHum' %}" class="btn btn-info">Graphique Humidité</a>
     </div>
-</body>
+</div>
+{% endblock content %}

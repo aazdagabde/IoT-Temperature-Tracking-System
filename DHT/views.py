@@ -1,41 +1,22 @@
-from django.shortcuts import render
-from .models import Dht11  # Assurez-vous d'importer le modèle Dht11
-from django.utils import timezone
-import csv
-from django.http import HttpResponse
-from django.utils import timezone
-from django.http import JsonResponse
-from datetime import timedelta
-import datetime
+import telepot
 from django.shortcuts import render, redirect
-from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
-from django.contrib.auth import login, authenticate
+from django.utils import timezone
 from django.contrib.auth.decorators import login_required
-from django.shortcuts import render, redirect
-from django.contrib.auth.forms import UserCreationForm
-from django.contrib.auth import login
+from django.http import HttpResponse, JsonResponse, HttpResponseForbidden
+from django.contrib import messages
 from django.contrib.auth import logout
+from django.contrib.auth.models import User
+from datetime import timedelta
+import csv
+from .models import Dht11
 
-from django.contrib.auth.forms import UserCreationForm
-from django.contrib.auth.decorators import login_required
 def home(request):
     return render(request, 'home.html')
+
 @login_required
 def table(request):
-    derniere_ligne = Dht11.objects.last()
-    derniere_date = derniere_ligne.dt
-    delta_temps = timezone.now() - derniere_date
-    difference_minutes = delta_temps.seconds // 60
-    temps_ecoule = f'il y a {difference_minutes} min'
-    if difference_minutes > 60:
-        temps_ecoule = f'il y a {difference_minutes // 60}h {difference_minutes % 60}min'
-    valeurs = {
-        'date': temps_ecoule,
-        'id': derniere_ligne.id,
-        'temp': derniere_ligne.temp,
-        'hum': derniere_ligne.hum
-    }
-    return render(request, 'value.html', {'valeurs': valeurs})
+    data = Dht11.objects.all().order_by('-dt')
+    return render(request, 'table.html', {'data': data})
 
 @login_required
 def download_csv(request):
@@ -48,8 +29,34 @@ def download_csv(request):
         writer.writerow(row)
     return response
 
-def index_view(request):
-    return render(request, 'index.html')
+@login_required
+def value_view(request):
+    derniere_ligne = Dht11.objects.last()
+    if derniere_ligne:
+        derniere_date = derniere_ligne.dt
+        delta_temps = timezone.now() - derniere_date
+        difference_minutes = delta_temps.total_seconds() // 60
+        if difference_minutes < 60:
+            temps_ecoule = f'il y a {int(difference_minutes)} min'
+        else:
+            heures = int(difference_minutes // 60)
+            minutes = int(difference_minutes % 60)
+            temps_ecoule = f'il y a {heures}h {minutes}min'
+        valeurs = {
+            'date': temps_ecoule,
+            'id': derniere_ligne.id,
+            'temp': derniere_ligne.temp,
+            'hum': derniere_ligne.hum
+        }
+    else:
+        valeurs = {
+            'date': 'Aucune donnée disponible',
+            'id': '-',
+            'temp': '-',
+            'hum': '-'
+        }
+
+    return render(request, 'value.html', {'valeurs': valeurs})
 
 @login_required
 def graphiqueTemp(request):
@@ -61,7 +68,7 @@ def graphiqueHum(request):
 
 @login_required
 def chart_data(request):
-    dht = Dht11.objects.all()
+    dht = Dht11.objects.all().order_by('dt')
     data = {
         'temps': [record.dt for record in dht],
         'temperature': [record.temp for record in dht],
@@ -73,7 +80,7 @@ def chart_data(request):
 def chart_data_jour(request):
     now = timezone.now()
     last_24_hours = now - timedelta(hours=24)
-    dht = Dht11.objects.filter(dt__range=(last_24_hours, now))
+    dht = Dht11.objects.filter(dt__range=(last_24_hours, now)).order_by('dt')
     data = {
         'temps': [record.dt for record in dht],
         'temperature': [record.temp for record in dht],
@@ -84,7 +91,7 @@ def chart_data_jour(request):
 @login_required
 def chart_data_semaine(request):
     date_debut_semaine = timezone.now().date() - timedelta(days=7)
-    dht = Dht11.objects.filter(dt__gte=date_debut_semaine)
+    dht = Dht11.objects.filter(dt__gte=date_debut_semaine).order_by('dt')
     data = {
         'temps': [record.dt for record in dht],
         'temperature': [record.temp for record in dht],
@@ -95,7 +102,7 @@ def chart_data_semaine(request):
 @login_required
 def chart_data_mois(request):
     date_debut_mois = timezone.now().date() - timedelta(days=30)
-    dht = Dht11.objects.filter(dt__gte=date_debut_mois)
+    dht = Dht11.objects.filter(dt__gte=date_debut_mois).order_by('dt')
     data = {
         'temps': [record.dt for record in dht],
         'temperature': [record.temp for record in dht],
@@ -103,19 +110,11 @@ def chart_data_mois(request):
     }
     return JsonResponse(data)
 
-###############################################
-from django.shortcuts import render, redirect
-from django.contrib.auth.models import User
-from django.contrib import messages
-from django.contrib.auth.decorators import login_required
-from django.http import HttpResponseForbidden
-
 @login_required
 def register_view(request):
-    # Vérifier si l'utilisateur est 'admin' ou 'admin2'
+    # Si besoin d'une page d'enregistrement, à adapter.
     if request.user.username not in ["admin", "admin2"]:
         return HttpResponseForbidden("Vous n'avez pas la permission d'accéder à cette page.")
-
     if request.method == 'POST':
         username = request.POST.get('username')
         email = request.POST.get('email')
@@ -127,7 +126,6 @@ def register_view(request):
         if password != password_confirm:
             messages.error(request, "Les mots de passe ne correspondent pas.")
             return redirect('register_view')
-
         try:
             user = User.objects.create_user(
                 username=username,
@@ -144,9 +142,6 @@ def register_view(request):
             return redirect('register_view')
 
     return render(request, 'register.html')
-
-
-################################################
 @login_required
 def sendtele():
     token = '6662023260:AAG4z48OO9gL8A6szdxg0SOma5hv9gIII1E'

@@ -1,95 +1,73 @@
 {% extends 'base.html' %}
-
-{% block i %}
-<div class="graphique">
-    <div class="navb">
-        <button id="aujourdhui-link">Historique d'Aujourd'hui</button>
-        <button id="semaine-link">Historique de cette semaine</button>
-        <button id="mois-link">Historique de ce mois</button>
-        <!--button id="csv">Télecharger csv</button-->
-    </div>
-    <div class="graphique-hum">
-        <canvas id="graphique-hum" height="220"></canvas>
-    </div>
+{% block title %}Graphique Humidité{% endblock title %}
+{% block content %}
+<h3 class="mb-4">Historique de l'Humidité</h3>
+<div class="mb-3">
+    <button id="jour-btn" class="btn btn-primary">Aujourd'hui</button>
+    <button id="semaine-btn" class="btn btn-secondary">Cette semaine</button>
+    <button id="mois-btn" class="btn btn-secondary">Ce mois</button>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+<div class="card">
+    <div class="card-body">
+        <div style="height:300px;">
+            <canvas id="graphique-hum"></canvas>
+        </div>
+    </div>
+</div>
+{% endblock content %}
+
+{% block extra_js %}
 <script>
-    // Fonction pour créer un graphique avec des données spécifiques
-    function createChart(url, borderWidth) {
-        fetch(url)
-            .then(response => response.json())
-            .then(data => {
-                var labels = data.temps;
-                var dataValues = data.humidity;
-                var startIndex = labels.length - 27;
-                if (startIndex < 0) startIndex = 0;
-                labels = labels.slice(startIndex);
-                dataValues = dataValues.slice(startIndex);
-                var ctx = document.getElementById('graphique-hum').getContext('2d');
-                var myChart = new Chart(ctx, {
-                    type: 'line',
-                    data: {
-                        labels: labels,
-                        datasets: [{
-                            label: 'La valeur de Humidité',
-                            data: dataValues,
-                            backgroundColor: 'white',
-                            borderColor: 'rgb(0,0,255)',
-                            borderWidth: borderWidth,
-                            pointStyle: 'circles',
-                            pointRadius: 2,
-                            pointBorderColor: 'black'
+function loadHumData(url, borderWidth) {
+    fetch(url)
+        .then(response => response.json())
+        .then(data => {
+            const labels = data.temps.map(t => new Date(t));
+            const humData = data.humidity;
+
+            const ctx = document.getElementById('graphique-hum').getContext('2d');
+            if (window.humChart) {
+                window.humChart.destroy();
+            }
+            window.humChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'Humidité (%)',
+                        data: humData,
+                        backgroundColor: 'rgba(0,0,255,0.1)',
+                        borderColor: 'rgb(0,0,255)',
+                        borderWidth: borderWidth,
+                        pointRadius: 3
+                    }]
+                },
+                options: {
+                    maintainAspectRatio: false,
+                    scales: {
+                        xAxes: [{
+                            type: 'time',
+                            time: { unit: 'hour', displayFormats: { hour: 'HH:mm' } },
+                            ticks: { autoSkip: true, maxRotation: 45, minRotation: 0 }
+                        }],
+                        yAxes: [{
+                            ticks: {
+                                beginAtZero: true,
+                                callback: function(value) { return value + '%'; }
+                            }
                         }]
-                    },
-                    options: {
-                        scales: {
-                            yAxes: [{
-                                ticks: {
-                                    beginAtZero: true,
-                                    min: 0,
-                                    max: 80, // Limiter l'axe des y à 80%
-                                    callback: function(value, index, values) {
-                                        return value + '%';
-                                    },
-                                }
-                            }],
-                            xAxes: [{
-                                ticks: {
-                                    beginAtZero: true,
-                                    display: true,
-                                    autoSkip: true,
-                                    maxTicksLimit: 20,
-                                    callback: function(value, index, values) {
-                                        return value;
-                                    }
-                                }
-                            }]
-                        }
                     }
-                });
+                }
             });
-    }
+        });
+}
 
-    // Écouteurs d'événements pour les boutons
-    const aujourdhuiLink = document.getElementById('aujourdhui-link');
-    const semaineLink = document.getElementById('semaine-link');
-    const moisLink = document.getElementById('mois-link');
+document.getElementById('jour-btn').addEventListener('click', () => loadHumData('/chart-data-jour/', 1));
+document.getElementById('semaine-btn').addEventListener('click', () => loadHumData('/chart-data-semaine/', 2));
+document.getElementById('mois-btn').addEventListener('click', () => loadHumData('/chart-data-mois/', 3));
 
-    aujourdhuiLink.addEventListener('click', () => {
-        createChart('/chart-data-jour/', 1);
-    });
-
-    semaineLink.addEventListener('click', () => {
-        createChart('/chart-data-semaine/', 2);
-    });
-
-    moisLink.addEventListener('click', () => {
-        createChart('/chart-data-mois/', 3);
-    });
-
-    // Charge initiale du graphique avec /chart-data/
-    createChart('/chart-data/', 4);
+// Chargement initial
+loadHumData('/chart-data/', 4);
 </script>
-
-{% endblock %}
+{% endblock extra_js %}

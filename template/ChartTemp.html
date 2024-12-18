@@ -1,442 +1,191 @@
 {% extends 'base.html' %}
-{% block i %}
+{% block title %}Graphique Température{% endblock title %}
+{% block content %}
+<h3 class="mb-4">Historique de la Température et de l'Humidité</h3>
 
-
-<div class="graphique">
-    <div class="navb">
-
-        <button id="aujourdhui-link">Historique d'Aujourd'hui</button>
-        <button  id="semaine-link">Historique de cette semaine</button>
-        <button  id="mois-link">Historique de ce mois</button>
-        <!--button id="csv" >Télecharger csv</button-->
-  </div>
-<div  class="graphique-temp" >
-<canvas id="graphique-temp"  height="220"></canvas>
+<!-- Boutons de sélection de période -->
+<div class="mb-3">
+    <button id="jour-btn" class="btn btn-primary">Aujourd'hui</button>
+    <button id="semaine-btn" class="btn btn-secondary">Cette semaine</button>
+    <button id="mois-btn" class="btn btn-secondary">Ce mois</button>
 </div>
-<div class="graphique-hum" >
-<canvas  id="graphique-hum"  height="220"> </canvas>
+
+<!-- Boutons pour échelle et zoom -->
+<div class="mb-3">
+    <button id="toggle-scale-btn" class="btn btn-info">Changer échelle (heure/jour)</button>
+    <button id="zoom-in-btn" class="btn btn-primary">Zoom +</button>
+    <button id="zoom-out-btn" class="btn btn-primary">Zoom -</button>
+    <button id="reset-zoom-btn" class="btn btn-secondary">Réinitialiser zoom</button>
 </div>
-<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+
+<div class="card mb-4">
+    <div class="card-body">
+        <h5 class="card-title">Température (°C)</h5>
+        <div style="height:300px;">
+            <canvas id="graphique-temp"></canvas>
+        </div>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">Humidité (%)</h5>
+        <div style="height:300px;">
+            <canvas id="graphique-hum"></canvas>
+        </div>
+    </div>
+</div>
+{% endblock content %}
+
+{% block extra_js %}
 <script>
+let currentTimeUnit = 'hour'; // échelle actuelle: 'hour' ou 'day'
 
-  const aujourdhuiLink = document.getElementById('aujourdhui-link');
-  const semaineLink = document.getElementById('semaine-link');
-  const moisLink = document.getElementById('mois-link');
-  aujourdhuiLink.addEventListener('click', () => {
-    fetch('/chart-data-jour/')
+function loadChartData(url, borderWidth) {
+    fetch(url)
         .then(response => response.json())
         .then(data => {
-            var labels = data.temps;
-             var dataValues = data.temperature;
-            var startIndex = labels.length - 27;
-            if (startIndex < 0) startIndex = 0;
-            labels = labels.slice(startIndex);
-            dataValues = dataValues.slice(startIndex);
-            var ctx = document.getElementById('graphique-temp').getContext('2d');
-            var myChart = new Chart(ctx,
-            {
+            const labels = data.temps.map(t => moment(t));
+            const tempData = data.temperature;
+            const humData = data.humidity;
 
-                type: 'line',
-                data: {
-                labels: labels,
-                    datasets: [{
-                        label: 'La valeur de Températeur' ,
-                        data: dataValues,
-                        backgroundColor: 'white',
-                        borderColor: 'rgb(0,0,255)' ,
-                        borderWidth: 2,
-                        pointStyle: 'circles',
-                        pointRadius: 2,
-                        pointBorderColor: 'blue'
-                    }]
-                },
-                options:
-                {
-                    scales:
-                    {
-                    yAxes: [{
-                            ticks: {
-                                beginAtZero: true,
-                                callback: function (value,index,values){
-                                    return value +'°';
-                                }
-                            }
-                        }],
-                        xAxes:[{
-                          type: 'time',
-                                    time: {
-                                        unit: 'hour',
-                                        displayFormats: {
-                                            hour: 'HH:mm'
-                                        }
-                                    },
-                                    ticks: {
-                                        autoSkip: true,
+            // Détruit les anciens graphiques s'ils existent
+            if (window.tempChart) window.tempChart.destroy();
+            if (window.humChart) window.humChart.destroy();
 
-                                        maxRotation: 45,
-                                        minRotation: 0
-                                    }
-                           }]
-                    }
-                }
-            });
-        });
-        fetch('/chart-data-jour/')
-        .then(response => response.json())
-        .then(data => {
-            var labels = data.temps;
+            const tempCtx = document.getElementById('graphique-temp').getContext('2d');
+            const humCtx = document.getElementById('graphique-hum').getContext('2d');
 
-            var startIndex = labels.length - 27;
-            if (startIndex < 0) startIndex = 0;
-            labels = labels.slice(startIndex);
-            dataValues = dataValues.slice(startIndex);
-            var ctx = document.getElementById('graphique-hum').getContext('2d');
-            var myChart = new Chart(ctx, {
+            window.tempChart = new Chart(tempCtx, {
                 type: 'line',
                 data: {
                     labels: labels,
                     datasets: [{
-                        label: 'La valeur de Humidité',
-                        data: dataValues,
-                        backgroundColor: 'white',
-                        borderColor: 'rgb(0,0,255)' ,
-                        borderWidth: 2,
-                        pointStyle: 'circles',
-                        pointRadius: 2,
-                        pointBorderColor: 'blue'
+                        label: 'Température (°C)',
+                        data: tempData,
+                        backgroundColor: 'rgba(0, 123, 255, 0.1)',
+                        borderColor: 'rgb(0, 123, 255)',
+                        borderWidth: borderWidth,
+                        pointRadius: 3
                     }]
                 },
                 options: {
+                    maintainAspectRatio: false,
                     scales: {
-
+                        xAxes: [{
+                            type: 'time',
+                            time: {
+                                unit: currentTimeUnit,
+                                displayFormats: currentTimeUnit === 'hour' ? { hour: 'HH:mm' } : { day: 'YYYY-MM-DD' }
+                            },
+                            ticks: {
+                                autoSkip: true,
+                                maxRotation: 45,
+                                minRotation: 0
+                            }
+                        }],
                         yAxes: [{
-                            ticks:
-                        {
+                            ticks: {
                                 beginAtZero: true,
-                                callback: function (value,index,values){
-                                    return value +'%';
-                                },
+                                callback: function(value) { return value + '°'; }
+                            }
+                        }]
+                    },
+                    plugins: {
+                        zoom: {
+                            pan: {
+                                enabled: true,
+                                mode: 'x'
+                            },
+                            zoom: {
+                                enabled: true,
+                                mode: 'x'
+                            }
                         }
-                        }],
-                        xAxes:[{
-                            ticks:
-                            {
-                                beginAtZero: true,
-                                display:false
-                            }
-                        }]
                     }
                 }
             });
-        });
-    });
 
-    semaineLink.addEventListener('click', () => {
-    fetch('/chart-data-semaine/')
-        .then(response => response.json())
-        .then(data => {
-            var labels = data.temps;
-             var dataValues = data.temperature;
-            var startIndex = labels.length - 27;
-            if (startIndex < 0) startIndex = 0;
-            labels = labels.slice(startIndex);
-            dataValues = dataValues.slice(startIndex);
-            var ctx = document.getElementById('graphique-temp').getContext('2d');
-            var myChart = new Chart(ctx,
-            {
-
-                type: 'line',
-                data: {
-                labels: labels,
-                    datasets: [{
-                        label: 'La valeur de Températeur',
-                        data: dataValues,
-                        backgroundColor: 'white',
-                        borderColor: 'rgb(0,0,255)' ,
-                        borderWidth: 2,
-                        pointStyle: 'circles',
-                        pointRadius: 2,
-                        pointBorderColor: 'blue'
-                    }]
-                },
-                options:
-                {
-                    scales:
-                    {
-                    yAxes: [{
-                            ticks: {
-                                beginAtZero: true,
-                                callback: function (value,index,values){
-                                    return value +'°';
-                                }
-                            }
-                        }],
-                        xAxes:[{
-                            ticks: {
-                                beginAtZero: true,
-                                display:true
-                                }
-                        }]
-                    }
-                }
-            });
-        });
-        fetch('/chart-data-semaine/')
-        .then(response => response.json())
-        .then(data => {
-            var labels = data.temps;
-
-            var startIndex = labels.length - 27;
-            if (startIndex < 0) startIndex = 0;
-            labels = labels.slice(startIndex);
-            dataValues = dataValues.slice(startIndex);
-            var ctx = document.getElementById('graphique-hum').getContext('2d');
-            var myChart = new Chart(ctx, {
+            window.humChart = new Chart(humCtx, {
                 type: 'line',
                 data: {
                     labels: labels,
                     datasets: [{
-                        label: 'La valeur de Humidité',
-                        data: dataValues,
-                        backgroundColor: 'white',
-                        borderColor: 'rgb(0,0,255)' ,
-                        borderWidth: 2,
-                        pointStyle: 'circles',
-                        pointRadius: 2,
-                        pointBorderColor: 'blue'
+                        label: 'Humidité (%)',
+                        data: humData,
+                        backgroundColor: 'rgba(0, 123, 255, 0.1)',
+                        borderColor: 'rgb(0, 123, 255)',
+                        borderWidth: borderWidth,
+                        pointRadius: 3
                     }]
                 },
                 options: {
+                    maintainAspectRatio: false,
                     scales: {
-
+                        xAxes: [{
+                            type: 'time',
+                            time: {
+                                unit: currentTimeUnit,
+                                displayFormats: currentTimeUnit === 'hour' ? { hour: 'HH:mm' } : { day: 'YYYY-MM-DD' }
+                            },
+                            ticks: {
+                                autoSkip: true,
+                                maxRotation: 45,
+                                minRotation: 0
+                            }
+                        }],
                         yAxes: [{
-                            ticks:
-                        {
+                            ticks: {
                                 beginAtZero: true,
-                                callback: function (value,index,values){
-                                    return value +'%';
-                                },
+                                callback: function(value) { return value + '%'; }
+                            }
+                        }]
+                    },
+                    plugins: {
+                        zoom: {
+                            pan: {
+                                enabled: true,
+                                mode: 'x'
+                            },
+                            zoom: {
+                                enabled: true,
+                                mode: 'x'
+                            }
                         }
-                        }],
-                        xAxes:[{
-                            ticks:
-                            {
-                                beginAtZero: true,
-                                display:true
-                            }
-                        }]
                     }
                 }
             });
-        });
-    });
+        })
+        .catch(error => console.error("Erreur lors du chargement des données:", error));
+}
 
+// Boutons de période
+document.getElementById('jour-btn').addEventListener('click', () => loadChartData('/chart-data-jour/', 1));
+document.getElementById('semaine-btn').addEventListener('click', () => loadChartData('/chart-data-semaine/', 2));
+document.getElementById('mois-btn').addEventListener('click', () => loadChartData('/chart-data-mois/', 3));
 
-    moisLink.addEventListener('click', () => {
-    fetch('/chart-data-mois/')
-        .then(response => response.json())
-        .then(data => {
-            var labels = data.temps;
-             var dataValues = data.temperature;
-            var startIndex = labels.length - 27;
-            if (startIndex < 0) startIndex = 0;
-            labels = labels.slice(startIndex);
-            dataValues = dataValues.slice(startIndex);
-            var ctx = document.getElementById('graphique-temp').getContext('2d');
-            var myChart = new Chart(ctx,
-            {
+// Bouton pour changer l'échelle
+document.getElementById('toggle-scale-btn').addEventListener('click', () => {
+    currentTimeUnit = (currentTimeUnit === 'hour') ? 'day' : 'hour';
+    // Recharge les données actuelles (par défaut l'URL initiale)
+    loadChartData('/chart-data/', 4);
+});
 
-                type: 'line',
-                data: {
-                labels: labels,
-                    datasets: [{
-                        label: 'La valeur de Températeur',
-                        data: dataValues,
-                        backgroundColor: 'white',
-                        borderColor: 'rgb(0,0,255)' ,
-                        borderWidth: 2,
-                        pointStyle: 'circles',
-                        pointRadius: 2,
-                        pointBorderColor: 'blue'
-                    }]
-                },
-                options:
-                {
-                    scales:
-                    {
-                    yAxes: [{
-                            ticks: {
-                                beginAtZero: true,
-                                callback: function (value,index,values){
-                                    return value +'°';
-                                }
-                            }
-                        }],
-                        xAxes:[{
-                            ticks: {
-                                beginAtZero: true,
-                                display:true
-                                }
-                        }]
-                    }
-                }
-            });
-        });
-        fetch('/chart-data-mois/')
-        .then(response => response.json())
-        .then(data => {
-            var labels = data.temps;
+// Boutons de zoom
+document.getElementById('zoom-in-btn').addEventListener('click', () => {
+    if (window.tempChart) window.tempChart.zoom(1.1);
+    if (window.humChart) window.humChart.zoom(1.1);
+});
+document.getElementById('zoom-out-btn').addEventListener('click', () => {
+    if (window.tempChart) window.tempChart.zoom(0.9);
+    if (window.humChart) window.humChart.zoom(0.9);
+});
+document.getElementById('reset-zoom-btn').addEventListener('click', () => {
+    if (window.tempChart) window.tempChart.resetZoom();
+    if (window.humChart) window.humChart.resetZoom();
+});
 
-            var startIndex = labels.length - 27;
-            if (startIndex < 0) startIndex = 0;
-            labels = labels.slice(startIndex);
-            dataValues = dataValues.slice(startIndex);
-            var ctx = document.getElementById('graphique-hum').getContext('2d');
-            var myChart = new Chart(ctx, {
-                type: 'line',
-                data: {
-                    labels: labels,
-                    datasets: [{
-                        label: 'La valeur de Humidité',
-                        data: dataValues,
-                        backgroundColor: 'white',
-                        borderColor: 'rgb(0,0,255)' ,
-                        borderWidth: 2,
-                        pointStyle: 'circles',
-                        pointRadius: 2,
-                        pointBorderColor: 'blue'
-                    }]
-                },
-                options: {
-                    scales: {
-
-                        yAxes: [{
-                            ticks:
-                        {
-                                beginAtZero: true,
-                                callback: function (value,index,values){
-                                    return value +'%';
-                                },
-                        }
-                        }],
-                        xAxes:[{
-                            ticks:
-                            {
-                                beginAtZero: true,
-                                display:true
-
-                            }
-                        }]
-                    }
-                }
-            });
-        });
-    });
-
-
-
-
-
-    fetch('/chart-data/')
-        .then(response => response.json())
-        .then(data => {
-            var labels = data.temps;
-
-             var dataValues = data.temperature;
-            var startIndex = labels.length - 6;
-            if (startIndex < 0) startIndex = 0;
-            labels = labels.slice(startIndex);
-            dataValues = dataValues.slice(startIndex);
-            var ctx = document.getElementById('graphique-temp').getContext('2d');
-            var myChart = new Chart(ctx,
-            {
-
-                type: 'line',
-                data: {
-                labels: labels,
-                    datasets: [{
-                        label: 'La valeur de Températeur',
-                        data: dataValues,
-                        backgroundColor: 'white',
-                        borderColor: 'rgb(0,0,255)' ,
-                        borderWidth: 2,
-                        pointStyle: 'circles',
-                        pointRadius: 2,
-                        pointBorderColor: 'blue'
-                    }]
-                },
-                options:
-                {
-                    scales:
-                    {
-                    yAxes: [{
-                            ticks: {
-                                beginAtZero: true,
-                                callback: function (value,index,values){
-                                    return value +'°';
-                                }
-                            }
-                        }],
-                        xAxes:[{
-                            ticks: {
-                                beginAtZero: true,
-                                display:true
-                                }
-                        }]
-                    }
-                }
-            });
-        });
-        fetch('/chart-data/')
-        .then(response => response.json())
-        .then(data => {
-            var labels = data.temps;
-
-            var startIndex = labels.length - 27;
-            if (startIndex < 0) startIndex = 0;
-            labels = labels.slice(startIndex);
-            dataValues = dataValues.slice(startIndex);
-            var ctx = document.getElementById('graphique-hum').getContext('2d');
-            var myChart = new Chart(ctx, {
-                type: 'line',
-                data: {
-                    labels: labels,
-                    datasets: [{
-                        label: 'La valeur de Humidité',
-                        data: dataValues,
-                        backgroundColor: 'white',
-                        borderColor: 'rgb(0,0,255)' ,
-                        borderWidth: 2,
-                        pointStyle: 'circles',
-                        pointRadius: 2,
-                        pointBorderColor: 'blue'
-                    }]
-                },
-                options: {
-                    scales: {
-
-                        yAxes: [{
-                            ticks:
-                        {
-                                beginAtZero: true,
-                                callback: function (value,index,values){
-                                    return value +'%';
-                                },
-                        }
-                        }],
-                        xAxes:[{
-                            ticks:
-                            {
-                                beginAtZero: true,
-                                display:true
-                            }
-                        }]
-                    }
-                }
-            });
-        });
-
+// Chargement initial
+loadChartData('/chart-data/', 4);
 </script>
-
-</div>
-{% endblock  %}
+{% endblock extra_js %}

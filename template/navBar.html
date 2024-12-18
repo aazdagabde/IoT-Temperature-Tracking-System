@@ -1,27 +1,22 @@
-
-  <div class="navbar">
-    <nav >
-        <h2 class="logo">SURVEILLANCE IOT:CAPTEUR DHT11</h2>
-
-            <ul>
-                    <li>  <a href="{% url 'table' %}" >Table</a></li>
-                    <li>  <a href="{% url 'myChartTemp' %}" >graph of temperature</a></li>
-                    <li>  <a href="{% url 'myChartHum' %}" >graph of humidity</a></li>
-                    <li>  <a href="{% url 'json' %}" >Json</a></li>
-                    <li>
-                          <a class="dropdown-item" href="{% url 'logout' %}">Se déconnecter</a>
-                    </li>
-
-            </ul>
-
-
-
-            <p>  </p>
-
-
-    </nav>
-</div>
-   <br>
-   <br>
-   <br>
-  <br>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="{% url 'home' %}">SURVEILLANCE IOT: DHT11</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainNavbar">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link {% if request.resolver_match.url_name == 'table' %}active{% endif %}" href="{% url 'table' %}">Table</a></li>
+        <li class="nav-item"><a class="nav-link {% if request.resolver_match.url_name == 'myChartTemp' %}active{% endif %}" href="{% url 'myChartTemp' %}">Graph Temp et Hum</a></li>
+        <!--li class="nav-item"><a class="nav-link {% if request.resolver_match.url_name == 'myChartHum' %}active{% endif %}" href="{% url 'myChartHum' %}">Graph Hum</a></--li§-->
+        <li class="nav-item"><a class="nav-link {% if request.resolver_match.url_name == 'json' %}active{% endif %}" href="{% url 'json' %}">JSON</a></li>
+        <li class="nav-item"><a class="nav-link {% if request.resolver_match.url_name == 'value_view' %}active{% endif %}" href="{% url 'value_view' %}">Dernière Valeur</a></li>
+        {% if user.is_authenticated %}
+        <li class="nav-item"><a class="nav-link" href="{% url 'logout' %}">Se déconnecter</a></li>
+        {% else %}
+        <li class="nav-item"><a class="nav-link" href="{% url 'login' %}">Se connecter</a></li>
+        {% endif %}
+      </ul>
+    </div>
+  </div>
+</nav>

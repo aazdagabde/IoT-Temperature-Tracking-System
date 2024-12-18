@@ -1,26 +1,33 @@
 {% extends 'base.html' %}
-{% block i %}
-<div class="projects">
-  <div class ="tables" >
-<table  border="0">
-
-    <thead class="DIV">
-        <tr>
-            <th>id</th>
-            <th>Temperature</th>
-            <th>Humidity</th>
-        </tr>
-    </thead>
-    <tbody>
-        {% for record in data %}
-        <tr>
-            <td>{{ record.id }}</td>
-            <td>{{ record.temp }}</td>
-            <td>{{ record.hum }}</td>
-        </tr>
-        {% endfor %}
-    </tbody>
-</table>
+{% block title %}Table des Mesures{% endblock title %}
+{% block content %}
+<h3 class="mb-4">Liste des mesures enregistrées</h3>
+<div class="card">
+    <div class="card-header">Mesures</div>
+    <div class="card-body">
+        <table class="table table-striped align-middle">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Température (°C)</th>
+                    <th>Humidité (%)</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for record in data %}
+                <tr>
+                    <td>{{ record.id }}</td>
+                    <td>{{ record.temp }}</td>
+                    <td>{{ record.hum }}</td>
+                </tr>
+                {% empty %}
+                <tr>
+                    <td colspan="3" class="text-center text-muted">Aucune donnée disponible</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <a href="{% url 'download_csv' %}" class="btn btn-primary">Télécharger CSV</a>
+    </div>
 </div>
-  </div>
-{% endblock i %}
+{% endblock content %}
