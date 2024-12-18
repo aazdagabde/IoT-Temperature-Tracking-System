@@ -172,14 +172,48 @@ document.getElementById('toggle-scale-btn').addEventListener('click', () => {
 });
 
 // Boutons de zoom
-document.getElementById('zoom-in-btn').addEventListener('click', () => {
+/*document.getElementById('zoom-in-btn').addEventListener('click', () => {
     if (window.tempChart) window.tempChart.zoom(1.1);
     if (window.humChart) window.humChart.zoom(1.1);
 });
 document.getElementById('zoom-out-btn').addEventListener('click', () => {
     if (window.tempChart) window.tempChart.zoom(0.9);
     if (window.humChart) window.humChart.zoom(0.9);
+});*/
+
+
+// augmenter l'échelle de l'axe X
+function zoomOut(chart) {
+    if (chart) {
+        let currentRange = chart.options.scales.xAxes[0].ticks.max - chart.options.scales.xAxes[0].ticks.min;
+        chart.options.scales.xAxes[0].ticks.min -= currentRange * 0.1;
+        chart.options.scales.xAxes[0].ticks.max += currentRange * 0.1;
+        chart.update();
+    }
+}
+
+// réduire l'échelle de l'axe x
+function zoomIn(chart) {
+    if (chart) {
+        let currentRange = chart.options.scales.xAxes[0].ticks.max - chart.options.scales.xAxes[0].ticks.min;
+        chart.options.scales.xAxes[0].ticks.min += currentRange * 0.1;
+        chart.options.scales.xAxes[0].ticks.max -= currentRange * 0.1;
+        chart.update();
+    }
+}
+
+document.getElementById('zoom-in-btn').addEventListener('click', () => {
+    zoomIn(window.tempChart);
+    zoomIn(window.humChart);
 });
+
+document.getElementById('zoom-out-btn').addEventListener('click', () => {
+    zoomOut(window.tempChart);
+    zoomOut(window.humChart);
+});
+
+
+//renitialiser
 document.getElementById('reset-zoom-btn').addEventListener('click', () => {
     if (window.tempChart) window.tempChart.resetZoom();
     if (window.humChart) window.humChart.resetZoom();
