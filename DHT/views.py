@@ -136,7 +136,7 @@ def register_view(request):
             )
             user.save()
             messages.success(request, "Utilisateur ajouté avec succès !")
-            return redirect('login')
+            return redirect('/index')
         except Exception as e:
             messages.error(request, f"Erreur : {e}")
             return redirect('register_view')
@@ -153,3 +153,94 @@ def sendtele():
 def custom_logout(request):
     logout(request)
     return redirect('/')
+
+
+#####################################################
+from django.shortcuts import render, redirect
+from django.contrib.auth.decorators import login_required
+from django.utils import timezone
+from django.contrib import messages
+from .models import Dht11, Incident
+
+@login_required
+def incident(request):
+    # On cherche s’il y a un incident en cours (end_dt is null)
+    open_incident = Incident.objects.filter(end_dt__isnull=True).order_by('-start_dt').first()
+
+    # Par défaut, on suppose pas d’incident
+    flag_color = 'green'
+    message = "Pas d'incidents."
+    incident_in_progress = False
+
+    if open_incident:
+        flag_color = 'red'
+        message = 'Attention, incident détecté.'
+        incident_in_progress = True
+
+    # Traitement du formulaire d’acquittement
+    # => Seul sens si un incident est en cours
+    if request.method == 'POST' and incident_in_progress:
+        # Récupérer la remarque
+        remarks = request.POST.get('remarks', '')
+
+        # Marquer l’incident comme acquitté
+        open_incident.ack = True
+        open_incident.remarks = remarks
+        open_incident.ack_user = request.user
+        open_incident.save()
+        messages.success(request, "Incident acquitté avec succès.")
+
+        return redirect('incident')  # Rafraîchir la page ou rediriger ailleurs
+
+    return render(request, 'incident.html', {
+        'flag': flag_color,
+        'message': message,
+        'incident_in_progress': incident_in_progress
+    })
+####################3333333333333
+from django.shortcuts import render
+from django.contrib.auth.decorators import login_required
+from django.utils import timezone
+from .models import Incident
+
+@login_required
+def log_incident(request):
+    # Récupérer le paramètre de filtrage
+    time_filter = request.GET.get('filter', 'all')
+    now = timezone.now()
+
+    if time_filter == 'jour':
+        start_date = now - timedelta(days=1)
+    elif time_filter == 'semaine':
+        start_date = now - timedelta(days=7)
+    elif time_filter == 'mois':
+        start_date = now - timedelta(days=30)
+    elif time_filter == 'annee':
+        start_date = now - timedelta(days=365)
+    else:
+        start_date = None
+
+    if start_date:
+        incidents = Incident.objects.filter(start_dt__gte=start_date).order_by('-start_dt')
+    else:
+        incidents = Incident.objects.all().order_by('-start_dt')
+
+    # Déterminer si l'utilisateur peut voir la colonne "Acquittement"
+    # On autorise par ex. le superuser ou les membres des groupes Admin / Admin1
+    can_see_ack = (
+        request.user.is_superuser or
+        request.user.groups.filter(name__in=["Admin", "Admin1"]).exists()
+    )
+
+    # Déterminer si l'utilisateur peut voir les colonnes "Remarques" et "Utilisateur"
+    # On autorise par ex. le superuser ou les membres des groupes Admin / Admin2
+    can_see_remarks = (
+        request.user.is_superuser or
+        request.user.groups.filter(name__in=["Admin", "Admin2"]).exists()
+    )
+
+    return render(request, 'log_incident.html', {
+        'incidents': incidents,
+        'can_see_ack': can_see_ack,
+        'can_see_remarks': can_see_remarks,
+    })

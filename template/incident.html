@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="container">
+  <h2>Statut de l’incident</h2>
+
+  {% if flag == 'red' %}
+    <img src="{% static 'images/red_flag.png' %}" alt="Drapeau rouge" width="50">
+    <p class="text-danger">{{ message }}</p>
+  {% else %}
+    <img src="{% static 'images/green_flag.png' %}" alt="Drapeau vert" width="50">
+    <p class="text-success">{{ message }}</p>
+  {% endif %}
+
+  <a href="{% url 'log_incident' %}" class="btn btn-primary">Historique des incidents</a>
+
+  {% if incident_in_progress %}
+  <hr>
+  <h4>Acquittement de l’incident</h4>
+  <form method="POST">
+    {% csrf_token %}
+    <div class="mb-3">
+      <label for="remarks" class="form-label">Remarques :</label>
+      <textarea name="remarks" id="remarks" rows="3" class="form-control"></textarea>
+    </div>
+    <button type="submit" class="btn btn-warning">Acquitter</button>
+  </form>
+  {% endif %}
+</div>
+{% endblock content %}

@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    <h2>Historique des incidents</h2>
+
+    <!-- Boutons de filtrage par période -->
+    <div class="d-flex mb-3">
+        <a href="?filter=jour" class="btn btn-outline-primary btn-sm me-2">Jour</a>
+        <a href="?filter=semaine" class="btn btn-outline-primary btn-sm me-2">Semaine</a>
+        <a href="?filter=mois" class="btn btn-outline-primary btn-sm me-2">Mois</a>
+        <a href="?filter=annee" class="btn btn-outline-primary btn-sm me-2">Année</a>
+        <a href="?filter=all" class="btn btn-outline-secondary btn-sm">Tous</a>
+    </div>
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Début</th>
+                <th>Fin</th>
+                <th>Durée</th>
+
+                <!-- Colonne Acquittement visible seulement si can_see_ack == True -->
+                {% if can_see_ack %}
+                    <th>Acquittement</th>
+                {% endif %}
+
+                <!-- Colonnes Remarques et Utilisateur visibles seulement si can_see_remarks == True -->
+                {% if can_see_remarks %}
+                    <th>Remarques</th>
+                    <th>Utilisateur</th>
+                {% endif %}
+            </tr>
+        </thead>
+        <tbody>
+            {% for incident in incidents %}
+            <tr>
+                <!-- Début de l'incident -->
+                <td>{{ incident.start_dt }}</td>
+
+                <!-- Fin de l'incident -->
+                <td>
+                    {% if incident.end_dt %}
+                        {{ incident.end_dt }}
+                    {% else %}
+                        <span class="text-danger">En cours</span>
+                    {% endif %}
+                </td>
+
+                <!-- Durée -->
+                <td>
+                    {% if incident.duration %}
+                        {{ incident.duration }}
+                    {% else %}
+                        --
+                    {% endif %}
+                </td>
+
+                <!-- Acquittement (Oui/Non) -->
+                {% if can_see_ack %}
+                <td>{{ incident.ack|yesno:"Oui,Non" }}</td>
+                {% endif %}
+
+                <!-- Remarques + Utilisateur qui a acquitté -->
+                {% if can_see_remarks %}
+                <td>
+                    {% if incident.remarks %}
+                        {{ incident.remarks }}
+                    {% else %}
+                        ---
+                    {% endif %}
+                </td>
+                <td>
+                    {% if incident.ack_user %}
+                        {{ incident.ack_user.username }}
+                    {% else %}
+                        ---
+                    {% endif %}
+                </td>
+                {% endif %}
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="6">Aucun incident enregistré.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock content %}

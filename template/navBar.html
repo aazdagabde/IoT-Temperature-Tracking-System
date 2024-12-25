@@ -10,6 +10,7 @@
         <li class="nav-item"><a class="nav-link {% if request.resolver_match.url_name == 'myChartTemp' %}active{% endif %}" href="{% url 'myChartTemp' %}">Graph Temp</a></li>
         <li class="nav-item"><a class="nav-link {% if request.resolver_match.url_name == 'myChartHum' %}active{% endif %}" href="{% url 'myChartHum' %}">Graph Hum</a></li>
         <li class="nav-item"><a class="nav-link {% if request.resolver_match.url_name == 'json' %}active{% endif %}" href="{% url 'json' %}">JSON</a></li>
+        <li class="nav-item"><a class="nav-link {% if request.resolver_match.url_name == 'incident' %}active{% endif %}" href="{% url 'incident' %}">Incidents</a></li>
         <li class="nav-item"><a class="nav-link {% if request.resolver_match.url_name == 'value_view' %}active{% endif %}" href="{% url 'value_view' %}">Dernière Valeur</a></li>
         {% if user.is_authenticated %}
         <li class="nav-item"><a class="nav-link" href="{% url 'logout' %}">Se déconnecter</a></li>

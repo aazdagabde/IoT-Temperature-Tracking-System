@@ -7,7 +7,7 @@ urlpatterns = [
     path("api", api.Dlist, name='json'),
     path("api/post", api.Dlist, name='json'),
     path('download_csv/', views.download_csv, name='download_csv'),
-    path('index/', views.table, name='table'),
+    path('table/', views.table, name='table'),
     path('myChartTemp/', views.graphiqueTemp, name='myChartTemp'),
     path('myChartHum/', views.graphiqueHum, name='myChartHum'),
     path('chart-data/', views.chart_data, name='chart-data'),
@@ -18,5 +18,12 @@ urlpatterns = [
     path('login/', auth_views.LoginView.as_view(template_name='login.html'), name='login'),
     path('logout/', views.custom_logout, name='logout'),
     path('register/', views.register_view, name='register_view'),
-    path('last-value/', views.value_view, name='value_view'),
+    path('index/', views.value_view, name='value_view'),
+
+    # ...
+    path('incident/', views.incident, name='incident'),
+    path('log_incident/', views.log_incident, name='log_incident'),
+
+    # Filtres
+
 ]
