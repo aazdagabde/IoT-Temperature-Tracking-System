@@ -4748,3 +4748,1541 @@ INFO 2024-12-28 07:37:24,365 basehttp "GET /incident/ HTTP/1.1" 200 3599
 INFO 2024-12-28 07:37:24,719 basehttp "GET /incident/ HTTP/1.1" 200 3599
 INFO 2024-12-28 07:37:25,311 basehttp "GET /incident/ HTTP/1.1" 200 3599
 INFO 2024-12-28 07:37:30,904 basehttp "GET /log_incident/ HTTP/1.1" 200 13569
+INFO 2024-12-28 07:42:01,690 autoreload Watching for file changes with StatReloader
+INFO 2024-12-28 07:42:03,583 basehttp "GET / HTTP/1.1" 200 2316
+INFO 2024-12-28 07:42:04,802 basehttp "GET /table/ HTTP/1.1" 200 108514
+INFO 2024-12-28 07:42:06,556 basehttp "GET /myChartTemp/ HTTP/1.1" 200 7485
+INFO 2024-12-28 07:42:06,624 basehttp "GET /chart-data/ HTTP/1.1" 200 27457
+INFO 2024-12-28 07:42:08,230 basehttp "GET /myChartHum/ HTTP/1.1" 200 7821
+INFO 2024-12-28 07:42:08,307 basehttp "GET /chart-data/ HTTP/1.1" 200 27457
+INFO 2024-12-28 07:42:18,185 basehttp "GET /chart-data/ HTTP/1.1" 200 27457
+INFO 2024-12-28 07:42:19,128 basehttp "GET /chart-data/ HTTP/1.1" 200 27457
+INFO 2024-12-28 07:42:20,681 basehttp "GET /chart-data/ HTTP/1.1" 200 27457
+INFO 2024-12-28 07:42:21,504 basehttp "GET /chart-data/ HTTP/1.1" 200 27457
+INFO 2024-12-28 07:42:22,458 basehttp "GET /chart-data/ HTTP/1.1" 200 27457
+INFO 2024-12-28 07:47:26,147 autoreload C:\Users\aabde\OneDrive\Desktop\DHT11project-master\DHT11project-master\DHT\views.py changed, reloading.
+INFO 2024-12-28 07:47:26,938 autoreload Watching for file changes with StatReloader
+INFO 2024-12-28 07:47:49,086 autoreload C:\Users\aabde\OneDrive\Desktop\DHT11project-master\DHT11project-master\DHT\urls.py changed, reloading.
+INFO 2024-12-28 07:47:49,998 autoreload Watching for file changes with StatReloader
+ERROR 2024-12-28 07:50:09,528 log Internal Server Error: /incident/
+Traceback (most recent call last):
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\smartif.py", line 180, in translate_token
+    op = OPERATORS[token]
+         ~~~~~~~~~^^^^^^^
+KeyError: "user.groups.filter(name='admin').exists"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\OneDrive\Desktop\DHT11project-master\DHT11project-master\DHT\views.py", line 201, in incident
+    return render(request, 'incident.html', {
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 134, in render
+    compiled_parent = self.get_parent(context)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 131, in get_parent
+    return self.find_template(parent, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 109, in find_template
+    template, origin = context.template.engine.find_template(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 960, in do_if
+    condition = TemplateIfParser(parser, bits).parse()
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 893, in __init__
+    super().__init__(*args, **kwargs)
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\smartif.py", line 171, in __init__
+    mapped_tokens.append(self.translate_token(token))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\smartif.py", line 182, in translate_token
+    return self.create_var(token)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 896, in create_var
+    return TemplateLiteral(self.template_parser.compile_filter(value), value)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 597, in compile_filter
+    return FilterExpression(token, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 698, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '(name='admin').exists' from 'user.groups.filter(name='admin').exists'
+ERROR 2024-12-28 07:50:09,542 basehttp "GET /incident/ HTTP/1.1" 500 219021
+ERROR 2024-12-28 07:50:10,814 log Internal Server Error: /incident/
+Traceback (most recent call last):
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\smartif.py", line 180, in translate_token
+    op = OPERATORS[token]
+         ~~~~~~~~~^^^^^^^
+KeyError: "user.groups.filter(name='admin').exists"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\OneDrive\Desktop\DHT11project-master\DHT11project-master\DHT\views.py", line 201, in incident
+    return render(request, 'incident.html', {
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 134, in render
+    compiled_parent = self.get_parent(context)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 131, in get_parent
+    return self.find_template(parent, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 109, in find_template
+    template, origin = context.template.engine.find_template(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 960, in do_if
+    condition = TemplateIfParser(parser, bits).parse()
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 893, in __init__
+    super().__init__(*args, **kwargs)
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\smartif.py", line 171, in __init__
+    mapped_tokens.append(self.translate_token(token))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\smartif.py", line 182, in translate_token
+    return self.create_var(token)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 896, in create_var
+    return TemplateLiteral(self.template_parser.compile_filter(value), value)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 597, in compile_filter
+    return FilterExpression(token, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 698, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '(name='admin').exists' from 'user.groups.filter(name='admin').exists'
+ERROR 2024-12-28 07:50:10,875 basehttp "GET /incident/ HTTP/1.1" 500 219021
+INFO 2024-12-28 07:50:37,560 basehttp "GET /incident/ HTTP/1.1" 200 3599
+WARNING 2024-12-28 07:50:48,514 log Not Found: /dHT/testjnhng
+WARNING 2024-12-28 07:50:48,526 basehttp "GET /dHT/testjnhng HTTP/1.1" 404 5450
+WARNING 2024-12-28 07:50:58,938 log Not Found: /dHT/dashboard
+WARNING 2024-12-28 07:50:58,940 basehttp "GET /dHT/dashboard HTTP/1.1" 404 5450
+INFO 2024-12-28 07:51:07,484 basehttp "GET /dashboard HTTP/1.1" 301 0
+INFO 2024-12-28 07:51:07,602 basehttp "GET /dashboard/ HTTP/1.1" 200 7892
+INFO 2024-12-28 07:51:21,749 basehttp "GET /dashboard/ HTTP/1.1" 200 7892
+ERROR 2024-12-28 07:51:49,415 log Internal Server Error: /dashboard/
+Traceback (most recent call last):
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\smartif.py", line 180, in translate_token
+    op = OPERATORS[token]
+         ~~~~~~~~~^^^^^^^
+KeyError: "user.groups.filter(name='admin').exists"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\OneDrive\Desktop\DHT11project-master\DHT11project-master\DHT\views.py", line 343, in dashboard
+    return render(request, 'dashboard.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 134, in render
+    compiled_parent = self.get_parent(context)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 131, in get_parent
+    return self.find_template(parent, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 109, in find_template
+    template, origin = context.template.engine.find_template(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 960, in do_if
+    condition = TemplateIfParser(parser, bits).parse()
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 893, in __init__
+    super().__init__(*args, **kwargs)
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\smartif.py", line 171, in __init__
+    mapped_tokens.append(self.translate_token(token))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\smartif.py", line 182, in translate_token
+    return self.create_var(token)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 896, in create_var
+    return TemplateLiteral(self.template_parser.compile_filter(value), value)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 597, in compile_filter
+    return FilterExpression(token, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 698, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '(name='admin').exists' from 'user.groups.filter(name='admin').exists'
+ERROR 2024-12-28 07:51:49,435 basehttp "GET /dashboard/ HTTP/1.1" 500 230706
+INFO 2024-12-28 07:52:07,296 basehttp "GET /dashboard/ HTTP/1.1" 200 7892
+ERROR 2024-12-28 07:52:23,388 log Internal Server Error: /dashboard/
+Traceback (most recent call last):
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\smartif.py", line 180, in translate_token
+    op = OPERATORS[token]
+         ~~~~~~~~~^^^^^^^
+KeyError: "user.groups.filter(name='admin').exists"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\OneDrive\Desktop\DHT11project-master\DHT11project-master\DHT\views.py", line 343, in dashboard
+    return render(request, 'dashboard.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 134, in render
+    compiled_parent = self.get_parent(context)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 131, in get_parent
+    return self.find_template(parent, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 109, in find_template
+    template, origin = context.template.engine.find_template(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 960, in do_if
+    condition = TemplateIfParser(parser, bits).parse()
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 893, in __init__
+    super().__init__(*args, **kwargs)
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\smartif.py", line 171, in __init__
+    mapped_tokens.append(self.translate_token(token))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\smartif.py", line 182, in translate_token
+    return self.create_var(token)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 896, in create_var
+    return TemplateLiteral(self.template_parser.compile_filter(value), value)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 597, in compile_filter
+    return FilterExpression(token, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 698, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '(name='admin').exists' from 'user.groups.filter(name='admin').exists'
+ERROR 2024-12-28 07:52:23,396 basehttp "GET /dashboard/ HTTP/1.1" 500 230690
+INFO 2024-12-28 07:52:30,150 basehttp "GET /dashboard/ HTTP/1.1" 200 7892
+INFO 2024-12-28 07:52:50,458 basehttp "GET /incident/ HTTP/1.1" 200 3599
+INFO 2024-12-28 07:52:56,977 basehttp "GET /table/ HTTP/1.1" 200 108514
+INFO 2024-12-28 07:52:58,337 basehttp "GET /myChartTemp/ HTTP/1.1" 200 7485
+INFO 2024-12-28 07:52:58,479 basehttp "GET /chart-data/ HTTP/1.1" 200 27457
+INFO 2024-12-28 07:52:59,766 basehttp "GET /table/ HTTP/1.1" 200 108514
+INFO 2024-12-28 07:53:00,474 basehttp "GET /logout/ HTTP/1.1" 302 0
+INFO 2024-12-28 07:53:00,539 basehttp "GET / HTTP/1.1" 200 2316
+INFO 2024-12-28 07:53:01,388 basehttp "GET /table/ HTTP/1.1" 302 0
+INFO 2024-12-28 07:53:01,424 basehttp "GET /login/?next=/table/ HTTP/1.1" 200 1662
+WARNING 2024-12-28 07:53:01,500 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1801
+INFO 2024-12-28 07:53:47,105 basehttp "GET /myChartHum/ HTTP/1.1" 302 0
+INFO 2024-12-28 07:53:47,105 basehttp "GET /login/?next=/myChartHum/ HTTP/1.1" 200 1662
+WARNING 2024-12-28 07:53:47,156 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1801
+INFO 2024-12-28 07:54:02,865 basehttp "POST /login/?next=/myChartHum/ HTTP/1.1" 302 0
+INFO 2024-12-28 07:54:02,897 basehttp "GET /myChartHum/ HTTP/1.1" 200 7821
+INFO 2024-12-28 07:54:03,068 basehttp "GET /chart-data/ HTTP/1.1" 200 27457
+WARNING 2024-12-28 07:54:14,240 log Not Found: /DHT/test
+WARNING 2024-12-28 07:54:14,254 basehttp "GET /DHT/test HTTP/1.1" 404 5435
+WARNING 2024-12-28 07:54:18,037 log Not Found: /DHT
+WARNING 2024-12-28 07:54:18,037 basehttp "GET /DHT HTTP/1.1" 404 5420
+INFO 2024-12-28 07:54:24,342 basehttp "GET /dashboard/ HTTP/1.1" 302 0
+INFO 2024-12-28 07:54:24,362 basehttp "GET /login/?next=/dashboard/ HTTP/1.1" 200 1952
+WARNING 2024-12-28 07:54:24,419 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1801
+WARNING 2024-12-28 07:54:47,739 log Forbidden: /register/
+WARNING 2024-12-28 07:54:47,747 basehttp "GET /register/ HTTP/1.1" 403 55
+INFO 2024-12-28 07:54:50,804 basehttp "GET /login/?next=/dashboard/ HTTP/1.1" 200 1952
+INFO 2024-12-28 07:55:13,932 basehttp "GET /table/ HTTP/1.1" 200 108514
+INFO 2024-12-28 07:55:24,660 basehttp "GET /incident/ HTTP/1.1" 200 3599
+INFO 2024-12-28 07:56:17,587 basehttp "GET /incident/ HTTP/1.1" 200 3599
+INFO 2024-12-28 07:56:25,736 basehttp "GET /myChartHum/ HTTP/1.1" 200 7821
+INFO 2024-12-28 07:56:25,838 basehttp "GET /chart-data/ HTTP/1.1" 200 27457
+INFO 2024-12-28 07:56:26,492 basehttp "GET /myChartTemp/ HTTP/1.1" 200 7485
+INFO 2024-12-28 07:56:26,551 basehttp "GET /chart-data/ HTTP/1.1" 200 27457
+INFO 2024-12-28 07:56:27,260 basehttp "GET /table/ HTTP/1.1" 200 108514
+INFO 2024-12-28 07:56:28,076 basehttp "GET /myChartTemp/ HTTP/1.1" 200 7485
+INFO 2024-12-28 07:56:28,199 basehttp "GET /chart-data/ HTTP/1.1" 200 27457
+INFO 2024-12-28 07:56:29,171 basehttp "GET /myChartHum/ HTTP/1.1" 200 7821
+INFO 2024-12-28 07:56:29,232 basehttp "GET /chart-data/ HTTP/1.1" 200 27457
+INFO 2024-12-28 07:56:33,968 basehttp "GET /api/post HTTP/1.1" 200 117214
+INFO 2024-12-28 07:56:36,561 basehttp "GET /incident/ HTTP/1.1" 200 3599
+INFO 2024-12-28 12:43:02,836 autoreload Watching for file changes with StatReloader
+INFO 2024-12-28 12:43:07,468 basehttp "GET / HTTP/1.1" 200 2316
+WARNING 2024-12-28 12:43:07,711 log Not Found: /favicon.ico
+WARNING 2024-12-28 12:43:07,711 basehttp "GET /favicon.ico HTTP/1.1" 404 5444
+INFO 2024-12-28 12:43:17,965 basehttp "GET /login/ HTTP/1.1" 200 1952
+WARNING 2024-12-28 12:43:18,007 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1801
+INFO 2024-12-28 12:43:21,101 basehttp "GET /table/ HTTP/1.1" 200 108514
+INFO 2024-12-28 12:43:23,735 basehttp "GET /incident/ HTTP/1.1" 200 3599
+INFO 2024-12-28 12:43:23,761 basehttp "GET /static/images/green_flag.png HTTP/1.1" 304 0
+INFO 2024-12-28 12:43:25,564 basehttp "GET /log_incident/ HTTP/1.1" 200 13569
+INFO 2024-12-28 12:45:15,567 basehttp "GET /dashboard/ HTTP/1.1" 302 0
+INFO 2024-12-28 12:45:15,588 basehttp "GET /login/?next=/dashboard/ HTTP/1.1" 200 1952
+WARNING 2024-12-28 12:45:15,667 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1801
+INFO 2024-12-28 12:45:38,800 basehttp "GET /logout/ HTTP/1.1" 302 0
+INFO 2024-12-28 12:45:38,813 basehttp "GET / HTTP/1.1" 200 2316
+INFO 2024-12-28 12:45:40,003 basehttp "GET /table/ HTTP/1.1" 302 0
+INFO 2024-12-28 12:45:40,033 basehttp "GET /login/?next=/table/ HTTP/1.1" 200 1662
+WARNING 2024-12-28 12:45:40,106 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1801
+INFO 2024-12-28 12:45:49,412 basehttp "POST /login/?next=/table/ HTTP/1.1" 302 0
+INFO 2024-12-28 12:45:49,496 basehttp "GET /table/ HTTP/1.1" 200 108514
+INFO 2024-12-28 12:45:57,639 basehttp "GET /dashboard/ HTTP/1.1" 200 7892
+ERROR 2024-12-28 12:49:37,970 log Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\OneDrive\Desktop\DHT11project-master\DHT11project-master\DHT\views.py", line 14, in home
+    return render(request, 'home.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'index' not found. 'index' is not a valid view function or pattern name.
+ERROR 2024-12-28 12:49:37,985 basehttp "GET / HTTP/1.1" 500 115326
+INFO 2024-12-28 12:49:52,594 basehttp "GET /incident/ HTTP/1.1" 200 3599
+INFO 2024-12-28 12:49:54,525 basehttp "GET /index/ HTTP/1.1" 200 5268
+INFO 2024-12-28 12:50:04,663 basehttp - Broken pipe from ('127.0.0.1', 62671)
+INFO 2024-12-28 12:50:04,720 basehttp "GET /index/ HTTP/1.1" 200 5268
+ERROR 2024-12-28 12:50:09,162 log Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\OneDrive\Desktop\DHT11project-master\DHT11project-master\DHT\views.py", line 14, in home
+    return render(request, 'home.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'index' not found. 'index' is not a valid view function or pattern name.
+ERROR 2024-12-28 12:50:09,171 basehttp "GET / HTTP/1.1" 500 115165
+ERROR 2024-12-28 12:50:31,278 log Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\OneDrive\Desktop\DHT11project-master\DHT11project-master\DHT\views.py", line 14, in home
+    return render(request, 'home.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'index' not found. 'index' is not a valid view function or pattern name.
+ERROR 2024-12-28 12:50:31,278 basehttp "GET / HTTP/1.1" 500 115302
+ERROR 2024-12-28 12:50:32,226 log Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\OneDrive\Desktop\DHT11project-master\DHT11project-master\DHT\views.py", line 14, in home
+    return render(request, 'home.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'index' not found. 'index' is not a valid view function or pattern name.
+ERROR 2024-12-28 12:50:32,226 basehttp "GET / HTTP/1.1" 500 115302
+ERROR 2024-12-28 12:50:32,829 log Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\OneDrive\Desktop\DHT11project-master\DHT11project-master\DHT\views.py", line 14, in home
+    return render(request, 'home.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'index' not found. 'index' is not a valid view function or pattern name.
+ERROR 2024-12-28 12:50:32,829 basehttp "GET / HTTP/1.1" 500 115302
+ERROR 2024-12-28 12:50:32,967 log Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\OneDrive\Desktop\DHT11project-master\DHT11project-master\DHT\views.py", line 14, in home
+    return render(request, 'home.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'index' not found. 'index' is not a valid view function or pattern name.
+ERROR 2024-12-28 12:50:32,967 basehttp "GET / HTTP/1.1" 500 115302
+ERROR 2024-12-28 12:50:33,315 log Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\OneDrive\Desktop\DHT11project-master\DHT11project-master\DHT\views.py", line 14, in home
+    return render(request, 'home.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'index' not found. 'index' is not a valid view function or pattern name.
+ERROR 2024-12-28 12:50:33,343 basehttp "GET / HTTP/1.1" 500 115302
+INFO 2024-12-28 12:50:44,712 basehttp "GET / HTTP/1.1" 200 2316
+ERROR 2024-12-28 12:52:02,879 log Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\OneDrive\Desktop\DHT11project-master\DHT11project-master\DHT\views.py", line 14, in home
+    return render(request, 'home.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for '/index' not found. '/index' is not a valid view function or pattern name.
+ERROR 2024-12-28 12:52:02,879 basehttp "GET / HTTP/1.1" 500 115326
+ERROR 2024-12-28 12:52:22,780 log Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\OneDrive\Desktop\DHT11project-master\DHT11project-master\DHT\views.py", line 14, in home
+    return render(request, 'home.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'index/' not found. 'index/' is not a valid view function or pattern name.
+ERROR 2024-12-28 12:52:22,786 basehttp "GET / HTTP/1.1" 500 115326
+ERROR 2024-12-28 12:52:23,770 log Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\OneDrive\Desktop\DHT11project-master\DHT11project-master\DHT\views.py", line 14, in home
+    return render(request, 'home.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'index/' not found. 'index/' is not a valid view function or pattern name.
+ERROR 2024-12-28 12:52:23,770 basehttp "GET / HTTP/1.1" 500 115326
+INFO 2024-12-28 12:53:06,169 basehttp "GET / HTTP/1.1" 200 2316
+INFO 2024-12-28 12:53:07,990 basehttp "GET /index/ HTTP/1.1" 200 5268
+INFO 2024-12-28 12:53:18,053 basehttp - Broken pipe from ('127.0.0.1', 34804)
+INFO 2024-12-28 12:53:18,065 basehttp "GET /index/ HTTP/1.1" 200 5268
+INFO 2024-12-28 12:53:18,950 basehttp "GET /incident/ HTTP/1.1" 200 3599
+INFO 2024-12-28 12:56:43,838 basehttp "GET /log_incident/ HTTP/1.1" 200 13569
+INFO 2024-12-28 13:00:18,400 basehttp "GET /log_incident/ HTTP/1.1" 200 13569
+INFO 2024-12-28 15:25:59,789 autoreload Watching for file changes with StatReloader
+INFO 2024-12-28 15:26:03,310 basehttp "GET / HTTP/1.1" 200 2316
+WARNING 2024-12-28 15:26:03,458 log Not Found: /favicon.ico
+WARNING 2024-12-28 15:26:03,459 basehttp "GET /favicon.ico HTTP/1.1" 404 5444
+INFO 2024-12-28 15:26:04,752 basehttp "GET /index/ HTTP/1.1" 200 5268
+INFO 2024-12-28 15:26:06,725 basehttp "GET /logout/ HTTP/1.1" 302 0
+INFO 2024-12-28 15:26:06,732 basehttp "GET / HTTP/1.1" 200 2316
+INFO 2024-12-28 15:26:09,654 basehttp "GET /index/ HTTP/1.1" 302 0
+INFO 2024-12-28 15:26:09,714 basehttp "GET /login/?next=/index/ HTTP/1.1" 200 1662
+WARNING 2024-12-28 15:26:09,770 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1801
+INFO 2024-12-28 15:26:21,172 basehttp "POST /login/?next=/index/ HTTP/1.1" 302 0
+INFO 2024-12-28 15:26:21,190 basehttp "GET /index/ HTTP/1.1" 200 5268
+INFO 2024-12-28 15:26:25,787 basehttp "GET /incident/ HTTP/1.1" 200 3599
+INFO 2024-12-28 15:26:28,292 basehttp "GET /index/ HTTP/1.1" 200 5268
+INFO 2024-12-28 15:26:28,994 basehttp "GET /incident/ HTTP/1.1" 200 3599
+INFO 2024-12-28 15:26:37,940 basehttp "GET /log_incident/ HTTP/1.1" 200 13569
+INFO 2024-12-28 15:26:51,730 basehttp "GET /log_incident/?filter=annee HTTP/1.1" 200 13569
+INFO 2024-12-28 15:26:52,504 basehttp "GET /log_incident/?filter=mois HTTP/1.1" 200 13569
+INFO 2024-12-28 15:26:53,026 basehttp "GET /log_incident/?filter=semaine HTTP/1.1" 200 13569
+INFO 2024-12-28 15:26:54,052 basehttp "GET /log_incident/?filter=jour HTTP/1.1" 200 7822
+INFO 2024-12-28 15:26:58,765 basehttp "GET /log_incident/?filter=semaine HTTP/1.1" 200 13569
+WARNING 2024-12-28 15:27:12,463 log Not Found: /log
+WARNING 2024-12-28 15:27:12,465 basehttp "GET /log HTTP/1.1" 404 5420
+INFO 2024-12-28 15:27:32,038 basehttp "GET / HTTP/1.1" 200 2316
+INFO 2024-12-28 15:27:34,686 basehttp "GET /index/ HTTP/1.1" 200 5268
+INFO 2024-12-28 15:27:36,564 basehttp "GET /incident/ HTTP/1.1" 200 3599
+INFO 2024-12-28 15:27:38,677 basehttp "GET /api/post HTTP/1.1" 200 117214
+INFO 2024-12-28 15:27:42,874 basehttp "GET /api/post HTTP/1.1" 200 117214
+INFO 2024-12-28 15:36:11,592 basehttp "GET /log_incident/?filter=jour HTTP/1.1" 200 7822
+INFO 2024-12-28 15:36:13,354 basehttp "GET /log_incident/?filter=semaine HTTP/1.1" 200 13569
+INFO 2024-12-28 15:36:16,850 basehttp "GET /myChartHum/ HTTP/1.1" 200 7821
+INFO 2024-12-28 15:36:16,925 basehttp "GET /chart-data/ HTTP/1.1" 200 27457
+INFO 2024-12-28 15:36:18,328 basehttp "GET /api/post HTTP/1.1" 200 117214
+INFO 2024-12-28 15:36:21,085 basehttp "GET /myChartTemp/ HTTP/1.1" 200 7485
+INFO 2024-12-28 15:36:21,181 basehttp "GET /chart-data/ HTTP/1.1" 200 27457
+INFO 2024-12-28 15:36:23,449 basehttp "GET /myChartHum/ HTTP/1.1" 200 7821
+INFO 2024-12-28 15:36:23,525 basehttp "GET /chart-data/ HTTP/1.1" 200 27457
+INFO 2024-12-28 15:36:24,337 basehttp "GET /myChartTemp/ HTTP/1.1" 200 7485
+INFO 2024-12-28 15:36:24,403 basehttp "GET /chart-data/ HTTP/1.1" 200 27457
+INFO 2024-12-28 15:39:42,970 basehttp "GET /myChartTemp/ HTTP/1.1" 200 7485
+INFO 2024-12-28 15:39:43,059 basehttp "GET /chart-data/ HTTP/1.1" 200 27457
+INFO 2024-12-28 15:39:44,255 basehttp "GET /myChartHum/ HTTP/1.1" 200 7821
+INFO 2024-12-28 15:39:44,320 basehttp "GET /chart-data/ HTTP/1.1" 200 27457
+INFO 2024-12-28 15:55:37,894 basehttp "GET / HTTP/1.1" 200 2316
+INFO 2024-12-28 15:55:39,228 basehttp "GET /index/ HTTP/1.1" 200 5268
+INFO 2024-12-28 18:26:43,087 autoreload Watching for file changes with StatReloader
+INFO 2024-12-28 18:26:47,560 basehttp "GET / HTTP/1.1" 200 2316
+INFO 2024-12-28 18:26:49,118 basehttp "GET /index/ HTTP/1.1" 200 5269
+INFO 2024-12-28 18:26:50,956 basehttp "GET /incident/ HTTP/1.1" 200 3599
+INFO 2024-12-28 18:27:03,114 basehttp "GET /log_incident/ HTTP/1.1" 200 13569
+INFO 2024-12-28 18:27:29,893 basehttp "GET /api/post HTTP/1.1" 200 117214
+INFO 2024-12-28 18:27:45,553 basehttp "OPTIONS /api/post HTTP/1.1" 200 7507
+INFO 2024-12-28 18:27:54,827 alerts Alerte Telegram envoyée.
+ERROR 2024-12-28 18:27:56,937 alerts Erreur lors de l'envoi de l'alerte WhatsApp : 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/None/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: Authentication Error - invalid username[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/20003[0m
+
+
+INFO 2024-12-28 18:27:59,671 alerts Alerte e-mail envoyée avec succès.
+INFO 2024-12-28 18:27:59,735 basehttp "POST /api/post HTTP/1.1" 200 7060
+INFO 2024-12-28 18:28:14,407 basehttp "POST /api/post HTTP/1.1" 200 7060
+INFO 2024-12-28 18:28:27,377 basehttp "GET /log_incident/ HTTP/1.1" 200 14522
+INFO 2024-12-28 18:28:29,332 basehttp "GET /log_incident/ HTTP/1.1" 200 14522
+INFO 2024-12-28 18:28:50,767 alerts Alerte Telegram envoyée.
+ERROR 2024-12-28 18:28:51,114 alerts Erreur lors de l'envoi de l'alerte WhatsApp : 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/None/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: Authentication Error - invalid username[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/20003[0m
+
+
+INFO 2024-12-28 18:28:53,386 alerts Alerte e-mail envoyée avec succès.
+INFO 2024-12-28 18:28:53,438 basehttp "POST /api/post HTTP/1.1" 200 7060
+INFO 2024-12-28 18:28:57,760 alerts Alerte Telegram envoyée.
+ERROR 2024-12-28 18:28:58,404 alerts Erreur lors de l'envoi de l'alerte WhatsApp : 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/None/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: Authentication Error - invalid username[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/20003[0m
+
+
+INFO 2024-12-28 18:29:01,181 alerts Alerte e-mail envoyée avec succès.
+INFO 2024-12-28 18:29:01,237 basehttp "POST /api/post HTTP/1.1" 200 7060
+INFO 2024-12-28 18:29:19,534 alerts Alerte Telegram envoyée.
+ERROR 2024-12-28 18:29:19,828 alerts Erreur lors de l'envoi de l'alerte WhatsApp : 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/None/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: Authentication Error - invalid username[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/20003[0m
+
+
+INFO 2024-12-28 18:29:21,826 alerts Alerte e-mail envoyée avec succès.
+INFO 2024-12-28 18:29:21,954 alerts Alerte Telegram envoyée.
+ERROR 2024-12-28 18:29:22,327 alerts Erreur lors de l'envoi de l'alerte WhatsApp : 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/None/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: Authentication Error - invalid username[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/20003[0m
+
+
+INFO 2024-12-28 18:29:24,224 alerts Alerte e-mail envoyée avec succès.
+INFO 2024-12-28 18:29:24,250 basehttp "POST /api/post HTTP/1.1" 200 7060
+INFO 2024-12-28 18:29:40,455 alerts Alerte Telegram envoyée.
+ERROR 2024-12-28 18:29:40,831 alerts Erreur lors de l'envoi de l'alerte WhatsApp : 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/None/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: Authentication Error - invalid username[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/20003[0m
+
+
+INFO 2024-12-28 18:29:42,749 alerts Alerte e-mail envoyée avec succès.
+INFO 2024-12-28 18:29:42,910 alerts Alerte Telegram envoyée.
+ERROR 2024-12-28 18:29:43,198 alerts Erreur lors de l'envoi de l'alerte WhatsApp : 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/None/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: Authentication Error - invalid username[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/20003[0m
+
+
+INFO 2024-12-28 18:29:45,348 alerts Alerte e-mail envoyée avec succès.
+INFO 2024-12-28 18:29:45,476 alerts Alerte Telegram envoyée.
+ERROR 2024-12-28 18:29:45,893 alerts Erreur lors de l'envoi de l'alerte WhatsApp : 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/None/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: Authentication Error - invalid username[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/20003[0m
+
+
+INFO 2024-12-28 18:29:47,831 alerts Alerte e-mail envoyée avec succès.
+INFO 2024-12-28 18:29:47,858 basehttp "POST /api/post HTTP/1.1" 200 7060
+INFO 2024-12-28 18:29:58,194 alerts Alerte Telegram envoyée.
+ERROR 2024-12-28 18:29:59,306 alerts Erreur lors de l'envoi de l'alerte WhatsApp : 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/None/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: Authentication Error - invalid username[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/20003[0m
+
+
+INFO 2024-12-28 18:30:06,313 alerts Alerte e-mail envoyée avec succès.
+INFO 2024-12-28 18:30:06,835 alerts Alerte Telegram envoyée.
+ERROR 2024-12-28 18:30:11,398 alerts Erreur lors de l'envoi de l'alerte WhatsApp : 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/None/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: Authentication Error - invalid username[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/20003[0m
+
+
+INFO 2024-12-28 18:30:16,920 alerts Alerte e-mail envoyée avec succès.
+INFO 2024-12-28 18:30:17,049 alerts Alerte Telegram envoyée.
+ERROR 2024-12-28 18:30:17,539 alerts Erreur lors de l'envoi de l'alerte WhatsApp : 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/None/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: Authentication Error - invalid username[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/20003[0m
+
+
+INFO 2024-12-28 18:30:21,261 alerts Alerte e-mail envoyée avec succès.
+INFO 2024-12-28 18:30:21,438 alerts Alerte Telegram envoyée.
+ERROR 2024-12-28 18:30:24,017 alerts Erreur lors de l'envoi de l'alerte WhatsApp : 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/None/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: Authentication Error - invalid username[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/20003[0m
+
+
+INFO 2024-12-28 18:30:26,848 alerts Alerte e-mail envoyée avec succès.
+INFO 2024-12-28 18:30:26,874 basehttp "POST /api/post HTTP/1.1" 200 7060
+INFO 2024-12-28 18:38:10,310 autoreload C:\Users\aabde\OneDrive\Desktop\DHT11project-master\DHT11project-master\DHT\api.py changed, reloading.
+INFO 2024-12-28 18:38:11,256 autoreload Watching for file changes with StatReloader
+INFO 2024-12-28 18:38:20,342 basehttp "POST /api/post HTTP/1.1" 200 7060
+INFO 2024-12-28 18:38:22,790 basehttp "GET /log_incident/ HTTP/1.1" 200 15475
+INFO 2024-12-28 18:38:24,427 basehttp "GET /index/ HTTP/1.1" 200 5265
+INFO 2024-12-28 18:38:26,083 basehttp "GET /index/ HTTP/1.1" 200 5265
+INFO 2024-12-28 18:38:36,169 basehttp - Broken pipe from ('127.0.0.1', 6468)
+INFO 2024-12-28 18:38:36,185 basehttp "GET /index/ HTTP/1.1" 200 5265
+INFO 2024-12-28 18:38:46,664 basehttp - Broken pipe from ('127.0.0.1', 14400)
+INFO 2024-12-28 18:38:46,676 basehttp "GET /index/ HTTP/1.1" 200 5265
+INFO 2024-12-28 18:38:57,668 basehttp "GET /index/ HTTP/1.1" 200 5265
+INFO 2024-12-28 18:38:57,719 basehttp "GET /index/ HTTP/1.1" 200 5265
+INFO 2024-12-28 18:39:08,675 basehttp "GET /index/ HTTP/1.1" 200 5265
+INFO 2024-12-28 18:39:08,719 basehttp "GET /index/ HTTP/1.1" 200 5265
+INFO 2024-12-28 18:39:19,685 basehttp "GET /index/ HTTP/1.1" 200 5265
+INFO 2024-12-28 18:39:19,717 basehttp "GET /index/ HTTP/1.1" 200 5265
+INFO 2024-12-28 18:39:30,669 basehttp "GET /index/ HTTP/1.1" 200 5265
+INFO 2024-12-28 18:39:30,754 basehttp "GET /index/ HTTP/1.1" 200 5265
+INFO 2024-12-28 18:39:41,650 basehttp "GET /index/ HTTP/1.1" 200 5265
+INFO 2024-12-28 18:39:41,730 basehttp "GET /index/ HTTP/1.1" 200 5265
+INFO 2024-12-28 18:39:52,673 basehttp "GET /index/ HTTP/1.1" 200 5265
+INFO 2024-12-28 18:39:52,747 basehttp "GET /index/ HTTP/1.1" 200 5265
+INFO 2024-12-28 18:40:03,630 basehttp "GET /index/ HTTP/1.1" 200 5265
+INFO 2024-12-28 18:40:03,747 basehttp "GET /index/ HTTP/1.1" 200 5265
+INFO 2024-12-28 18:40:14,674 basehttp "GET /index/ HTTP/1.1" 200 5265
+INFO 2024-12-28 18:40:14,722 basehttp "GET /index/ HTTP/1.1" 200 5265
+INFO 2024-12-28 18:40:25,644 basehttp "GET /index/ HTTP/1.1" 200 5265
+INFO 2024-12-28 18:40:25,692 basehttp "GET /index/ HTTP/1.1" 200 5265
+INFO 2024-12-28 18:40:36,662 basehttp "GET /index/ HTTP/1.1" 200 5265
+INFO 2024-12-28 18:40:36,705 basehttp "GET /index/ HTTP/1.1" 200 5265
+INFO 2024-12-28 18:40:47,669 basehttp "GET /index/ HTTP/1.1" 200 5265
+INFO 2024-12-28 18:40:47,710 basehttp "GET /index/ HTTP/1.1" 200 5265
+INFO 2024-12-28 18:40:58,646 basehttp "GET /index/ HTTP/1.1" 200 5265
+INFO 2024-12-28 18:40:58,697 basehttp "GET /index/ HTTP/1.1" 200 5265
+INFO 2024-12-28 18:41:09,652 basehttp "GET /index/ HTTP/1.1" 200 5265
+INFO 2024-12-28 18:41:09,709 basehttp "GET /index/ HTTP/1.1" 200 5265
+INFO 2024-12-28 18:41:20,675 basehttp - Broken pipe from ('127.0.0.1', 34863)
+INFO 2024-12-28 18:41:20,734 basehttp "GET /index/ HTTP/1.1" 200 5265
+INFO 2024-12-28 18:41:31,671 basehttp "GET /index/ HTTP/1.1" 200 5265
+INFO 2024-12-28 18:41:31,781 basehttp "GET /index/ HTTP/1.1" 200 5265
+INFO 2024-12-28 18:41:42,711 basehttp "GET /index/ HTTP/1.1" 200 5265
+INFO 2024-12-28 18:41:53,606 basehttp "GET /index/ HTTP/1.1" 200 5265
+INFO 2024-12-28 18:41:53,658 basehttp "GET /index/ HTTP/1.1" 200 5265
+INFO 2024-12-28 18:42:04,687 basehttp "GET /index/ HTTP/1.1" 200 5265
+INFO 2024-12-28 18:42:04,735 basehttp "GET /index/ HTTP/1.1" 200 5265
+INFO 2024-12-28 18:42:15,658 basehttp "GET /index/ HTTP/1.1" 200 5265
+INFO 2024-12-28 18:42:15,688 basehttp "GET /index/ HTTP/1.1" 200 5265
+INFO 2024-12-28 18:42:26,646 basehttp "GET /index/ HTTP/1.1" 200 5265
+INFO 2024-12-28 18:42:26,726 basehttp "GET /index/ HTTP/1.1" 200 5265
+INFO 2024-12-28 18:42:35,615 autoreload C:\Users\aabde\OneDrive\Desktop\DHT11project-master\DHT11project-master\DHT\api.py changed, reloading.
+INFO 2024-12-28 18:42:36,368 autoreload Watching for file changes with StatReloader
+INFO 2024-12-28 18:42:37,639 basehttp "GET /index/ HTTP/1.1" 200 5265
+INFO 2024-12-28 18:42:37,639 basehttp - Broken pipe from ('127.0.0.1', 35823)
+INFO 2024-12-28 18:42:48,661 basehttp - Broken pipe from ('127.0.0.1', 7518)
+INFO 2024-12-28 18:42:48,681 basehttp "GET /index/ HTTP/1.1" 200 5265
+INFO 2024-12-28 18:42:59,671 basehttp - Broken pipe from ('127.0.0.1', 28133)
+INFO 2024-12-28 18:42:59,688 basehttp "GET /index/ HTTP/1.1" 200 5265
+INFO 2024-12-28 18:43:10,652 basehttp - Broken pipe from ('127.0.0.1', 20767)
+INFO 2024-12-28 18:43:10,679 basehttp "GET /index/ HTTP/1.1" 200 5265
+INFO 2024-12-28 18:43:21,652 basehttp - Broken pipe from ('127.0.0.1', 35378)
+INFO 2024-12-28 18:43:21,699 basehttp "GET /index/ HTTP/1.1" 200 5265
+INFO 2024-12-28 18:43:31,949 autoreload C:\Users\aabde\OneDrive\Desktop\DHT11project-master\DHT11project-master\DHT\api.py changed, reloading.
+INFO 2024-12-28 18:43:32,625 autoreload Watching for file changes with StatReloader
+INFO 2024-12-28 18:43:33,740 basehttp "GET /index/ HTTP/1.1" 200 5265
+INFO 2024-12-28 18:43:41,639 basehttp "GET /api/post HTTP/1.1" 200 118622
+INFO 2024-12-28 18:43:44,403 basehttp "OPTIONS /api/post HTTP/1.1" 200 7507
+INFO 2024-12-28 18:43:49,778 basehttp "OPTIONS /api/post HTTP/1.1" 200 7507
+INFO 2024-12-28 18:43:51,408 basehttp "GET /api/post HTTP/1.1" 200 118622
+INFO 2024-12-28 18:43:56,333 basehttp "OPTIONS /api/post HTTP/1.1" 200 7507
+ERROR 2024-12-28 18:44:15,518 log Internal Server Error: /api/post
+Traceback (most recent call last):
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\OneDrive\Desktop\DHT11project-master\DHT11project-master\DHT\api.py", line 38, in Dlist
+    check_temperature_and_manage_incident(float(temp))
+  File "C:\Users\aabde\OneDrive\Desktop\DHT11project-master\DHT11project-master\DHT\api.py", line 73, in check_temperature_and_manage_incident
+    send_custom_alerts(new_incident, users_to_alert)
+  File "C:\Users\aabde\OneDrive\Desktop\DHT11project-master\DHT11project-master\DHT\api.py", line 125, in send_custom_alerts
+    f"(Incident #{incident.id}, itération {incident.iteration}, utilisateur : {user.name})."
+                                                                               ^^^^^^^^^
+AttributeError: 'User' object has no attribute 'name'
+ERROR 2024-12-28 18:44:15,571 basehttp "POST /api/post HTTP/1.1" 500 107953
+INFO 2024-12-28 18:44:38,018 autoreload C:\Users\aabde\OneDrive\Desktop\DHT11project-master\DHT11project-master\DHT\api.py changed, reloading.
+INFO 2024-12-28 18:44:38,668 autoreload Watching for file changes with StatReloader
+INFO 2024-12-28 18:44:39,463 basehttp "GET /api/post HTTP/1.1" 200 118792
+INFO 2024-12-28 18:44:48,176 basehttp "OPTIONS /api/post HTTP/1.1" 200 7507
+INFO 2024-12-28 18:44:58,432 basehttp "GET / HTTP/1.1" 200 2316
+INFO 2024-12-28 18:44:59,532 basehttp "GET /index/ HTTP/1.1" 200 5259
+INFO 2024-12-28 18:45:01,191 basehttp "GET /myChartHum/ HTTP/1.1" 200 7821
+INFO 2024-12-28 18:45:01,392 basehttp "GET /chart-data/ HTTP/1.1" 200 27874
+INFO 2024-12-28 18:45:02,328 basehttp "GET /incident/ HTTP/1.1" 200 4328
+INFO 2024-12-28 18:45:02,376 basehttp "GET /static/images/red_flag.png HTTP/1.1" 304 0
+INFO 2024-12-28 18:45:04,129 basehttp "GET /log_incident/ HTTP/1.1" 200 16441
+INFO 2024-12-28 18:45:10,852 alerts Alerte Telegram envoyée.
+ERROR 2024-12-28 18:45:13,496 alerts Erreur lors de l'envoi de l'alerte WhatsApp : 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/None/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: Authentication Error - invalid username[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/20003[0m
+
+
+INFO 2024-12-28 18:45:16,570 alerts Alerte e-mail envoyée avec succès.
+INFO 2024-12-28 18:45:16,613 basehttp "POST /api/post HTTP/1.1" 200 7060
+INFO 2024-12-28 18:45:38,241 basehttp "POST /api/post HTTP/1.1" 200 7060
+INFO 2024-12-28 18:45:52,072 alerts Alerte Telegram envoyée.
+ERROR 2024-12-28 18:45:53,188 alerts Erreur lors de l'envoi de l'alerte WhatsApp : 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/None/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: Authentication Error - invalid username[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/20003[0m
+
+
+INFO 2024-12-28 18:46:03,666 alerts Alerte e-mail envoyée avec succès.
+INFO 2024-12-28 18:46:03,714 basehttp "POST /api/post HTTP/1.1" 200 7060
+INFO 2024-12-28 18:46:15,207 alerts Alerte Telegram envoyée.
+ERROR 2024-12-28 18:46:15,866 alerts Erreur lors de l'envoi de l'alerte WhatsApp : 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/None/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: Authentication Error - invalid username[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/20003[0m
+
+
+INFO 2024-12-28 18:46:19,468 alerts Alerte e-mail envoyée avec succès.
+INFO 2024-12-28 18:46:19,504 basehttp "POST /api/post HTTP/1.1" 200 7060
+INFO 2024-12-28 18:46:37,502 alerts Alerte Telegram envoyée.
+ERROR 2024-12-28 18:46:37,921 alerts Erreur lors de l'envoi de l'alerte WhatsApp : 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/None/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: Authentication Error - invalid username[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/20003[0m
+
+
+INFO 2024-12-28 18:46:39,957 alerts Alerte e-mail envoyée avec succès.
+INFO 2024-12-28 18:46:40,118 alerts Alerte Telegram envoyée.
+ERROR 2024-12-28 18:46:40,453 alerts Erreur lors de l'envoi de l'alerte WhatsApp : 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/None/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: Authentication Error - invalid username[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/20003[0m
+
+
+INFO 2024-12-28 18:46:44,165 alerts Alerte e-mail envoyée avec succès.
+INFO 2024-12-28 18:46:44,188 basehttp "POST /api/post HTTP/1.1" 200 7060
+INFO 2024-12-28 18:46:48,763 alerts Alerte Telegram envoyée.
+ERROR 2024-12-28 18:46:49,491 alerts Erreur lors de l'envoi de l'alerte WhatsApp : 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/None/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: Authentication Error - invalid username[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/20003[0m
+
+
+INFO 2024-12-28 18:46:52,135 alerts Alerte e-mail envoyée avec succès.
+INFO 2024-12-28 18:46:52,294 alerts Alerte Telegram envoyée.
+ERROR 2024-12-28 18:46:52,568 alerts Erreur lors de l'envoi de l'alerte WhatsApp : 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/None/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: Authentication Error - invalid username[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/20003[0m
+
+
+INFO 2024-12-28 18:46:56,384 alerts Alerte e-mail envoyée avec succès.
+INFO 2024-12-28 18:46:56,562 alerts Alerte Telegram envoyée.
+ERROR 2024-12-28 18:46:57,009 alerts Erreur lors de l'envoi de l'alerte WhatsApp : 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/None/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: Authentication Error - invalid username[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/20003[0m
+
+
+INFO 2024-12-28 18:46:59,308 alerts Alerte e-mail envoyée avec succès.
+INFO 2024-12-28 18:46:59,348 basehttp "POST /api/post HTTP/1.1" 200 7060
+INFO 2024-12-28 18:47:03,583 alerts Alerte Telegram envoyée.
+ERROR 2024-12-28 18:47:03,949 alerts Erreur lors de l'envoi de l'alerte WhatsApp : 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/None/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: Authentication Error - invalid username[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/20003[0m
+
+
+INFO 2024-12-28 18:47:06,420 alerts Alerte e-mail envoyée avec succès.
+INFO 2024-12-28 18:47:06,593 alerts Alerte Telegram envoyée.
+ERROR 2024-12-28 18:47:06,917 alerts Erreur lors de l'envoi de l'alerte WhatsApp : 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/None/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: Authentication Error - invalid username[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/20003[0m
+
+
+INFO 2024-12-28 18:47:09,244 alerts Alerte e-mail envoyée avec succès.
+INFO 2024-12-28 18:47:09,524 alerts Alerte Telegram envoyée.
+ERROR 2024-12-28 18:47:09,922 alerts Erreur lors de l'envoi de l'alerte WhatsApp : 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/None/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: Authentication Error - invalid username[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/20003[0m
+
+
+INFO 2024-12-28 18:47:12,300 alerts Alerte e-mail envoyée avec succès.
+INFO 2024-12-28 18:47:12,490 alerts Alerte Telegram envoyée.
+ERROR 2024-12-28 18:47:12,943 alerts Erreur lors de l'envoi de l'alerte WhatsApp : 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/None/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: Authentication Error - invalid username[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/20003[0m
+
+
+INFO 2024-12-28 18:47:15,479 alerts Alerte e-mail envoyée avec succès.
+INFO 2024-12-28 18:47:15,508 basehttp "POST /api/post HTTP/1.1" 200 7060
+INFO 2024-12-28 18:47:25,433 alerts Alerte Telegram envoyée.
+ERROR 2024-12-28 18:47:26,084 alerts Erreur lors de l'envoi de l'alerte WhatsApp : 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/None/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: Authentication Error - invalid username[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/20003[0m
+
+
+INFO 2024-12-28 18:47:29,183 alerts Alerte e-mail envoyée avec succès.
+INFO 2024-12-28 18:47:29,295 alerts Alerte Telegram envoyée.
+ERROR 2024-12-28 18:47:29,587 alerts Erreur lors de l'envoi de l'alerte WhatsApp : 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/None/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: Authentication Error - invalid username[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/20003[0m
+
+
+INFO 2024-12-28 18:47:32,450 alerts Alerte e-mail envoyée avec succès.
+INFO 2024-12-28 18:47:32,570 alerts Alerte Telegram envoyée.
+ERROR 2024-12-28 18:47:32,874 alerts Erreur lors de l'envoi de l'alerte WhatsApp : 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/None/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: Authentication Error - invalid username[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/20003[0m
+
+
+INFO 2024-12-28 18:47:35,701 alerts Alerte e-mail envoyée avec succès.
+INFO 2024-12-28 18:47:35,845 alerts Alerte Telegram envoyée.
+ERROR 2024-12-28 18:47:36,134 alerts Erreur lors de l'envoi de l'alerte WhatsApp : 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/None/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: Authentication Error - invalid username[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/20003[0m
+
+
+INFO 2024-12-28 18:47:38,042 alerts Alerte e-mail envoyée avec succès.
+INFO 2024-12-28 18:47:38,106 basehttp "POST /api/post HTTP/1.1" 200 7060
+INFO 2024-12-28 18:52:50,774 autoreload C:\Users\aabde\OneDrive\Desktop\DHT11project-master\DHT11project-master\DHT\api.py changed, reloading.
+INFO 2024-12-28 18:52:51,439 autoreload Watching for file changes with StatReloader
+INFO 2024-12-28 18:54:20,570 basehttp "GET /index/ HTTP/1.1" 200 5259
+INFO 2024-12-28 18:54:29,327 basehttp "POST /api/post HTTP/1.1" 200 7060
+INFO 2024-12-28 18:54:30,761 basehttp - Broken pipe from ('127.0.0.1', 49998)
+INFO 2024-12-28 18:54:30,800 basehttp "GET /index/ HTTP/1.1" 200 5259
+INFO 2024-12-28 18:54:36,351 basehttp "GET /incident/ HTTP/1.1" 200 3599
+INFO 2024-12-28 18:54:38,213 basehttp "GET /log_incident/ HTTP/1.1" 200 17381

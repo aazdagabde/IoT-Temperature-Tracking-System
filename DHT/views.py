@@ -296,3 +296,48 @@ def alertConf_view(request):
 def custom_logout(request):
     logout(request)
     return redirect('/')
+
+
+##########################################""
+# DHT/views.py
+
+from django.shortcuts import render
+from django.contrib.auth.decorators import login_required, user_passes_test
+from django.contrib.auth.models import User, Group
+from django.utils import timezone
+from datetime import timedelta, datetime
+from collections import defaultdict
+from .models import Incident
+
+def is_admin(user):
+    return user.is_authenticated and user.groups.filter(name='admin').exists()
+
+@login_required
+@user_passes_test(is_admin)
+def dashboard(request):
+    # Statistiques
+    total_users = User.objects.count()
+    total_incidents = Incident.objects.count()
+    active_incidents = Incident.objects.filter(end_dt__isnull=True).count()
+    latest_incidents = Incident.objects.order_by('-start_dt')[:5]
+
+    # Données pour le graphique (Nombre d'incidents par mois)
+    incidents_per_month = defaultdict(int)
+    for incident in Incident.objects.all():
+        month_label = incident.start_dt.strftime('%b %Y')
+        incidents_per_month[month_label] += 1
+
+    # Trier les mois chronologiquement
+    sorted_months = sorted(incidents_per_month.keys(), key=lambda x: datetime.strptime(x, '%b %Y'))
+    sorted_counts = [incidents_per_month[month] for month in sorted_months]
+
+    context = {
+        'total_users': total_users,
+        'total_incidents': total_incidents,
+        'active_incidents': active_incidents,
+        'latest_incidents': latest_incidents,
+        'months': sorted_months,
+        'incidents_per_month': sorted_counts,
+    }
+
+    return render(request, 'dashboard.html', context)

@@ -26,4 +26,5 @@ urlpatterns = [
 
     path('alertConf/', views.alertConf_view, name='alertConf_view'),
 
+    path('dashboard/', views.dashboard, name='dashboard'),
 ]

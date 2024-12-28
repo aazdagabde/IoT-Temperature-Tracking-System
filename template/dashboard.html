@@ -1,0 +1,152 @@
+<!-- DHT/templates/dashboard.html -->
+
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Dashboard{% endblock %}
+{% block content %}
+<div class="container my-5">
+    <h2 class="text-center mb-4">Dashboard Administratif</h2>
+
+    <!-- Cartes Statistiques -->
+    <div class="row mb-4">
+        <div class="col-md-4">
+            <div class="card text-white bg-primary mb-3">
+                <div class="card-body">
+                    <h5 class="card-title"><i class="fas fa-users"></i> Utilisateurs</h5>
+                    <p class="card-text">{{ total_users }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card text-white bg-success mb-3">
+                <div class="card-body">
+                    <h5 class="card-title"><i class="fas fa-clipboard-list"></i> Incidents</h5>
+                    <p class="card-text">{{ total_incidents }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card text-white bg-warning mb-3">
+                <div class="card-body">
+                    <h5 class="card-title"><i class="fas fa-exclamation-triangle"></i> Incidents en Cours</h5>
+                    <p class="card-text">{{ active_incidents }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Graphique des Incidents (Optionnel) -->
+    <div class="card mb-4">
+        <div class="card-body">
+            <h5 class="card-title text-center">Nombre d'Incidents par Mois</h5>
+            <canvas id="incidentsChart" width="400" height="200"></canvas>
+        </div>
+    </div>
+
+    <!-- Table des Derniers Incidents -->
+    <div class="table-responsive">
+        <h4 class="mb-3">Derniers Incidents</h4>
+        <table id="latestIncidentsTable" class="table table-striped table-bordered table-hover">
+            <thead class="table-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Début</th>
+                    <th>Fin</th>
+                    <th>Durée</th>
+                    <th>Itération</th>
+                    <th>Remarques</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for incident in latest_incidents %}
+                <tr>
+                    <td>{{ incident.id }}</td>
+                    <td>{{ incident.start_dt|date:"d/m/Y H:i" }}</td>
+                    <td>
+                        {% if incident.end_dt %}
+                            {{ incident.end_dt|date:"d/m/Y H:i" }}
+                        {% else %}
+                            <span class="text-danger">En cours</span>
+                        {% endif %}
+                    </td>
+                    <td>
+                        {% if incident.duration %}
+                            {{ incident.duration }}
+                        {% else %}
+                            --
+                        {% endif %}
+                    </td>
+                    <td>{{ incident.iteration }}</td>
+                    <td>
+                        {% if incident.remarks %}
+                            {{ incident.remarks }}
+                        {% else %}
+                            ---
+                        {% endif %}
+                    </td>
+                </tr>
+                {% empty %}
+                <tr>
+                    <td colspan="6" class="text-center">Aucun incident enregistré.</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock content %}
+
+{% block scripts %}
+<!-- Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    // Initialisation du graphique des incidents
+    const ctx = document.getElementById('incidentsChart').getContext('2d');
+    const incidentsData = {
+        labels: [
+            {% for month in months %}
+                "{{ month }}",
+            {% endfor %}
+        ],
+        datasets: [{
+            label: 'Nombre d\'Incidents',
+            data: [
+                {% for count in incidents_per_month %}
+                    {{ count }},
+                {% endfor %}
+            ],
+            backgroundColor: 'rgba(54, 162, 235, 0.5)',
+            borderColor: 'rgba(54, 162, 235, 1)',
+            borderWidth: 1
+        }]
+    };
+    const incidentsChart = new Chart(ctx, {
+        type: 'bar',
+        data: incidentsData,
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    precision: 0
+                }
+            },
+            plugins: {
+                legend: {
+                    display: false
+                }
+            }
+        }
+    });
+
+    // Initialisation de DataTables pour la table des derniers incidents
+    $(document).ready(function() {
+        $('#latestIncidentsTable').DataTable({
+            "language": {
+                "url": "https://cdn.datatables.net/plug-ins/1.13.4/i18n/fr-FR.json"
+            },
+            "order": [[ 1, "desc" ]],
+            "pageLength": 5
+        });
+    });
+</script>
+{% endblock %}

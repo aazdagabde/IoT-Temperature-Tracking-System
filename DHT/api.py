@@ -58,6 +58,7 @@ def check_temperature_and_manage_incident(current_temp):
             open_incident.end_dt = timezone.now()
             open_incident.save()
             print("[INFO] Incident fermé (température redevenue normale).")
+            iteration = 0
         else:
             print("[INFO] Aucun incident en cours, température normale.")
     else:
@@ -94,7 +95,7 @@ def get_users_to_alert(incident):
     Retourne la liste des utilisateurs à alerter selon l'itération et les acquittements.
     """
     iteration = incident.iteration
-    message = f"Alerte: température élevée (Incident #{incident.id}, itération {iteration})."
+    message = f"Alerte: température élevée veuillez intervenir immédiatement pour vérifier et corriger cette situation (Incident #{incident.id}, itération {iteration} )."
 
     # Récupérer les utilisateurs dans l'ordre d'escalade
     escalation_order = ['user1', 'user2', 'user3', 'admin']  # À adapter selon vos besoins
@@ -118,8 +119,12 @@ def send_custom_alerts(incident, users):
         incident (Incident): L'incident en cours.
         users (list of User): Les utilisateurs à alerter.
     """
-    message = f"Alerte: température élevée (Incident #{incident.id}, itération {incident.iteration})."
+    #message = f"Alerte: température élevée  ,veuillez intervenir immédiatement pour vérifier et corriger cette situation (Incident #{incident.id}, itération {incident.iteration} , to user : {users[i]})."
     for user in users:
+        message = (
+            f"Alerte: température élevée, veuillez intervenir immédiatement pour vérifier et corriger cette situation "
+            f"(Incident #{incident.id}, itération {incident.iteration}, utilisateur : {user})."
+        )
         notify_user(user, message)
 
 
