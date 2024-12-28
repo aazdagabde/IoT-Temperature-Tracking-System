@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="container">
+    <h2>Configuration des alertes</h2>
+    <form method="POST">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="username" class="form-label">Nom d'utilisateur</label>
+            <input type="text" name="username" value="{{ user.username }}" class="form-control"/>
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Adresse e-mail</label>
+            <input type="email" name="email" value="{{ user.email }}" class="form-control"/>
+        </div>
+
+        <hr/>
+        <h5>Configuration Telegram</h5>
+        <div class="mb-3">
+            <label for="telegram_id" class="form-label">ID Telegram (chat_id)</label>
+            <input type="text" name="telegram_id" value="{{ profile.telegram_id }}" class="form-control"/>
+        </div>
+
+        <hr/>
+        <h5>Configuration Twilio</h5>
+        <div class="mb-3">
+            <label for="twilio_account_sid" class="form-label">Account SID</label>
+            <input type="text" name="twilio_account_sid" value="{{ profile.twilio_account_sid }}" class="form-control"/>
+        </div>
+        <div class="mb-3">
+            <label for="twilio_auth_token" class="form-label">Auth Token</label>
+            <input type="text" name="twilio_auth_token" value="{{ profile.twilio_auth_token }}" class="form-control"/>
+        </div>
+        <div class="mb-3">
+            <label for="whatsapp_number" class="form-label">Numéro WhatsApp (ex: +212600000000)</label>
+            <input type="text" name="whatsapp_number" value="{{ profile.whatsapp_number }}" class="form-control"/>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Enregistrer</button>
+    </form>
+</div>
+{% endblock content %}

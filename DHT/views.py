@@ -160,7 +160,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from django.utils import timezone
 from django.contrib import messages
-from .models import Dht11, Incident
+from .models import Dht11, Incident ,Profile
 
 @login_required
 def incident(request):
@@ -244,3 +244,33 @@ def log_incident(request):
         'can_see_ack': can_see_ack,
         'can_see_remarks': can_see_remarks,
     })
+###################################
+@login_required
+def alertConf_view(request):
+    # Récupérer ou créer le Profile
+    profile, created = Profile.objects.get_or_create(user=request.user)
+
+    if request.method == 'POST':
+        # Champs User
+        username = request.POST.get('username')
+        email = request.POST.get('email')
+
+        request.user.username = username
+        request.user.email = email
+        request.user.save()
+
+        # Champs Profile
+        profile.telegram_id = request.POST.get('telegram_id')
+        profile.twilio_account_sid = request.POST.get('twilio_account_sid')
+        profile.twilio_auth_token = request.POST.get('twilio_auth_token')
+        profile.whatsapp_number = request.POST.get('whatsapp_number')
+        profile.save()
+
+        messages.success(request, "Paramètres mis à jour avec succès.")
+        return redirect('alertConf_view')
+
+    return render(request, 'alertConf.html', {'profile': profile})
+
+def custom_logout(request):
+    logout(request)
+    return redirect('/')

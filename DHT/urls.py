@@ -24,6 +24,6 @@ urlpatterns = [
     path('incident/', views.incident, name='incident'),
     path('log_incident/', views.log_incident, name='log_incident'),
 
-    # Filtres
+    path('alertConf/', views.alertConf_view, name='alertConf_view'),
 
 ]
