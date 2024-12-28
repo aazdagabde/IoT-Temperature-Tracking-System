@@ -6286,3 +6286,2145 @@ INFO 2024-12-28 18:54:30,761 basehttp - Broken pipe from ('127.0.0.1', 49998)
 INFO 2024-12-28 18:54:30,800 basehttp "GET /index/ HTTP/1.1" 200 5259
 INFO 2024-12-28 18:54:36,351 basehttp "GET /incident/ HTTP/1.1" 200 3599
 INFO 2024-12-28 18:54:38,213 basehttp "GET /log_incident/ HTTP/1.1" 200 17381
+INFO 2024-12-28 19:34:46,646 autoreload Watching for file changes with StatReloader
+INFO 2024-12-28 19:34:54,761 basehttp "GET /index/ HTTP/1.1" 200 5260
+INFO 2024-12-28 19:34:57,991 basehttp "GET /index/ HTTP/1.1" 200 5260
+INFO 2024-12-28 19:34:58,655 basehttp "GET /index/ HTTP/1.1" 200 5260
+INFO 2024-12-28 19:34:58,984 basehttp "GET /index/ HTTP/1.1" 200 5260
+INFO 2024-12-28 19:34:59,234 basehttp "GET /index/ HTTP/1.1" 200 5260
+INFO 2024-12-28 19:35:09,677 basehttp "GET /index/ HTTP/1.1" 200 5260
+INFO 2024-12-28 19:35:09,720 basehttp "GET /index/ HTTP/1.1" 200 5260
+INFO 2024-12-28 19:35:19,370 basehttp "GET /index/ HTTP/1.1" 200 5260
+INFO 2024-12-28 19:35:22,725 basehttp "GET /incident/ HTTP/1.1" 200 3599
+INFO 2024-12-28 19:35:23,619 basehttp "GET /index/ HTTP/1.1" 200 5260
+INFO 2024-12-28 19:35:34,675 basehttp - Broken pipe from ('127.0.0.1', 50673)
+INFO 2024-12-28 19:35:34,702 basehttp "GET /index/ HTTP/1.1" 200 5260
+INFO 2024-12-28 19:35:45,692 basehttp - Broken pipe from ('127.0.0.1', 35702)
+INFO 2024-12-28 19:35:45,747 basehttp "GET /index/ HTTP/1.1" 200 5260
+INFO 2024-12-28 19:35:54,068 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:36:05,672 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:36:05,720 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:37:49,092 autoreload Watching for file changes with StatReloader
+INFO 2024-12-28 19:37:53,653 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:37:56,931 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:37:57,478 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:37:57,716 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:38:08,678 basehttp - Broken pipe from ('127.0.0.1', 18051)
+INFO 2024-12-28 19:38:08,708 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:38:19,695 basehttp - Broken pipe from ('127.0.0.1', 25243)
+INFO 2024-12-28 19:38:19,779 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:38:30,722 basehttp - Broken pipe from ('127.0.0.1', 13647)
+INFO 2024-12-28 19:38:30,748 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:38:41,691 basehttp - Broken pipe from ('127.0.0.1', 47400)
+INFO 2024-12-28 19:38:41,771 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:38:52,435 basehttp - Broken pipe from ('127.0.0.1', 39276)
+INFO 2024-12-28 19:38:52,494 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:38:57,011 basehttp "GET /index/ HTTP/1.1" 200 5371
+WARNING 2024-12-28 19:38:57,756 log Not Found: /favicon.ico
+WARNING 2024-12-28 19:38:57,756 basehttp "GET /favicon.ico HTTP/1.1" 404 5444
+INFO 2024-12-28 19:38:58,565 basehttp "GET /index/ HTTP/1.1" 200 5371
+WARNING 2024-12-28 19:38:59,021 log Not Found: /favicon.ico
+WARNING 2024-12-28 19:38:59,036 basehttp "GET /favicon.ico HTTP/1.1" 404 5444
+INFO 2024-12-28 19:39:01,846 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:39:02,632 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:39:13,721 basehttp - Broken pipe from ('127.0.0.1', 54566)
+INFO 2024-12-28 19:39:13,771 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:39:24,726 basehttp - Broken pipe from ('127.0.0.1', 3380)
+INFO 2024-12-28 19:39:24,757 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:39:30,483 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:39:31,307 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:39:31,577 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:39:31,991 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:39:32,376 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:39:42,676 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:39:53,704 basehttp - Broken pipe from ('127.0.0.1', 25059)
+INFO 2024-12-28 19:39:53,751 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:40:04,675 basehttp - Broken pipe from ('127.0.0.1', 37086)
+INFO 2024-12-28 19:40:04,738 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:40:15,707 basehttp - Broken pipe from ('127.0.0.1', 8312)
+INFO 2024-12-28 19:40:15,768 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:40:26,671 basehttp - Broken pipe from ('127.0.0.1', 26353)
+INFO 2024-12-28 19:40:26,709 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:40:37,674 basehttp - Broken pipe from ('127.0.0.1', 33503)
+INFO 2024-12-28 19:40:37,737 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:40:49,188 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:40:50,306 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:41:01,670 basehttp - Broken pipe from ('127.0.0.1', 48811)
+INFO 2024-12-28 19:41:01,718 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:41:12,655 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:41:12,719 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:41:23,851 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:41:24,161 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:41:30,480 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:41:31,147 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:41:31,363 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:41:31,574 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:41:31,769 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:41:31,941 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:41:32,156 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:41:32,661 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:41:32,917 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:41:43,667 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:41:43,714 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:41:54,660 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:41:54,692 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:42:04,427 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:42:05,191 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:42:15,682 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:42:15,720 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:42:26,683 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:42:26,730 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:42:31,557 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:42:32,215 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:42:32,641 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:42:34,045 basehttp "GET /logout/ HTTP/1.1" 302 0
+INFO 2024-12-28 19:42:34,061 basehttp "GET / HTTP/1.1" 200 2316
+INFO 2024-12-28 19:42:35,177 basehttp "GET /index/ HTTP/1.1" 302 0
+INFO 2024-12-28 19:42:35,361 basehttp "GET /login/?next=/index/ HTTP/1.1" 200 1662
+WARNING 2024-12-28 19:42:35,459 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1801
+INFO 2024-12-28 19:42:45,324 basehttp "POST /login/?next=/index/ HTTP/1.1" 302 0
+INFO 2024-12-28 19:42:45,377 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:42:55,475 basehttp - Broken pipe from ('127.0.0.1', 60976)
+INFO 2024-12-28 19:42:55,519 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:43:05,668 basehttp - Broken pipe from ('127.0.0.1', 41033)
+INFO 2024-12-28 19:43:05,754 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:43:16,074 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:43:16,120 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:43:26,680 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:43:26,724 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:43:37,671 basehttp - Broken pipe from ('127.0.0.1', 52760)
+INFO 2024-12-28 19:43:37,722 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:43:48,681 basehttp - Broken pipe from ('127.0.0.1', 62009)
+INFO 2024-12-28 19:43:48,725 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:43:59,684 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:43:59,722 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:44:10,682 basehttp - Broken pipe from ('127.0.0.1', 65023)
+INFO 2024-12-28 19:44:10,732 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:44:21,691 basehttp - Broken pipe from ('127.0.0.1', 65405)
+INFO 2024-12-28 19:44:21,713 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:44:32,683 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:44:32,727 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:44:43,514 basehttp - Broken pipe from ('127.0.0.1', 64814)
+INFO 2024-12-28 19:44:43,544 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:44:54,644 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:44:54,692 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:45:05,666 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:45:05,709 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:45:16,676 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:45:16,720 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:45:27,642 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:45:27,690 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:45:38,664 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:45:38,712 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:45:49,667 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:45:49,715 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:46:00,643 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:46:00,691 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:46:10,876 basehttp - Broken pipe from ('127.0.0.1', 56002)
+INFO 2024-12-28 19:46:10,892 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:46:14,166 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:46:24,669 basehttp - Broken pipe from ('127.0.0.1', 61584)
+INFO 2024-12-28 19:46:24,685 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:46:35,661 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:46:35,695 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:46:39,387 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:46:40,691 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:46:41,176 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:46:41,404 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:46:47,314 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:46:47,973 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:46:48,221 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:46:48,424 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:46:58,226 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:46:58,816 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:46:59,233 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:46:59,439 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:46:59,631 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:47:10,675 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:47:10,719 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:47:21,657 basehttp - Broken pipe from ('127.0.0.1', 16807)
+INFO 2024-12-28 19:47:21,673 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:47:32,634 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:47:32,644 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:47:43,603 basehttp - Broken pipe from ('127.0.0.1', 17831)
+INFO 2024-12-28 19:47:43,618 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:47:54,629 basehttp - Broken pipe from ('127.0.0.1', 6466)
+INFO 2024-12-28 19:47:54,643 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:48:05,644 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:48:05,669 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:48:16,600 basehttp - Broken pipe from ('127.0.0.1', 27648)
+INFO 2024-12-28 19:48:16,606 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:48:21,223 basehttp "GET /table/ HTTP/1.1" 200 112616
+INFO 2024-12-28 19:48:33,702 basehttp "GET /table/ HTTP/1.1" 200 112616
+INFO 2024-12-28 19:49:23,746 basehttp "GET /table/ HTTP/1.1" 200 112603
+INFO 2024-12-28 19:49:25,183 basehttp "GET /table/ HTTP/1.1" 200 112603
+INFO 2024-12-28 19:49:30,434 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:49:32,948 basehttp "GET /table/ HTTP/1.1" 200 112603
+INFO 2024-12-28 19:49:37,209 basehttp "GET /index/ HTTP/1.1" 200 5371
+INFO 2024-12-28 19:49:39,664 basehttp "GET /table/ HTTP/1.1" 200 112603
+INFO 2024-12-28 19:49:45,790 basehttp "GET /table/ HTTP/1.1" 200 112603
+INFO 2024-12-28 19:52:05,636 basehttp "GET /table/ HTTP/1.1" 200 112602
+INFO 2024-12-28 19:52:08,383 basehttp "GET /index/ HTTP/1.1" 200 5633
+INFO 2024-12-28 19:52:10,158 basehttp "GET /index/ HTTP/1.1" 200 5633
+INFO 2024-12-28 19:52:10,805 basehttp "GET /index/ HTTP/1.1" 200 5633
+INFO 2024-12-28 19:52:11,074 basehttp "GET /index/ HTTP/1.1" 200 5633
+INFO 2024-12-28 19:52:11,300 basehttp "GET /index/ HTTP/1.1" 200 5633
+INFO 2024-12-28 19:52:20,746 basehttp "GET /index/ HTTP/1.1" 200 5633
+INFO 2024-12-28 19:52:21,540 basehttp "GET /index/ HTTP/1.1" 200 5633
+INFO 2024-12-28 19:52:21,757 basehttp "GET /index/ HTTP/1.1" 200 5633
+INFO 2024-12-28 19:52:21,991 basehttp "GET /index/ HTTP/1.1" 200 5633
+INFO 2024-12-28 19:52:22,211 basehttp "GET /index/ HTTP/1.1" 200 5633
+INFO 2024-12-28 19:52:25,162 basehttp "GET /table/ HTTP/1.1" 200 112602
+INFO 2024-12-28 19:52:26,514 basehttp "GET /myChartTemp/ HTTP/1.1" 200 7596
+INFO 2024-12-28 19:52:26,740 basehttp "GET /chart-data/ HTTP/1.1" 200 28243
+INFO 2024-12-28 19:52:28,675 basehttp "GET /myChartHum/ HTTP/1.1" 200 7932
+INFO 2024-12-28 19:52:28,810 basehttp "GET /chart-data/ HTTP/1.1" 200 28243
+INFO 2024-12-28 19:52:33,430 basehttp "GET /api/post HTTP/1.1" 200 120322
+INFO 2024-12-28 19:52:36,308 basehttp "GET /index/ HTTP/1.1" 200 5633
+INFO 2024-12-28 19:52:46,635 basehttp "GET /index/ HTTP/1.1" 200 5633
+INFO 2024-12-28 19:52:46,670 basehttp "GET /index/ HTTP/1.1" 200 5633
+INFO 2024-12-28 19:52:57,616 basehttp - Broken pipe from ('127.0.0.1', 19764)
+INFO 2024-12-28 19:52:57,627 basehttp "GET /index/ HTTP/1.1" 200 5633
+INFO 2024-12-28 19:53:08,654 basehttp - Broken pipe from ('127.0.0.1', 51828)
+INFO 2024-12-28 19:53:08,662 basehttp "GET /index/ HTTP/1.1" 200 5633
+INFO 2024-12-28 19:53:19,645 basehttp - Broken pipe from ('127.0.0.1', 17438)
+INFO 2024-12-28 19:53:19,662 basehttp "GET /index/ HTTP/1.1" 200 5633
+INFO 2024-12-28 19:53:30,617 basehttp - Broken pipe from ('127.0.0.1', 25201)
+INFO 2024-12-28 19:53:30,642 basehttp "GET /index/ HTTP/1.1" 200 5633
+INFO 2024-12-28 19:53:41,623 basehttp "GET /index/ HTTP/1.1" 200 5633
+INFO 2024-12-28 19:53:41,642 basehttp "GET /index/ HTTP/1.1" 200 5633
+INFO 2024-12-28 19:53:52,626 basehttp "GET /index/ HTTP/1.1" 200 5633
+INFO 2024-12-28 19:53:52,643 basehttp "GET /index/ HTTP/1.1" 200 5633
+INFO 2024-12-28 19:54:03,606 basehttp - Broken pipe from ('127.0.0.1', 3235)
+INFO 2024-12-28 19:54:03,619 basehttp "GET /index/ HTTP/1.1" 200 5633
+INFO 2024-12-28 19:54:14,598 basehttp - Broken pipe from ('127.0.0.1', 44159)
+INFO 2024-12-28 19:54:14,618 basehttp "GET /index/ HTTP/1.1" 200 5633
+INFO 2024-12-28 19:54:25,662 basehttp - Broken pipe from ('127.0.0.1', 1035)
+INFO 2024-12-28 19:54:25,693 basehttp "GET /index/ HTTP/1.1" 200 5633
+INFO 2024-12-28 19:54:36,632 basehttp - Broken pipe from ('127.0.0.1', 2933)
+INFO 2024-12-28 19:54:36,644 basehttp "GET /index/ HTTP/1.1" 200 5634
+INFO 2024-12-28 19:54:47,661 basehttp - Broken pipe from ('127.0.0.1', 8074)
+INFO 2024-12-28 19:54:47,675 basehttp "GET /index/ HTTP/1.1" 200 5634
+INFO 2024-12-28 19:54:58,649 basehttp - Broken pipe from ('127.0.0.1', 60117)
+INFO 2024-12-28 19:54:58,667 basehttp "GET /index/ HTTP/1.1" 200 5634
+INFO 2024-12-28 19:55:09,606 basehttp - Broken pipe from ('127.0.0.1', 11445)
+INFO 2024-12-28 19:55:09,657 basehttp "GET /index/ HTTP/1.1" 200 5634
+INFO 2024-12-28 19:55:16,538 basehttp "GET /index/ HTTP/1.1" 200 5956
+INFO 2024-12-28 19:55:26,718 basehttp "GET /index/ HTTP/1.1" 200 5956
+INFO 2024-12-28 19:55:36,862 basehttp "GET /index/ HTTP/1.1" 200 5956
+INFO 2024-12-28 19:55:47,009 basehttp "GET /index/ HTTP/1.1" 200 5956
+INFO 2024-12-28 19:55:57,663 basehttp "GET /index/ HTTP/1.1" 200 5956
+INFO 2024-12-28 19:56:08,659 basehttp "GET /index/ HTTP/1.1" 200 5956
+INFO 2024-12-28 19:56:19,002 basehttp "GET /index/ HTTP/1.1" 200 5956
+INFO 2024-12-28 19:56:29,662 basehttp "GET /index/ HTTP/1.1" 200 5956
+INFO 2024-12-28 19:56:40,655 basehttp "GET /index/ HTTP/1.1" 200 5956
+INFO 2024-12-28 19:56:51,636 basehttp "GET /index/ HTTP/1.1" 200 5956
+INFO 2024-12-28 19:57:02,651 basehttp "GET /index/ HTTP/1.1" 200 5956
+INFO 2024-12-28 19:57:13,643 basehttp "GET /index/ HTTP/1.1" 200 5956
+INFO 2024-12-28 19:57:24,660 basehttp "GET /index/ HTTP/1.1" 200 5956
+INFO 2024-12-28 19:57:35,357 basehttp "GET /index/ HTTP/1.1" 200 6609
+INFO 2024-12-28 19:57:37,812 basehttp "GET /index/ HTTP/1.1" 200 6609
+INFO 2024-12-28 19:57:47,999 basehttp "GET /index/ HTTP/1.1" 200 6609
+INFO 2024-12-28 19:57:58,120 basehttp "GET /index/ HTTP/1.1" 200 6609
+INFO 2024-12-28 19:58:08,678 basehttp "GET /index/ HTTP/1.1" 200 6609
+INFO 2024-12-28 19:58:19,644 basehttp "GET /index/ HTTP/1.1" 200 6609
+INFO 2024-12-28 19:58:27,203 basehttp "GET /index/ HTTP/1.1" 200 6608
+INFO 2024-12-28 19:58:27,936 basehttp "GET /index/ HTTP/1.1" 200 6608
+INFO 2024-12-28 19:58:38,656 basehttp "GET /index/ HTTP/1.1" 200 6608
+INFO 2024-12-28 19:58:49,663 basehttp "GET /index/ HTTP/1.1" 200 6608
+INFO 2024-12-28 19:59:00,660 basehttp "GET /index/ HTTP/1.1" 200 6608
+INFO 2024-12-28 19:59:11,673 basehttp "GET /index/ HTTP/1.1" 200 6608
+INFO 2024-12-28 19:59:22,633 basehttp "GET /index/ HTTP/1.1" 200 6608
+INFO 2024-12-28 19:59:33,623 basehttp "GET /index/ HTTP/1.1" 200 6608
+INFO 2024-12-28 19:59:44,649 basehttp "GET /index/ HTTP/1.1" 200 6608
+INFO 2024-12-28 19:59:55,651 basehttp "GET /index/ HTTP/1.1" 200 6608
+INFO 2024-12-28 20:00:00,306 basehttp "GET /index/ HTTP/1.1" 200 7716
+INFO 2024-12-28 20:00:10,442 basehttp "GET /index/ HTTP/1.1" 200 7716
+INFO 2024-12-28 20:00:20,557 basehttp "GET /index/ HTTP/1.1" 200 7716
+INFO 2024-12-28 20:00:29,747 basehttp "GET /table/ HTTP/1.1" 200 114362
+INFO 2024-12-28 20:00:32,230 basehttp "GET /myChartTemp/ HTTP/1.1" 200 9356
+INFO 2024-12-28 20:00:32,408 basehttp "GET /chart-data/ HTTP/1.1" 200 28243
+INFO 2024-12-28 20:00:33,798 basehttp "GET /incident/ HTTP/1.1" 200 5470
+INFO 2024-12-28 20:00:39,101 basehttp "GET /log_incident/ HTTP/1.1" 200 19252
+INFO 2024-12-28 20:01:37,198 basehttp "GET /log_incident/ HTTP/1.1" 200 19252
+INFO 2024-12-28 20:04:40,934 basehttp "GET /log_incident/ HTTP/1.1" 200 19622
+INFO 2024-12-28 20:05:01,287 basehttp "GET /logout/ HTTP/1.1" 302 0
+INFO 2024-12-28 20:05:01,323 basehttp "GET / HTTP/1.1" 200 2316
+INFO 2024-12-28 20:05:02,293 basehttp "GET /index/ HTTP/1.1" 302 0
+INFO 2024-12-28 20:05:02,318 basehttp "GET /login/?next=/index/ HTTP/1.1" 200 1662
+WARNING 2024-12-28 20:05:02,421 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1801
+INFO 2024-12-28 20:05:14,409 basehttp "POST /login/?next=/index/ HTTP/1.1" 302 0
+INFO 2024-12-28 20:05:14,491 basehttp "GET /index/ HTTP/1.1" 200 7717
+INFO 2024-12-28 20:05:24,664 basehttp "GET /index/ HTTP/1.1" 200 7717
+INFO 2024-12-28 20:05:34,768 basehttp "GET /index/ HTTP/1.1" 200 7717
+INFO 2024-12-28 20:05:39,371 basehttp "GET /index/ HTTP/1.1" 200 7717
+INFO 2024-12-28 20:05:49,500 basehttp "GET /index/ HTTP/1.1" 200 7717
+INFO 2024-12-28 20:05:55,018 basehttp "GET /logout/ HTTP/1.1" 302 0
+INFO 2024-12-28 20:05:55,040 basehttp "GET / HTTP/1.1" 200 2316
+INFO 2024-12-28 20:05:56,180 basehttp "GET /index/ HTTP/1.1" 302 0
+INFO 2024-12-28 20:05:56,204 basehttp "GET /login/?next=/index/ HTTP/1.1" 200 1662
+WARNING 2024-12-28 20:05:56,301 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1801
+INFO 2024-12-28 20:06:06,127 basehttp - Broken pipe from ('127.0.0.1', 1316)
+INFO 2024-12-28 20:06:08,072 basehttp "POST /login/?next=/index/ HTTP/1.1" 302 0
+INFO 2024-12-28 20:06:08,120 basehttp "GET /index/ HTTP/1.1" 200 7717
+INFO 2024-12-28 20:06:11,637 basehttp "GET /incident/ HTTP/1.1" 200 5840
+INFO 2024-12-28 20:06:13,058 basehttp "GET /log_incident/ HTTP/1.1" 200 19622
+INFO 2024-12-28 20:06:16,731 basehttp "GET /index/ HTTP/1.1" 200 7717
+INFO 2024-12-28 20:06:26,832 basehttp "GET /index/ HTTP/1.1" 200 7717
+INFO 2024-12-28 20:06:37,690 basehttp "GET /index/ HTTP/1.1" 200 7717
+INFO 2024-12-28 20:06:48,639 basehttp "GET /index/ HTTP/1.1" 200 7717
+INFO 2024-12-28 20:06:52,883 basehttp "GET /index/ HTTP/1.1" 200 7717
+INFO 2024-12-28 20:07:03,630 basehttp "GET /index/ HTTP/1.1" 200 7717
+INFO 2024-12-28 20:07:14,652 basehttp "GET /index/ HTTP/1.1" 200 7717
+INFO 2024-12-28 20:07:25,684 basehttp "GET /index/ HTTP/1.1" 200 7717
+INFO 2024-12-28 20:07:36,624 basehttp "GET /index/ HTTP/1.1" 200 7717
+INFO 2024-12-28 20:07:47,650 basehttp "GET /index/ HTTP/1.1" 200 7717
+INFO 2024-12-28 20:07:58,647 basehttp "GET /index/ HTTP/1.1" 200 7717
+INFO 2024-12-28 20:08:09,641 basehttp "GET /index/ HTTP/1.1" 200 7717
+INFO 2024-12-28 20:08:20,640 basehttp "GET /index/ HTTP/1.1" 200 7717
+INFO 2024-12-28 20:08:31,609 basehttp "GET /index/ HTTP/1.1" 200 7717
+INFO 2024-12-28 20:08:42,650 basehttp "GET /index/ HTTP/1.1" 200 7717
+INFO 2024-12-28 20:08:53,638 basehttp "GET /index/ HTTP/1.1" 200 7717
+INFO 2024-12-28 20:09:04,636 basehttp "GET /index/ HTTP/1.1" 200 7717
+INFO 2024-12-28 20:09:15,630 basehttp "GET /index/ HTTP/1.1" 200 7717
+INFO 2024-12-28 20:09:26,599 basehttp "GET /index/ HTTP/1.1" 200 7717
+INFO 2024-12-28 20:09:37,603 basehttp "GET /index/ HTTP/1.1" 200 7717
+INFO 2024-12-28 20:09:48,635 basehttp "GET /index/ HTTP/1.1" 200 7717
+INFO 2024-12-28 20:09:52,463 basehttp "GET /incident/ HTTP/1.1" 200 6161
+INFO 2024-12-28 20:12:19,860 basehttp "GET /log_incident/ HTTP/1.1" 200 21307
+INFO 2024-12-28 20:13:05,871 basehttp "GET /incident/ HTTP/1.1" 200 6161
+INFO 2024-12-28 20:13:07,910 basehttp "GET /log_incident/ HTTP/1.1" 200 21307
+INFO 2024-12-28 20:13:49,858 basehttp "GET /incident/ HTTP/1.1" 200 6161
+INFO 2024-12-28 20:13:52,448 basehttp "GET /incident/ HTTP/1.1" 200 6161
+INFO 2024-12-28 20:13:53,684 basehttp "GET /log_incident/ HTTP/1.1" 200 21307
+INFO 2024-12-28 20:13:55,083 basehttp "GET /log_incident/?filter=jour HTTP/1.1" 200 15156
+INFO 2024-12-28 20:13:57,645 basehttp "GET /log_incident/?filter=semaine HTTP/1.1" 200 21307
+INFO 2024-12-28 20:13:59,287 basehttp "GET /log_incident/?filter=jour HTTP/1.1" 200 15156
+INFO 2024-12-28 20:14:01,081 basehttp "GET /myChartHum/ HTTP/1.1" 200 9692
+INFO 2024-12-28 20:14:01,288 basehttp "GET /chart-data/ HTTP/1.1" 200 28243
+INFO 2024-12-28 20:14:03,514 basehttp "GET /chart-data-semaine/ HTTP/1.1" 200 2773
+INFO 2024-12-28 20:14:05,126 basehttp "GET /myChartTemp/ HTTP/1.1" 200 9356
+INFO 2024-12-28 20:14:05,251 basehttp "GET /chart-data/ HTTP/1.1" 200 28243
+INFO 2024-12-28 20:14:10,171 basehttp "GET /myChartHum/ HTTP/1.1" 200 9692
+INFO 2024-12-28 20:14:10,388 basehttp "GET /chart-data/ HTTP/1.1" 200 28243
+INFO 2024-12-28 20:14:11,662 basehttp "GET /myChartTemp/ HTTP/1.1" 200 9356
+INFO 2024-12-28 20:14:11,832 basehttp "GET /chart-data/ HTTP/1.1" 200 28243
+INFO 2024-12-28 20:14:12,914 basehttp "GET /table/ HTTP/1.1" 200 114732
+INFO 2024-12-28 20:15:12,006 basehttp "GET /index/ HTTP/1.1" 200 7845
+INFO 2024-12-28 20:15:22,648 basehttp "GET /index/ HTTP/1.1" 200 7845
+INFO 2024-12-28 20:15:33,696 basehttp "GET /index/ HTTP/1.1" 200 7845
+INFO 2024-12-28 20:15:44,678 basehttp "GET /index/ HTTP/1.1" 200 7718
+INFO 2024-12-28 20:15:49,219 basehttp "GET /index/ HTTP/1.1" 200 7983
+INFO 2024-12-28 20:15:54,656 basehttp "GET /table/ HTTP/1.1" 200 114732
+INFO 2024-12-28 20:15:56,920 basehttp "GET /incident/ HTTP/1.1" 200 6161
+INFO 2024-12-28 20:15:58,526 basehttp "GET /index/ HTTP/1.1" 200 7983
+INFO 2024-12-28 20:16:09,691 basehttp "GET /index/ HTTP/1.1" 200 7983
+INFO 2024-12-28 20:16:20,676 basehttp "GET /index/ HTTP/1.1" 200 7983
+INFO 2024-12-28 20:16:31,672 basehttp "GET /index/ HTTP/1.1" 200 7983
+INFO 2024-12-28 20:16:42,674 basehttp "GET /index/ HTTP/1.1" 200 7983
+INFO 2024-12-28 20:16:53,674 basehttp "GET /index/ HTTP/1.1" 200 7983
+INFO 2024-12-28 20:17:04,673 basehttp "GET /index/ HTTP/1.1" 200 7983
+INFO 2024-12-28 20:17:15,647 basehttp "GET /index/ HTTP/1.1" 200 7983
+INFO 2024-12-28 20:17:26,678 basehttp "GET /index/ HTTP/1.1" 200 8407
+INFO 2024-12-28 20:17:37,106 basehttp "GET /index/ HTTP/1.1" 200 8407
+INFO 2024-12-28 20:17:47,227 basehttp "GET /index/ HTTP/1.1" 200 8407
+INFO 2024-12-28 20:17:57,383 basehttp "GET /index/ HTTP/1.1" 200 8407
+INFO 2024-12-28 20:18:07,541 basehttp "GET /index/ HTTP/1.1" 200 8407
+INFO 2024-12-28 20:18:17,671 basehttp "GET /index/ HTTP/1.1" 200 8407
+INFO 2024-12-28 20:18:26,032 basehttp "GET /table/ HTTP/1.1" 200 114732
+INFO 2024-12-28 20:18:29,177 basehttp "GET /index/ HTTP/1.1" 200 8407
+INFO 2024-12-28 20:18:36,036 basehttp "GET /table/ HTTP/1.1" 200 114732
+INFO 2024-12-28 20:18:37,555 basehttp "GET /myChartTemp/ HTTP/1.1" 200 9356
+INFO 2024-12-28 20:18:37,729 basehttp "GET /chart-data/ HTTP/1.1" 200 28243
+INFO 2024-12-28 20:18:47,564 basehttp "GET /incident/ HTTP/1.1" 200 6161
+INFO 2024-12-28 20:18:50,902 basehttp "GET /log_incident/ HTTP/1.1" 200 21307
+INFO 2024-12-28 20:19:06,720 basehttp "GET /log_incident/?filter=all HTTP/1.1" 200 21307
+INFO 2024-12-28 20:19:08,235 basehttp "GET /log_incident/?filter=annee HTTP/1.1" 200 21307
+INFO 2024-12-28 20:19:09,560 basehttp "GET /log_incident/?filter=mois HTTP/1.1" 200 21307
+INFO 2024-12-28 20:19:10,325 basehttp "GET /log_incident/?filter=semaine HTTP/1.1" 200 21307
+INFO 2024-12-28 20:19:11,250 basehttp "GET /log_incident/?filter=jour HTTP/1.1" 200 15156
+INFO 2024-12-28 20:19:28,227 basehttp "GET /table/ HTTP/1.1" 200 114732
+INFO 2024-12-28 20:19:30,110 basehttp "GET /index/ HTTP/1.1" 200 8407
+INFO 2024-12-28 20:19:40,312 basehttp "GET /index/ HTTP/1.1" 200 8407
+INFO 2024-12-28 20:19:50,299 basehttp "GET /incident/ HTTP/1.1" 200 6161
+INFO 2024-12-28 20:19:54,237 basehttp "GET /index/ HTTP/1.1" 200 8407
+INFO 2024-12-28 20:20:00,718 basehttp "GET / HTTP/1.1" 200 2316
+INFO 2024-12-28 20:20:01,877 basehttp "GET /index/ HTTP/1.1" 200 8407
+INFO 2024-12-28 20:20:12,010 basehttp "GET /index/ HTTP/1.1" 200 8407
+INFO 2024-12-28 20:20:22,154 basehttp "GET /index/ HTTP/1.1" 200 8407
+INFO 2024-12-28 20:20:32,266 basehttp "GET /index/ HTTP/1.1" 200 8407
+INFO 2024-12-28 20:20:42,667 basehttp "GET /index/ HTTP/1.1" 200 8407
+INFO 2024-12-28 20:20:53,707 basehttp "GET /index/ HTTP/1.1" 200 8407
+INFO 2024-12-28 20:21:04,688 basehttp "GET /index/ HTTP/1.1" 200 8407
+INFO 2024-12-28 20:21:15,693 basehttp "GET /index/ HTTP/1.1" 200 8407
+INFO 2024-12-28 20:21:26,719 basehttp "GET /index/ HTTP/1.1" 200 8407
+INFO 2024-12-28 20:21:40,712 basehttp "GET /index/ HTTP/1.1" 200 8407
+INFO 2024-12-28 20:21:51,705 basehttp "GET /index/ HTTP/1.1" 200 8407
+INFO 2024-12-28 20:22:02,689 basehttp "GET /index/ HTTP/1.1" 200 8407
+INFO 2024-12-28 20:22:13,721 basehttp "GET /index/ HTTP/1.1" 200 8407
+INFO 2024-12-28 20:22:24,689 basehttp "GET /index/ HTTP/1.1" 200 8407
+INFO 2024-12-28 20:22:35,688 basehttp "GET /index/ HTTP/1.1" 200 8407
+INFO 2024-12-28 20:22:46,699 basehttp "GET /index/ HTTP/1.1" 200 8407
+INFO 2024-12-28 20:22:57,700 basehttp "GET /index/ HTTP/1.1" 200 8407
+INFO 2024-12-28 20:23:08,713 basehttp "GET /index/ HTTP/1.1" 200 8407
+INFO 2024-12-28 20:23:19,701 basehttp "GET /index/ HTTP/1.1" 200 8407
+INFO 2024-12-28 20:23:30,717 basehttp "GET /index/ HTTP/1.1" 200 8407
+INFO 2024-12-28 20:23:41,679 basehttp "GET /index/ HTTP/1.1" 200 8407
+INFO 2024-12-28 20:23:52,696 basehttp "GET /index/ HTTP/1.1" 200 8407
+INFO 2024-12-28 20:24:03,684 basehttp "GET /index/ HTTP/1.1" 200 8407
+INFO 2024-12-28 20:24:14,681 basehttp "GET /index/ HTTP/1.1" 200 8407
+INFO 2024-12-28 20:24:25,668 basehttp "GET /index/ HTTP/1.1" 200 8407
+INFO 2024-12-28 20:24:36,681 basehttp "GET /index/ HTTP/1.1" 200 8407
+INFO 2024-12-28 20:24:47,671 basehttp "GET /index/ HTTP/1.1" 200 8407
+INFO 2024-12-28 20:24:58,691 basehttp "GET /index/ HTTP/1.1" 200 8407
+INFO 2024-12-28 20:25:09,674 basehttp "GET /index/ HTTP/1.1" 200 8407
+INFO 2024-12-28 20:25:20,667 basehttp "GET /index/ HTTP/1.1" 200 8407
+INFO 2024-12-28 20:25:31,632 basehttp "GET /index/ HTTP/1.1" 200 8407
+INFO 2024-12-28 20:25:42,669 basehttp "GET /index/ HTTP/1.1" 200 8407
+INFO 2024-12-28 20:25:53,478 basehttp "GET /api/post HTTP/1.1" 200 120322
+INFO 2024-12-28 20:26:02,819 basehttp "GET /index/ HTTP/1.1" 200 8407
+INFO 2024-12-28 20:26:13,677 basehttp "GET /index/ HTTP/1.1" 200 8407
+INFO 2024-12-28 20:26:24,660 basehttp "GET /index/ HTTP/1.1" 200 8407
+INFO 2024-12-28 20:26:35,638 basehttp "GET /index/ HTTP/1.1" 200 8407
+INFO 2024-12-28 20:26:46,658 basehttp "GET /index/ HTTP/1.1" 200 8407
+INFO 2024-12-28 20:26:57,669 basehttp "GET /index/ HTTP/1.1" 200 8407
+INFO 2024-12-28 20:27:08,670 basehttp "GET /index/ HTTP/1.1" 200 8407
+INFO 2024-12-28 20:27:19,676 basehttp "GET /index/ HTTP/1.1" 200 8407
+INFO 2024-12-28 20:27:30,663 basehttp "GET /index/ HTTP/1.1" 200 8407
+INFO 2024-12-28 20:27:41,666 basehttp "GET /index/ HTTP/1.1" 200 8407
+INFO 2024-12-28 20:27:52,672 basehttp "GET /index/ HTTP/1.1" 200 8407
+INFO 2024-12-28 20:28:03,678 basehttp "GET /index/ HTTP/1.1" 200 8407
+INFO 2024-12-28 20:28:14,657 basehttp "GET /index/ HTTP/1.1" 200 8407
+INFO 2024-12-28 20:28:25,679 basehttp "GET /index/ HTTP/1.1" 200 8407
+INFO 2024-12-28 20:28:36,662 basehttp "GET /index/ HTTP/1.1" 200 8407
+INFO 2024-12-28 20:28:47,672 basehttp "GET /index/ HTTP/1.1" 200 8407
+INFO 2024-12-28 20:28:58,666 basehttp "GET /index/ HTTP/1.1" 200 8407
+INFO 2024-12-28 20:29:09,671 basehttp "GET /index/ HTTP/1.1" 200 8407
+INFO 2024-12-28 20:29:20,659 basehttp "GET /index/ HTTP/1.1" 200 8407
+INFO 2024-12-28 20:29:31,653 basehttp "GET /index/ HTTP/1.1" 200 8407
+INFO 2024-12-28 20:29:42,649 basehttp "GET /index/ HTTP/1.1" 200 8407
+INFO 2024-12-28 20:29:53,661 basehttp "GET /index/ HTTP/1.1" 200 8407
+INFO 2024-12-28 20:30:04,626 basehttp "GET /index/ HTTP/1.1" 200 8407
+INFO 2024-12-28 20:30:15,634 basehttp "GET /index/ HTTP/1.1" 200 8407
+INFO 2024-12-28 20:30:26,629 basehttp "GET /index/ HTTP/1.1" 200 8407
+INFO 2024-12-28 20:30:37,642 basehttp "GET /index/ HTTP/1.1" 200 8407
+INFO 2024-12-28 20:30:48,649 basehttp "GET /index/ HTTP/1.1" 200 8407
+INFO 2024-12-28 20:30:59,616 basehttp "GET /index/ HTTP/1.1" 200 8407
+INFO 2024-12-28 20:31:10,624 basehttp "GET /index/ HTTP/1.1" 200 8407
+INFO 2024-12-28 20:31:21,621 basehttp "GET /index/ HTTP/1.1" 200 8407
+INFO 2024-12-28 20:31:32,644 basehttp "GET /index/ HTTP/1.1" 200 8407
+INFO 2024-12-28 20:31:43,632 basehttp "GET /index/ HTTP/1.1" 200 8407
+INFO 2024-12-28 20:31:54,641 basehttp "GET /index/ HTTP/1.1" 200 8407
+INFO 2024-12-28 20:32:05,788 basehttp "GET /index/ HTTP/1.1" 200 8407
+ERROR 2024-12-28 20:32:10,002 log Internal Server Error: /index/
+Traceback (most recent call last):
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\smartif.py", line 180, in translate_token
+    op = OPERATORS[token]
+         ~~~~~~~~~^^^^^^^
+KeyError: 'user|has_group:"admin"'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\OneDrive\Desktop\DHT11project-master\DHT11project-master\DHT\views.py", line 59, in value_view
+    return render(request, 'value.html', {'valeurs': valeurs})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 199, in render
+    template = context.template.engine.select_template(template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 208, in select_template
+    return self.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 960, in do_if
+    condition = TemplateIfParser(parser, bits).parse()
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 893, in __init__
+    super().__init__(*args, **kwargs)
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\smartif.py", line 171, in __init__
+    mapped_tokens.append(self.translate_token(token))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\smartif.py", line 182, in translate_token
+    return self.create_var(token)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 896, in create_var
+    return TemplateLiteral(self.template_parser.compile_filter(value), value)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 597, in compile_filter
+    return FilterExpression(token, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 693, in __init__
+    filter_func = parser.find_filter(filter_name)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 603, in find_filter
+    raise TemplateSyntaxError("Invalid filter: '%s'" % filter_name)
+django.template.exceptions.TemplateSyntaxError: Invalid filter: 'has_group'
+ERROR 2024-12-28 20:32:10,421 basehttp "GET /index/ HTTP/1.1" 500 260314
+INFO 2024-12-28 20:34:57,285 autoreload C:\Users\aabde\OneDrive\Desktop\DHT11project-master\DHT11project-master\DHT\views.py changed, reloading.
+INFO 2024-12-28 20:34:58,715 autoreload Watching for file changes with StatReloader
+INFO 2024-12-28 20:37:18,959 autoreload C:\Users\aabde\OneDrive\Desktop\DHT11project-master\DHT11project-master\DHT\views.py changed, reloading.
+INFO 2024-12-28 20:37:19,946 autoreload Watching for file changes with StatReloader
+ERROR 2024-12-28 20:37:22,408 log Internal Server Error: /index/
+Traceback (most recent call last):
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\smartif.py", line 180, in translate_token
+    op = OPERATORS[token]
+         ~~~~~~~~~^^^^^^^
+KeyError: "user.groups.filter(name='admin').exists"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\OneDrive\Desktop\DHT11project-master\DHT11project-master\DHT\views.py", line 59, in value_view
+    return render(request, 'value.html', {'valeurs': valeurs})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 199, in render
+    template = context.template.engine.select_template(template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 208, in select_template
+    return self.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 961, in do_if
+    nodelist = parser.parse(("elif", "else", "endif"))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 960, in do_if
+    condition = TemplateIfParser(parser, bits).parse()
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 893, in __init__
+    super().__init__(*args, **kwargs)
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\smartif.py", line 171, in __init__
+    mapped_tokens.append(self.translate_token(token))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\smartif.py", line 182, in translate_token
+    return self.create_var(token)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 896, in create_var
+    return TemplateLiteral(self.template_parser.compile_filter(value), value)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 597, in compile_filter
+    return FilterExpression(token, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 698, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '(name='admin').exists' from 'user.groups.filter(name='admin').exists'
+ERROR 2024-12-28 20:37:22,425 basehttp "GET /index/ HTTP/1.1" 500 269060
+ERROR 2024-12-28 20:37:25,006 log Internal Server Error: /index/
+Traceback (most recent call last):
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\smartif.py", line 180, in translate_token
+    op = OPERATORS[token]
+         ~~~~~~~~~^^^^^^^
+KeyError: "user.groups.filter(name='admin').exists"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\OneDrive\Desktop\DHT11project-master\DHT11project-master\DHT\views.py", line 59, in value_view
+    return render(request, 'value.html', {'valeurs': valeurs})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 199, in render
+    template = context.template.engine.select_template(template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 208, in select_template
+    return self.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 961, in do_if
+    nodelist = parser.parse(("elif", "else", "endif"))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 960, in do_if
+    condition = TemplateIfParser(parser, bits).parse()
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 893, in __init__
+    super().__init__(*args, **kwargs)
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\smartif.py", line 171, in __init__
+    mapped_tokens.append(self.translate_token(token))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\smartif.py", line 182, in translate_token
+    return self.create_var(token)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 896, in create_var
+    return TemplateLiteral(self.template_parser.compile_filter(value), value)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 597, in compile_filter
+    return FilterExpression(token, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 698, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '(name='admin').exists' from 'user.groups.filter(name='admin').exists'
+ERROR 2024-12-28 20:37:25,339 basehttp "GET /index/ HTTP/1.1" 500 269060
+ERROR 2024-12-28 20:38:02,460 log Internal Server Error: /index/
+Traceback (most recent call last):
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\smartif.py", line 180, in translate_token
+    op = OPERATORS[token]
+         ~~~~~~~~~^^^^^^^
+KeyError: "user.groups.filter(name='admin').exists"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\OneDrive\Desktop\DHT11project-master\DHT11project-master\DHT\views.py", line 59, in value_view
+    return render(request, 'value.html', {'valeurs': valeurs})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 199, in render
+    template = context.template.engine.select_template(template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 208, in select_template
+    return self.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 961, in do_if
+    nodelist = parser.parse(("elif", "else", "endif"))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 960, in do_if
+    condition = TemplateIfParser(parser, bits).parse()
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 893, in __init__
+    super().__init__(*args, **kwargs)
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\smartif.py", line 171, in __init__
+    mapped_tokens.append(self.translate_token(token))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\smartif.py", line 182, in translate_token
+    return self.create_var(token)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 896, in create_var
+    return TemplateLiteral(self.template_parser.compile_filter(value), value)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 597, in compile_filter
+    return FilterExpression(token, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 698, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '(name='admin').exists' from 'user.groups.filter(name='admin').exists'
+ERROR 2024-12-28 20:38:02,495 basehttp "GET /index/ HTTP/1.1" 500 269060
+ERROR 2024-12-28 20:42:39,115 log Internal Server Error: /index/
+Traceback (most recent call last):
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 1034, in find_library
+    return parser.libraries[name]
+           ~~~~~~~~~~~~~~~~^^^^^^
+KeyError: 'group_filters'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\OneDrive\Desktop\DHT11project-master\DHT11project-master\DHT\views.py", line 59, in value_view
+    return render(request, 'value.html', {'valeurs': valeurs})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 199, in render
+    template = context.template.engine.select_template(template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 208, in select_template
+    return self.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 1096, in load
+    lib = find_library(parser, name)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 1036, in find_library
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: 'group_filters' is not a registered tag library. Must be one of:
+admin_list
+admin_modify
+admin_urls
+cache
+i18n
+l10n
+log
+rest_framework
+static
+tz
+ERROR 2024-12-28 20:42:39,115 basehttp "GET /index/ HTTP/1.1" 500 234991
+INFO 2024-12-28 20:43:32,703 autoreload C:\Users\aabde\OneDrive\Desktop\DHT11project-master\DHT11project-master\DHT\views.py changed, reloading.
+INFO 2024-12-28 20:43:33,505 autoreload Watching for file changes with StatReloader
+ERROR 2024-12-28 20:43:35,468 log Internal Server Error: /index/
+Traceback (most recent call last):
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\OneDrive\Desktop\DHT11project-master\DHT11project-master\DHT\views.py", line 59, in value_view
+    return render(request, 'value.html', {'valeurs': valeurs})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 210, in render
+    return template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 326, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'alertConf' not found. 'alertConf' is not a valid view function or pattern name.
+ERROR 2024-12-28 20:43:35,470 basehttp "GET /index/ HTTP/1.1" 500 182352
+ERROR 2024-12-28 20:46:47,308 log Internal Server Error: /index/
+Traceback (most recent call last):
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\OneDrive\Desktop\DHT11project-master\DHT11project-master\DHT\views.py", line 59, in value_view
+    return render(request, 'value.html', {'valeurs': valeurs})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 199, in render
+    template = context.template.engine.select_template(template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 208, in select_template
+    return self.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 961, in do_if
+    nodelist = parser.parse(("elif", "else", "endif"))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 1380, in url
+    viewname = parser.compile_filter(bits[1])
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 597, in compile_filter
+    return FilterExpression(token, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 698, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: ''alertConf_view' from ''alertConf_view'
+ERROR 2024-12-28 20:46:47,315 basehttp "GET /index/ HTTP/1.1" 500 246528
+ERROR 2024-12-28 20:47:03,342 log Internal Server Error: /index/
+Traceback (most recent call last):
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\OneDrive\Desktop\DHT11project-master\DHT11project-master\DHT\views.py", line 59, in value_view
+    return render(request, 'value.html', {'valeurs': valeurs})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 199, in render
+    template = context.template.engine.select_template(template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 208, in select_template
+    return self.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 961, in do_if
+    nodelist = parser.parse(("elif", "else", "endif"))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 1380, in url
+    viewname = parser.compile_filter(bits[1])
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 597, in compile_filter
+    return FilterExpression(token, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 698, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: ''alertConf_view' from ''alertConf_view'
+ERROR 2024-12-28 20:47:03,377 basehttp "GET /index/ HTTP/1.1" 500 246528
+ERROR 2024-12-28 20:47:17,588 log Internal Server Error: /index/
+Traceback (most recent call last):
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\OneDrive\Desktop\DHT11project-master\DHT11project-master\DHT\views.py", line 59, in value_view
+    return render(request, 'value.html', {'valeurs': valeurs})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 199, in render
+    template = context.template.engine.select_template(template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 208, in select_template
+    return self.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 961, in do_if
+    nodelist = parser.parse(("elif", "else", "endif"))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 1380, in url
+    viewname = parser.compile_filter(bits[1])
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 597, in compile_filter
+    return FilterExpression(token, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 698, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: ''alertConf_view' from ''alertConf_view'
+ERROR 2024-12-28 20:47:17,613 basehttp "GET /index/ HTTP/1.1" 500 246528
+ERROR 2024-12-28 20:47:35,408 log Internal Server Error: /index/
+Traceback (most recent call last):
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\OneDrive\Desktop\DHT11project-master\DHT11project-master\DHT\views.py", line 59, in value_view
+    return render(request, 'value.html', {'valeurs': valeurs})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 199, in render
+    template = context.template.engine.select_template(template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 208, in select_template
+    return self.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 961, in do_if
+    nodelist = parser.parse(("elif", "else", "endif"))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 1380, in url
+    viewname = parser.compile_filter(bits[1])
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 597, in compile_filter
+    return FilterExpression(token, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 698, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: ''alertConf_view' from ''alertConf_view'
+ERROR 2024-12-28 20:47:35,408 basehttp "GET /index/ HTTP/1.1" 500 246528
+ERROR 2024-12-28 20:47:36,315 log Internal Server Error: /index/
+Traceback (most recent call last):
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\OneDrive\Desktop\DHT11project-master\DHT11project-master\DHT\views.py", line 59, in value_view
+    return render(request, 'value.html', {'valeurs': valeurs})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 199, in render
+    template = context.template.engine.select_template(template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 208, in select_template
+    return self.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 961, in do_if
+    nodelist = parser.parse(("elif", "else", "endif"))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 1380, in url
+    viewname = parser.compile_filter(bits[1])
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 597, in compile_filter
+    return FilterExpression(token, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 698, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: ''alertConf_view' from ''alertConf_view'
+ERROR 2024-12-28 20:47:36,324 basehttp "GET /index/ HTTP/1.1" 500 246528
+ERROR 2024-12-28 20:47:36,505 log Internal Server Error: /index/
+Traceback (most recent call last):
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\OneDrive\Desktop\DHT11project-master\DHT11project-master\DHT\views.py", line 59, in value_view
+    return render(request, 'value.html', {'valeurs': valeurs})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 199, in render
+    template = context.template.engine.select_template(template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 208, in select_template
+    return self.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 961, in do_if
+    nodelist = parser.parse(("elif", "else", "endif"))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 1380, in url
+    viewname = parser.compile_filter(bits[1])
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 597, in compile_filter
+    return FilterExpression(token, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 698, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: ''alertConf_view' from ''alertConf_view'
+ERROR 2024-12-28 20:47:36,521 basehttp "GET /index/ HTTP/1.1" 500 246528
+ERROR 2024-12-28 20:49:33,244 log Internal Server Error: /index/
+Traceback (most recent call last):
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\OneDrive\Desktop\DHT11project-master\DHT11project-master\DHT\views.py", line 59, in value_view
+    return render(request, 'value.html', {'valeurs': valeurs})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 210, in render
+    return template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 326, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 326, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'api_post' not found. 'api_post' is not a valid view function or pattern name.
+ERROR 2024-12-28 20:49:33,276 basehttp "GET /index/ HTTP/1.1" 500 196420
+ERROR 2024-12-28 20:49:34,862 log Internal Server Error: /index/
+Traceback (most recent call last):
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\OneDrive\Desktop\DHT11project-master\DHT11project-master\DHT\views.py", line 59, in value_view
+    return render(request, 'value.html', {'valeurs': valeurs})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 210, in render
+    return template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 326, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 326, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'api_post' not found. 'api_post' is not a valid view function or pattern name.
+ERROR 2024-12-28 20:49:34,894 basehttp "GET /index/ HTTP/1.1" 500 196420
+ERROR 2024-12-28 20:50:01,182 log Internal Server Error: /index/
+Traceback (most recent call last):
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\OneDrive\Desktop\DHT11project-master\DHT11project-master\DHT\views.py", line 59, in value_view
+    return render(request, 'value.html', {'valeurs': valeurs})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 210, in render
+    return template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'json_list' not found. 'json_list' is not a valid view function or pattern name.
+ERROR 2024-12-28 20:50:01,186 basehttp "GET /index/ HTTP/1.1" 500 169211
+ERROR 2024-12-28 20:52:20,824 log Internal Server Error: /index/
+Traceback (most recent call last):
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\OneDrive\Desktop\DHT11project-master\DHT11project-master\DHT\views.py", line 59, in value_view
+    return render(request, 'value.html', {'valeurs': valeurs})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 210, in render
+    return template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'json_list' not found. 'json_list' is not a valid view function or pattern name.
+ERROR 2024-12-28 20:52:20,839 basehttp "GET /index/ HTTP/1.1" 500 169421
+ERROR 2024-12-28 20:52:23,480 log Internal Server Error: /index/
+Traceback (most recent call last):
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\OneDrive\Desktop\DHT11project-master\DHT11project-master\DHT\views.py", line 59, in value_view
+    return render(request, 'value.html', {'valeurs': valeurs})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 210, in render
+    return template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'json_list' not found. 'json_list' is not a valid view function or pattern name.
+ERROR 2024-12-28 20:52:23,512 basehttp "GET /index/ HTTP/1.1" 500 169421
+ERROR 2024-12-28 20:52:24,044 log Internal Server Error: /index/
+Traceback (most recent call last):
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\OneDrive\Desktop\DHT11project-master\DHT11project-master\DHT\views.py", line 59, in value_view
+    return render(request, 'value.html', {'valeurs': valeurs})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 210, in render
+    return template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'json_list' not found. 'json_list' is not a valid view function or pattern name.
+ERROR 2024-12-28 20:52:24,070 basehttp "GET /index/ HTTP/1.1" 500 169421
+INFO 2024-12-28 20:54:58,377 basehttp "GET /index/ HTTP/1.1" 200 10219
+INFO 2024-12-28 20:55:08,885 basehttp "GET /index/ HTTP/1.1" 200 10219
+INFO 2024-12-28 20:55:19,004 basehttp "GET /index/ HTTP/1.1" 200 10219
+INFO 2024-12-28 20:55:29,127 basehttp "GET /index/ HTTP/1.1" 200 10219
+INFO 2024-12-28 20:55:39,348 basehttp "GET /index/ HTTP/1.1" 200 10219
+INFO 2024-12-28 20:55:49,692 basehttp "GET /index/ HTTP/1.1" 200 10219
+INFO 2024-12-28 20:56:00,694 basehttp "GET /index/ HTTP/1.1" 200 10219
+INFO 2024-12-28 20:56:11,679 basehttp "GET /index/ HTTP/1.1" 200 10219
+INFO 2024-12-28 20:56:22,704 basehttp "GET /index/ HTTP/1.1" 200 10219
+INFO 2024-12-28 20:56:33,683 basehttp "GET /index/ HTTP/1.1" 200 10219
+INFO 2024-12-28 20:56:39,181 basehttp "GET /index/ HTTP/1.1" 200 10223
+INFO 2024-12-28 20:56:42,962 basehttp "GET /table/ HTTP/1.1" 200 116549
+INFO 2024-12-28 20:56:44,422 basehttp "GET /myChartTemp/ HTTP/1.1" 200 11173
+INFO 2024-12-28 20:56:44,627 basehttp "GET /chart-data/ HTTP/1.1" 200 28243
+INFO 2024-12-28 20:56:45,989 basehttp "GET /myChartHum/ HTTP/1.1" 200 11509
+INFO 2024-12-28 20:56:46,174 basehttp "GET /chart-data/ HTTP/1.1" 200 28243
+INFO 2024-12-28 20:56:48,909 basehttp "GET /api/post HTTP/1.1" 200 120322
+INFO 2024-12-28 20:56:53,389 basehttp "GET /incident/ HTTP/1.1" 200 7978
+INFO 2024-12-28 20:56:55,473 basehttp "GET /index/ HTTP/1.1" 200 10223
+INFO 2024-12-28 20:57:05,630 basehttp - Broken pipe from ('127.0.0.1', 36913)
+INFO 2024-12-28 20:57:05,780 basehttp "GET /alertConf/ HTTP/1.1" 200 8614
+INFO 2024-12-28 20:57:51,278 basehttp "GET /logout/ HTTP/1.1" 302 0
+INFO 2024-12-28 20:57:51,337 basehttp "GET / HTTP/1.1" 200 2316
+INFO 2024-12-28 20:57:51,430 basehttp "GET /static/images/HD.gif HTTP/1.1" 304 0
+INFO 2024-12-28 20:57:52,459 basehttp "GET /index/ HTTP/1.1" 302 0
+INFO 2024-12-28 20:57:52,475 basehttp "GET /login/?next=/index/ HTTP/1.1" 200 1662
+WARNING 2024-12-28 20:57:52,602 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1801
+INFO 2024-12-28 20:58:05,478 basehttp "POST /login/?next=/index/ HTTP/1.1" 302 0
+INFO 2024-12-28 20:58:05,542 basehttp "GET /index/ HTTP/1.1" 200 9279
+INFO 2024-12-28 20:58:14,201 basehttp "GET /alertConf/ HTTP/1.1" 200 7673
+INFO 2024-12-28 20:58:32,425 basehttp "GET /index/ HTTP/1.1" 200 9279
+INFO 2024-12-28 20:58:38,160 basehttp "GET /alertConf/ HTTP/1.1" 200 7673
+INFO 2024-12-28 20:58:41,467 basehttp "GET /api/post HTTP/1.1" 200 120322
+INFO 2024-12-28 20:59:35,958 basehttp "GET /alertConf/ HTTP/1.1" 200 7675
+INFO 2024-12-28 20:59:37,297 basehttp "GET /alertConf/ HTTP/1.1" 200 7675
+INFO 2024-12-28 20:59:37,503 basehttp "GET /alertConf/ HTTP/1.1" 200 7675
+INFO 2024-12-28 20:59:37,714 basehttp "GET /alertConf/ HTTP/1.1" 200 7675
+INFO 2024-12-28 20:59:37,920 basehttp "GET /alertConf/ HTTP/1.1" 200 7675
+INFO 2024-12-28 20:59:38,127 basehttp "GET /alertConf/ HTTP/1.1" 200 7675
+INFO 2024-12-28 21:00:10,815 basehttp "GET /index/ HTTP/1.1" 200 9281
+INFO 2024-12-28 21:00:13,586 basehttp "GET /incident/ HTTP/1.1" 200 7036
+INFO 2024-12-28 21:00:15,515 basehttp "GET /log_incident/ HTTP/1.1" 200 22182
+INFO 2024-12-28 21:00:18,062 basehttp "GET / HTTP/1.1" 200 2316
+INFO 2024-12-28 21:00:19,527 basehttp "GET /index/ HTTP/1.1" 200 9281
+INFO 2024-12-28 21:00:30,685 basehttp "GET /index/ HTTP/1.1" 200 9281

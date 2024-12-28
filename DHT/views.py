@@ -341,3 +341,7 @@ def dashboard(request):
     }
 
     return render(request, 'dashboard.html', context)
+
+
+def is_admin(user):
+    return user.groups.filter(name='admin').exists()

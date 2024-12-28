@@ -4,19 +4,21 @@
 {% load static %}
 {% block content %}
 <div class="container my-5">
-    <h2 class="text-center mb-4">Gestion des Incidents</h2>
+    <h2 class="text-center mb-4">
+        <i class="fas fa-exclamation-triangle text-warning me-2"></i> Gestion des Incidents
+    </h2>
 
     <!-- Drapeau et Message -->
     <div class="d-flex flex-column align-items-center mb-4">
         {% if incident_in_progress %}
             <img src="{% static 'images/red_flag.png' %}" alt="Drapeau rouge" width="100" class="mb-3">
-            <div class="alert alert-danger text-center" role="alert" style="width: 100%; max-width: 500px;">
-                {{ message }}
+            <div class="alert alert-danger d-flex align-items-center text-center" role="alert" style="width: 100%; max-width: 500px;">
+                <i class="fas fa-times-circle me-2"></i> {{ message }}
             </div>
         {% else %}
             <img src="{% static 'images/green_flag.png' %}" alt="Drapeau vert" width="100" class="mb-3">
-            <div class="alert alert-success text-center" role="alert" style="width: 100%; max-width: 500px;">
-                {{ message }}
+            <div class="alert alert-success d-flex align-items-center text-center" role="alert" style="width: 100%; max-width: 500px;">
+                <i class="fas fa-check-circle me-2"></i> {{ message }}
             </div>
         {% endif %}
     </div>
@@ -28,22 +30,28 @@
                 <form method="POST" class="w-100" style="max-width: 500px;">
                     {% csrf_token %}
                     <div class="mb-3">
-                        <label for="remarks" class="form-label">Remarques (optionnel)</label>
-                        <textarea name="remarks" class="form-control" rows="3" placeholder="Ajouter des remarques..."></textarea>
+                        <label for="remarks" class="form-label">
+                            <i class="fas fa-comment-dots me-2"></i> Remarques (optionnel)
+                        </label>
+                        <textarea name="remarks" id="remarks" class="form-control" rows="3" placeholder="Ajouter des remarques..."></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary w-100">Acquitter</button>
+                    <button type="submit" class="btn btn-primary w-100" data-bs-toggle="tooltip" data-bs-placement="top" title="Cliquez pour acquitter l'incident">
+                        <i class="fas fa-thumbs-up me-2"></i> Acquitter
+                    </button>
                 </form>
             </div>
         {% else %}
-            <div class="alert alert-info text-center" role="alert">
-                Vous avez déjà acquitté cet incident.
+            <div class="alert alert-info d-flex align-items-center justify-content-center" role="alert">
+                <i class="fas fa-info-circle me-2"></i> Vous avez déjà acquitté cet incident.
             </div>
         {% endif %}
     {% endif %}
 
     <!-- Bouton Historique des Incidents -->
     <div class="d-flex justify-content-center mt-4">
-        <a href="{% url 'log_incident' %}" class="btn btn-secondary">Historique des incidents</a>
+        <a href="{% url 'log_incident' %}" class="btn btn-secondary d-flex align-items-center" data-bs-toggle="tooltip" data-bs-placement="top" title="Consulter l'historique des incidents">
+            <i class="fas fa-history me-2"></i> Historique des Incidents
+        </a>
     </div>
 </div>
 {% endblock content %}
