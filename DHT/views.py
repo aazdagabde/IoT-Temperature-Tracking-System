@@ -160,90 +160,112 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from django.utils import timezone
 from django.contrib import messages
-from .models import Dht11, Incident ,Profile
+from .models import Dht11, Incident ,Profile, Acknowledgment
+
+from .alerts import send_telegram_alert, send_whatsapp_alert, send_email_alert
 
 @login_required
 def incident(request):
-    # On cherche s’il y a un incident en cours (end_dt is null)
     open_incident = Incident.objects.filter(end_dt__isnull=True).order_by('-start_dt').first()
 
-    # Par défaut, on suppose pas d’incident
     flag_color = 'green'
     message = "Pas d'incidents."
     incident_in_progress = False
 
     if open_incident:
         flag_color = 'red'
-        message = 'Attention, incident détecté.'
+        message = "Attention, incident détecté."
         incident_in_progress = True
 
-    # Traitement du formulaire d’acquittement
-    # => Seul sens si un incident est en cours
     if request.method == 'POST' and incident_in_progress:
-        # Récupérer la remarque
         remarks = request.POST.get('remarks', '')
+        # Créer une acknowledgment pour l'utilisateur actuel
+        acknowledgment, created = Acknowledgment.objects.get_or_create(
+            incident=open_incident,
+            user=request.user
+        )
+        if created:
+            messages.success(request, "Incident acquitté avec succès.")
+            if remarks:
+                open_incident.remarks = remarks
+                open_incident.save()
+        else:
+            messages.info(request, "Vous avez déjà acquitté cet incident.")
+        return redirect('incident')
 
-        # Marquer l’incident comme acquitté
-        open_incident.ack = True
-        open_incident.remarks = remarks
-        open_incident.ack_user = request.user
-        open_incident.save()
-        messages.success(request, "Incident acquitté avec succès.")
-
-        return redirect('incident')  # Rafraîchir la page ou rediriger ailleurs
+    # Vérifier si l'utilisateur a déjà acquitté
+    user_acknowledged = False
+    if open_incident:
+        user_acknowledged = Acknowledgment.objects.filter(incident=open_incident, user=request.user).exists()
 
     return render(request, 'incident.html', {
         'flag': flag_color,
         'message': message,
-        'incident_in_progress': incident_in_progress
+        'incident_in_progress': incident_in_progress,
+        'user_acknowledged': user_acknowledged
     })
+
 ####################3333333333333
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
 from django.utils import timezone
 from .models import Incident
 
+
+# DHT/views.py
+
+from django.shortcuts import render
+from django.utils import timezone
+from datetime import timedelta, datetime
+from collections import defaultdict
+from .models import Incident
 @login_required
 def log_incident(request):
-    # Récupérer le paramètre de filtrage
-    time_filter = request.GET.get('filter', 'all')
+    # Récupérer le filtre depuis les paramètres GET
+    filter_param = request.GET.get('filter', 'all')
     now = timezone.now()
 
-    if time_filter == 'jour':
-        start_date = now - timedelta(days=1)
-    elif time_filter == 'semaine':
-        start_date = now - timedelta(days=7)
-    elif time_filter == 'mois':
-        start_date = now - timedelta(days=30)
-    elif time_filter == 'annee':
-        start_date = now - timedelta(days=365)
-    else:
-        start_date = None
-
-    if start_date:
-        incidents = Incident.objects.filter(start_dt__gte=start_date).order_by('-start_dt')
+    if filter_param == 'jour':
+        incidents = Incident.objects.filter(start_dt__gte=now - timedelta(days=1)).order_by('-start_dt')
+    elif filter_param == 'semaine':
+        incidents = Incident.objects.filter(start_dt__gte=now - timedelta(weeks=1)).order_by('-start_dt')
+    elif filter_param == 'mois':
+        incidents = Incident.objects.filter(start_dt__gte=now - timedelta(days=30)).order_by('-start_dt')
+    elif filter_param == 'annee':
+        incidents = Incident.objects.filter(start_dt__gte=now - timedelta(days=365)).order_by('-start_dt')
     else:
         incidents = Incident.objects.all().order_by('-start_dt')
 
-    # Déterminer si l'utilisateur peut voir la colonne "Acquittement"
-    # On autorise par ex. le superuser ou les membres des groupes Admin / Admin1
-    can_see_ack = (
-        request.user.is_superuser or
-        request.user.groups.filter(name__in=["Admin", "Admin1"]).exists()
-    )
+    # Statistiques Résumées
+    total_incidents = Incident.objects.count()
+    active_incidents = Incident.objects.filter(end_dt__isnull=True).count()
+    last_incident = Incident.objects.order_by('-start_dt').first()
 
-    # Déterminer si l'utilisateur peut voir les colonnes "Remarques" et "Utilisateur"
-    # On autorise par ex. le superuser ou les membres des groupes Admin / Admin2
-    can_see_remarks = (
-        request.user.is_superuser or
-        request.user.groups.filter(name__in=["Admin", "Admin2"]).exists()
-    )
+    # Données pour le Graphique (Nombre d'incidents par mois)
+    incidents_per_month = defaultdict(int)
 
-    return render(request, 'log_incident.html', {
+    # Filtrer les incidents selon le filtre appliqué
+    filtered_incidents = incidents
+
+    for incident in filtered_incidents:
+        month_label = incident.start_dt.strftime('%b %Y')
+        incidents_per_month[month_label] += 1
+
+    # Trier les mois chronologiquement
+    sorted_months = sorted(incidents_per_month.keys(), key=lambda x: datetime.strptime(x, '%b %Y'))
+    sorted_counts = [incidents_per_month[month] for month in sorted_months]
+
+    context = {
         'incidents': incidents,
-        'can_see_ack': can_see_ack,
-        'can_see_remarks': can_see_remarks,
-    })
+        'total_incidents': total_incidents,
+        'active_incidents': active_incidents,
+        'last_incident': last_incident,
+        'months': sorted_months,
+        'incidents_per_month': sorted_counts,
+    }
+
+    return render(request, 'log_incident.html', context)
+
 ###################################
 @login_required
 def alertConf_view(request):

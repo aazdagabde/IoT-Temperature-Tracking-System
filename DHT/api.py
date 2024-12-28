@@ -1,17 +1,11 @@
-
-
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from django.utils import timezone
 from django.contrib.auth.models import User
-from .serializers import DHT11serialize
 
-from .models import Dht11, Incident
-from .alerts import (
-    send_telegram_alert,
-    send_whatsapp_alert,
-    send_email_alert
-)
+from .models import Dht11, Incident, Profile, Acknowledgment
+from .alerts import send_telegram_alert, send_whatsapp_alert, send_email_alert
+
 
 @api_view(['GET','POST'])
 def Dlist(request):
@@ -21,9 +15,16 @@ def Dlist(request):
              Puis gère l’ouverture/fermeture d’incident + escalade.
     """
     if request.method == 'GET':
-        all_data = Dht11.objects.all()
-        data_ser = DHT11serialize(all_data, many=True)
-        return Response(data_ser.data)
+        queryset = Dht11.objects.all().order_by('-dt')
+        data = [
+            {
+                'id': d.id,
+                'temp': d.temp,
+                'hum': d.hum,
+                'dt': d.dt
+            } for d in queryset
+        ]
+        return Response(data)
 
     elif request.method == 'POST':
         # Supposons que l’ESP8266 envoie un JSON {"temp": 30, "hum": 60}
@@ -42,80 +43,84 @@ def Dlist(request):
     return Response({"status": "ERROR", "message": "Méthode non prise en charge."}, status=405)
 
 
+
 def check_temperature_and_manage_incident(current_temp):
+    """
+    - current_temp : float, la température reçue
+    - Gère la création/fermeture d’incident + escalade en fonction
+      de la température et de l’état actuel (incident ouvert ou non).
+    """
     open_incident = Incident.objects.filter(end_dt__isnull=True).order_by('-start_dt').first()
 
     if current_temp <= 25:
+        # => Température normale => on ferme l'incident s'il y en a un
         if open_incident:
             open_incident.end_dt = timezone.now()
             open_incident.save()
-            logger.info(f"Incident {open_incident.id} fermé (température redevenue normale).")
-    else:
-        if not open_incident:
-            try:
-                new_incident = Incident.objects.create(
-                    start_dt=timezone.now(),
-                    iteration=1
-                )
-                logger.info(f"Nouvel incident créé (ID={new_incident.id}). Itération=1")
-                send_iteration_alerts(new_incident)
-            except Exception as e:
-                logger.error(f"Erreur lors de la création de l'incident: {e}")
+            print("[INFO] Incident fermé (température redevenue normale).")
         else:
-            try:
-                # Toujours escalader, même si ack=True
+            print("[INFO] Aucun incident en cours, température normale.")
+    else:
+        # => Température élevée
+        if not open_incident:
+            # 1. Créer un nouvel incident
+            new_incident = Incident.objects.create(
+                start_dt=timezone.now(),
+                iteration=1
+            )
+            print(f"[INFO] Nouvel incident créé (ID={new_incident.id}). Itération=1")
+            users_to_alert = get_users_to_alert(new_incident)
+            send_custom_alerts(new_incident, users_to_alert)
+        else:
+            # Il y a déjà un incident en cours
+            # Vérifier s'il y a encore des utilisateurs non acquittés
+            users_to_alert = get_users_to_alert(open_incident)
+            if users_to_alert:
+                # Incrémenter l'itération
                 open_incident.iteration += 1
-                open_incident.ack = False  # Réinitialiser ack pour permettre l'escalade
                 open_incident.save()
-                logger.info(f"Incident en cours (ID={open_incident.id}) -> Itération={open_incident.iteration}")
-                send_iteration_alerts(open_incident)
-            except Exception as e:
-                logger.error(f"Erreur lors de l'escalade de l'incident {open_incident.id}: {e}")
+                print(f"[INFO] Incident en cours (ID={open_incident.id}) -> Itération={open_incident.iteration}")
+                send_custom_alerts(open_incident, users_to_alert)
+            else:
+                # Tous les utilisateurs ont acquitté
+                print("[INFO] Tous les utilisateurs ont acquitté l'incident. Pas d'escalade.")
+                # Optionnel : Fermer l'incident si vous le souhaitez
+                # open_incident.end_dt = timezone.now()
+                # open_incident.save()
 
 
-
-def send_iteration_alerts(incident: Incident):
+def get_users_to_alert(incident):
     """
-    Envoie des alertes selon incident.iteration.
-    - user1 : itération 1
-    - user2 : itération 2
-    - user3 : itération 3
-    - admin : itération 4
-    etc.
-    Hardcodé pour l'exemple, adaptez à vos besoins ou via Profile.
+    Retourne la liste des utilisateurs à alerter selon l'itération et les acquittements.
     """
     iteration = incident.iteration
     message = f"Alerte: température élevée (Incident #{incident.id}, itération {iteration})."
 
-    user1 = get_user_by_username("user1")
-    user2 = get_user_by_username("user2")
-    user3 = get_user_by_username("user3")
-    admin = get_user_by_username("admin")
+    # Récupérer les utilisateurs dans l'ordre d'escalade
+    escalation_order = ['user1', 'user2', 'user3', 'admin']  # À adapter selon vos besoins
+    users_to_alert = []
 
-    if iteration == 1:
-        # Alerte à user1
-        notify_user(user1, message)
-    elif iteration == 2:
-        # user1 (si pas acquitté) et user2
-        if not incident.ack:
-            notify_user(user1, message)
-        notify_user(user2, message)
-    elif iteration == 3:
-        # user1 & user2 (si pas acquitté), user3
-        if not incident.ack:
-            notify_user(user1, message)
-            notify_user(user2, message)
-        notify_user(user3, message)
-    elif iteration == 4:
-        # user1, user2, user3 (si pas acquitté), admin
-        if not incident.ack:
-            notify_user(user1, message)
-            notify_user(user2, message)
-            notify_user(user3, message)
-        notify_user(admin, message)
-    else:
-        # itération > 4 => à vous de voir la logique
-        pass
+    for i in range(iteration):
+        if i < len(escalation_order):
+            username = escalation_order[i]
+            user = get_user_by_username(username)
+            if user and not Acknowledgment.objects.filter(incident=incident, user=user).exists():
+                users_to_alert.append(user)
+
+    return users_to_alert
+
+
+def send_custom_alerts(incident, users):
+    """
+    Envoie des alertes personnalisées aux utilisateurs spécifiés.
+
+    Args:
+        incident (Incident): L'incident en cours.
+        users (list of User): Les utilisateurs à alerter.
+    """
+    message = f"Alerte: température élevée (Incident #{incident.id}, itération {incident.iteration})."
+    for user in users:
+        notify_user(user, message)
 
 
 def notify_user(user, message: str):
@@ -131,12 +136,11 @@ def notify_user(user, message: str):
         return
 
     # Ex. Telegram
-    telegram_bot_token = "7859262503:AAGScp5W3u876LlZk1kcA7_S-dK1bmcuMVw"  # ou en variable d’env.
+    telegram_bot_token = "7859262503:AAGScp5W3u876LlZk1kcA7_S-dK1bmcuMVw"  # Remplacez par votre token
     if profile.telegram_id:
         send_telegram_alert(telegram_bot_token, profile.telegram_id, message)
 
     # Ex. WhatsApp
-    """
     if profile.twilio_account_sid and profile.twilio_auth_token and profile.whatsapp_number:
         send_whatsapp_alert(
             account_sid=profile.twilio_account_sid,
@@ -145,7 +149,6 @@ def notify_user(user, message: str):
             to_whatsapp=f'whatsapp:{profile.whatsapp_number}',
             message=message
         )
-    """
 
     # Ex. E-mail
     if user.email:

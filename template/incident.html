@@ -1,30 +1,49 @@
+<!-- DHT/templates/incident.html -->
+
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-<div class="container">
-  <h2>Statut de l’incident</h2>
+<div class="container my-5">
+    <h2 class="text-center mb-4">Gestion des Incidents</h2>
 
-  {% if flag == 'red' %}
-    <img src="{% static 'images/red_flag.png' %}" alt="Drapeau rouge" width="50">
-    <p class="text-danger">{{ message }}</p>
-  {% else %}
-    <img src="{% static 'images/green_flag.png' %}" alt="Drapeau vert" width="50">
-    <p class="text-success">{{ message }}</p>
-  {% endif %}
-
-  <a href="{% url 'log_incident' %}" class="btn btn-primary">Historique des incidents</a>
-
-  {% if incident_in_progress %}
-  <hr>
-  <h4>Acquittement de l’incident</h4>
-  <form method="POST">
-    {% csrf_token %}
-    <div class="mb-3">
-      <label for="remarks" class="form-label">Remarques :</label>
-      <textarea name="remarks" id="remarks" rows="3" class="form-control"></textarea>
+    <!-- Drapeau et Message -->
+    <div class="d-flex flex-column align-items-center mb-4">
+        {% if incident_in_progress %}
+            <img src="{% static 'images/red_flag.png' %}" alt="Drapeau rouge" width="100" class="mb-3">
+            <div class="alert alert-danger text-center" role="alert" style="width: 100%; max-width: 500px;">
+                {{ message }}
+            </div>
+        {% else %}
+            <img src="{% static 'images/green_flag.png' %}" alt="Drapeau vert" width="100" class="mb-3">
+            <div class="alert alert-success text-center" role="alert" style="width: 100%; max-width: 500px;">
+                {{ message }}
+            </div>
+        {% endif %}
     </div>
-    <button type="submit" class="btn btn-warning">Acquitter</button>
-  </form>
-  {% endif %}
+
+    <!-- Formulaire d'Acquittement ou Message -->
+    {% if incident_in_progress %}
+        {% if not user_acknowledged %}
+            <div class="d-flex justify-content-center">
+                <form method="POST" class="w-100" style="max-width: 500px;">
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        <label for="remarks" class="form-label">Remarques (optionnel)</label>
+                        <textarea name="remarks" class="form-control" rows="3" placeholder="Ajouter des remarques..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Acquitter</button>
+                </form>
+            </div>
+        {% else %}
+            <div class="alert alert-info text-center" role="alert">
+                Vous avez déjà acquitté cet incident.
+            </div>
+        {% endif %}
+    {% endif %}
+
+    <!-- Bouton Historique des Incidents -->
+    <div class="d-flex justify-content-center mt-4">
+        <a href="{% url 'log_incident' %}" class="btn btn-secondary">Historique des incidents</a>
+    </div>
 </div>
 {% endblock content %}

@@ -125,6 +125,44 @@ LOGOUT_REDIRECT_URL = '/'
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 import os
+#################
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'verbose': {
+            'format': '{levelname} {asctime} {module} {message}',
+            'style': '{',
+        },
+        'simple': {
+            'format': '{levelname} {message}',
+            'style': '{',
+        },
+    },
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+            'formatter': 'simple',
+        },
+        'file': {
+            'class': 'logging.FileHandler',
+            'filename': os.path.join(BASE_DIR, 'debug.log'),
+            'formatter': 'verbose',
+        },
+    },
+    'loggers': {
+        'DHT': {
+            'handlers': ['console', 'file'],
+            'level': 'DEBUG',
+        },
+        'django': {
+            'handlers': ['console', 'file'],
+            'level': 'INFO',
+            'propagate': True,
+        },
+    },
+}
+######################
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [
    os.path.join(BASE_DIR, 'static')
