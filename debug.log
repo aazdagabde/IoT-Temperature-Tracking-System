@@ -8831,3 +8831,19 @@ INFO 2024-12-29 23:44:33,461 basehttp "POST /api/post HTTP/1.1" 200 7060
 INFO 2024-12-29 23:44:41,216 basehttp "GET /incident/ HTTP/1.1" 200 7980
 INFO 2024-12-29 23:44:41,294 basehttp "GET /static/images/green_flag.png HTTP/1.1" 304 0
 INFO 2024-12-29 23:44:42,404 basehttp "GET /log_incident/ HTTP/1.1" 200 26604
+INFO 2024-12-29 23:50:14,663 autoreload Watching for file changes with StatReloader
+INFO 2024-12-29 23:50:17,256 basehttp "GET / HTTP/1.1" 200 2316
+INFO 2024-12-29 23:50:18,469 basehttp "GET /index/ HTTP/1.1" 200 10223
+INFO 2024-12-29 23:50:20,103 basehttp "GET /incident/ HTTP/1.1" 200 7980
+INFO 2024-12-29 23:50:21,273 basehttp "GET /log_incident/ HTTP/1.1" 200 26604
+INFO 2024-12-29 23:53:13,251 basehttp "GET / HTTP/1.1" 200 2316
+INFO 2024-12-29 23:53:14,342 basehttp "GET /index/ HTTP/1.1" 200 10223
+INFO 2024-12-29 23:53:16,720 basehttp "GET /logout/ HTTP/1.1" 302 0
+INFO 2024-12-29 23:53:16,736 basehttp "GET / HTTP/1.1" 200 2316
+INFO 2024-12-29 23:53:17,995 basehttp "GET /index/ HTTP/1.1" 302 0
+INFO 2024-12-29 23:53:18,010 basehttp "GET /login/?next=/index/ HTTP/1.1" 200 1662
+WARNING 2024-12-29 23:53:18,075 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1801
+INFO 2024-12-29 23:53:28,539 basehttp "POST /login/?next=/index/ HTTP/1.1" 302 0
+INFO 2024-12-29 23:53:28,553 basehttp "GET /index/ HTTP/1.1" 200 10223
+INFO 2024-12-29 23:53:30,759 basehttp "GET /alertConf/ HTTP/1.1" 200 8616
+INFO 2024-12-29 23:53:32,896 basehttp "GET /table/ HTTP/1.1" 200 117685
