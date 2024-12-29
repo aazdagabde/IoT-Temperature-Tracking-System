@@ -8428,3 +8428,406 @@ INFO 2024-12-28 21:00:15,515 basehttp "GET /log_incident/ HTTP/1.1" 200 22182
 INFO 2024-12-28 21:00:18,062 basehttp "GET / HTTP/1.1" 200 2316
 INFO 2024-12-28 21:00:19,527 basehttp "GET /index/ HTTP/1.1" 200 9281
 INFO 2024-12-28 21:00:30,685 basehttp "GET /index/ HTTP/1.1" 200 9281
+INFO 2024-12-28 21:01:25,925 autoreload Watching for file changes with StatReloader
+INFO 2024-12-28 21:01:26,865 basehttp "GET /index/ HTTP/1.1" 200 9281
+INFO 2024-12-28 21:01:30,048 basehttp "GET /index/ HTTP/1.1" 200 9281
+INFO 2024-12-28 21:01:40,170 basehttp "GET /index/ HTTP/1.1" 200 9281
+INFO 2024-12-28 21:01:41,674 basehttp "GET /logout/ HTTP/1.1" 302 0
+INFO 2024-12-28 21:01:41,726 basehttp "GET / HTTP/1.1" 200 2316
+INFO 2024-12-28 21:01:43,185 basehttp "GET /index/ HTTP/1.1" 302 0
+INFO 2024-12-28 21:01:43,215 basehttp "GET /login/?next=/index/ HTTP/1.1" 200 1662
+WARNING 2024-12-28 21:01:43,362 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1801
+INFO 2024-12-28 21:01:55,509 basehttp - Broken pipe from ('127.0.0.1', 9440)
+INFO 2024-12-28 21:01:57,221 basehttp "POST /login/?next=/index/ HTTP/1.1" 302 0
+INFO 2024-12-28 21:01:57,299 basehttp "GET /index/ HTTP/1.1" 200 10225
+INFO 2024-12-28 21:02:07,481 basehttp "GET /index/ HTTP/1.1" 200 10225
+INFO 2024-12-28 21:02:12,071 basehttp "GET /table/ HTTP/1.1" 200 116551
+INFO 2024-12-28 21:02:22,011 basehttp "GET /index/ HTTP/1.1" 200 10225
+INFO 2024-12-28 21:02:32,662 basehttp "GET /index/ HTTP/1.1" 200 10225
+INFO 2024-12-28 21:02:42,879 basehttp "GET /index/ HTTP/1.1" 200 10225
+INFO 2024-12-28 21:02:44,553 basehttp "GET /api/post HTTP/1.1" 200 120322
+INFO 2024-12-28 21:02:52,979 basehttp "GET /index/ HTTP/1.1" 200 10225
+INFO 2024-12-28 21:03:03,083 basehttp "GET /index/ HTTP/1.1" 200 10225
+INFO 2024-12-28 21:03:13,229 basehttp "GET /index/ HTTP/1.1" 200 10225
+INFO 2024-12-28 21:03:23,671 basehttp "GET /index/ HTTP/1.1" 200 10225
+INFO 2024-12-28 21:03:34,696 basehttp "GET /index/ HTTP/1.1" 200 10225
+INFO 2024-12-28 21:03:45,716 basehttp "GET /index/ HTTP/1.1" 200 10225
+INFO 2024-12-28 21:03:56,747 basehttp "GET /index/ HTTP/1.1" 200 10225
+INFO 2024-12-28 21:04:01,388 basehttp "GET /alertConf/ HTTP/1.1" 200 8616
+INFO 2024-12-28 21:04:03,233 basehttp "GET /index/ HTTP/1.1" 200 10225
+INFO 2024-12-28 21:04:03,932 basehttp "GET /incident/ HTTP/1.1" 200 7980
+INFO 2024-12-28 21:04:07,138 basehttp "GET /api/post HTTP/1.1" 200 120322
+INFO 2024-12-28 21:04:18,999 basehttp "OPTIONS /api/post HTTP/1.1" 200 7507
+INFO 2024-12-28 21:04:27,408 alerts Alerte Telegram envoyée.
+ERROR 2024-12-28 21:04:28,749 alerts Erreur lors de l'envoi de l'alerte WhatsApp : 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/None/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: Authentication Error - invalid username[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/20003[0m
+
+
+INFO 2024-12-28 21:04:30,899 alerts Alerte e-mail envoyée avec succès.
+INFO 2024-12-28 21:04:30,923 basehttp "POST /api/post HTTP/1.1" 200 7060
+INFO 2024-12-28 21:04:36,152 basehttp "GET /incident/ HTTP/1.1" 200 8992
+INFO 2024-12-28 21:04:54,857 basehttp "POST /incident/ HTTP/1.1" 302 0
+INFO 2024-12-28 21:04:54,876 basehttp "GET /incident/ HTTP/1.1" 200 8365
+INFO 2024-12-28 21:05:03,071 basehttp "GET /log_incident/ HTTP/1.1" 200 24444
+INFO 2024-12-28 21:05:16,491 basehttp "GET /log_incident/?filter=jour HTTP/1.1" 200 18293
+INFO 2024-12-28 21:05:17,186 basehttp "GET /log_incident/?filter=semaine HTTP/1.1" 200 24444
+INFO 2024-12-28 21:05:17,721 basehttp "GET /log_incident/?filter=mois HTTP/1.1" 200 24444
+INFO 2024-12-28 21:05:18,217 basehttp "GET /log_incident/?filter=annee HTTP/1.1" 200 24444
+INFO 2024-12-28 21:05:41,078 basehttp "POST /api/post HTTP/1.1" 200 7060
+INFO 2024-12-28 21:05:45,035 basehttp "GET /log_incident/?filter=annee HTTP/1.1" 200 24358
+INFO 2024-12-29 09:27:50,607 basehttp "GET /register/ HTTP/1.1" 200 3123
+WARNING 2024-12-29 09:27:50,657 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1801
+INFO 2024-12-29 09:28:02,885 basehttp "GET /alertConf/ HTTP/1.1" 200 8616
+INFO 2024-12-29 09:28:14,392 basehttp "GET /incident/ HTTP/1.1" 200 7980
+INFO 2024-12-29 09:28:14,447 basehttp "GET /static/images/green_flag.png HTTP/1.1" 304 0
+INFO 2024-12-29 09:28:17,926 basehttp "GET /log_incident/ HTTP/1.1" 200 24358
+INFO 2024-12-29 09:28:20,454 basehttp "GET /table/ HTTP/1.1" 200 116875
+INFO 2024-12-29 09:28:38,269 basehttp "GET /dashboard/ HTTP/1.1" 200 11968
+INFO 2024-12-29 09:29:15,036 basehttp "GET /index/ HTTP/1.1" 200 10227
+INFO 2024-12-29 09:29:25,156 basehttp "GET /index/ HTTP/1.1" 200 10227
+INFO 2024-12-29 09:29:36,289 basehttp "GET /index/ HTTP/1.1" 200 10227
+INFO 2024-12-29 15:27:45,208 autoreload Watching for file changes with StatReloader
+INFO 2024-12-29 15:27:54,108 basehttp "GET / HTTP/1.1" 200 2316
+WARNING 2024-12-29 15:27:55,287 log Not Found: /favicon.ico
+WARNING 2024-12-29 15:27:55,287 basehttp "GET /favicon.ico HTTP/1.1" 404 5444
+INFO 2024-12-29 15:27:56,976 basehttp "GET /index/ HTTP/1.1" 200 10227
+INFO 2024-12-29 15:27:59,837 basehttp "GET /logout/ HTTP/1.1" 302 0
+INFO 2024-12-29 15:27:59,880 basehttp "GET / HTTP/1.1" 200 2316
+INFO 2024-12-29 15:28:00,906 basehttp "GET /index/ HTTP/1.1" 302 0
+INFO 2024-12-29 15:28:01,077 basehttp "GET /login/?next=/index/ HTTP/1.1" 200 1662
+WARNING 2024-12-29 15:28:01,177 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1801
+INFO 2024-12-29 15:32:03,091 basehttp "POST /login/?next=/index/ HTTP/1.1" 302 0
+INFO 2024-12-29 15:32:03,103 basehttp "GET /index/ HTTP/1.1" 200 10227
+INFO 2024-12-29 15:32:13,232 basehttp "GET /index/ HTTP/1.1" 200 10227
+INFO 2024-12-29 15:32:23,466 basehttp "GET /index/ HTTP/1.1" 200 10227
+INFO 2024-12-29 15:32:34,478 basehttp "GET /index/ HTTP/1.1" 200 10227
+INFO 2024-12-29 15:32:45,413 basehttp "GET /index/ HTTP/1.1" 200 10227
+INFO 2024-12-29 15:32:56,462 basehttp "GET /index/ HTTP/1.1" 200 10227
+INFO 2024-12-29 15:33:07,443 basehttp "GET /index/ HTTP/1.1" 200 10227
+INFO 2024-12-29 15:33:18,460 basehttp "GET /index/ HTTP/1.1" 200 10227
+INFO 2024-12-29 15:33:28,844 basehttp "GET /index/ HTTP/1.1" 200 10227
+INFO 2024-12-29 15:33:29,566 basehttp "GET /alertConf/ HTTP/1.1" 200 8616
+INFO 2024-12-29 15:33:44,459 basehttp "GET /index/ HTTP/1.1" 200 10227
+INFO 2024-12-29 15:33:46,392 basehttp "GET /logout/ HTTP/1.1" 302 0
+INFO 2024-12-29 15:33:46,412 basehttp "GET / HTTP/1.1" 200 2316
+INFO 2024-12-29 15:33:52,108 basehttp "GET /admin/ HTTP/1.1" 302 0
+INFO 2024-12-29 15:33:52,965 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4158
+INFO 2024-12-29 15:33:53,021 basehttp "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2024-12-29 15:33:53,062 basehttp "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+INFO 2024-12-29 15:33:53,084 basehttp "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+INFO 2024-12-29 15:33:53,098 basehttp "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+INFO 2024-12-29 15:33:53,127 basehttp "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2024-12-29 15:33:53,131 basehttp "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO 2024-12-29 15:33:53,850 basehttp "GET /static/admin/css/login.css HTTP/1.1" 200 958
+INFO 2024-12-29 15:54:38,775 basehttp "GET /index/ HTTP/1.1" 302 0
+INFO 2024-12-29 15:54:38,799 basehttp "GET /login/?next=/index/ HTTP/1.1" 200 1662
+WARNING 2024-12-29 15:54:38,902 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1801
+INFO 2024-12-29 16:04:39,583 basehttp "GET /index/ HTTP/1.1" 302 0
+INFO 2024-12-29 16:04:39,607 basehttp "GET /login/?next=/index/ HTTP/1.1" 200 1662
+WARNING 2024-12-29 16:04:39,712 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1801
+INFO 2024-12-29 16:04:57,969 basehttp "POST /login/?next=/index/ HTTP/1.1" 302 0
+INFO 2024-12-29 16:04:58,021 basehttp "GET /index/ HTTP/1.1" 200 9283
+INFO 2024-12-29 16:05:08,238 basehttp "GET /index/ HTTP/1.1" 200 9283
+INFO 2024-12-29 16:05:18,458 basehttp "GET /index/ HTTP/1.1" 200 9283
+INFO 2024-12-29 16:05:22,351 basehttp "GET /alertConf/ HTTP/1.1" 200 7675
+INFO 2024-12-29 16:06:21,354 basehttp "POST /alertConf/ HTTP/1.1" 302 0
+INFO 2024-12-29 16:06:21,395 basehttp "GET /alertConf/ HTTP/1.1" 200 7814
+INFO 2024-12-29 16:06:32,864 basehttp "GET /api/post HTTP/1.1" 200 120662
+INFO 2024-12-29 16:06:52,904 basehttp "OPTIONS /api/post HTTP/1.1" 200 7507
+INFO 2024-12-29 16:07:14,917 alerts Alerte Telegram envoyée.
+ERROR 2024-12-29 16:07:17,318 alerts Erreur lors de l'envoi de l'alerte WhatsApp : 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/None/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: Authentication Error - invalid username[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/20003[0m
+
+
+INFO 2024-12-29 16:07:23,011 alerts Alerte e-mail envoyée avec succès.
+INFO 2024-12-29 16:07:23,050 basehttp "POST /api/post HTTP/1.1" 200 7060
+INFO 2024-12-29 16:07:36,860 alerts Alerte Telegram envoyée.
+ERROR 2024-12-29 16:07:38,273 alerts Erreur lors de l'envoi de l'alerte WhatsApp : 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/None/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: Authentication Error - invalid username[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/20003[0m
+
+
+INFO 2024-12-29 16:07:45,132 alerts Alerte e-mail envoyée avec succès.
+INFO 2024-12-29 16:07:45,170 basehttp "POST /api/post HTTP/1.1" 200 7060
+INFO 2024-12-29 16:19:48,580 basehttp "GET /alertConf/ HTTP/1.1" 200 7675
+INFO 2024-12-29 16:19:59,625 basehttp "GET /index/ HTTP/1.1" 200 9280
+INFO 2024-12-29 16:20:09,767 basehttp "GET /index/ HTTP/1.1" 200 9280
+INFO 2024-12-29 16:20:19,899 basehttp "GET /index/ HTTP/1.1" 200 9280
+INFO 2024-12-29 16:20:30,013 basehttp "GET /index/ HTTP/1.1" 200 9280
+INFO 2024-12-29 16:20:40,152 basehttp "GET /index/ HTTP/1.1" 200 9280
+INFO 2024-12-29 16:20:43,715 basehttp "GET /login/?next=/index/ HTTP/1.1" 200 1952
+WARNING 2024-12-29 16:20:43,832 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1801
+INFO 2024-12-29 16:20:46,142 basehttp "GET /logout/ HTTP/1.1" 302 0
+INFO 2024-12-29 16:20:46,180 basehttp "GET / HTTP/1.1" 200 2316
+INFO 2024-12-29 16:21:35,515 basehttp "GET /index/ HTTP/1.1" 302 0
+INFO 2024-12-29 16:21:35,533 basehttp "GET /login/?next=/index/ HTTP/1.1" 200 1662
+WARNING 2024-12-29 16:21:35,645 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1801
+INFO 2024-12-29 16:21:44,951 basehttp "POST /login/?next=/index/ HTTP/1.1" 302 0
+INFO 2024-12-29 16:21:45,002 basehttp "GET /index/ HTTP/1.1" 200 10224
+INFO 2024-12-29 16:21:55,161 basehttp "GET /index/ HTTP/1.1" 200 10224
+INFO 2024-12-29 16:21:57,461 basehttp "GET /alertConf/ HTTP/1.1" 200 8616
+INFO 2024-12-29 16:22:00,126 basehttp "GET /dashboard/ HTTP/1.1" 200 11981
+INFO 2024-12-29 16:22:58,870 basehttp "GET /logout/ HTTP/1.1" 302 0
+INFO 2024-12-29 16:22:58,891 basehttp "GET / HTTP/1.1" 200 2316
+INFO 2024-12-29 16:22:59,663 basehttp "GET /index/ HTTP/1.1" 302 0
+INFO 2024-12-29 16:22:59,698 basehttp "GET /login/?next=/index/ HTTP/1.1" 200 1662
+WARNING 2024-12-29 16:22:59,781 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1801
+INFO 2024-12-29 16:23:09,824 basehttp "POST /login/?next=/index/ HTTP/1.1" 302 0
+INFO 2024-12-29 16:23:09,884 basehttp "GET /index/ HTTP/1.1" 200 9280
+INFO 2024-12-29 16:23:20,017 basehttp "GET /index/ HTTP/1.1" 200 9280
+INFO 2024-12-29 16:23:25,510 basehttp "GET /incident/ HTTP/1.1" 200 8048
+INFO 2024-12-29 16:23:25,626 basehttp "GET /static/images/red_flag.png HTTP/1.1" 304 0
+INFO 2024-12-29 16:23:42,535 basehttp "POST /incident/ HTTP/1.1" 302 0
+INFO 2024-12-29 16:23:42,596 basehttp "GET /incident/ HTTP/1.1" 200 7421
+INFO 2024-12-29 16:23:49,589 basehttp "GET /log_incident/ HTTP/1.1" 200 24729
+INFO 2024-12-29 16:24:08,210 basehttp "GET /api/post HTTP/1.1" 200 121002
+INFO 2024-12-29 16:24:25,805 basehttp "OPTIONS /api/post HTTP/1.1" 200 7507
+INFO 2024-12-29 16:24:47,774 basehttp "GET /incident/ HTTP/1.1" 200 7287
+INFO 2024-12-29 16:24:53,206 basehttp "POST /api/post HTTP/1.1" 200 7060
+INFO 2024-12-29 16:24:56,699 basehttp "GET /incident/ HTTP/1.1" 200 7036
+INFO 2024-12-29 16:25:00,198 basehttp "GET /log_incident/ HTTP/1.1" 200 24643
+INFO 2024-12-29 16:49:49,861 basehttp "GET /table/ HTTP/1.1" 200 116417
+INFO 2024-12-29 16:53:44,140 basehttp "GET /myChartTemp/ HTTP/1.1" 200 10231
+INFO 2024-12-29 16:53:44,364 basehttp "GET /chart-data/ HTTP/1.1" 200 28448
+INFO 2024-12-29 16:54:44,231 basehttp "GET /table/ HTTP/1.1" 200 116417
+INFO 2024-12-29 16:55:40,969 basehttp "GET /myChartTemp/ HTTP/1.1" 200 10231
+INFO 2024-12-29 16:55:41,130 basehttp "GET /chart-data/ HTTP/1.1" 200 28448
+INFO 2024-12-29 16:55:42,991 basehttp "GET /index/ HTTP/1.1" 200 9280
+INFO 2024-12-29 16:55:53,156 basehttp "GET /index/ HTTP/1.1" 200 9280
+INFO 2024-12-29 16:56:03,302 basehttp "GET /index/ HTTP/1.1" 200 9280
+INFO 2024-12-29 16:56:13,443 basehttp "GET /index/ HTTP/1.1" 200 9280
+INFO 2024-12-29 16:56:24,423 basehttp "GET /index/ HTTP/1.1" 200 9280
+INFO 2024-12-29 16:56:35,462 basehttp "GET /index/ HTTP/1.1" 200 9280
+INFO 2024-12-29 16:56:46,476 basehttp "GET /index/ HTTP/1.1" 200 9280
+INFO 2024-12-29 16:56:57,428 basehttp "GET /index/ HTTP/1.1" 200 9280
+INFO 2024-12-29 16:57:08,473 basehttp "GET /index/ HTTP/1.1" 200 9280
+INFO 2024-12-29 16:57:19,421 basehttp "GET /index/ HTTP/1.1" 200 9280
+INFO 2024-12-29 16:57:30,441 basehttp "GET /index/ HTTP/1.1" 200 9280
+INFO 2024-12-29 16:57:41,449 basehttp "GET /index/ HTTP/1.1" 200 9280
+INFO 2024-12-29 16:57:52,478 basehttp "GET /index/ HTTP/1.1" 200 9280
+INFO 2024-12-29 16:58:03,480 basehttp "GET /index/ HTTP/1.1" 200 9280
+INFO 2024-12-29 16:58:14,421 basehttp "GET /index/ HTTP/1.1" 200 9280
+INFO 2024-12-29 16:58:25,438 basehttp "GET /index/ HTTP/1.1" 200 9280
+INFO 2024-12-29 16:58:36,472 basehttp "GET /index/ HTTP/1.1" 200 9280
+INFO 2024-12-29 16:58:47,484 basehttp "GET /index/ HTTP/1.1" 200 9280
+INFO 2024-12-29 16:58:58,410 basehttp "GET /index/ HTTP/1.1" 200 9280
+INFO 2024-12-29 16:59:09,471 basehttp "GET /index/ HTTP/1.1" 200 9280
+INFO 2024-12-29 16:59:20,473 basehttp "GET /index/ HTTP/1.1" 200 9280
+INFO 2024-12-29 16:59:24,318 basehttp "GET / HTTP/1.1" 200 2316
+INFO 2024-12-29 16:59:33,457 basehttp "GET /index/ HTTP/1.1" 200 9280
+INFO 2024-12-29 16:59:43,631 basehttp "GET /index/ HTTP/1.1" 200 9280
+INFO 2024-12-29 16:59:54,435 basehttp "GET /index/ HTTP/1.1" 200 9280
+INFO 2024-12-29 17:00:05,427 basehttp "GET /index/ HTTP/1.1" 200 9280
+INFO 2024-12-29 17:00:16,475 basehttp "GET /index/ HTTP/1.1" 200 9280
+INFO 2024-12-29 17:00:27,470 basehttp "GET /index/ HTTP/1.1" 200 9280
+INFO 2024-12-29 17:00:38,454 basehttp "GET /index/ HTTP/1.1" 200 9280
+INFO 2024-12-29 17:00:48,781 basehttp "GET /index/ HTTP/1.1" 200 9280
+INFO 2024-12-29 17:00:59,483 basehttp "GET /index/ HTTP/1.1" 200 9280
+INFO 2024-12-29 17:01:10,479 basehttp "GET /index/ HTTP/1.1" 200 9280
+INFO 2024-12-29 17:01:21,497 basehttp "GET /index/ HTTP/1.1" 200 9280
+INFO 2024-12-29 17:01:32,480 basehttp "GET /index/ HTTP/1.1" 200 9280
+INFO 2024-12-29 17:01:43,490 basehttp "GET /index/ HTTP/1.1" 200 9280
+INFO 2024-12-29 17:01:54,471 basehttp "GET /index/ HTTP/1.1" 200 9280
+INFO 2024-12-29 17:02:05,470 basehttp "GET /index/ HTTP/1.1" 200 9280
+INFO 2024-12-29 17:02:16,443 basehttp "GET /index/ HTTP/1.1" 200 9280
+INFO 2024-12-29 17:02:24,001 basehttp "GET /admin/ HTTP/1.1" 302 0
+INFO 2024-12-29 17:02:24,072 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 3678
+INFO 2024-12-29 17:02:37,623 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2024-12-29 17:02:37,836 basehttp "GET /admin/ HTTP/1.1" 200 9417
+INFO 2024-12-29 17:02:37,938 basehttp "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+INFO 2024-12-29 17:02:45,038 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2024-12-29 17:02:45,105 basehttp "GET /admin/ HTTP/1.1" 200 9417
+INFO 2024-12-29 17:02:47,198 basehttp "POST /admin/logout/ HTTP/1.1" 302 0
+INFO 2024-12-29 17:02:47,225 basehttp "GET / HTTP/1.1" 200 2316
+INFO 2024-12-29 17:02:51,795 basehttp "GET /index/ HTTP/1.1" 302 0
+INFO 2024-12-29 17:02:51,811 basehttp "GET /login/?next=/index/ HTTP/1.1" 200 1662
+WARNING 2024-12-29 17:02:51,946 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1801
+INFO 2024-12-29 17:03:05,954 basehttp "POST /login/?next=/index/ HTTP/1.1" 302 0
+INFO 2024-12-29 17:03:06,029 basehttp "GET /index/ HTTP/1.1" 200 9280
+INFO 2024-12-29 17:03:16,179 basehttp "GET /index/ HTTP/1.1" 200 9280
+WARNING 2024-12-29 17:03:22,954 log Forbidden: /register/
+WARNING 2024-12-29 17:03:22,954 basehttp "GET /register/ HTTP/1.1" 403 55
+INFO 2024-12-29 17:03:31,985 basehttp "GET /admin/ HTTP/1.1" 302 0
+INFO 2024-12-29 17:03:32,059 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 3678
+INFO 2024-12-29 17:03:59,003 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2024-12-29 17:03:59,140 basehttp "GET /admin/ HTTP/1.1" 200 9417
+INFO 2024-12-29 17:04:05,144 basehttp "GET /admin/auth/user/ HTTP/1.1" 200 12995
+INFO 2024-12-29 17:04:05,290 basehttp "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+INFO 2024-12-29 17:04:05,303 basehttp "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2024-12-29 17:04:05,336 basehttp "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2024-12-29 17:04:05,336 basehttp "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2024-12-29 17:04:05,339 basehttp "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2024-12-29 17:04:05,339 basehttp "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2024-12-29 17:04:05,365 basehttp "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2024-12-29 17:04:05,365 basehttp "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2024-12-29 17:04:05,365 basehttp "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2024-12-29 17:04:05,396 basehttp "GET /static/admin/img/search.svg HTTP/1.1" 304 0
+INFO 2024-12-29 17:04:05,397 basehttp "GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+INFO 2024-12-29 17:04:05,433 basehttp "GET /static/admin/img/icon-no.svg HTTP/1.1" 304 0
+INFO 2024-12-29 17:04:05,455 basehttp "GET /static/admin/js/filters.js HTTP/1.1" 304 0
+INFO 2024-12-29 17:04:05,566 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-29 17:04:05,647 basehttp "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+INFO 2024-12-29 17:04:05,648 basehttp "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 304 0
+INFO 2024-12-29 17:04:05,650 basehttp "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 304 0
+INFO 2024-12-29 17:04:07,896 basehttp "GET /admin/auth/group/ HTTP/1.1" 200 8991
+INFO 2024-12-29 17:04:08,010 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-29 17:04:16,969 basehttp "GET /admin/auth/group/1/change/ HTTP/1.1" 200 12956
+INFO 2024-12-29 17:04:17,089 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-29 17:04:23,750 basehttp "GET /admin/auth/user/ HTTP/1.1" 200 12995
+INFO 2024-12-29 17:04:23,886 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-29 17:04:25,810 basehttp "GET /admin/auth/user/3/change/ HTTP/1.1" 200 22153
+INFO 2024-12-29 17:04:25,929 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-29 17:05:12,275 basehttp "GET /admin/auth/user/ HTTP/1.1" 200 12995
+INFO 2024-12-29 17:05:12,387 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-29 17:05:13,910 basehttp "GET /admin/auth/user/add/ HTTP/1.1" 200 10630
+INFO 2024-12-29 17:05:13,991 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-29 17:05:19,903 basehttp "GET / HTTP/1.1" 200 2316
+INFO 2024-12-29 17:05:21,545 basehttp "GET /index/ HTTP/1.1" 200 10224
+INFO 2024-12-29 17:05:31,781 basehttp "GET /index/ HTTP/1.1" 200 10224
+INFO 2024-12-29 17:05:35,186 basehttp "GET /register/ HTTP/1.1" 200 3123
+WARNING 2024-12-29 17:05:35,322 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1801
+INFO 2024-12-29 17:06:46,196 basehttp "POST /register/ HTTP/1.1" 302 0
+INFO 2024-12-29 17:06:46,230 basehttp "GET /register/ HTTP/1.1" 200 3123
+WARNING 2024-12-29 17:06:46,323 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1801
+INFO 2024-12-29 17:06:56,373 basehttp "GET /admin/auth/user/ HTTP/1.1" 200 13138
+INFO 2024-12-29 17:06:56,468 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-29 17:07:11,994 basehttp "GET /register/ HTTP/1.1" 200 3123
+INFO 2024-12-29 17:07:24,471 basehttp "GET /admin/auth/user/ HTTP/1.1" 200 12995
+INFO 2024-12-29 17:07:24,598 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-29 17:07:24,969 basehttp "POST /register/ HTTP/1.1" 302 0
+INFO 2024-12-29 17:07:25,039 basehttp "GET /index HTTP/1.1" 301 0
+INFO 2024-12-29 17:07:25,101 basehttp "GET /index/ HTTP/1.1" 200 10360
+INFO 2024-12-29 17:07:26,501 basehttp "GET /admin/auth/user/ HTTP/1.1" 200 13456
+INFO 2024-12-29 17:07:26,605 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-29 17:07:29,110 basehttp "GET /admin/auth/user/15/change/ HTTP/1.1" 200 22078
+INFO 2024-12-29 17:07:29,240 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-29 17:07:35,458 basehttp "GET /index/ HTTP/1.1" 200 10224
+INFO 2024-12-29 17:07:46,462 basehttp "GET /index/ HTTP/1.1" 200 10224
+INFO 2024-12-29 17:07:57,444 basehttp "GET /index/ HTTP/1.1" 200 10224
+INFO 2024-12-29 17:08:08,452 basehttp "GET /index/ HTTP/1.1" 200 10224
+INFO 2024-12-29 17:08:18,747 basehttp "GET /index/ HTTP/1.1" 200 10224
+INFO 2024-12-29 17:08:28,925 basehttp "GET /index/ HTTP/1.1" 200 10224
+INFO 2024-12-29 17:08:39,453 basehttp "GET /index/ HTTP/1.1" 200 10224
+INFO 2024-12-29 17:08:50,473 basehttp "GET /index/ HTTP/1.1" 200 10224
+INFO 2024-12-29 17:09:01,466 basehttp "GET /index/ HTTP/1.1" 200 10224
+INFO 2024-12-29 17:09:12,461 basehttp "GET /index/ HTTP/1.1" 200 10224
+INFO 2024-12-29 17:09:23,458 basehttp "GET /index/ HTTP/1.1" 200 10224
+INFO 2024-12-29 17:09:34,452 basehttp "GET /index/ HTTP/1.1" 200 10224
+INFO 2024-12-29 17:09:45,475 basehttp "GET /index/ HTTP/1.1" 200 10224
+INFO 2024-12-29 17:09:56,456 basehttp "GET /index/ HTTP/1.1" 200 10224
+INFO 2024-12-29 17:10:07,468 basehttp "GET /index/ HTTP/1.1" 200 10224
+INFO 2024-12-29 17:10:18,488 basehttp "GET /index/ HTTP/1.1" 200 10224
+INFO 2024-12-29 17:10:29,486 basehttp "GET /index/ HTTP/1.1" 200 10224
+INFO 2024-12-29 17:10:40,434 basehttp "GET /index/ HTTP/1.1" 200 10224
+INFO 2024-12-29 17:10:51,473 basehttp "GET /index/ HTTP/1.1" 200 10224
+INFO 2024-12-29 17:11:02,448 basehttp "GET /index/ HTTP/1.1" 200 10224
+INFO 2024-12-29 17:11:13,483 basehttp "GET /index/ HTTP/1.1" 200 10224
+INFO 2024-12-29 17:11:23,912 basehttp "GET /index/ HTTP/1.1" 200 10224
+INFO 2024-12-29 17:11:34,106 basehttp "GET /index/ HTTP/1.1" 200 10224
+INFO 2024-12-29 17:11:41,436 basehttp "GET /alertConf/ HTTP/1.1" 200 8616
+INFO 2024-12-29 17:14:53,819 basehttp "GET /admin/auth/user/ HTTP/1.1" 200 13456
+INFO 2024-12-29 17:14:53,930 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-29 17:14:55,060 basehttp "GET /admin/auth/user/add/ HTTP/1.1" 200 10630
+INFO 2024-12-29 17:14:55,153 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-12-29 17:21:43,536 basehttp "GET /alertConf/ HTTP/1.1" 200 8616
+INFO 2024-12-29 17:22:29,246 basehttp "GET /index/ HTTP/1.1" 200 10224
+INFO 2024-12-29 17:22:33,964 basehttp "GET /api/post HTTP/1.1" 200 121172
+INFO 2024-12-29 17:22:39,607 basehttp "GET /api/post HTTP/1.1" 200 121172
+INFO 2024-12-29 17:22:40,730 basehttp "OPTIONS /api/post HTTP/1.1" 200 7507
+WARNING 2024-12-29 17:22:57,377 log Bad Request: /api/post
+WARNING 2024-12-29 17:22:57,381 basehttp "POST /api/post HTTP/1.1" 400 7029
+INFO 2024-12-29 17:23:28,999 alerts Alerte Telegram envoyée.
+ERROR 2024-12-29 17:23:30,341 alerts Erreur lors de l'envoi de l'alerte WhatsApp : 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/None/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: Authentication Error - invalid username[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/20003[0m
+
+
+INFO 2024-12-29 17:23:38,553 alerts Alerte e-mail envoyée avec succès.
+INFO 2024-12-29 17:23:38,586 basehttp "POST /api/post HTTP/1.1" 200 7060
+INFO 2024-12-29 17:33:29,741 basehttp "GET /admin/auth/user/ HTTP/1.1" 200 13456
+INFO 2024-12-29 17:33:30,597 basehttp "GET /admin/auth/user/15/change/ HTTP/1.1" 200 22078
+INFO 2024-12-29 17:33:31,526 basehttp "GET /admin/auth/user/ HTTP/1.1" 200 13456
+INFO 2024-12-29 17:33:32,358 basehttp "GET /admin/auth/user/add/ HTTP/1.1" 200 10630
+INFO 2024-12-29 17:33:33,264 basehttp "GET /admin/auth/user/ HTTP/1.1" 200 13456
+INFO 2024-12-29 17:33:34,011 basehttp "GET /admin/auth/user/3/change/ HTTP/1.1" 200 22153
+INFO 2024-12-29 17:33:34,828 basehttp "GET /admin/auth/user/ HTTP/1.1" 200 13456
+INFO 2024-12-29 17:33:41,377 basehttp "GET / HTTP/1.1" 200 2316
+INFO 2024-12-29 17:33:43,886 basehttp "GET /index/ HTTP/1.1" 200 10224
+INFO 2024-12-29 17:33:46,828 basehttp "GET /alertConf/ HTTP/1.1" 200 8616
+INFO 2024-12-29 18:25:10,145 autoreload Watching for file changes with StatReloader
+INFO 2024-12-29 18:25:15,955 basehttp "GET / HTTP/1.1" 200 2316
+INFO 2024-12-29 18:25:17,258 basehttp "GET /index/ HTTP/1.1" 200 10225
+INFO 2024-12-29 18:25:27,467 basehttp "GET /index/ HTTP/1.1" 200 10225
+INFO 2024-12-29 18:25:37,633 basehttp "GET /index/ HTTP/1.1" 200 10225
+INFO 2024-12-29 18:25:47,798 basehttp "GET /index/ HTTP/1.1" 200 10225
+INFO 2024-12-29 18:25:57,977 basehttp "GET /index/ HTTP/1.1" 200 10225
+INFO 2024-12-29 18:26:08,128 basehttp "GET /index/ HTTP/1.1" 200 10225
+INFO 2024-12-29 18:26:18,289 basehttp "GET /index/ HTTP/1.1" 200 10225
+INFO 2024-12-29 18:26:28,498 basehttp "GET /index/ HTTP/1.1" 200 10225
+INFO 2024-12-29 18:26:38,596 basehttp "GET /index/ HTTP/1.1" 200 10225
+INFO 2024-12-29 18:26:48,710 basehttp "GET /index/ HTTP/1.1" 200 10225
+INFO 2024-12-29 18:26:58,855 basehttp "GET /index/ HTTP/1.1" 200 10225
+INFO 2024-12-29 18:27:08,987 basehttp "GET /index/ HTTP/1.1" 200 10225
+INFO 2024-12-29 18:27:19,131 basehttp "GET /index/ HTTP/1.1" 200 10225
+INFO 2024-12-29 18:27:24,540 basehttp "GET /logout/ HTTP/1.1" 302 0
+INFO 2024-12-29 18:27:24,579 basehttp "GET / HTTP/1.1" 200 2316
+INFO 2024-12-29 23:43:49,631 autoreload Watching for file changes with StatReloader
+INFO 2024-12-29 23:43:54,577 basehttp "GET / HTTP/1.1" 200 2316
+WARNING 2024-12-29 23:43:54,768 log Not Found: /favicon.ico
+WARNING 2024-12-29 23:43:54,768 basehttp "GET /favicon.ico HTTP/1.1" 404 5444
+INFO 2024-12-29 23:43:55,904 basehttp "GET /index/ HTTP/1.1" 302 0
+INFO 2024-12-29 23:43:55,918 basehttp "GET /login/?next=/index/ HTTP/1.1" 200 1662
+WARNING 2024-12-29 23:43:55,973 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1801
+INFO 2024-12-29 23:44:04,559 basehttp "POST /login/?next=/index/ HTTP/1.1" 302 0
+INFO 2024-12-29 23:44:04,601 basehttp "GET /index/ HTTP/1.1" 200 10226
+INFO 2024-12-29 23:44:07,786 basehttp "GET /table/ HTTP/1.1" 200 117523
+INFO 2024-12-29 23:44:08,832 basehttp "GET /myChartTemp/ HTTP/1.1" 200 11175
+INFO 2024-12-29 23:44:08,921 basehttp "GET /chart-data/ HTTP/1.1" 200 28489
+INFO 2024-12-29 23:44:09,807 basehttp "GET /myChartHum/ HTTP/1.1" 200 11511
+INFO 2024-12-29 23:44:09,884 basehttp "GET /chart-data/ HTTP/1.1" 200 28489
+INFO 2024-12-29 23:44:10,735 basehttp "GET /api/post HTTP/1.1" 200 121342
+INFO 2024-12-29 23:44:12,984 basehttp "GET /incident/ HTTP/1.1" 200 8992
+INFO 2024-12-29 23:44:18,869 basehttp "GET /api/post HTTP/1.1" 200 121342
+INFO 2024-12-29 23:44:30,463 basehttp "OPTIONS /api/post HTTP/1.1" 200 7507
+INFO 2024-12-29 23:44:33,461 basehttp "POST /api/post HTTP/1.1" 200 7060
+INFO 2024-12-29 23:44:41,216 basehttp "GET /incident/ HTTP/1.1" 200 7980
+INFO 2024-12-29 23:44:41,294 basehttp "GET /static/images/green_flag.png HTTP/1.1" 304 0
+INFO 2024-12-29 23:44:42,404 basehttp "GET /log_incident/ HTTP/1.1" 200 26604
