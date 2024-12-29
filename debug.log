@@ -8847,3 +8847,6 @@ INFO 2024-12-29 23:53:28,539 basehttp "POST /login/?next=/index/ HTTP/1.1" 302 0
 INFO 2024-12-29 23:53:28,553 basehttp "GET /index/ HTTP/1.1" 200 10223
 INFO 2024-12-29 23:53:30,759 basehttp "GET /alertConf/ HTTP/1.1" 200 8616
 INFO 2024-12-29 23:53:32,896 basehttp "GET /table/ HTTP/1.1" 200 117685
+WARNING 2024-12-29 23:28:27,857 log Not Found: /favicon.ico
+WARNING 2024-12-29 23:28:30,054 log Not Found: /home/aazdagbousslamaiot/provesoire/static/css/custom.css
+WARNING 2024-12-29 23:29:48,418 log Not Found: /favicon.ico
