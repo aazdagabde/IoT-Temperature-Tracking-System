@@ -1,5 +1,6 @@
 import telepot
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect,get_object_or_404
+
 from django.utils import timezone
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse, JsonResponse, HttpResponseForbidden
@@ -343,5 +344,42 @@ def dashboard(request):
     return render(request, 'dashboard.html', context)
 
 
+#def is_admin(user):
+#    return user.groups.filter(name='admin').exists()
+
+
+from django.contrib.auth.decorators import user_passes_test
+from django.contrib.auth.models import User
+
 def is_admin(user):
-    return user.groups.filter(name='admin').exists()
+    return user.is_authenticated and user.groups.filter(name='admin').exists()
+
+@login_required
+@user_passes_test(is_admin)
+def manage_users(request):
+    users = User.objects.all()
+    return render(request, 'manage_users.html', {'users': users})
+
+@login_required
+@user_passes_test(is_admin)
+def edit_user(request, user_id):
+    user = get_object_or_404(User, id=user_id)
+    if request.method == 'POST':
+        user.username = request.POST.get('username')
+        user.email = request.POST.get('email')
+        user.first_name = request.POST.get('first_name')
+        user.last_name = request.POST.get('last_name')
+        user.save()
+        messages.success(request, "Utilisateur mis à jour avec succès.")
+        return redirect('manage_users')
+    return render(request, 'edit_user.html', {'user': user})
+
+@login_required
+@user_passes_test(is_admin)
+def delete_user(request, user_id):
+    user = get_object_or_404(User, id=user_id)
+    if request.method == 'POST':
+        user.delete()
+        messages.success(request, "Utilisateur supprimé avec succès.")
+        return redirect('manage_users')
+    return render(request, 'delete_user.html', {'user': user})

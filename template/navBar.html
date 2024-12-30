@@ -1,104 +1,88 @@
-<!-- navBar.html -->
+<!-- navbar.html -->
 {% load static %}
 {% load group_filters %} <!-- Charger le filtre personnalisé -->
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
   <div class="container-fluid">
-    <!-- Brand -->
+    <!-- Gauche : Nom du site avec logo -->
     <a class="navbar-brand d-flex align-items-center" href="{% url 'home' %}">
       <i class="fas fa-microchip fa-lg me-2"></i>
       <span>SURVEILLANCE IOT: DHT11</span>
     </a>
-    <!-- Toggler for mobile view -->
+    <!-- Bouton toggler pour mobile -->
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <!-- Navbar Links -->
+    <!-- Contenu de la NavBar -->
     <div class="collapse navbar-collapse" id="mainNavbar">
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        <!-- Individual Links -->
-        <li class="nav-item">
-          <a class="nav-link {% if request.resolver_match.url_name == 'table' %}active{% endif %}" href="{% url 'table' %}" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Voir les données sous forme de table">
-            <i class="fas fa-table me-1"></i> Table
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link {% if request.resolver_match.url_name == 'myChartTemp' %}active{% endif %}" href="{% url 'myChartTemp' %}" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Voir le graphique de la température">
-            <i class="fas fa-thermometer-half me-1"></i> Graph Temp
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link {% if request.resolver_match.url_name == 'myChartHum' %}active{% endif %}" href="{% url 'myChartHum' %}" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Voir le graphique de l'humidité">
-            <i class="fas fa-tint me-1"></i> Graph Hum
-          </a>
-        </li>
-        <!--li class="nav-item">
-          <a class="nav-link {% if request.resolver_match.url_name == 'json' %}active{% endif %}" href="{% url 'json' %}" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Accéder aux données JSON">
-            <i class="fas fa-code me-1"></i> JSON
-          </a>
-        </li!-->
-        <!-- Utiliser le chemin direct pour 'api/post' -->
-        <li class="nav-item">
-          <a class="nav-link" href="/api/post" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Accéder à l'API POST">
-            <i class="fas fa-cloud-upload-alt me-1"></i> API POST
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link {% if request.resolver_match.url_name == 'incident' %}active{% endif %}" href="{% url 'incident' %}" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Voir les incidents">
-            <i class="fas fa-exclamation-triangle me-1"></i> Incidents
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link {% if request.resolver_match.url_name == 'value_view' %}active{% endif %}" href="{% url 'value_view' %}" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Voir la dernière valeur enregistrée">
-            <i class="fas fa-chart-line me-1"></i> Dernière Valeur
-          </a>
-        </li>
-
-        <!-- Liens Conditionnels pour les Utilisateurs Connectés -->
+      <!-- Centre : Liens principaux pour utilisateurs authentifiés -->
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         {% if user.is_authenticated %}
-          <!-- Lien vers alertConf : Accessible à tous les utilisateurs connectés -->
+         <!-- Dernière Valeur -->
           <li class="nav-item">
-            <a class="nav-link {% if request.resolver_match.url_name == 'alertConf_view' %}active{% endif %}" href="{% url 'alertConf_view' %}" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Configurer les alertes">
-              <i class="fas fa-bell me-1"></i> Alertes
+            <a class="nav-link {% if request.resolver_match.url_name == 'value_view' %}active{% endif %}" href="{% url 'value_view' %}" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Voir la dernière valeur enregistrée">
+              <i class="fas fa-chart-line me-1"></i> Dernière Valeur
+            </a>
+          </li>
+          <!-- Table -->
+          <li class="nav-item">
+            <a class="nav-link {% if request.resolver_match.url_name == 'table' %}active{% endif %}" href="{% url 'table' %}" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Voir les données sous forme de table">
+              <i class="fas fa-table me-1"></i> Table
+            </a>
+          </li>
+          <!-- Graph Température -->
+          <li class="nav-item">
+            <a class="nav-link {% if request.resolver_match.url_name == 'myChartTemp' %}active{% endif %}" href="{% url 'myChartTemp' %}" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Voir le graphique de la température">
+              <i class="fas fa-thermometer-half me-1"></i> Graph Temp
+            </a>
+          </li>
+          <!-- Graph Humidité -->
+          <li class="nav-item">
+            <a class="nav-link {% if request.resolver_match.url_name == 'myChartHum' %}active{% endif %}" href="{% url 'myChartHum' %}" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Voir le graphique de l'humidité">
+              <i class="fas fa-tint me-1"></i> Graph Hum
+            </a>
+          </li>
+          <!-- API POST -->
+          <li class="nav-item">
+            <a class="nav-link {% if request.resolver_match.url_name == 'api_post' %}active{% endif %}" href="{% url 'api_post' %}" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Accéder à l'API POST">
+              <i class="fas fa-cloud-upload-alt me-1"></i> API POST
+            </a>
+          </li>
+          <!-- Incidents -->
+          <li class="nav-item">
+            <a class="nav-link {% if request.resolver_match.url_name == 'incident' %}active{% endif %}" href="{% url 'incident' %}" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Voir les incidents">
+              <i class="fas fa-exclamation-triangle me-1"></i> Incidents
             </a>
           </li>
 
-          <!-- Liens réservés aux Admins -->
-          {% if user|has_group:"admin" %}
-            <li class="nav-item">
-              <a class="nav-link {% if request.resolver_match.url_name == 'dashboard' %}active{% endif %}" href="{% url 'dashboard' %}" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Accéder au dashboard administrateur">
-                <i class="fas fa-tachometer-alt me-1"></i> Dashboard
-              </a>
-            </li>
-            <li class="nav-item">
-              <!-- Utiliser le chemin direct pour 'api/post' si nécessaire -->
-              <a class="nav-link" href="/api/post" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Accéder à l'API POST">
-                <i class="fas fa-cloud-upload-alt me-1"></i> API POST
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link {% if request.resolver_match.url_name == 'register_view' %}active{% endif %}" href="{% url 'register_view' %}" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Enregistrer un nouvel utilisateur">
-                <i class="fas fa-user-plus me-1"></i> Enregistrer
-              </a>
-            </li>
-          {% endif %}
+        {% endif %}
+      </ul>
 
-          <!-- Dropdown pour l'Utilisateur Connecté -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              <i class="fas fa-user-circle me-1"></i> {{ user.username }}
-            </a>
-            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
-              <li><a class="dropdown-item" href="{% url 'logout' %}"><i class="fas fa-sign-out-alt me-2"></i> Se déconnecter</a></li>
-            </ul>
-          </li>
+      <!-- Droite : Nom de l'utilisateur et menu déroulant -->
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        {% if user.is_authenticated %}
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fas fa-user-circle me-1"></i> {{ user.username }}
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+            <!-- Alertes : Accessible à tous les utilisateurs authentifiés -->
+            <li><a class="dropdown-item" href="{% url 'alertConf_view' %}"><i class="fas fa-bell me-2"></i> Alertes</a></li>
+            {% if user|has_group:"admin" %}
+              <li><a class="dropdown-item" href="{% url 'dashboard' %}"><i class="fas fa-tachometer-alt me-2"></i> Dashboard</a></li>
+              <li><a class="dropdown-item" href="{% url 'manage_users' %}"><i class="fas fa-users-cog me-2"></i> Gérer les Utilisateurs</a></li>
+              <li><a class="dropdown-item" href="{% url 'register_view' %}"><i class="fas fa-user-plus me-2"></i> Ajouter un Utilisateur</a></li>
+            {% endif %}
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="{% url 'logout' %}"><i class="fas fa-sign-out-alt me-2"></i> Se déconnecter</a></li>
+          </ul>
+        </li>
         {% else %}
-          <!-- Lien de Connexion pour les Utilisateurs Non Authentifiés -->
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'login' %}" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Se connecter">
-              <i class="fas fa-sign-in-alt me-1"></i> Se connecter
-            </a>
-          </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'login' %}" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Se connecter">
+            <i class="fas fa-sign-in-alt me-1"></i> Se connecter
+          </a>
+        </li>
         {% endif %}
       </ul>
     </div>

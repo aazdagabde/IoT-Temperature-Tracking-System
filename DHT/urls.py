@@ -4,8 +4,8 @@ from . import api
 from django.contrib.auth import views as auth_views
 
 urlpatterns = [
-    path("api", api.Dlist, name='json'),
-    path("api/post", api.Dlist, name='json'),
+    path("api", api.Dlist, name='api'),
+    path("api/post", api.Dlist, name='api_post'),
     path('download_csv/', views.download_csv, name='download_csv'),
     path('table/', views.table, name='table'),
     path('myChartTemp/', views.graphiqueTemp, name='myChartTemp'),
@@ -27,4 +27,8 @@ urlpatterns = [
     path('alertConf/', views.alertConf_view, name='alertConf_view'),
 
     path('dashboard/', views.dashboard, name='dashboard'),
+    path('manage-users/', views.manage_users, name='manage_users'),
+    path('edit-user/<int:user_id>/', views.edit_user, name='edit_user'),
+    path('delete-user/<int:user_id>/', views.delete_user, name='delete_user'),
+
 ]

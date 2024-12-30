@@ -1,0 +1,31 @@
+<!-- edit_user.html -->
+{% extends 'base.html' %}
+
+{% block title %}Éditer l'Utilisateur{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2>Éditer l'Utilisateur</h2>
+    <form method="POST">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="username" class="form-label">Nom d'utilisateur</label>
+            <input type="text" class="form-control" id="username" name="username" value="{{ user.username }}" required>
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" name="email" value="{{ user.email }}" required>
+        </div>
+        <div class="mb-3">
+            <label for="first_name" class="form-label">Prénom</label>
+            <input type="text" class="form-control" id="first_name" name="first_name" value="{{ user.first_name }}">
+        </div>
+        <div class="mb-3">
+            <label for="last_name" class="form-label">Nom</label>
+            <input type="text" class="form-control" id="last_name" name="last_name" value="{{ user.last_name }}">
+        </div>
+        <button type="submit" class="btn btn-primary">Enregistrer</button>
+        <a href="{% url 'manage_users' %}" class="btn btn-secondary">Annuler</a>
+    </form>
+</div>
+{% endblock %}

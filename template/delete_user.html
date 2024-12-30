@@ -1,0 +1,16 @@
+<!-- delete_user.html -->
+{% extends 'base.html' %}
+
+{% block title %}Supprimer l'Utilisateur{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2>Supprimer l'Utilisateur</h2>
+    <p>Êtes-vous sûr de vouloir supprimer l'utilisateur <strong>{{ user.username }}</strong> ? Cette action est irréversible.</p>
+    <form method="POST">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-danger">Supprimer</button>
+        <a href="{% url 'manage_users' %}" class="btn btn-secondary">Annuler</a>
+    </form>
+</div>
+{% endblock %}

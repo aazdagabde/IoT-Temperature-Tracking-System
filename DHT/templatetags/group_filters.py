@@ -1,5 +1,6 @@
 # DHT/templatetags/group_filters.py
 
+# app/templatetags/group_filters.py
 from django import template
 
 register = template.Library()

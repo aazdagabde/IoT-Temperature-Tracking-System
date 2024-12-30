@@ -108,5 +108,13 @@
     }
     setInterval(updateTime, 1000);
     updateTime(); // Call immediately to show time on page load
+
+     // Initialisation des tooltips
+    document.addEventListener('DOMContentLoaded', function () {
+      var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+      var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+      })
+    });
 </script>
 {% endblock extra_js %}
