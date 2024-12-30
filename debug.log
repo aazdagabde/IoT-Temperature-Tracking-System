@@ -8847,3 +8847,285 @@ INFO 2024-12-29 23:53:28,539 basehttp "POST /login/?next=/index/ HTTP/1.1" 302 0
 INFO 2024-12-29 23:53:28,553 basehttp "GET /index/ HTTP/1.1" 200 10223
 INFO 2024-12-29 23:53:30,759 basehttp "GET /alertConf/ HTTP/1.1" 200 8616
 INFO 2024-12-29 23:53:32,896 basehttp "GET /table/ HTTP/1.1" 200 117685
+INFO 2024-12-30 01:46:55,106 autoreload Watching for file changes with StatReloader
+INFO 2024-12-30 01:47:00,896 basehttp "GET / HTTP/1.1" 200 2316
+INFO 2024-12-30 01:47:02,655 basehttp "GET /index/ HTTP/1.1" 200 10225
+INFO 2024-12-30 01:47:04,609 basehttp "GET /myChartTemp/ HTTP/1.1" 200 11527
+INFO 2024-12-30 01:47:04,700 basehttp "GET /chart-data/ HTTP/1.1" 200 28530
+INFO 2024-12-30 01:47:37,925 basehttp "GET /chart-data-semaine/ HTTP/1.1" 200 3060
+INFO 2024-12-30 01:47:39,441 basehttp "GET /chart-data-mois/ HTTP/1.1" 200 4064
+INFO 2024-12-30 01:47:41,004 basehttp "GET /chart-data-annee/ HTTP/1.1" 200 28530
+INFO 2024-12-30 01:47:42,939 basehttp "GET /chart-data-mois/ HTTP/1.1" 200 4064
+INFO 2024-12-30 01:47:44,019 basehttp "GET /chart-data-semaine/ HTTP/1.1" 200 3060
+INFO 2024-12-30 01:47:45,896 basehttp "GET /chart-data-jour/ HTTP/1.1" 200 247
+INFO 2024-12-30 01:47:47,360 basehttp "GET /chart-data-semaine/ HTTP/1.1" 200 3060
+INFO 2024-12-30 01:47:48,661 basehttp "GET /chart-data/ HTTP/1.1" 200 28530
+INFO 2024-12-30 01:47:49,921 basehttp "GET /chart-data/ HTTP/1.1" 200 28530
+INFO 2024-12-30 01:47:51,756 basehttp "GET /myChartHum/ HTTP/1.1" 200 11632
+INFO 2024-12-30 01:47:51,921 basehttp "GET /chart-data/ HTTP/1.1" 200 28530
+INFO 2024-12-30 01:47:55,061 basehttp "GET /myChartTemp/ HTTP/1.1" 200 11527
+INFO 2024-12-30 01:47:55,281 basehttp "GET /chart-data/ HTTP/1.1" 200 28530
+INFO 2024-12-30 01:47:57,153 basehttp "GET /myChartHum/ HTTP/1.1" 200 11632
+INFO 2024-12-30 01:47:57,356 basehttp "GET /chart-data/ HTTP/1.1" 200 28530
+INFO 2024-12-30 01:47:59,305 basehttp "GET /myChartTemp/ HTTP/1.1" 200 11527
+INFO 2024-12-30 01:47:59,549 basehttp "GET /chart-data/ HTTP/1.1" 200 28530
+INFO 2024-12-30 01:53:07,979 autoreload Watching for file changes with StatReloader
+INFO 2024-12-30 01:53:12,525 basehttp "GET /myChartTemp/ HTTP/1.1" 200 11841
+INFO 2024-12-30 01:53:12,660 basehttp "GET /chart-data/ HTTP/1.1" 200 28530
+INFO 2024-12-30 01:53:27,256 basehttp "GET /chart-data-jour/ HTTP/1.1" 200 247
+INFO 2024-12-30 01:53:30,845 basehttp "GET /chart-data-semaine/ HTTP/1.1" 200 3060
+INFO 2024-12-30 01:54:17,785 basehttp "GET /myChartTemp/ HTTP/1.1" 200 11836
+INFO 2024-12-30 01:54:17,910 basehttp "GET /chart-data/ HTTP/1.1" 200 28530
+INFO 2024-12-30 01:54:42,535 basehttp "GET /myChartTemp/ HTTP/1.1" 200 11832
+INFO 2024-12-30 01:54:42,626 basehttp "GET /chart-data/ HTTP/1.1" 200 28530
+INFO 2024-12-30 01:54:46,211 basehttp "GET /chart-data-jour/ HTTP/1.1" 200 247
+INFO 2024-12-30 01:54:53,933 basehttp "GET /myChartHum/ HTTP/1.1" 200 11937
+INFO 2024-12-30 01:54:54,089 basehttp "GET /chart-data/ HTTP/1.1" 200 28530
+INFO 2024-12-30 01:54:59,020 basehttp "GET /chart-data/ HTTP/1.1" 200 28530
+INFO 2024-12-30 01:55:00,470 basehttp "GET /chart-data/ HTTP/1.1" 200 28530
+INFO 2024-12-30 01:55:01,327 basehttp "GET /chart-data/ HTTP/1.1" 200 28530
+INFO 2024-12-30 01:55:02,262 basehttp "GET /chart-data/ HTTP/1.1" 200 28530
+INFO 2024-12-30 01:56:14,255 basehttp "GET /myChartHum/ HTTP/1.1" 200 11429
+INFO 2024-12-30 01:56:14,335 basehttp "GET /chart-data/ HTTP/1.1" 200 28530
+INFO 2024-12-30 01:56:23,366 basehttp "GET /chart-data-jour/ HTTP/1.1" 200 247
+INFO 2024-12-30 01:56:25,715 basehttp "GET /myChartTemp/ HTTP/1.1" 200 11324
+INFO 2024-12-30 01:56:25,875 basehttp "GET /chart-data/ HTTP/1.1" 200 28530
+INFO 2024-12-30 01:56:27,106 basehttp "GET /chart-data-annee/ HTTP/1.1" 200 28530
+INFO 2024-12-30 01:56:28,670 basehttp "GET /chart-data-mois/ HTTP/1.1" 200 4064
+INFO 2024-12-30 01:56:30,261 basehttp "GET /chart-data-semaine/ HTTP/1.1" 200 3060
+INFO 2024-12-30 01:56:37,350 basehttp "GET /chart-data/ HTTP/1.1" 200 28530
+INFO 2024-12-30 01:56:39,478 basehttp "GET /chart-data/ HTTP/1.1" 200 28530
+INFO 2024-12-30 01:56:40,064 basehttp "GET /chart-data/ HTTP/1.1" 200 28530
+INFO 2024-12-30 01:56:40,940 basehttp "GET /chart-data/ HTTP/1.1" 200 28530
+INFO 2024-12-30 02:11:05,658 basehttp "GET /myChartTemp/ HTTP/1.1" 200 8083
+INFO 2024-12-30 02:12:29,810 autoreload C:\Users\aabde\OneDrive\Desktop\DHT11project-master\DHT11project-master\DHT\views.py changed, reloading.
+INFO 2024-12-30 02:12:30,546 autoreload Watching for file changes with StatReloader
+INFO 2024-12-30 02:12:53,061 autoreload C:\Users\aabde\OneDrive\Desktop\DHT11project-master\DHT11project-master\DHT\urls.py changed, reloading.
+INFO 2024-12-30 02:12:53,779 autoreload Watching for file changes with StatReloader
+INFO 2024-12-30 02:12:57,599 basehttp "GET /myChartTemp/ HTTP/1.1" 200 8083
+INFO 2024-12-30 02:13:36,350 basehttp "GET /myChartTemp/ HTTP/1.1" 200 8083
+INFO 2024-12-30 02:13:43,010 basehttp "GET /myChartTemp/ HTTP/1.1" 200 8083
+INFO 2024-12-30 02:13:44,724 basehttp "GET /myChartHum/ HTTP/1.1" 200 11601
+INFO 2024-12-30 02:13:44,901 basehttp "GET /chart-data/ HTTP/1.1" 200 28530
+INFO 2024-12-30 02:13:45,820 basehttp "GET /myChartTemp/ HTTP/1.1" 200 8083
+INFO 2024-12-30 02:14:51,746 basehttp "GET /myChartTemp/ HTTP/1.1" 200 8083
+INFO 2024-12-30 02:16:18,460 basehttp "GET /myChartTemp/ HTTP/1.1" 200 8083
+INFO 2024-12-30 02:21:13,753 autoreload C:\Users\aabde\OneDrive\Desktop\DHT11project-master\DHT11project-master\DHT\views.py changed, reloading.
+INFO 2024-12-30 02:21:14,598 autoreload Watching for file changes with StatReloader
+INFO 2024-12-30 02:21:15,560 basehttp "GET /myChartTemp/ HTTP/1.1" 200 8083
+INFO 2024-12-30 02:21:21,999 basehttp "GET /myChartTemp/ HTTP/1.1" 200 8083
+INFO 2024-12-30 02:21:23,163 basehttp "GET /myChartTemp/ HTTP/1.1" 200 8083
+INFO 2024-12-30 02:21:51,416 basehttp "GET /myChartTemp/ HTTP/1.1" 200 8083
+INFO 2024-12-30 02:21:51,876 basehttp "GET /myChartTemp/ HTTP/1.1" 200 8083
+INFO 2024-12-30 02:22:15,676 basehttp "GET /myChartTemp/ HTTP/1.1" 200 10972
+INFO 2024-12-30 02:22:15,752 basehttp "GET /chart-data/ HTTP/1.1" 200 28530
+INFO 2024-12-30 02:22:38,058 autoreload C:\Users\aabde\OneDrive\Desktop\DHT11project-master\DHT11project-master\DHT\views.py changed, reloading.
+INFO 2024-12-30 02:22:39,019 autoreload Watching for file changes with StatReloader
+INFO 2024-12-30 02:23:17,628 autoreload C:\Users\aabde\OneDrive\Desktop\DHT11project-master\DHT11project-master\DHT\urls.py changed, reloading.
+INFO 2024-12-30 02:23:18,249 autoreload Watching for file changes with StatReloader
+INFO 2024-12-30 02:23:21,387 basehttp "GET /myChartTemp/ HTTP/1.1" 200 10972
+INFO 2024-12-30 02:23:21,451 basehttp "GET /chart-data/ HTTP/1.1" 200 28530
+INFO 2024-12-30 02:23:23,086 basehttp "GET /myChartTemp/ HTTP/1.1" 200 10972
+INFO 2024-12-30 02:23:23,175 basehttp "GET /chart-data/ HTTP/1.1" 200 28530
+INFO 2024-12-30 02:23:25,097 basehttp "GET /chart-data/ HTTP/1.1" 200 28530
+INFO 2024-12-30 02:23:26,024 basehttp "GET /chart-data/ HTTP/1.1" 200 28530
+INFO 2024-12-30 02:24:11,823 autoreload C:\Users\aabde\OneDrive\Desktop\DHT11project-master\DHT11project-master\DHT\urls.py changed, reloading.
+INFO 2024-12-30 02:24:12,455 autoreload Watching for file changes with StatReloader
+INFO 2024-12-30 02:24:13,326 basehttp "GET /myChartTemp/ HTTP/1.1" 200 11175
+INFO 2024-12-30 02:24:13,415 basehttp "GET /chart-data/ HTTP/1.1" 200 28530
+INFO 2024-12-30 02:24:17,895 basehttp "GET /chart-data-semaine/ HTTP/1.1" 200 3060
+INFO 2024-12-30 02:24:18,735 basehttp "GET /chart-data-mois/ HTTP/1.1" 200 4064
+INFO 2024-12-30 02:36:20,226 autoreload C:\Users\aabde\OneDrive\Desktop\DHT11project-master\DHT11project-master\DHT\views.py changed, reloading.
+INFO 2024-12-30 02:36:21,060 autoreload Watching for file changes with StatReloader
+INFO 2024-12-30 02:36:48,498 autoreload C:\Users\aabde\OneDrive\Desktop\DHT11project-master\DHT11project-master\DHT\urls.py changed, reloading.
+INFO 2024-12-30 02:36:49,251 autoreload Watching for file changes with StatReloader
+INFO 2024-12-30 02:38:26,599 autoreload C:\Users\aabde\OneDrive\Desktop\DHT11project-master\DHT11project-master\DHT\views.py changed, reloading.
+INFO 2024-12-30 02:38:27,576 autoreload Watching for file changes with StatReloader
+INFO 2024-12-30 02:38:38,042 autoreload C:\Users\aabde\OneDrive\Desktop\DHT11project-master\DHT11project-master\DHT\urls.py changed, reloading.
+INFO 2024-12-30 02:38:38,804 autoreload Watching for file changes with StatReloader
+INFO 2024-12-30 02:41:31,283 autoreload C:\Users\aabde\OneDrive\Desktop\DHT11project-master\DHT11project-master\DHT\views.py changed, reloading.
+INFO 2024-12-30 02:41:32,041 autoreload Watching for file changes with StatReloader
+INFO 2024-12-30 02:42:21,707 autoreload C:\Users\aabde\OneDrive\Desktop\DHT11project-master\DHT11project-master\DHT\views.py changed, reloading.
+INFO 2024-12-30 02:42:22,446 autoreload Watching for file changes with StatReloader
+INFO 2024-12-30 02:46:37,858 basehttp "GET / HTTP/1.1" 200 2316
+INFO 2024-12-30 02:46:39,019 basehttp "GET /index/ HTTP/1.1" 200 5559
+INFO 2024-12-30 02:46:42,976 basehttp "GET / HTTP/1.1" 200 2316
+INFO 2024-12-30 02:46:46,096 basehttp "GET /index/ HTTP/1.1" 200 5559
+INFO 2024-12-30 02:48:34,820 basehttp "GET /index/ HTTP/1.1" 200 10225
+INFO 2024-12-30 02:48:36,574 basehttp "GET /myChartTemp/ HTTP/1.1" 200 7357
+INFO 2024-12-30 02:48:41,683 basehttp "GET /myChartHum/ HTTP/1.1" 200 7342
+INFO 2024-12-30 02:48:45,512 basehttp "GET /index/ HTTP/1.1" 200 10225
+INFO 2024-12-30 02:48:49,841 basehttp "GET /myChartHum/ HTTP/1.1" 200 7342
+INFO 2024-12-30 02:49:08,454 basehttp "GET /myChartHum/ HTTP/1.1" 200 2311
+INFO 2024-12-30 02:49:09,628 basehttp "GET /myChartHum/ HTTP/1.1" 200 2311
+INFO 2024-12-30 02:49:09,848 basehttp "GET /myChartHum/ HTTP/1.1" 200 2311
+INFO 2024-12-30 02:49:10,046 basehttp "GET /myChartHum/ HTTP/1.1" 200 2311
+INFO 2024-12-30 02:49:54,181 basehttp "GET /myChartHum/ HTTP/1.1" 200 7342
+INFO 2024-12-30 02:51:08,300 basehttp "GET /myChartHum/ HTTP/1.1" 200 2261
+INFO 2024-12-30 02:51:09,695 basehttp "GET /myChartHum/ HTTP/1.1" 200 2261
+INFO 2024-12-30 02:51:09,908 basehttp "GET /myChartHum/ HTTP/1.1" 200 2261
+INFO 2024-12-30 02:51:10,102 basehttp "GET /myChartHum/ HTTP/1.1" 200 2261
+INFO 2024-12-30 02:51:10,330 basehttp "GET /myChartHum/ HTTP/1.1" 200 2261
+INFO 2024-12-30 02:51:10,558 basehttp "GET /myChartHum/ HTTP/1.1" 200 2261
+INFO 2024-12-30 02:51:10,888 basehttp "GET /myChartHum/ HTTP/1.1" 200 2261
+INFO 2024-12-30 02:51:11,329 basehttp "GET / HTTP/1.1" 200 2316
+INFO 2024-12-30 02:55:43,846 basehttp "GET /myChartHum/ HTTP/1.1" 200 7061
+INFO 2024-12-30 02:55:54,654 basehttp "GET /index/ HTTP/1.1" 200 9945
+INFO 2024-12-30 02:55:58,807 basehttp "GET /myChartTemp/ HTTP/1.1" 200 7076
+INFO 2024-12-30 02:55:59,846 basehttp "GET /myChartHum/ HTTP/1.1" 200 7061
+INFO 2024-12-30 02:56:00,486 basehttp "GET /myChartTemp/ HTTP/1.1" 200 7076
+INFO 2024-12-30 02:57:47,021 basehttp "GET /myChartTemp/ HTTP/1.1" 200 7102
+INFO 2024-12-30 02:57:47,948 basehttp "GET /myChartTemp/ HTTP/1.1" 200 7102
+INFO 2024-12-30 02:57:48,138 basehttp "GET /myChartTemp/ HTTP/1.1" 200 7102
+INFO 2024-12-30 02:57:48,371 basehttp "GET /myChartTemp/ HTTP/1.1" 200 7102
+INFO 2024-12-30 02:57:48,590 basehttp "GET /myChartTemp/ HTTP/1.1" 200 7102
+INFO 2024-12-30 02:57:48,798 basehttp "GET /myChartTemp/ HTTP/1.1" 200 7102
+INFO 2024-12-30 02:57:49,016 basehttp "GET /myChartTemp/ HTTP/1.1" 200 7102
+INFO 2024-12-30 02:57:49,223 basehttp "GET /myChartTemp/ HTTP/1.1" 200 7102
+INFO 2024-12-30 02:57:49,385 basehttp "GET /myChartTemp/ HTTP/1.1" 200 7102
+INFO 2024-12-30 02:58:56,856 autoreload C:\Users\aabde\OneDrive\Desktop\DHT11project-master\DHT11project-master\DHT\urls.py changed, reloading.
+INFO 2024-12-30 02:58:57,732 autoreload Watching for file changes with StatReloader
+INFO 2024-12-30 02:59:38,469 autoreload C:\Users\aabde\OneDrive\Desktop\DHT11project-master\DHT11project-master\DHT\urls.py changed, reloading.
+INFO 2024-12-30 02:59:39,218 autoreload Watching for file changes with StatReloader
+INFO 2024-12-30 03:00:40,074 basehttp "GET /myChartTemp/ HTTP/1.1" 200 7102
+INFO 2024-12-30 03:00:40,756 basehttp "GET /myChartTemp/ HTTP/1.1" 200 7102
+INFO 2024-12-30 03:00:40,928 basehttp "GET /myChartTemp/ HTTP/1.1" 200 7102
+INFO 2024-12-30 03:00:41,716 basehttp "GET /myChartHum/ HTTP/1.1" 200 7102
+INFO 2024-12-30 03:00:42,580 basehttp "GET /myChartTemp/ HTTP/1.1" 200 7102
+INFO 2024-12-30 03:00:43,190 basehttp "GET /myChartHum/ HTTP/1.1" 200 7102
+INFO 2024-12-30 03:00:44,336 basehttp "GET /table/ HTTP/1.1" 200 117404
+INFO 2024-12-30 03:00:45,151 basehttp "GET /myChartTemp/ HTTP/1.1" 200 7102
+INFO 2024-12-30 03:00:46,702 basehttp "GET /myChartHum/ HTTP/1.1" 200 7102
+INFO 2024-12-30 03:00:47,241 basehttp "GET /myChartTemp/ HTTP/1.1" 200 7102
+INFO 2024-12-30 03:00:47,598 basehttp "GET /myChartTemp/ HTTP/1.1" 200 7102
+INFO 2024-12-30 03:03:40,756 basehttp "GET /myChartTemp/ HTTP/1.1" 200 7102
+INFO 2024-12-30 03:03:41,916 basehttp "GET /myChartTemp/ HTTP/1.1" 200 7102
+INFO 2024-12-30 03:03:42,137 basehttp "GET /myChartTemp/ HTTP/1.1" 200 7102
+INFO 2024-12-30 03:03:42,360 basehttp "GET /myChartTemp/ HTTP/1.1" 200 7102
+INFO 2024-12-30 03:03:42,582 basehttp "GET /myChartTemp/ HTTP/1.1" 200 7102
+INFO 2024-12-30 03:03:42,806 basehttp "GET /myChartTemp/ HTTP/1.1" 200 7102
+INFO 2024-12-30 03:03:43,028 basehttp "GET /myChartTemp/ HTTP/1.1" 200 7102
+INFO 2024-12-30 03:03:43,251 basehttp "GET /myChartTemp/ HTTP/1.1" 200 7102
+INFO 2024-12-30 03:03:44,002 basehttp "GET /myChartHum/ HTTP/1.1" 200 7102
+INFO 2024-12-30 03:03:44,884 basehttp "GET /myChartTemp/ HTTP/1.1" 200 7102
+INFO 2024-12-30 03:03:45,796 basehttp "GET /myChartHum/ HTTP/1.1" 200 7102
+INFO 2024-12-30 03:03:46,244 basehttp "GET /myChartTemp/ HTTP/1.1" 200 7102
+INFO 2024-12-30 03:03:46,638 basehttp "GET /myChartHum/ HTTP/1.1" 200 7102
+INFO 2024-12-30 03:03:46,987 basehttp "GET /myChartTemp/ HTTP/1.1" 200 7102
+INFO 2024-12-30 03:03:47,428 basehttp "GET /myChartTemp/ HTTP/1.1" 200 7102
+INFO 2024-12-30 03:03:47,651 basehttp "GET /myChartTemp/ HTTP/1.1" 200 7102
+INFO 2024-12-30 03:03:47,863 basehttp "GET /myChartTemp/ HTTP/1.1" 200 7102
+INFO 2024-12-30 03:03:48,083 basehttp "GET /myChartTemp/ HTTP/1.1" 200 7102
+INFO 2024-12-30 03:03:48,293 basehttp "GET /myChartTemp/ HTTP/1.1" 200 7102
+INFO 2024-12-30 03:05:51,937 autoreload C:\Users\aabde\OneDrive\Desktop\DHT11project-master\DHT11project-master\DHT\views.py changed, reloading.
+INFO 2024-12-30 03:05:52,750 autoreload Watching for file changes with StatReloader
+INFO 2024-12-30 03:05:55,451 basehttp "GET /myChartTemp/ HTTP/1.1" 200 7102
+INFO 2024-12-30 03:05:56,081 basehttp "GET /myChartTemp/ HTTP/1.1" 200 7102
+INFO 2024-12-30 03:05:56,281 basehttp "GET /myChartTemp/ HTTP/1.1" 200 7102
+INFO 2024-12-30 03:05:56,490 basehttp "GET /myChartTemp/ HTTP/1.1" 200 7102
+INFO 2024-12-30 03:05:57,169 basehttp "GET /myChartHum/ HTTP/1.1" 200 7086
+INFO 2024-12-30 03:05:58,109 basehttp "GET /myChartTemp/ HTTP/1.1" 200 7102
+INFO 2024-12-30 03:05:58,581 basehttp "GET /myChartHum/ HTTP/1.1" 200 7086
+INFO 2024-12-30 03:05:59,016 basehttp "GET /myChartTemp/ HTTP/1.1" 200 7102
+INFO 2024-12-30 03:05:59,693 basehttp "GET /myChartHum/ HTTP/1.1" 200 7086
+INFO 2024-12-30 03:08:07,897 basehttp "GET /myChartHum/ HTTP/1.1" 200 6973
+INFO 2024-12-30 03:08:08,571 basehttp "GET /myChartHum/ HTTP/1.1" 200 6973
+INFO 2024-12-30 03:08:08,781 basehttp "GET /myChartHum/ HTTP/1.1" 200 6973
+INFO 2024-12-30 03:08:08,984 basehttp "GET /myChartHum/ HTTP/1.1" 200 6973
+INFO 2024-12-30 03:08:09,182 basehttp "GET /myChartHum/ HTTP/1.1" 200 6973
+INFO 2024-12-30 03:08:21,873 autoreload C:\Users\aabde\OneDrive\Desktop\DHT11project-master\DHT11project-master\DHT\views.py changed, reloading.
+INFO 2024-12-30 03:08:22,787 autoreload Watching for file changes with StatReloader
+INFO 2024-12-30 03:09:22,816 autoreload C:\Users\aabde\OneDrive\Desktop\DHT11project-master\DHT11project-master\DHT\urls.py changed, reloading.
+INFO 2024-12-30 03:09:23,636 autoreload Watching for file changes with StatReloader
+INFO 2024-12-30 03:09:26,573 basehttp "GET /myChartHum/ HTTP/1.1" 200 11511
+INFO 2024-12-30 03:09:26,656 basehttp "GET /chart-data/ HTTP/1.1" 200 28530
+INFO 2024-12-30 03:09:34,029 basehttp "GET /chart-data/ HTTP/1.1" 200 28530
+INFO 2024-12-30 03:09:34,876 basehttp "GET /chart-data/ HTTP/1.1" 200 28530
+INFO 2024-12-30 03:10:27,808 basehttp "GET /myChartHum/ HTTP/1.1" 200 11630
+INFO 2024-12-30 03:10:27,876 basehttp "GET /chart-data/ HTTP/1.1" 200 28530
+INFO 2024-12-30 03:10:46,307 basehttp "GET /myChartHum/ HTTP/1.1" 200 11635
+INFO 2024-12-30 03:10:46,376 basehttp "GET /chart-data/ HTTP/1.1" 200 28530
+INFO 2024-12-30 03:10:49,458 basehttp "GET /chart-data-semaine/ HTTP/1.1" 200 3060
+INFO 2024-12-30 03:11:13,704 basehttp "GET /myChartHum/ HTTP/1.1" 200 11640
+INFO 2024-12-30 03:11:13,769 basehttp "GET /chart-data/ HTTP/1.1" 200 28530
+INFO 2024-12-30 03:11:15,800 basehttp "GET /chart-data/ HTTP/1.1" 200 28530
+INFO 2024-12-30 03:11:18,607 basehttp "GET /chart-data-semaine/ HTTP/1.1" 200 3060
+INFO 2024-12-30 03:11:22,288 basehttp "GET /chart-data-mois/ HTTP/1.1" 200 4064
+INFO 2024-12-30 03:11:47,206 basehttp "GET /myChartHum/ HTTP/1.1" 200 11645
+INFO 2024-12-30 03:11:47,276 basehttp "GET /chart-data/ HTTP/1.1" 200 28530
+INFO 2024-12-30 03:11:49,326 basehttp "GET /myChartHum/ HTTP/1.1" 200 11645
+INFO 2024-12-30 03:11:49,397 basehttp "GET /chart-data/ HTTP/1.1" 200 28530
+INFO 2024-12-30 03:11:49,556 basehttp "GET /myChartHum/ HTTP/1.1" 200 11645
+INFO 2024-12-30 03:11:49,662 basehttp "GET /chart-data/ HTTP/1.1" 200 28530
+INFO 2024-12-30 03:11:49,766 basehttp "GET /myChartHum/ HTTP/1.1" 200 11645
+INFO 2024-12-30 03:11:49,843 basehttp "GET /chart-data/ HTTP/1.1" 200 28530
+INFO 2024-12-30 03:11:53,233 basehttp "GET /api/post HTTP/1.1" 200 121512
+INFO 2024-12-30 03:11:55,446 basehttp "GET /myChartTemp/ HTTP/1.1" 200 11309
+INFO 2024-12-30 03:11:55,628 basehttp "GET /chart-data/ HTTP/1.1" 200 28530
+INFO 2024-12-30 03:13:01,876 basehttp "GET /myChartTemp/ HTTP/1.1" 200 11578
+INFO 2024-12-30 03:13:01,972 basehttp "GET /chart-data/ HTTP/1.1" 200 28530
+INFO 2024-12-30 03:13:30,902 basehttp "GET /myChartTemp/ HTTP/1.1" 200 11583
+INFO 2024-12-30 03:13:30,977 basehttp "GET /chart-data/ HTTP/1.1" 200 28530
+INFO 2024-12-30 03:13:46,374 basehttp "GET /myChartTemp/ HTTP/1.1" 200 11588
+INFO 2024-12-30 03:13:46,446 basehttp "GET /chart-data/ HTTP/1.1" 200 28530
+INFO 2024-12-30 03:13:47,886 basehttp "GET /chart-data/ HTTP/1.1" 200 28530
+INFO 2024-12-30 03:13:49,659 basehttp "GET /chart-data/ HTTP/1.1" 200 28530
+INFO 2024-12-30 03:13:50,776 basehttp "GET /chart-data-semaine/ HTTP/1.1" 200 3060
+INFO 2024-12-30 03:13:54,964 basehttp "GET /chart-data/ HTTP/1.1" 200 28530
+INFO 2024-12-30 03:13:55,271 basehttp "GET /chart-data/ HTTP/1.1" 200 28530
+INFO 2024-12-30 03:14:28,236 basehttp "GET /myChartTemp/ HTTP/1.1" 200 11587
+INFO 2024-12-30 03:14:28,321 basehttp "GET /chart-data/ HTTP/1.1" 200 28530
+INFO 2024-12-30 03:14:51,008 basehttp "GET /myChartTemp/ HTTP/1.1" 200 11582
+INFO 2024-12-30 03:14:51,088 basehttp "GET /chart-data/ HTTP/1.1" 200 28530
+INFO 2024-12-30 03:15:06,036 basehttp "GET /myChartTemp/ HTTP/1.1" 200 11578
+INFO 2024-12-30 03:15:06,126 basehttp "GET /chart-data/ HTTP/1.1" 200 28530
+INFO 2024-12-30 03:15:19,018 basehttp "GET /myChartTemp/ HTTP/1.1" 200 11310
+INFO 2024-12-30 03:15:19,127 basehttp "GET /chart-data/ HTTP/1.1" 200 28530
+INFO 2024-12-30 03:15:33,187 basehttp "GET /myChartTemp/ HTTP/1.1" 200 11305
+INFO 2024-12-30 03:15:33,271 basehttp "GET /chart-data/ HTTP/1.1" 200 28530
+INFO 2024-12-30 03:16:02,906 basehttp "GET /myChartTemp/ HTTP/1.1" 200 11175
+INFO 2024-12-30 03:16:02,982 basehttp "GET /chart-data/ HTTP/1.1" 200 28530
+INFO 2024-12-30 03:16:25,077 basehttp "GET /myChartTemp/ HTTP/1.1" 200 11010
+INFO 2024-12-30 03:16:25,168 basehttp "GET /chart-data/ HTTP/1.1" 200 28530
+INFO 2024-12-30 03:16:28,435 basehttp "GET /chart-data-semaine/ HTTP/1.1" 200 3060
+INFO 2024-12-30 03:16:31,102 basehttp "GET /chart-data-mois/ HTTP/1.1" 200 4064
+INFO 2024-12-30 03:16:34,246 basehttp "GET /chart-data/ HTTP/1.1" 200 28530
+INFO 2024-12-30 03:16:34,628 basehttp "GET /chart-data/ HTTP/1.1" 200 28530
+INFO 2024-12-30 03:16:36,330 basehttp "GET /chart-data/ HTTP/1.1" 200 28530
+INFO 2024-12-30 03:16:37,808 basehttp "GET /chart-data/ HTTP/1.1" 200 28530
+INFO 2024-12-30 03:16:38,805 basehttp "GET /chart-data/ HTTP/1.1" 200 28530
+INFO 2024-12-30 03:16:38,996 basehttp "GET /chart-data/ HTTP/1.1" 200 28530
+INFO 2024-12-30 03:16:39,687 basehttp "GET /chart-data/ HTTP/1.1" 200 28530
+INFO 2024-12-30 03:16:41,537 basehttp "GET /chart-data-semaine/ HTTP/1.1" 200 3060
+INFO 2024-12-30 03:16:43,041 basehttp "GET /chart-data/ HTTP/1.1" 200 28530
+INFO 2024-12-30 03:16:43,877 basehttp "GET /chart-data/ HTTP/1.1" 200 28530
+INFO 2024-12-30 03:16:45,663 basehttp "GET /chart-data-mois/ HTTP/1.1" 200 4064
+INFO 2024-12-30 03:16:46,190 basehttp "GET /chart-data/ HTTP/1.1" 200 28530
+INFO 2024-12-30 03:16:46,621 basehttp "GET /chart-data/ HTTP/1.1" 200 28530
+INFO 2024-12-30 03:18:06,696 basehttp "GET /myChartTemp/ HTTP/1.1" 200 11191
+INFO 2024-12-30 03:18:06,759 basehttp "GET /chart-data/ HTTP/1.1" 200 28530
+INFO 2024-12-30 03:18:07,851 basehttp "GET /myChartTemp/ HTTP/1.1" 200 11191
+INFO 2024-12-30 03:18:07,908 basehttp "GET /chart-data/ HTTP/1.1" 200 28530
+INFO 2024-12-30 03:18:08,053 basehttp "GET /myChartTemp/ HTTP/1.1" 200 11191
+INFO 2024-12-30 03:18:08,146 basehttp "GET /chart-data/ HTTP/1.1" 200 28530
+INFO 2024-12-30 03:18:08,283 basehttp "GET /myChartTemp/ HTTP/1.1" 200 11191
+INFO 2024-12-30 03:18:08,360 basehttp "GET /chart-data/ HTTP/1.1" 200 28530
+INFO 2024-12-30 03:18:32,529 basehttp "GET /myChartTemp/ HTTP/1.1" 200 11186
+INFO 2024-12-30 03:18:32,610 basehttp "GET /chart-data/ HTTP/1.1" 200 28530
+INFO 2024-12-30 03:19:12,333 basehttp "GET /myChartTemp/ HTTP/1.1" 200 11186
+INFO 2024-12-30 03:19:12,413 basehttp "GET /chart-data/ HTTP/1.1" 200 28530
+INFO 2024-12-30 03:19:17,283 basehttp "GET /chart-data-mois/ HTTP/1.1" 200 4064
+INFO 2024-12-30 03:19:18,098 basehttp "GET /chart-data-semaine/ HTTP/1.1" 200 3060
+INFO 2024-12-30 03:20:02,545 basehttp "GET /myChartTemp/ HTTP/1.1" 200 11181
+INFO 2024-12-30 03:20:04,773 basehttp "GET /chart-data/ HTTP/1.1" 200 28530
+INFO 2024-12-30 03:20:19,907 basehttp "GET /chart-data-mois/ HTTP/1.1" 200 4064
+INFO 2024-12-30 13:33:50,297 autoreload Watching for file changes with StatReloader
+INFO 2024-12-30 13:33:53,367 basehttp "GET / HTTP/1.1" 200 2316
+INFO 2024-12-30 13:33:53,502 basehttp "GET /static/images/HD.gif HTTP/1.1" 304 0
+WARNING 2024-12-30 13:33:53,790 log Not Found: /favicon.ico
+WARNING 2024-12-30 13:33:53,790 basehttp "GET /favicon.ico HTTP/1.1" 404 5444
+INFO 2024-12-30 13:33:55,083 basehttp "GET /index/ HTTP/1.1" 200 10227
+INFO 2024-12-30 13:34:01,147 basehttp "GET /myChartTemp/ HTTP/1.1" 200 11217
+INFO 2024-12-30 13:34:01,234 basehttp "GET /chart-data/ HTTP/1.1" 200 28530
+INFO 2024-12-30 13:34:05,537 basehttp "GET /chart-data-semaine/ HTTP/1.1" 200 3060
+INFO 2024-12-30 13:34:08,351 basehttp "GET /chart-data-jour/ HTTP/1.1" 200 247
