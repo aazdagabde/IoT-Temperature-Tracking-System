@@ -1,90 +1,40 @@
-<!-- DHT/templates/base.html -->
-
+<!-- template/base.html -->
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Gestion des Incidents{% endblock %}</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome pour les icônes -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <!-- DataTables CSS (pour log_incident.html) -->
-    <link href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css" rel="stylesheet">
-    {% load static %}
-    <style>
-        /* Styles personnalisés */
-        .flag-icon {
-            width: 100px;
-            transition: transform 0.3s;
-        }
-        .flag-icon:hover {
-            transform: scale(1.1);
-        }
-        .table-responsive {
-            overflow-x: auto;
-        }
-        .navbar-brand {
-            font-weight: bold;
-        }
-    </style>
+    <title>{% block title %}Django Chart{% endblock title %}</title>
+    <!-- Bootstrap CSS (Optional, assuming you're using it based on button classes) -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTTXABl6o9N1Md7qRl9MnBY64sFVXGuvFQb8bPyZwL1Ys7QogjYI7OP1TXDA5pI1gR1WbiAGGw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Moment.js for Date Formatting (Used by Chart.js v2) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+    <!-- Chart.js Zoom Plugin -->
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom@0.7.7/dist/chartjs-plugin-zoom.min.js"></script>
+    <!-- jsPDF for PDF Downloads -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    {% block extra_head %}{% endblock extra_head %}
 </head>
 <body>
-    <!-- Barre de navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="{% url 'home' %}">Gestion Incidents</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'incident' %}">Accueil</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'log_incident' %}">Historique</a>
-                    </li>
-                    {% if user.is_authenticated and user.groups.filter(name='admin').exists %}
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'dashboard' %}"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
-                        </li>
-                    {% endif %}
-                    {% if user.is_authenticated %}
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'logout' %}">Déconnexion</a>
-                        </li>
-                    {% else %}
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'login' %}">Connexion</a>
-                        </li>
-                    {% endif %}
-                </ul>
-            </div>
-        </div>
+    <!-- Navigation Bar (Optional) -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="{% url 'home' %}">Django Chart</a>
+        <!-- Add more navigation items as needed -->
     </nav>
 
-    <!-- Contenu principal -->
-    <main>
+    <div class="container mt-4">
         {% block content %}
-        {% endblock %}
-    </main>
+        {% endblock content %}
+    </div>
 
-    <!-- Footer -->
-    <footer class="bg-dark text-white text-center py-3 mt-5">
-        &copy; {{ current_year }} Gestion Incidents. Tous droits réservés.
-    </footer>
-
-    <!-- Bootstrap JS et dépendances -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- jQuery (nécessaire pour DataTables) -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!-- DataTables JS (pour log_incident.html) -->
-    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
-    {% block scripts %}
-    {% endblock %}
+    <!-- Bootstrap JS and dependencies (Optional) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    {% block extra_js %}
+    {% endblock extra_js %}
 </body>
 </html>

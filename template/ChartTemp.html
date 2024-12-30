@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
-{% block title %}Graphique Humidité{% endblock title %}
+{% block title %}Graphique Température{% endblock title %}
 {% block content %}
-<h3 class="mb-4">Historique de l'Humidité</h3>
+<h3 class="mb-4">Historique de la Température</h3>
 
 <!-- Boutons de sélection de période -->
 <div class="mb-3">
@@ -21,9 +21,9 @@
 <!-- Card contenant le graphique -->
 <div class="card mb-4">
     <div class="card-body">
-        <h5 class="card-title">Humidité (%)</h5>
+        <h5 class="card-title">Température (°C)</h5>
         <div style="height:300px;">
-            <canvas id="graphique-hum"></canvas>
+            <canvas id="graphique-temp"></canvas>
         </div>
     </div>
 </div>
@@ -33,26 +33,26 @@
 <script>
 let currentTimeUnit = 'hour'; // Échelle initiale
 
-function loadHumData(url, borderWidth) {
+function loadTempData(url, borderWidth) {
     fetch(url)
         .then(response => response.json())
         .then(data => {
             const labels = data.temps.map(t => moment(t)); // Dates formatées
-            const humData = data.humidity;
+            const tempData = data.temperature;
 
             // Détruit l'ancien graphique s'il existe
-            if (window.humChart) {
-                window.humChart.destroy();
+            if (window.tempChart) {
+                window.tempChart.destroy();
             }
 
-            const humCtx = document.getElementById('graphique-hum').getContext('2d');
-            window.humChart = new Chart(humCtx, {
+            const tempCtx = document.getElementById('graphique-temp').getContext('2d');
+            window.tempChart = new Chart(tempCtx, {
                 type: 'line',
                 data: {
                     labels: labels,
                     datasets: [{
-                        label: 'Humidité (%)',
-                        data: humData,
+                        label: 'Température (°C)',
+                        data: tempData,
                         backgroundColor: 'rgba(0, 123, 255, 0.1)', // Bleu clair
                         borderColor: 'rgb(0, 123, 255)',           // Bleu
                         borderWidth: borderWidth,
@@ -78,7 +78,7 @@ function loadHumData(url, borderWidth) {
                             ticks: {
                                 beginAtZero: true,
                                 callback: function(value) {
-                                    return value + '%';
+                                    return value + '°';
                                 }
                             }
                         }]
@@ -102,24 +102,24 @@ function loadHumData(url, borderWidth) {
 }
 
 // Gestion des boutons
-document.getElementById('jour-btn').addEventListener('click', () => loadHumData('/chart-data-jour/', 1));
-document.getElementById('semaine-btn').addEventListener('click', () => loadHumData('/chart-data-semaine/', 2));
-document.getElementById('mois-btn').addEventListener('click', () => loadHumData('/chart-data-mois/', 3));
+document.getElementById('jour-btn').addEventListener('click', () => loadTempData('/chart-data-jour/', 1));
+document.getElementById('semaine-btn').addEventListener('click', () => loadTempData('/chart-data-semaine/', 2));
+document.getElementById('mois-btn').addEventListener('click', () => loadTempData('/chart-data-mois/', 3));
 document.getElementById('toggle-scale-btn').addEventListener('click', () => {
     currentTimeUnit = (currentTimeUnit === 'hour') ? 'day' : 'hour';
-    loadHumData('/chart-data/', 4);
+    loadTempData('/chart-data/', 4);
 });
 document.getElementById('zoom-in-btn').addEventListener('click', () => {
-    if (window.humChart) window.humChart.zoom({ x: 1.1, y: 1 });
+    if (window.tempChart) window.tempChart.zoom({ x: 1.1, y: 1 });
 });
 document.getElementById('zoom-out-btn').addEventListener('click', () => {
-    if (window.humChart) window.humChart.zoom({ x: 0.9, y: 1 });
+    if (window.tempChart) window.tempChart.zoom({ x: 0.9, y: 1 });
 });
 document.getElementById('reset-zoom-btn').addEventListener('click', () => {
-    if (window.humChart) window.humChart.resetZoom();
+    if (window.tempChart) window.tempChart.resetZoom();
 });
 
 // Chargement initial
-loadHumData('/chart-data/', 4);
+loadTempData('/chart-data/', 4);
 </script>
 {% endblock extra_js %}
