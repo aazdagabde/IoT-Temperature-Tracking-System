@@ -10083,3 +10083,6 @@ INFO 2024-12-31 00:53:26,779 basehttp "GET /index/ HTTP/1.1" 200 10588
 INFO 2024-12-31 00:53:37,795 basehttp "GET /index/ HTTP/1.1" 200 10588
 INFO 2024-12-31 00:53:48,750 basehttp "GET /index/ HTTP/1.1" 200 10588
 INFO 2024-12-31 00:53:59,097 basehttp "GET /index/ HTTP/1.1" 200 10588
+INFO 2024-12-31 01:33:21,088 autoreload Watching for file changes with StatReloader
+INFO 2024-12-31 01:33:24,004 basehttp "GET / HTTP/1.1" 200 2316
+INFO 2024-12-31 01:33:26,036 basehttp "GET /index/ HTTP/1.1" 200 10588
