@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Incidents PDF</title>
+    <style>
+      /* Un peu de style pour le PDF */
+      body { font-family: Arial, sans-serif; font-size: 14px; }
+      table { border-collapse: collapse; width: 100%; margin-bottom: 20px; }
+      th, td { border: 1px solid #ccc; padding: 8px; }
+      th { background: #f2f2f2; }
+    </style>
+</head>
+<body>
+    <h1>Rapport d'Incidents ({{ filter_param|title }})</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Début</th>
+          <th>Fin</th>
+          <th>Durée</th>
+          <th>Itération</th>
+          <th>Remarques</th>
+          <th>Nb Acquittements</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for inc in incidents %}
+        <tr>
+          <td>{{ inc.id }}</td>
+          <td>{{ inc.start_dt|date:"d/m/Y H:i" }}</td>
+          <td>
+            {% if inc.end_dt %}
+              {{ inc.end_dt|date:"d/m/Y H:i" }}
+            {% else %}
+              En cours
+            {% endif %}
+          </td>
+          <td>
+            {% if inc.duration %}
+              {{ inc.duration }}
+            {% else %}
+              --
+            {% endif %}
+          </td>
+          <td>{{ inc.iteration }}</td>
+          <td>{{ inc.remarks|default:"---" }}</td>
+          <td>{{ inc.acknowledgments.count }}</td>
+        </tr>
+        {% empty %}
+        <tr><td colspan="7">Aucun incident</td></tr>
+        {% endfor %}
+      </tbody>
+    </table>
+</body>
+</html>

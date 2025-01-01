@@ -30,5 +30,12 @@ urlpatterns = [
     path('manage-users/', views.manage_users, name='manage_users'),
     path('edit-user/<int:user_id>/', views.edit_user, name='edit_user'),
     path('delete-user/<int:user_id>/', views.delete_user, name='delete_user'),
+################
 
+    path('incident-detail/<int:incident_id>/', views.incident_detail, name='incident_detail'),
+
+
+    path('export/incidents/excel/', views.export_incidents_excel, name='export_incidents_excel'),
+    path('export/incidents/pdf/', views.export_incidents_pdf, name='export_incidents_pdf'),
+    path('export_pdf_data/', views.export_pdf_data, name='export_pdf_data'),
 ]

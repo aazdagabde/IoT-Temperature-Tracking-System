@@ -1,112 +1,215 @@
-<!-- DHT/templates/log_incident.html -->
-
 {% extends 'base.html' %}
 {% load static %}
+{% block extra_css %}
+<!-- CSS de bootstrap-table -->
+<link rel="stylesheet"
+      href="https://unpkg.com/bootstrap-table@1.21.2/dist/bootstrap-table.min.css">
+{% endblock extra_css %}
+
 {% block content %}
 <div class="container my-5">
-    <h2 class="text-center mb-4">
-        <i class="fas fa-history text-primary me-2"></i> Historique des Incidents
-    </h2>
+  <h2 class="text-center mb-4">
+    <i class="fas fa-history text-primary me-2"></i> Historique des Incidents
+  </h2>
 
-    <!-- Boutons de filtrage par période -->
-    <div class="d-flex justify-content-center mb-4">
-        <div class="btn-group" role="group" aria-label="Filtrer par période">
-            <a href="?filter=jour" class="btn btn-outline-primary btn-sm {% if request.GET.filter == 'jour' %}active{% endif %}">
-                <i class="fas fa-calendar-day me-1"></i> Jour
-            </a>
-            <a href="?filter=semaine" class="btn btn-outline-primary btn-sm {% if request.GET.filter == 'semaine' %}active{% endif %}">
-                <i class="fas fa-calendar-week me-1"></i> Semaine
-            </a>
-            <a href="?filter=mois" class="btn btn-outline-primary btn-sm {% if request.GET.filter == 'mois' %}active{% endif %}">
-                <i class="fas fa-calendar-alt me-1"></i> Mois
-            </a>
-            <a href="?filter=annee" class="btn btn-outline-primary btn-sm {% if request.GET.filter == 'annee' %}active{% endif %}">
-                <i class="fas fa-calendar me-1"></i> Année
-            </a>
-            <a href="?filter=all" class="btn btn-outline-secondary btn-sm {% if not request.GET.filter or request.GET.filter == 'all' %}active{% endif %}">
-                <i class="fas fa-list me-1"></i> Tous
-            </a>
-        </div>
+  <!-- Boutons de filtrage par période -->
+  <div class="d-flex justify-content-center mb-4">
+    <div class="btn-group" role="group">
+      <a href="?filter=jour"
+         class="btn btn-outline-primary btn-sm {% if request.GET.filter == 'jour' %}active{% endif %}">
+        <i class="fas fa-calendar-day me-1"></i> Jour
+      </a>
+      <a href="?filter=semaine"
+         class="btn btn-outline-primary btn-sm {% if request.GET.filter == 'semaine' %}active{% endif %}">
+        <i class="fas fa-calendar-week me-1"></i> Semaine
+      </a>
+      <a href="?filter=mois"
+         class="btn btn-outline-primary btn-sm {% if request.GET.filter == 'mois' %}active{% endif %}">
+        <i class="fas fa-calendar-alt me-1"></i> Mois
+      </a>
+      <a href="?filter=annee"
+         class="btn btn-outline-primary btn-sm {% if request.GET.filter == 'annee' %}active{% endif %}">
+        <i class="fas fa-calendar me-1"></i> Année
+      </a>
+      <a href="?filter=all"
+         class="btn btn-outline-secondary btn-sm
+                {% if not request.GET.filter or request.GET.filter == 'all' %}active{% endif %}">
+        <i class="fas fa-list me-1"></i> Tous
+      </a>
     </div>
+  </div>
 
-    <!-- Table des incidents -->
-    <div class="table-responsive">
-        <table class="table table-striped table-bordered table-hover">
-            <thead class="table-dark">
-                <tr>
-                    <th><i class="fas fa-clock me-1"></i> Début</th>
-                    <th><i class="fas fa-clock me-1"></i> Fin</th>
-                    <th><i class="fas fa-hourglass-half me-1"></i> Durée</th>
-                    <th><i class="fas fa-sync-alt me-1"></i> Itération</th>
-                    <th><i class="fas fa-comment-dots me-1"></i> Remarques</th>
-                    <th><i class="fas fa-user-check me-1"></i> Acquittements</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for incident in incidents %}
-                <tr>
-                    <!-- Début de l'incident -->
-                    <td>{{ incident.start_dt|date:"d/m/Y H:i" }}</td>
+  <!-- Table des incidents -->
+  <table class="table table-bordered table-hover"
+         id="tableIncidents"
+         data-toggle="table"
+         data-search="true"
+         data-show-export="true"
+         data-show-columns="true"
+         data-export-types='["csv","excel","pdf"]'
+         data-export-options='{"fileName": "incidents_export"}'>
+    <thead class="table-dark">
+      <tr>
+        <th data-field="start_dt" data-sortable="true">Début</th>
+        <th data-field="end_dt"   data-sortable="true">Fin</th>
+        <th data-field="duration" data-sortable="true">Durée</th>
+        <th data-field="iteration" data-sortable="true">Itération</th>
+        <th data-field="remarks" data-sortable="true">Remarques</th>
+        <th data-field="ack" data-sortable="false">Acquittements</th>
+        <th data-field="actions" data-sortable="false">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for inc in incidents %}
+      <tr>
+        <td>{{ inc.start_dt|date:"d/m/Y H:i" }}</td>
+        <td>
+          {% if inc.end_dt %}
+            {{ inc.end_dt|date:"d/m/Y H:i" }}
+          {% else %}
+            <span class="text-danger">En cours</span>
+          {% endif %}
+        </td>
+        <td>
+          {% if inc.duration %}
+            {{ inc.duration }}
+          {% else %}
+            <span class="text-muted">--</span>
+          {% endif %}
+        </td>
+        <td>{{ inc.iteration }}</td>
+        <td>{{ inc.remarks|default:"---" }}</td>
+        <td>
+          {% if inc.acknowledgments.exists %}
+            <ul class="list-unstyled mb-0">
+              {% for ack in inc.acknowledgments.all %}
+                <li>
+                  <i class="fas fa-user-check me-1"></i>{{ ack.user.username }}
+                  à {{ ack.acknowledged_at|date:"d/m/Y H:i" }}
+                </li>
+              {% endfor %}
+            </ul>
+          {% else %}
+            <span class="text-muted">---</span>
+          {% endif %}
+        </td>
+        <!-- Bouton "Plus d'info" avec modal Bootstrap -->
+        <td>
+          <button type="button"
+                  class="btn btn-info btn-sm btn-show-detail"
+                  data-bs-toggle="modal"
+                  data-bs-target="#incidentModal"
+                  data-incident-id="{{ inc.id }}">
+            <i class="fas fa-info-circle"></i> Plus d'info
+          </button>
+        </td>
+      </tr>
+      {% empty %}
+      <tr>
+        <td colspan="7" class="text-center">
+          <i class="fas fa-info-circle me-2"></i>Aucun incident enregistré.
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
 
-                    <!-- Fin de l'incident -->
-                    <td>
-                        {% if incident.end_dt %}
-                            {{ incident.end_dt|date:"d/m/Y H:i" }}
-                        {% else %}
-                            <span class="text-danger"><i class="fas fa-times-circle me-1"></i> En cours</span>
-                        {% endif %}
-                    </td>
+  <div class="d-flex justify-content-center mb-3">
+  <!-- Le paramètre 'filter' est transmis dans l'URL -->
+  <a href="{% url 'export_incidents_excel' %}?filter={{ filter_param }}"
+     class="btn btn-success me-2">
+    <i class="fas fa-file-excel"></i> Export Excel
+  </a>
+  <a href="{% url 'export_incidents_pdf' %}?filter={{ filter_param }}"
+     class="btn btn-danger">
+    <i class="fas fa-file-pdf"></i> Imprimer / Export PDF
+  </a>
+</div>
 
-                    <!-- Durée -->
-                    <td>
-                        {% if incident.duration %}
-                            {{ incident.duration }}
-                        {% else %}
-                            <span class="text-muted">--</span>
-                        {% endif %}
-                    </td>
 
-                    <!-- Itération -->
-                    <td>{{ incident.iteration }}</td>
+  <!-- Bouton Retour à la page des incidents -->
+  <div class="d-flex justify-content-center mt-4">
+    <a href="{% url 'incident' %}" class="btn btn-secondary d-flex align-items-center">
+      <i class="fas fa-arrow-left me-2"></i> Retour à la Gestion des Incidents
+    </a>
+  </div>
+</div>
 
-                    <!-- Remarques -->
-                    <td>
-                        {% if incident.remarks %}
-                            <i class="fas fa-comment me-1"></i> {{ incident.remarks }}
-                        {% else %}
-                            <span class="text-muted">---</span>
-                        {% endif %}
-                    </td>
-
-                    <!-- Acquittements -->
-                    <td>
-                        {% if incident.acknowledgments.all %}
-                            <ul class="list-unstyled mb-0">
-                                {% for ack in incident.acknowledgments.all %}
-                                    <li><i class="fas fa-user-check me-1"></i>{{ ack.user.username }} à {{ ack.acknowledged_at|date:"d/m/Y H:i" }}</li>
-                                {% endfor %}
-                            </ul>
-                        {% else %}
-                            <span class="text-muted">---</span>
-                        {% endif %}
-                    </td>
-                </tr>
-                {% empty %}
-                <tr>
-                    <td colspan="6" class="text-center">
-                        <i class="fas fa-info-circle me-2"></i>Aucun incident enregistré.
-                    </td>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
+<!-- ======================================== -->
+<!-- Modal Bootstrap -->
+<div class="modal fade" id="incidentModal" tabindex="-1"
+     aria-labelledby="incidentModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg"> <!-- modal-lg pour plus de largeur -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="incidentModalLabel">Détails de l'incident</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                aria-label="Close"></button>
+      </div>
+      <div class="modal-body" id="modalBody">
+        <!-- Le contenu dynamique sera injecté ici via JS -->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary"
+                data-bs-dismiss="modal">Fermer</button>
+      </div>
     </div>
-
-    <!-- Bouton Retour à la page des incidents -->
-    <div class="d-flex justify-content-center mt-4">
-        <a href="{% url 'incident' %}" class="btn btn-secondary d-flex align-items-center">
-            <i class="fas fa-arrow-left me-2"></i> Retour à la Gestion des Incidents
-        </a>
-    </div>
+  </div>
 </div>
 {% endblock content %}
+
+{% block extra_js %}
+<!-- JS de bootstrap-table -->
+<script src="https://unpkg.com/bootstrap-table@1.21.2/dist/bootstrap-table.min.js"></script>
+<!-- Plugins d’export (PDF, Excel, CSV) -->
+<script src="https://unpkg.com/tableexport.jquery.plugin/tableExport.min.js"></script>
+<script src="https://unpkg.com/bootstrap-table@1.21.2/dist/extensions/export/bootstrap-table-export.min.js"></script>
+
+<script>
+  // Au chargement, initialiser la table
+  document.addEventListener('DOMContentLoaded', function () {
+    const table = document.getElementById('tableIncidents');
+    // bootstrap-table se charge généralement tout seul si data-toggle="table" est présent
+
+    // Gérer le click sur "Plus d'info"
+    const detailBtns = document.querySelectorAll('.btn-show-detail');
+    const modalBody = document.getElementById('modalBody');
+
+    detailBtns.forEach(btn => {
+      btn.addEventListener('click', function() {
+        const incidentId = this.getAttribute('data-incident-id');
+        const url = `/incident-detail/${incidentId}/`; // Vue Django
+
+        fetch(url)
+          .then(resp => resp.json())
+          .then(data => {
+            let html = `
+              <p><strong>ID:</strong> ${data.id}</p>
+              <p><strong>Début:</strong> ${data.start_dt}</p>
+              <p><strong>Fin:</strong> ${data.end_dt}</p>
+              <p><strong>Itération:</strong> ${data.iteration}</p>
+              <p><strong>Remarques:</strong> ${data.remarks}</p>
+              <p><strong>Utilisateurs ayant acquitté:</strong>
+                 ${data.ack_users.join(", ")}</p>
+            `;
+
+            if (data.dht_data && data.dht_data.length) {
+              html += `<h5>Mesures DHT (extrait)</h5><ul>`;
+              data.dht_data.forEach(d => {
+                html += `<li>${d.dt} - Temp: ${d.temp}°C, Hum: ${d.hum}%</li>`;
+              });
+              html += `</ul>`;
+            }
+
+            modalBody.innerHTML = html;
+          })
+          .catch(err => {
+            modalBody.innerHTML = `<div class="alert alert-danger">
+              Erreur lors du chargement des détails.
+            </div>`;
+          });
+      });
+    });
+  });
+</script>
+{% endblock extra_js %}

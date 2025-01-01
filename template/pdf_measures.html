@@ -1,0 +1,86 @@
+<!-- DHT/templates/pdf_measures.html -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Rapport des Mesures DHT</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            font-size: 14px;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 1em;
+        }
+        .info-impression {
+            margin-bottom: 1em;
+            font-size: 0.95em;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 2em;
+        }
+        table, th, td {
+            border: 1px solid #ccc;
+        }
+        th {
+            background: #f2f2f2;
+            text-align: left;
+        }
+        th, td {
+            padding: 8px;
+        }
+        .signature {
+            margin-top: 3em;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Rapport des Mesures DHT</h2>
+
+<div class="info-impression">
+    <p>Imprimé par :
+       <strong>{{ user.first_name }} {{ user.last_name }}</strong>
+       le {{ today|date:"d/m/Y H:i" }}
+    </p>
+</div>
+
+<!-- Filtre actuel -->
+<p>Filtre utilisé : <strong>{{ filter_param|title }}</strong></p>
+
+<!-- Tableau des mesures -->
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Temp (°C)</th>
+      <th>Hum (%)</th>
+      <th>Date/Heure</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for record in data %}
+    <tr>
+      <td>{{ record.id }}</td>
+      <td>{{ record.temp }}</td>
+      <td>{{ record.hum }}</td>
+      <td>{{ record.dt|date:"d/m/Y H:i" }}</td>
+    </tr>
+    {% empty %}
+    <tr>
+      <td colspan="4">Aucune donnée disponible</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+<div class="signature">
+    <p>Signature de l'administrateur : <span style="margin-left: 2em;">____________________</span></p>
+</div>
+
+</body>
+</html>

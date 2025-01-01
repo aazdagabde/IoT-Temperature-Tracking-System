@@ -5,6 +5,37 @@
     <i class="fas fa-thermometer-half"></i> Liste des mesures enregistrées
 </h3>
 
+<!-- Boutons de filtrage -->
+<div class="mb-3 d-flex align-items-center">
+    <div class="btn-group me-3">
+        <a href="?filter=jour" class="btn btn-outline-primary btn-sm {% if filter_param == 'jour' %}active{% endif %}">
+            Jour
+        </a>
+        <a href="?filter=semaine" class="btn btn-outline-primary btn-sm {% if filter_param == 'semaine' %}active{% endif %}">
+            Semaine
+        </a>
+        <a href="?filter=mois" class="btn btn-outline-primary btn-sm {% if filter_param == 'mois' %}active{% endif %}">
+            Mois
+        </a>
+        <a href="?filter=annee" class="btn btn-outline-primary btn-sm {% if filter_param == 'annee' %}active{% endif %}">
+            Année
+        </a>
+        <a href="?filter=all" class="btn btn-outline-secondary btn-sm {% if filter_param == 'all' or not filter_param %}active{% endif %}">
+            Tous
+        </a>
+    </div>
+
+    <!-- Bouton Export PDF avec le même filter_param -->
+    <a href="{% url 'export_pdf_data' %}?filter={{ filter_param }}"
+       class="btn btn-danger btn-sm me-2">
+       <i class="fas fa-file-pdf"></i> Exporter PDF
+    </a>
+
+    <!-- Bouton CSV existant -->
+    <a href="{% url 'download_csv' %}" class="btn btn-primary btn-sm">
+        <i class="fas fa-download"></i> CSV
+    </a>
+</div>
 
 <div class="d-flex justify-content-between align-items-center mb-3">
     <div>
@@ -16,13 +47,9 @@
     </div>
 </div>
 
-
 <div class="card">
     <div class="card-header d-flex justify-content-between align-items-center">
         <span><i class="fas fa-database"></i> Mesures</span>
-        <a href="{% url 'download_csv' %}" class="btn btn-primary">
-            <i class="fas fa-download"></i> Télécharger CSV
-        </a>
     </div>
     <div class="card-body">
         <table class="table table-striped align-middle">
@@ -53,13 +80,13 @@
 </div>
 
 <script>
-    // Script to update the current time dynamically
+    // Script pour mettre à jour l'heure locale
     function updateTime() {
         const now = new Date();
         const options = { hour: '2-digit', minute: '2-digit', second: '2-digit' };
         document.getElementById('current-time').textContent = now.toLocaleTimeString('fr-FR', options);
     }
     setInterval(updateTime, 1000);
-    updateTime(); // Call immediately to show time on page load
+    updateTime(); // Appel immédiat
 </script>
 {% endblock content %}
