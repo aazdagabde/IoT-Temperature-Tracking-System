@@ -337,7 +337,7 @@ def dashboard(request):
 
 
 from django.contrib.auth.decorators import user_passes_test
-from django.contrib.auth.models import User
+
 
 def is_admin(user):
     return user.is_authenticated and user.groups.filter(name='admin').exists()
@@ -376,12 +376,9 @@ def delete_user(request, user_id):
 
 # DHT/views.py
 
-from django.shortcuts import render, get_object_or_404
-from django.http import JsonResponse
-from django.contrib.auth.decorators import login_required
-from .models import Incident, Acknowledgment, Dht11
 
-from django.utils import timezone
+from django.contrib.auth.decorators import login_required
+
 
 @login_required
 def incident_detail(request, incident_id):
@@ -419,9 +416,7 @@ def incident_detail(request, incident_id):
 
 # views.py
 import openpyxl
-from django.http import HttpResponse
-from .utils import filter_incidents_by_param
-from datetime import datetime
+
 
 @login_required
 def export_incidents_excel(request):
@@ -460,10 +455,10 @@ def export_incidents_excel(request):
 
 ########################
 import pdfkit
-from django.http import HttpResponse
+
 from django.template.loader import render_to_string
-from datetime import datetime
-from .utils import filter_incidents_by_param
+
+
 
 
 def export_incidents_pdf(request):
@@ -477,9 +472,9 @@ def export_incidents_pdf(request):
     })
 
     # Sur PythonAnywhere, wkhtmltopdf se trouve généralement ici :
-    #config = pdfkit.configuration(wkhtmltopdf='/usr/bin/wkhtmltopdf')
+    config = pdfkit.configuration(wkhtmltopdf='/usr/bin/wkhtmltopdf')
     #Sur windows
-    config = pdfkit.configuration(wkhtmltopdf=r'C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe')
+    #config = pdfkit.configuration(wkhtmltopdf=r'C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe')
 
 
     # Générer le PDF en mémoire (False signifie "ne pas écrire sur disque")
@@ -495,12 +490,7 @@ def export_incidents_pdf(request):
 #############################"
 # views.py
 
-from django.utils import timezone
-from datetime import timedelta
-from django.shortcuts import render
-from django.http import HttpResponse
-from .models import Dht11
-import pdfkit  # ou xhtml2pdf, ou tout autre librairie PDF (ex: WeasyPrint si c’était installé)
+
 from django.contrib.auth.decorators import login_required
 
 def filter_data_by_param(filter_param):
@@ -536,16 +526,9 @@ def table(request):
     })
 
 ##########
-from django.shortcuts import render
-from django.http import HttpResponse
-from django.template.loader import render_to_string
-from django.contrib.auth.decorators import login_required
-from django.utils import timezone
-import pdfkit
 
-from .models import Dht11
-from datetime import timedelta
-from .utils import filter_data_by_param  # ou votre fonction de filtrage
+from django.contrib.auth.decorators import login_required
+
 
 
 @login_required
@@ -572,9 +555,9 @@ def export_pdf_data(request):
     # 2) Configurer pdfkit
     # Sur PythonAnywhere ou Linux : /usr/bin/wkhtmltopdf
     # Sur Windows : chemin absolu de wkhtmltopdf.exe
-    #config = pdfkit.configuration(wkhtmltopdf='/usr/bin/wkhtmltopdf')
+    config = pdfkit.configuration(wkhtmltopdf='/usr/bin/wkhtmltopdf')
     # sur windows
-    config = pdfkit.configuration(wkhtmltopdf=r'C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe')
+    #config = pdfkit.configuration(wkhtmltopdf=r'C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe')
 
 
     # 3) Générer le PDF en bytes (False = on ne sauvegarde pas de fichier temporaire)

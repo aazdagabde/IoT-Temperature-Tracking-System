@@ -10533,3 +10533,41 @@ INFO 2025-01-01 23:39:49,264 basehttp "GET /chart-data/ HTTP/1.1" 200 28651
 INFO 2025-01-01 23:39:51,518 basehttp "GET /api/post HTTP/1.1" 200 122020
 INFO 2025-01-01 23:39:54,702 basehttp "GET /incident/ HTTP/1.1" 200 9037
 INFO 2025-01-01 23:39:56,634 basehttp "GET /log_incident/ HTTP/1.1" 200 26192
+INFO 2025-01-01 23:24:23,323 autoreload Watching for file changes with StatReloader
+WARNING 2025-01-01 23:28:11,403 log Not Found: /home/aazdagbousslamaiot/provesoire/static/css/custom.css
+WARNING 2025-01-01 23:30:19,488 log Not Found: /home/aazdagbousslamaiot/provesoire/static/css/custom.css
+WARNING 2025-01-01 23:49:24,977 log Not Found: /home/aazdagbousslamaiot/provesoire/static/css/custom.css
+WARNING 2025-01-01 23:49:26,848 log Not Found: /favicon.ico
+WARNING 2025-01-01 23:57:11,766 log Not Found: /favicon.ico
+WARNING 2025-01-02 00:42:09,464 log Not Found: /favicon.ico
+WARNING 2025-01-02 00:42:12,824 log Not Found: /home/aazdagbousslamaiot/provesoire/static/css/custom.css
+WARNING 2025-01-02 00:42:12,900 log Not Found: /home/aazdagbousslamaiot/provesoire/static/css/custom.css
+WARNING 2025-01-02 06:35:10,651 log Not Found: /favicon.ico
+WARNING 2025-01-02 06:42:36,988 log Not Found: /favicon.ico
+WARNING 2025-01-02 09:03:11,790 log Not Found: /favicon.ico
+WARNING 2025-01-02 12:04:28,665 log Not Found: /favicon.ico
+WARNING 2025-01-02 12:55:33,711 log Not Found: /favicon.ico
+WARNING 2025-01-02 12:56:20,407 log Not Found: /home/aazdagbousslamaiot/provesoire/static/css/custom.css
+WARNING 2025-01-02 12:56:20,937 log Not Found: /home/aazdagbousslamaiot/provesoire/static/css/custom.css
+WARNING 2025-01-02 16:55:29,530 log Not Found: /favicon.ico
+WARNING 2025-01-02 18:05:22,413 log Not Found: /favicon.ico
+WARNING 2025-01-02 19:44:00,842 log Not Found: /home/aazdagbousslamaiot/provesoire/static/css/custom.css
+WARNING 2025-01-02 19:44:17,849 log Not Found: /home/aazdagbousslamaiot/provesoire/static/css/custom.css
+WARNING 2025-01-02 19:44:24,256 log Not Found: /home/aazdagbousslamaiot/provesoire/static/css/custom.css
+WARNING 2025-01-02 19:44:35,026 log Not Found: /edit-user/
+WARNING 2025-01-02 19:45:56,225 log Not Found: /home/aazdagbousslamaiot/provesoire/static/css/custom.css
+WARNING 2025-01-02 19:46:10,756 log Not Found: /home/aazdagbousslamaiot/provesoire/static/css/custom.css
+WARNING 2025-01-02 19:58:56,019 log Not Found: /home/aazdagbousslamaiot/provesoire/static/css/custom.css
+WARNING 2025-01-02 20:04:09,364 log Not Found: /robots.txt
+WARNING 2025-01-03 06:41:30,365 log Not Found: /favicon.ico
+WARNING 2025-01-03 07:04:40,579 log Not Found: /favicon.ico
+WARNING 2025-01-03 13:07:56,502 log Not Found: /favicon.ico
+WARNING 2025-01-03 13:31:03,819 log Not Found: /favicon.ico
+WARNING 2025-01-04 05:53:58,970 log Not Found: /favicon.ico
+WARNING 2025-01-04 10:06:42,544 log Not Found: /favicon.ico
+WARNING 2025-01-04 10:30:52,070 log Not Found: /home/aazdagbousslamaiot/provesoire/static/css/custom.css
+WARNING 2025-01-04 11:00:47,193 log Not Found: /favicon.ico
+WARNING 2025-01-04 11:00:51,149 log Not Found: /home/aazdagbousslamaiot/provesoire/static/css/custom.css
+WARNING 2025-01-04 11:00:51,192 log Not Found: /home/aazdagbousslamaiot/provesoire/static/css/custom.css
+WARNING 2025-01-04 12:46:29,774 log Not Found: /favicon.ico
+WARNING 2025-01-04 13:23:17,778 log Not Found: /favicon.ico
