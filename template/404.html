@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+
+        body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.container {
+  max-width: 600px;
+  padding: 20px;
+}
+
+.oops {
+  font-size: 6rem;
+  font-weight: bold;
+  background: linear-gradient(to right, #4facfe, #003c8f);
+  -webkit-background-clip: text;
+  color: transparent;
+  margin: 0;
+}
+
+.error-code {
+  font-size: 1.5rem;
+  margin: 10px 0;
+  font-weight: bold;
+  color: #666;
+}
+
+.message {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.homepage-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #007BFF;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.homepage-btn:hover {
+  background-color: #0056b3;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="oops">Oops!</h1>
+        <p class="error-code">404 - PAGE NOT FOUND</p>
+        <p class="message">
+            The page you are looking for might have been removed,<br>
+            had its name changed, or is temporarily unavailable.
+        </p>
+        <a href="/" class="homepage-btn">GO TO HOMEPAGE</a>
+    </div>
+</body>
+</html>

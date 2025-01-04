@@ -3,6 +3,11 @@ from . import views
 from . import api
 from django.contrib.auth import views as auth_views
 
+from django.conf.urls import handler404
+from .views import custom_404_view
+
+handler404 =custom_404_view
+
 urlpatterns = [
     path("api", api.Dlist, name='api'),
     path("api/post", api.Dlist, name='api_post'),
