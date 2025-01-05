@@ -1,10 +1,85 @@
 {% extends 'base.html' %}
 {% load static %}
+
 {% block extra_css %}
+<!-- Styles personnalisés pour harmoniser avec la page d'accueil -->
+<style>
+  /* 1) Arrière-plan sombre et texte clair */
+  body {
+    background-color: #2c3e50 !important;
+    color: #fff !important;
+  }
+
+  /* 2) Sur cette page, on remplace la classe Bootstrap .text-primary
+        par la couleur orange #ff7f50 pour les icônes, les titres, etc.
+   */
+  .text-primary {
+    color: #ff7f50 !important;
+  }
+
+  /* 3) Boutons outline primary => contour orange + hover orange plein */
+  .btn-outline-primary {
+    color: #ff7f50;
+    border-color: #ff7f50;
+  }
+  .btn-outline-primary:hover {
+    background-color: #ff7f50;
+    color: #fff;
+  }
+
+  /* 4) Bouton outline secondary => si besoin, ajustez la couleur */
+  .btn-outline-secondary {
+    color: #ccc;
+    border-color: #ccc;
+  }
+  .btn-outline-secondary:hover {
+    background-color: #ccc;
+    color: #2c3e50;
+  }
+
+  /* 5) Tableau : on applique table-hover, table-bordered, table-dark en partie
+        et on personnalise davantage.
+  */
+  /* Couleur du texte dans les td/th du tableau */
+  .table {
+    color: #fff;
+  }
+  /* Tête du tableau plus foncée que le fond global */
+  .table thead.table-dark {
+    background-color: #1a252f !important;
+  }
+  /* Couleur de texte dans le thead (ex. accent orange) */
+  .table thead.table-dark th {
+    color: #ff7f50 !important;
+  }
+  /* Bordures du tableau (si souhaité) */
+  .table-bordered {
+    border: 1px solid #34495e !important;
+  }
+  .table-bordered td,
+  .table-bordered th {
+    border: 1px solid #34495e !important;
+  }
+  /* Hover sur les lignes */
+  .table-hover tbody tr:hover {
+    background-color: #34495e;
+  }
+  /* Couleur du message "Aucun incident" */
+  .table .text-center {
+    color: #ccc;
+  }
+
+  /* 6) Titres / marges générales */
+  h2.text-center.mb-4 {
+    color: #ff7f50; /* accent sur le titre */
+  }
+</style>
+
 <!-- CSS de bootstrap-table -->
 <link rel="stylesheet"
       href="https://unpkg.com/bootstrap-table@1.21.2/dist/bootstrap-table.min.css">
 {% endblock extra_css %}
+
 
 {% block content %}
 <div class="container my-5">
@@ -115,17 +190,16 @@
   </table>
 
   <div class="d-flex justify-content-center mb-3">
-  <!-- Le paramètre 'filter' est transmis dans l'URL -->
-  <a href="{% url 'export_incidents_excel' %}?filter={{ filter_param }}"
-     class="btn btn-success me-2">
-    <i class="fas fa-file-excel"></i> Export Excel
-  </a>
-  <a href="{% url 'export_incidents_pdf' %}?filter={{ filter_param }}"
-     class="btn btn-danger">
-    <i class="fas fa-file-pdf"></i> Imprimer / Export PDF
-  </a>
-</div>
-
+    <!-- Le paramètre 'filter' est transmis dans l'URL -->
+    <a href="{% url 'export_incidents_excel' %}?filter={{ filter_param }}"
+       class="btn btn-success me-2">
+      <i class="fas fa-file-excel"></i> Export Excel
+    </a>
+    <a href="{% url 'export_incidents_pdf' %}?filter={{ filter_param }}"
+       class="btn btn-danger">
+      <i class="fas fa-file-pdf"></i> Imprimer / Export PDF
+    </a>
+  </div>
 
   <!-- Bouton Retour à la page des incidents -->
   <div class="d-flex justify-content-center mt-4">
@@ -169,7 +243,7 @@
   // Au chargement, initialiser la table
   document.addEventListener('DOMContentLoaded', function () {
     const table = document.getElementById('tableIncidents');
-    // bootstrap-table se charge généralement tout seul si data-toggle="table" est présent
+    // bootstrap-table se charge déjà avec data-toggle="table"
 
     // Gérer le click sur "Plus d'info"
     const detailBtns = document.querySelectorAll('.btn-show-detail');
@@ -178,7 +252,7 @@
     detailBtns.forEach(btn => {
       btn.addEventListener('click', function() {
         const incidentId = this.getAttribute('data-incident-id');
-        const url = `/incident-detail/${incidentId}/`; // Vue Django
+        const url = `/incident-detail/${incidentId}/`; // Ex. vue Django
 
         fetch(url)
           .then(resp => resp.json())
