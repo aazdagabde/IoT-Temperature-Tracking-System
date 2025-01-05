@@ -43,4 +43,5 @@ urlpatterns = [
     path('export/incidents/excel/', views.export_incidents_excel, name='export_incidents_excel'),
     path('export/incidents/pdf/', views.export_incidents_pdf, name='export_incidents_pdf'),
     path('export_pdf_data/', views.export_pdf_data, name='export_pdf_data'),
+
 ]
