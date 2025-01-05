@@ -10571,3 +10571,21 @@ WARNING 2025-01-04 11:00:51,149 log Not Found: /home/aazdagbousslamaiot/provesoi
 WARNING 2025-01-04 11:00:51,192 log Not Found: /home/aazdagbousslamaiot/provesoire/static/css/custom.css
 WARNING 2025-01-04 12:46:29,774 log Not Found: /favicon.ico
 WARNING 2025-01-04 13:23:17,778 log Not Found: /favicon.ico
+WARNING 2025-01-04 13:51:04,625 log Not Found: /favicon.ico
+WARNING 2025-01-04 15:14:38,565 log Not Found: /home/aazdagbousslamaiot/provesoire/static/css/custom.css
+WARNING 2025-01-04 15:19:22,783 log Not Found: /home/aazdagbousslamaiot/provesoire/static/css/custom.css
+ERROR 2025-01-04 15:20:31,478 alerts Erreur lors de l'envoi de l'alerte Telegram : HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot7859262503:AAGScp5W3u876LlZk1kcA7_S-dK1bmcuMVw/sendMessage (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x74390d850250>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+ERROR 2025-01-04 15:20:31,995 alerts Erreur lors de l'envoi de l'alerte WhatsApp : HTTP 401 error: Unable to create record: Authentication Error - invalid username
+INFO 2025-01-04 15:20:33,072 alerts Alerte e-mail envoyée avec succès.
+WARNING 2025-01-04 15:21:00,899 log Not Found: /home/aazdagbousslamaiot/provesoire/static/css/custom.css
+WARNING 2025-01-04 15:21:42,151 log Not Found: /home/aazdagbousslamaiot/provesoire/static/css/custom.css
+ERROR 2025-01-04 15:22:56,571 alerts Erreur lors de l'envoi de l'alerte Telegram : HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot7859262503:AAGScp5W3u876LlZk1kcA7_S-dK1bmcuMVw/sendMessage (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x74390d8771c0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+ERROR 2025-01-04 15:22:56,600 alerts Erreur lors de l'envoi de l'alerte WhatsApp : HTTP 401 error: Unable to create record: Authentication Error - invalid username
+INFO 2025-01-04 15:22:57,931 alerts Alerte e-mail envoyée avec succès.
+WARNING 2025-01-04 20:40:29,819 log Not Found: /robots.txt
+WARNING 2025-01-04 20:40:38,030 log Not Found: /sitemap_index.xml
+WARNING 2025-01-04 20:40:40,045 log Not Found: /sitemap.xml
+WARNING 2025-01-04 20:40:42,607 log Not Found: /sitemap.xml.gz
+WARNING 2025-01-04 20:40:42,919 log Not Found: /atom.xml
+WARNING 2025-01-04 20:40:43,243 log Not Found: /sitemaps.xml
+WARNING 2025-01-04 20:40:50,077 log Not Found: /sitemap.txt
