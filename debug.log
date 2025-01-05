@@ -10571,6 +10571,7 @@ WARNING 2025-01-04 11:00:51,149 log Not Found: /home/aazdagbousslamaiot/provesoi
 WARNING 2025-01-04 11:00:51,192 log Not Found: /home/aazdagbousslamaiot/provesoire/static/css/custom.css
 WARNING 2025-01-04 12:46:29,774 log Not Found: /favicon.ico
 WARNING 2025-01-04 13:23:17,778 log Not Found: /favicon.ico
+<<<<<<< HEAD
 WARNING 2025-01-04 13:51:04,625 log Not Found: /favicon.ico
 WARNING 2025-01-04 15:14:38,565 log Not Found: /home/aazdagbousslamaiot/provesoire/static/css/custom.css
 WARNING 2025-01-04 15:19:22,783 log Not Found: /home/aazdagbousslamaiot/provesoire/static/css/custom.css
@@ -10589,3 +10590,46 @@ WARNING 2025-01-04 20:40:42,607 log Not Found: /sitemap.xml.gz
 WARNING 2025-01-04 20:40:42,919 log Not Found: /atom.xml
 WARNING 2025-01-04 20:40:43,243 log Not Found: /sitemaps.xml
 WARNING 2025-01-04 20:40:50,077 log Not Found: /sitemap.txt
+=======
+INFO 2025-01-04 14:35:29,815 autoreload Watching for file changes with StatReloader
+INFO 2025-01-04 14:35:34,110 basehttp "GET / HTTP/1.1" 200 2316
+INFO 2025-01-04 14:35:34,182 basehttp "GET /static/images/HD.gif HTTP/1.1" 304 0
+WARNING 2025-01-04 14:35:34,483 log Not Found: /favicon.ico
+WARNING 2025-01-04 14:35:34,483 basehttp "GET /favicon.ico HTTP/1.1" 404 6818
+INFO 2025-01-04 14:35:35,875 basehttp "GET /index/ HTTP/1.1" 200 10620
+INFO 2025-01-04 14:35:46,529 basehttp "GET /index/ HTTP/1.1" 200 10620
+INFO 2025-01-04 14:35:57,544 basehttp "GET /index/ HTTP/1.1" 200 10620
+INFO 2025-01-04 14:36:08,540 basehttp "GET /index/ HTTP/1.1" 200 10620
+INFO 2025-01-04 14:36:19,499 basehttp "GET /index/ HTTP/1.1" 200 10620
+INFO 2025-01-04 14:36:30,488 basehttp "GET /index/ HTTP/1.1" 200 10620
+INFO 2025-01-04 14:36:41,526 basehttp "GET /index/ HTTP/1.1" 200 10620
+INFO 2025-01-04 14:36:45,503 autoreload C:\Users\aabde\OneDrive\Desktop\DHT11project-master\DHT11project-master\DHT\views.py changed, reloading.
+INFO 2025-01-04 14:36:46,581 autoreload Watching for file changes with StatReloader
+INFO 2025-01-04 14:36:52,577 basehttp "GET /index/ HTTP/1.1" 200 10620
+INFO 2025-01-04 14:37:03,514 basehttp "GET /index/ HTTP/1.1" 200 10620
+INFO 2025-01-04 14:37:14,535 basehttp "GET /index/ HTTP/1.1" 200 10620
+INFO 2025-01-04 14:37:25,485 basehttp "GET /index/ HTTP/1.1" 200 10620
+INFO 2025-01-04 14:37:36,490 basehttp "GET /index/ HTTP/1.1" 200 10620
+INFO 2025-01-04 14:37:47,035 basehttp "GET /index/ HTTP/1.1" 200 10620
+INFO 2025-01-04 14:37:47,163 autoreload C:\Users\aabde\OneDrive\Desktop\DHT11project-master\DHT11project-master\DHT\urls.py changed, reloading.
+INFO 2025-01-04 14:37:48,043 autoreload Watching for file changes with StatReloader
+INFO 2025-01-04 14:40:50,163 autoreload C:\Users\aabde\OneDrive\Desktop\DHT11project-master\DHT11project-master\projet\settings.py changed, reloading.
+INFO 2025-01-04 14:40:51,119 autoreload Watching for file changes with StatReloader
+INFO 2025-01-04 14:44:27,855 autoreload C:\Users\aabde\OneDrive\Desktop\DHT11project-master\DHT11project-master\DHT\urls.py changed, reloading.
+INFO 2025-01-04 14:44:28,612 autoreload Watching for file changes with StatReloader
+INFO 2025-01-04 14:47:46,853 autoreload C:\Users\aabde\OneDrive\Desktop\DHT11project-master\DHT11project-master\DHT\urls.py changed, reloading.
+INFO 2025-01-04 14:47:48,086 autoreload Watching for file changes with StatReloader
+INFO 2025-01-04 14:48:15,356 basehttp "GET /index/ HTTP/1.1" 200 10620
+INFO 2025-01-04 14:48:25,641 basehttp "GET /index/ HTTP/1.1" 200 10620
+WARNING 2025-01-04 14:48:33,746 log Not Found: /hhhh
+WARNING 2025-01-04 14:48:33,746 basehttp "GET /hhhh HTTP/1.1" 404 844
+WARNING 2025-01-04 14:49:33,553 log Not Found: /hhhh
+WARNING 2025-01-04 14:49:33,555 basehttp "GET /hhhh HTTP/1.1" 404 1566
+WARNING 2025-01-04 14:49:33,595 log Not Found: /styles.css
+WARNING 2025-01-04 14:49:33,595 basehttp "GET /styles.css HTTP/1.1" 404 1566
+INFO 2025-01-04 14:49:41,847 basehttp "GET / HTTP/1.1" 200 2316
+INFO 2025-01-04 14:49:45,190 basehttp "GET /index/ HTTP/1.1" 200 10620
+INFO 2025-01-04 14:49:55,523 basehttp "GET /index/ HTTP/1.1" 200 10620
+INFO 2025-01-04 14:50:06,540 basehttp "GET /index/ HTTP/1.1" 200 10620
+INFO 2025-01-04 14:50:17,525 basehttp "GET /index/ HTTP/1.1" 200 10620
+>>>>>>> 4093b69a5605e8e49ca639e3fc52093baa418ad2
