@@ -10633,3 +10633,45 @@ INFO 2025-01-04 14:49:55,523 basehttp "GET /index/ HTTP/1.1" 200 10620
 INFO 2025-01-04 14:50:06,540 basehttp "GET /index/ HTTP/1.1" 200 10620
 INFO 2025-01-04 14:50:17,525 basehttp "GET /index/ HTTP/1.1" 200 10620
 >>>>>>> 4093b69a5605e8e49ca639e3fc52093baa418ad2
+WARNING 2025-01-05 01:00:44,896 log Not Found: /home/aazdagbousslamaiot/provesoire/static/images/developers.png
+WARNING 2025-01-05 01:02:19,175 log Not Found: /home/aazdagbousslamaiot/provesoire/static/images/developers.png
+WARNING 2025-01-05 01:02:23,194 log Not Found: /home/aazdagbousslamaiot/provesoire/static/css/custom.css
+WARNING 2025-01-05 01:02:35,203 log Not Found: /home/aazdagbousslamaiot/provesoire/static/css/custom.css
+WARNING 2025-01-05 01:10:40,108 log Not Found: /favicon.ico
+WARNING 2025-01-05 01:10:57,061 log Not Found: /home/aazdagbousslamaiot/provesoire/static/images/developers.png
+WARNING 2025-01-05 01:11:08,903 log Not Found: /home/aazdagbousslamaiot/provesoire/static/css/custom.css
+WARNING 2025-01-05 01:45:39,068 log Not Found: /favicon.ico
+WARNING 2025-01-05 07:38:01,233 log Not Found: /favicon.ico
+WARNING 2025-01-05 07:47:36,211 log Not Found: /index/xff
+WARNING 2025-01-05 07:47:37,074 log Not Found: /index/styles.css
+WARNING 2025-01-05 07:47:37,309 log Not Found: /favicon.ico
+WARNING 2025-01-05 07:49:33,927 log Not Found: /index/xff
+WARNING 2025-01-05 07:50:39,700 log Not Found: /index/styles.css
+WARNING 2025-01-05 08:05:24,244 log Not Found: /home/aazdagbousslamaiot/provesoire/static/images/developers.png
+WARNING 2025-01-05 11:44:31,390 log Not Found: /favicon.ico
+WARNING 2025-01-05 16:22:30,578 log Not Found: /favicon.ico
+WARNING 2025-01-05 16:22:34,280 log Not Found: /home/aazdagbousslamaiot/provesoire/static/css/custom.css
+WARNING 2025-01-05 16:22:34,329 log Not Found: /home/aazdagbousslamaiot/provesoire/static/css/custom.css
+WARNING 2025-01-05 17:09:17,156 log Not Found: /home/aazdagbousslamaiot/provesoire/static/images/developers.png
+WARNING 2025-01-05 17:09:17,395 log Not Found: /favicon.ico
+WARNING 2025-01-05 17:34:55,938 log Not Found: /sitemap_index.xml
+WARNING 2025-01-05 17:34:57,035 log Not Found: /sitemap.xml.gz
+WARNING 2025-01-05 17:35:00,343 log Not Found: /sitemap.txt
+WARNING 2025-01-05 17:35:00,547 log Not Found: /sitemap.xml
+WARNING 2025-01-05 17:35:07,200 log Not Found: /sitemaps.xml
+WARNING 2025-01-05 17:35:07,303 log Not Found: /atom.xml
+WARNING 2025-01-05 18:57:58,822 log Not Found: /home/aazdagbousslamaiot/provesoire/static/images/developers.png
+WARNING 2025-01-05 18:59:43,610 log Not Found: /home/aazdagbousslamaiot/provesoire/static/images/developers.png
+ERROR 2025-01-05 19:00:33,358 alerts Erreur lors de l'envoi de l'alerte Telegram : HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot7859262503:AAGScp5W3u876LlZk1kcA7_S-dK1bmcuMVw/sendMessage (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x724b44cdf610>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+ERROR 2025-01-05 19:00:33,973 alerts Erreur lors de l'envoi de l'alerte WhatsApp : HTTP 401 error: Unable to create record: Authentication Error - invalid username
+INFO 2025-01-05 19:00:35,163 alerts Alerte e-mail envoyée avec succès.
+ERROR 2025-01-05 19:01:59,830 alerts Erreur lors de l'envoi de l'alerte Telegram : HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot7859262503:AAGScp5W3u876LlZk1kcA7_S-dK1bmcuMVw/sendMessage (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x724b44bb8100>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+ERROR 2025-01-05 19:01:59,859 alerts Erreur lors de l'envoi de l'alerte WhatsApp : HTTP 401 error: Unable to create record: Authentication Error - invalid username
+INFO 2025-01-05 19:02:00,820 alerts Alerte e-mail envoyée avec succès.
+ERROR 2025-01-05 19:02:00,852 alerts Erreur lors de l'envoi de l'alerte Telegram : HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot7859262503:AAGScp5W3u876LlZk1kcA7_S-dK1bmcuMVw/sendMessage (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x724b44bb9780>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+ERROR 2025-01-05 19:02:00,885 alerts Erreur lors de l'envoi de l'alerte WhatsApp : HTTP 401 error: Unable to create record: Authentication Error - invalid username
+INFO 2025-01-05 19:02:01,823 alerts Alerte e-mail envoyée avec succès.
+ERROR 2025-01-05 19:09:12,828 alerts Erreur lors de l'envoi de l'alerte Telegram : HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot7859262503:AAGScp5W3u876LlZk1kcA7_S-dK1bmcuMVw/sendMessage (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7367f12d4130>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+ERROR 2025-01-05 19:09:13,083 alerts Erreur lors de l'envoi de l'alerte WhatsApp : HTTP 401 error: Unable to create record: Authentication Error - invalid username
+INFO 2025-01-05 19:09:14,053 alerts Alerte e-mail envoyée avec succès.
+WARNING 2025-01-05 20:51:33,111 log Not Found: /home/aazdagbousslamaiot/provesoire/static/images/developers.png
