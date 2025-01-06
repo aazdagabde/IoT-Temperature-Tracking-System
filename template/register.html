@@ -1,41 +1,30 @@
-{% extends 'authenreg.html' %}
-
+{% extends 'base.html' %}
 {% block content %}
-    {% if user.username == "admin" or user.username == "admin2" %}
-        <p>{{ message }}</p>
-        <form method="post" action="{% url 'register_view' %}" class="needs-validation" novalidate>
-            {% csrf_token %}
-            <div class="mb-3">
-                <label for="username" class="form-label">Nom d'utilisateur</label>
-                <input type="text" id="username" name="username" class="form-control" placeholder="Entrez un nom d'utilisateur" required>
-            </div>
-            <div class="mb-3">
-                <label for="email" class="form-label">Adresse Email</label>
-                <input type="email" id="email" name="email" class="form-control" placeholder="Entrez une adresse email valide" required>
-            </div>
-            <div class="mb-3">
-                <label for="first_name" class="form-label">Prénom</label>
-                <input type="text" id="first_name" name="first_name" class="form-control" placeholder="Entrez votre prénom" required>
-            </div>
-            <div class="mb-3">
-                <label for="last_name" class="form-label">Nom</label>
-                <input type="text" id="last_name" name="last_name" class="form-control" placeholder="Entrez votre nom" required>
-            </div>
-            <div class="mb-3">
-                <label for="password" class="form-label">Mot de passe</label>
-                <input type="password" id="password" name="password" class="form-control" placeholder="Créez un mot de passe" required>
-            </div>
-            <div class="mb-3">
-                <label for="password_confirm" class="form-label">Confirmer le mot de passe</label>
-                <input type="password" id="password_confirm" name="password_confirm" class="form-control" placeholder="Confirmez le mot de passe" required>
-            </div>
-            <div class="d-grid gap-2">
-                <button type="submit" class="btn btn-primary">Ajouter l'utilisateur</button>
-            </div>
-        </form>
-    {% else %}
-        <div class="alert alert-danger text-center mt-3">
-            <strong>Accès refusé :</strong> Vous n'avez pas la permission d'accéder à cette page.
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-4">
+      <h3 class="text-center">Inscription</h3>
+      <form method="post">
+        {% csrf_token %}
+        <div class="form-group mb-3">
+          <label for="username">Nom d'utilisateur :</label>
+          <input type="text" class="form-control" id="username" name="username">
         </div>
-    {% endif %}
-{% endblock content %}
+        <div class="form-group mb-3">
+          <label for="email">Email :</label>
+          <input type="email" class="form-control" id="email" name="email">
+        </div>
+        <div class="form-group mb-3">
+          <label for="password">Mot de passe :</label>
+          <input type="password" class="form-control" id="password" name="password">
+        </div>
+        <div class="form-group mb-3">
+          <label for="password_confirm">Confirmer le mot de passe :</label>
+          <input type="password" class="form-control" id="password_confirm" name="password_confirm">
+        </div>
+        <button type="submit" class="btn btn-primary w-100">S'inscrire</button>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

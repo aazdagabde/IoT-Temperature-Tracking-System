@@ -10675,6 +10675,7 @@ ERROR 2025-01-05 19:09:12,828 alerts Erreur lors de l'envoi de l'alerte Telegram
 ERROR 2025-01-05 19:09:13,083 alerts Erreur lors de l'envoi de l'alerte WhatsApp : HTTP 401 error: Unable to create record: Authentication Error - invalid username
 INFO 2025-01-05 19:09:14,053 alerts Alerte e-mail envoyée avec succès.
 WARNING 2025-01-05 20:51:33,111 log Not Found: /home/aazdagbousslamaiot/provesoire/static/images/developers.png
+<<<<<<< HEAD
 WARNING 2025-01-05 21:58:04,347 log Not Found: /home/aazdagbousslamaiot/provesoire/static/images/developers.png
 WARNING 2025-01-05 21:58:09,673 log Not Found: /home/aazdagbousslamaiot/provesoire/static/images/developers.png
 WARNING 2025-01-05 21:58:11,504 log Not Found: /home/aazdagbousslamaiot/provesoire/static/css/custom.css
@@ -10684,3 +10685,1404 @@ WARNING 2025-01-05 23:05:04,790 log Not Found: /home/aazdagbousslamaiot/provesoi
 WARNING 2025-01-06 00:11:30,946 log Not Found: /home/aazdagbousslamaiot/provesoire/static/images/developers.png
 WARNING 2025-01-06 00:29:43,092 log Not Found: /home/aazdagbousslamaiot/provesoire/static/images/developers.png
 WARNING 2025-01-06 00:29:45,975 log Not Found: /home/aazdagbousslamaiot/provesoire/static/css/custom.css
+=======
+INFO 2025-01-05 22:52:57,081 autoreload Watching for file changes with StatReloader
+INFO 2025-01-05 22:53:02,510 basehttp "GET / HTTP/1.1" 200 6253
+WARNING 2025-01-05 22:53:02,611 log Not Found: /static/images/developers.png
+WARNING 2025-01-05 22:53:02,611 basehttp "GET /static/images/developers.png HTTP/1.1" 404 1566
+ERROR 2025-01-05 22:53:06,491 log Internal Server Error: /index/
+Traceback (most recent call last):
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\backends\base.py", line 187, in _get_session
+    return self._session_cache
+           ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'SessionStore' object has no attribute '_session_cache'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: django_session
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapper_view
+    if test_func(request.user):
+       ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 51, in <lambda>
+    lambda u: u.is_authenticated,
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\functional.py", line 251, in inner
+    self._setup()
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\functional.py", line 404, in _setup
+    self._wrapped = self._setupfunc()
+                    ^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\middleware.py", line 33, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+                                            ^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\middleware.py", line 13, in get_user
+    request._cached_user = auth.get_user(request)
+                           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\__init__.py", line 209, in get_user
+    user_id = _get_user_session_key(request)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\__init__.py", line 62, in _get_user_session_key
+    return get_user_model()._meta.pk.to_python(request.session[SESSION_KEY])
+                                               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\backends\base.py", line 53, in __getitem__
+    return self._session[key]
+           ^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\backends\base.py", line 192, in _get_session
+    self._session_cache = self.load()
+                          ^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\backends\db.py", line 42, in load
+    s = self._get_session_from_db()
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\backends\db.py", line 32, in _get_session_from_db
+    return self.model.objects.get(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\query.py", line 645, in get
+    num = len(clone)
+          ^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\query.py", line 382, in __len__
+    self._fetch_all()
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: django_session
+ERROR 2025-01-05 22:53:07,671 basehttp "GET /index/ HTTP/1.1" 500 145
+ERROR 2025-01-05 22:53:12,181 log Internal Server Error: /index/
+Traceback (most recent call last):
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\backends\base.py", line 187, in _get_session
+    return self._session_cache
+           ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'SessionStore' object has no attribute '_session_cache'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: django_session
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapper_view
+    if test_func(request.user):
+       ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 51, in <lambda>
+    lambda u: u.is_authenticated,
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\functional.py", line 251, in inner
+    self._setup()
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\functional.py", line 404, in _setup
+    self._wrapped = self._setupfunc()
+                    ^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\middleware.py", line 33, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+                                            ^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\middleware.py", line 13, in get_user
+    request._cached_user = auth.get_user(request)
+                           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\__init__.py", line 209, in get_user
+    user_id = _get_user_session_key(request)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\__init__.py", line 62, in _get_user_session_key
+    return get_user_model()._meta.pk.to_python(request.session[SESSION_KEY])
+                                               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\backends\base.py", line 53, in __getitem__
+    return self._session[key]
+           ^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\backends\base.py", line 192, in _get_session
+    self._session_cache = self.load()
+                          ^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\backends\db.py", line 42, in load
+    s = self._get_session_from_db()
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\backends\db.py", line 32, in _get_session_from_db
+    return self.model.objects.get(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\query.py", line 645, in get
+    num = len(clone)
+          ^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\query.py", line 382, in __len__
+    self._fetch_all()
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: django_session
+ERROR 2025-01-05 22:53:12,197 basehttp "GET /index/ HTTP/1.1" 500 145
+INFO 2025-01-05 22:54:10,232 basehttp "GET /logout HTTP/1.1" 301 0
+ERROR 2025-01-05 22:54:10,251 log Internal Server Error: /logout/
+Traceback (most recent call last):
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\backends\base.py", line 187, in _get_session
+    return self._session_cache
+           ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'SessionStore' object has no attribute '_session_cache'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: django_session
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\OneDrive\Desktop\DHT11project-master\DHT11project-master\DHT\views.py", line 286, in custom_logout
+    logout(request)
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\__init__.py", line 168, in logout
+    if not getattr(user, "is_authenticated", True):
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\functional.py", line 251, in inner
+    self._setup()
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\functional.py", line 404, in _setup
+    self._wrapped = self._setupfunc()
+                    ^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\middleware.py", line 33, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+                                            ^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\middleware.py", line 13, in get_user
+    request._cached_user = auth.get_user(request)
+                           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\__init__.py", line 209, in get_user
+    user_id = _get_user_session_key(request)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\__init__.py", line 62, in _get_user_session_key
+    return get_user_model()._meta.pk.to_python(request.session[SESSION_KEY])
+                                               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\backends\base.py", line 53, in __getitem__
+    return self._session[key]
+           ^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\backends\base.py", line 192, in _get_session
+    self._session_cache = self.load()
+                          ^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\backends\db.py", line 42, in load
+    s = self._get_session_from_db()
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\backends\db.py", line 32, in _get_session_from_db
+    return self.model.objects.get(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\query.py", line 645, in get
+    num = len(clone)
+          ^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\query.py", line 382, in __len__
+    self._fetch_all()
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: django_session
+ERROR 2025-01-05 22:54:10,267 basehttp "GET /logout/ HTTP/1.1" 500 145
+ERROR 2025-01-05 22:54:11,503 log Internal Server Error: /logout/
+Traceback (most recent call last):
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\backends\base.py", line 187, in _get_session
+    return self._session_cache
+           ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'SessionStore' object has no attribute '_session_cache'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: django_session
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\OneDrive\Desktop\DHT11project-master\DHT11project-master\DHT\views.py", line 286, in custom_logout
+    logout(request)
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\__init__.py", line 168, in logout
+    if not getattr(user, "is_authenticated", True):
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\functional.py", line 251, in inner
+    self._setup()
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\functional.py", line 404, in _setup
+    self._wrapped = self._setupfunc()
+                    ^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\middleware.py", line 33, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+                                            ^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\middleware.py", line 13, in get_user
+    request._cached_user = auth.get_user(request)
+                           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\__init__.py", line 209, in get_user
+    user_id = _get_user_session_key(request)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\__init__.py", line 62, in _get_user_session_key
+    return get_user_model()._meta.pk.to_python(request.session[SESSION_KEY])
+                                               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\backends\base.py", line 53, in __getitem__
+    return self._session[key]
+           ^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\backends\base.py", line 192, in _get_session
+    self._session_cache = self.load()
+                          ^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\backends\db.py", line 42, in load
+    s = self._get_session_from_db()
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\backends\db.py", line 32, in _get_session_from_db
+    return self.model.objects.get(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\query.py", line 645, in get
+    num = len(clone)
+          ^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\query.py", line 382, in __len__
+    self._fetch_all()
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: django_session
+ERROR 2025-01-05 22:54:11,514 basehttp "GET /logout/ HTTP/1.1" 500 145
+ERROR 2025-01-05 22:54:12,102 log Internal Server Error: /logout/
+Traceback (most recent call last):
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\backends\base.py", line 187, in _get_session
+    return self._session_cache
+           ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'SessionStore' object has no attribute '_session_cache'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: django_session
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\OneDrive\Desktop\DHT11project-master\DHT11project-master\DHT\views.py", line 286, in custom_logout
+    logout(request)
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\__init__.py", line 168, in logout
+    if not getattr(user, "is_authenticated", True):
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\functional.py", line 251, in inner
+    self._setup()
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\functional.py", line 404, in _setup
+    self._wrapped = self._setupfunc()
+                    ^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\middleware.py", line 33, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+                                            ^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\middleware.py", line 13, in get_user
+    request._cached_user = auth.get_user(request)
+                           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\__init__.py", line 209, in get_user
+    user_id = _get_user_session_key(request)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\__init__.py", line 62, in _get_user_session_key
+    return get_user_model()._meta.pk.to_python(request.session[SESSION_KEY])
+                                               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\backends\base.py", line 53, in __getitem__
+    return self._session[key]
+           ^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\backends\base.py", line 192, in _get_session
+    self._session_cache = self.load()
+                          ^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\backends\db.py", line 42, in load
+    s = self._get_session_from_db()
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\backends\db.py", line 32, in _get_session_from_db
+    return self.model.objects.get(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\query.py", line 645, in get
+    num = len(clone)
+          ^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\query.py", line 382, in __len__
+    self._fetch_all()
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: django_session
+ERROR 2025-01-05 22:54:12,111 basehttp "GET /logout/ HTTP/1.1" 500 145
+ERROR 2025-01-05 22:54:12,287 log Internal Server Error: /logout/
+Traceback (most recent call last):
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\backends\base.py", line 187, in _get_session
+    return self._session_cache
+           ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'SessionStore' object has no attribute '_session_cache'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: django_session
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\OneDrive\Desktop\DHT11project-master\DHT11project-master\DHT\views.py", line 286, in custom_logout
+    logout(request)
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\__init__.py", line 168, in logout
+    if not getattr(user, "is_authenticated", True):
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\functional.py", line 251, in inner
+    self._setup()
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\functional.py", line 404, in _setup
+    self._wrapped = self._setupfunc()
+                    ^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\middleware.py", line 33, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+                                            ^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\middleware.py", line 13, in get_user
+    request._cached_user = auth.get_user(request)
+                           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\__init__.py", line 209, in get_user
+    user_id = _get_user_session_key(request)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\__init__.py", line 62, in _get_user_session_key
+    return get_user_model()._meta.pk.to_python(request.session[SESSION_KEY])
+                                               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\backends\base.py", line 53, in __getitem__
+    return self._session[key]
+           ^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\backends\base.py", line 192, in _get_session
+    self._session_cache = self.load()
+                          ^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\backends\db.py", line 42, in load
+    s = self._get_session_from_db()
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\backends\db.py", line 32, in _get_session_from_db
+    return self.model.objects.get(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\query.py", line 645, in get
+    num = len(clone)
+          ^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\query.py", line 382, in __len__
+    self._fetch_all()
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: django_session
+ERROR 2025-01-05 22:54:12,290 basehttp "GET /logout/ HTTP/1.1" 500 145
+ERROR 2025-01-05 22:54:12,510 log Internal Server Error: /logout/
+Traceback (most recent call last):
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\backends\base.py", line 187, in _get_session
+    return self._session_cache
+           ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'SessionStore' object has no attribute '_session_cache'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: django_session
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\OneDrive\Desktop\DHT11project-master\DHT11project-master\DHT\views.py", line 286, in custom_logout
+    logout(request)
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\__init__.py", line 168, in logout
+    if not getattr(user, "is_authenticated", True):
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\functional.py", line 251, in inner
+    self._setup()
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\utils\functional.py", line 404, in _setup
+    self._wrapped = self._setupfunc()
+                    ^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\middleware.py", line 33, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+                                            ^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\middleware.py", line 13, in get_user
+    request._cached_user = auth.get_user(request)
+                           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\__init__.py", line 209, in get_user
+    user_id = _get_user_session_key(request)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\__init__.py", line 62, in _get_user_session_key
+    return get_user_model()._meta.pk.to_python(request.session[SESSION_KEY])
+                                               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\backends\base.py", line 53, in __getitem__
+    return self._session[key]
+           ^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\backends\base.py", line 192, in _get_session
+    self._session_cache = self.load()
+                          ^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\backends\db.py", line 42, in load
+    s = self._get_session_from_db()
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\sessions\backends\db.py", line 32, in _get_session_from_db
+    return self.model.objects.get(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\query.py", line 645, in get
+    num = len(clone)
+          ^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\query.py", line 382, in __len__
+    self._fetch_all()
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: django_session
+ERROR 2025-01-05 22:54:12,521 basehttp "GET /logout/ HTTP/1.1" 500 145
+INFO 2025-01-05 22:57:01,830 autoreload Watching for file changes with StatReloader
+INFO 2025-01-05 22:57:05,019 basehttp "GET / HTTP/1.1" 200 6253
+WARNING 2025-01-05 22:57:05,078 log Not Found: /static/images/im.png
+WARNING 2025-01-05 22:57:05,078 basehttp "GET /static/images/im.png HTTP/1.1" 404 1566
+WARNING 2025-01-05 22:57:05,086 log Not Found: /static/images/developers.png
+WARNING 2025-01-05 22:57:05,086 basehttp "GET /static/images/developers.png HTTP/1.1" 404 1566
+INFO 2025-01-05 22:57:06,300 basehttp "GET /index/ HTTP/1.1" 302 0
+INFO 2025-01-05 22:57:06,340 basehttp "GET /login/?next=/index/ HTTP/1.1" 200 1666
+WARNING 2025-01-05 22:57:06,372 log Not Found: /static/css/custom.css
+WARNING 2025-01-05 22:57:06,372 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1566
+INFO 2025-01-05 22:57:14,421 basehttp "POST /login/?next=/index/ HTTP/1.1" 200 1666
+WARNING 2025-01-05 22:57:14,472 log Not Found: /static/css/custom.css
+WARNING 2025-01-05 22:57:14,472 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1566
+INFO 2025-01-05 22:57:21,390 basehttp "GET /admin/ HTTP/1.1" 302 0
+INFO 2025-01-05 22:57:21,602 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4158
+WARNING 2025-01-05 22:57:21,653 log Not Found: /static/admin/css/base.css
+WARNING 2025-01-05 22:57:21,653 log Not Found: /static/admin/css/dark_mode.css
+WARNING 2025-01-05 22:57:21,653 log Not Found: /static/admin/css/nav_sidebar.css
+WARNING 2025-01-05 22:57:21,653 basehttp "GET /static/admin/css/dark_mode.css HTTP/1.1" 404 1566
+WARNING 2025-01-05 22:57:21,653 basehttp "GET /static/admin/css/base.css HTTP/1.1" 404 1566
+WARNING 2025-01-05 22:57:21,653 log Not Found: /static/admin/css/login.css
+WARNING 2025-01-05 22:57:21,660 log Not Found: /static/admin/css/responsive.css
+WARNING 2025-01-05 22:57:21,660 basehttp "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 404 1566
+WARNING 2025-01-05 22:57:21,660 log Not Found: /static/admin/js/theme.js
+WARNING 2025-01-05 22:57:21,665 log Not Found: /static/admin/js/nav_sidebar.js
+WARNING 2025-01-05 22:57:21,665 basehttp "GET /static/admin/css/login.css HTTP/1.1" 404 1566
+WARNING 2025-01-05 22:57:21,665 basehttp "GET /static/admin/css/responsive.css HTTP/1.1" 404 1566
+WARNING 2025-01-05 22:57:21,665 basehttp "GET /static/admin/js/theme.js HTTP/1.1" 404 1566
+WARNING 2025-01-05 22:57:21,670 basehttp "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 404 1566
+INFO 2025-01-05 22:59:59,721 autoreload Watching for file changes with StatReloader
+INFO 2025-01-05 23:00:04,398 basehttp "GET / HTTP/1.1" 200 6253
+WARNING 2025-01-05 23:00:04,469 log Not Found: /static/images/im.png
+WARNING 2025-01-05 23:00:04,469 basehttp "GET /static/images/im.png HTTP/1.1" 404 1566
+WARNING 2025-01-05 23:00:04,483 log Not Found: /static/images/developers.png
+WARNING 2025-01-05 23:00:04,483 basehttp "GET /static/images/developers.png HTTP/1.1" 404 1566
+INFO 2025-01-05 23:00:09,441 basehttp "GET /index/ HTTP/1.1" 302 0
+INFO 2025-01-05 23:00:09,466 basehttp "GET /login/?next=/index/ HTTP/1.1" 200 1666
+WARNING 2025-01-05 23:00:09,521 log Not Found: /static/css/custom.css
+WARNING 2025-01-05 23:00:09,524 basehttp "GET /static/css/custom.css HTTP/1.1" 404 1566
+INFO 2025-01-05 23:00:18,364 basehttp "POST /login/?next=/index/ HTTP/1.1" 302 0
+INFO 2025-01-05 23:00:18,432 basehttp "GET /index/ HTTP/1.1" 200 14678
+INFO 2025-01-05 23:00:24,640 basehttp "GET /table/ HTTP/1.1" 200 104557
+INFO 2025-01-05 23:00:25,411 basehttp "GET /incident/ HTTP/1.1" 200 12124
+WARNING 2025-01-05 23:00:25,466 log Not Found: /static/images/green_flag.png
+WARNING 2025-01-05 23:00:25,466 basehttp "GET /static/images/green_flag.png HTTP/1.1" 404 1566
+INFO 2025-01-05 23:00:30,650 basehttp "GET /incident/ HTTP/1.1" 200 12124
+WARNING 2025-01-05 23:00:30,690 log Not Found: /static/images/green_flag.png
+WARNING 2025-01-05 23:00:30,690 basehttp "GET /static/images/green_flag.png HTTP/1.1" 404 1566
+INFO 2025-01-05 23:00:52,400 autoreload C:\Users\aabde\OneDrive\Desktop\DHT11project-master\DHT11project-master\projet\settings.py changed, reloading.
+INFO 2025-01-05 23:00:53,292 autoreload Watching for file changes with StatReloader
+INFO 2025-01-05 23:00:54,777 basehttp "GET /incident/ HTTP/1.1" 200 12124
+INFO 2025-01-05 23:00:54,914 basehttp "GET /static/images/green_flag.png HTTP/1.1" 200 1556407
+INFO 2025-01-05 23:00:56,854 basehttp "GET /log_incident/ HTTP/1.1" 200 34283
+INFO 2025-01-05 23:00:59,162 basehttp "GET /incident-detail/19/ HTTP/1.1" 200 256
+INFO 2025-01-05 23:03:03,846 basehttp "GET /incident-detail/7/ HTTP/1.1" 200 664
+INFO 2025-01-05 23:03:39,250 basehttp "GET /incident-detail/8/ HTTP/1.1" 200 438
+INFO 2025-01-05 23:06:57,571 basehttp "GET /log_incident/ HTTP/1.1" 200 34719
+INFO 2025-01-05 23:07:00,012 basehttp "GET /incident-detail/20/ HTTP/1.1" 200 198
+INFO 2025-01-05 23:07:05,300 basehttp "GET /log_incident/?filter=annee HTTP/1.1" 200 34723
+INFO 2025-01-05 23:07:06,572 basehttp "GET /log_incident/?filter=jour HTTP/1.1" 200 20197
+INFO 2025-01-05 23:07:08,481 basehttp "GET /incident-detail/20/ HTTP/1.1" 200 198
+INFO 2025-01-05 23:07:22,931 basehttp "GET /api/post HTTP/1.1" 200 142469
+INFO 2025-01-05 23:07:25,407 basehttp "GET /index/ HTTP/1.1" 200 14679
+INFO 2025-01-05 23:07:27,741 basehttp "GET /table/ HTTP/1.1" 200 104557
+INFO 2025-01-05 23:10:05,047 basehttp "GET / HTTP/1.1" 200 7255
+WARNING 2025-01-05 23:10:05,132 basehttp "GET /static/images/developers.png HTTP/1.1" 404 1822
+INFO 2025-01-05 23:10:05,142 basehttp "GET /static/images/im.png HTTP/1.1" 200 1488354
+INFO 2025-01-05 23:10:07,124 basehttp "GET / HTTP/1.1" 200 7255
+WARNING 2025-01-05 23:10:07,190 basehttp "GET /static/images/developers.png HTTP/1.1" 404 1822
+INFO 2025-01-05 23:26:47,450 basehttp "GET / HTTP/1.1" 200 7255
+WARNING 2025-01-05 23:26:47,495 basehttp "GET /static/images/developers.png HTTP/1.1" 404 1822
+ERROR 2025-01-05 23:26:51,026 log Internal Server Error: /index/
+Traceback (most recent call last):
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 502, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\OneDrive\Desktop\DHT11project-master\DHT11project-master\DHT\views.py", line 60, in value_view
+    return render(request, 'value.html', {'valeurs': valeurs})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 134, in render
+    compiled_parent = self.get_parent(context)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 131, in get_parent
+    return self.find_template(parent, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 109, in find_template
+    template, origin = context.template.engine.find_template(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 504, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 565, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 14: 'static'. Did you forget to register or load this tag?
+ERROR 2025-01-05 23:26:51,081 basehttp "GET /index/ HTTP/1.1" 500 173332
+INFO 2025-01-05 23:28:21,964 autoreload Watching for file changes with StatReloader
+ERROR 2025-01-05 23:28:23,370 log Internal Server Error: /index/
+Traceback (most recent call last):
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 502, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\OneDrive\Desktop\DHT11project-master\DHT11project-master\DHT\views.py", line 60, in value_view
+    return render(request, 'value.html', {'valeurs': valeurs})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 134, in render
+    compiled_parent = self.get_parent(context)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 131, in get_parent
+    return self.find_template(parent, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 109, in find_template
+    template, origin = context.template.engine.find_template(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 504, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 565, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 14: 'static'. Did you forget to register or load this tag?
+ERROR 2025-01-05 23:28:23,376 basehttp "GET /index/ HTTP/1.1" 500 173469
+INFO 2025-01-05 23:31:56,530 basehttp "GET /index/ HTTP/1.1" 200 10796
+INFO 2025-01-05 23:31:56,574 basehttp "GET /static/css/global.css HTTP/1.1" 200 1950
+INFO 2025-01-05 23:32:03,439 basehttp "GET /table/ HTTP/1.1" 200 100581
+INFO 2025-01-05 23:32:05,464 basehttp "GET /table/?filter=annee HTTP/1.1" 200 100583
+INFO 2025-01-05 23:32:06,880 basehttp "GET /table/?filter=jour HTTP/1.1" 200 17900
+ERROR 2025-01-05 23:32:08,302 log Internal Server Error: /incident/
+Traceback (most recent call last):
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 502, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\OneDrive\Desktop\DHT11project-master\DHT11project-master\DHT\views.py", line 212, in incident
+    return render(request, 'incident.html', {
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 295, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 961, in do_if
+    nodelist = parser.parse(("elif", "else", "endif"))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 504, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 555, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 11: 'static', expected 'elif', 'else' or 'endif'. Did you forget to register or load this tag?
+ERROR 2025-01-05 23:32:08,328 basehttp "GET /incident/ HTTP/1.1" 500 213722
+INFO 2025-01-05 23:33:02,402 basehttp "GET /incident/ HTTP/1.1" 200 8110
+INFO 2025-01-05 23:33:10,000 basehttp "GET /log_incident/ HTTP/1.1" 200 30464
+INFO 2025-01-05 23:33:11,550 basehttp "GET /incident-detail/20/ HTTP/1.1" 200 198
+INFO 2025-01-05 23:33:21,733 basehttp "GET /incident-detail/20/ HTTP/1.1" 200 198
+INFO 2025-01-05 23:33:50,616 basehttp "GET /incident-detail/20/ HTTP/1.1" 200 198
+INFO 2025-01-05 23:34:08,142 basehttp "GET /incident-detail/20/ HTTP/1.1" 200 198
+INFO 2025-01-05 23:34:15,954 basehttp "GET /log_incident/?filter=annee HTTP/1.1" 200 30468
+INFO 2025-01-05 23:34:16,003 basehttp "GET /static/css/global.css HTTP/1.1" 304 0
+INFO 2025-01-05 23:34:17,054 basehttp "GET /log_incident/?filter=jour HTTP/1.1" 200 13492
+INFO 2025-01-05 23:34:18,620 basehttp "GET /log_incident/?filter=annee HTTP/1.1" 200 30468
+INFO 2025-01-05 23:34:19,440 basehttp "GET /incident-detail/20/ HTTP/1.1" 200 198
+INFO 2025-01-05 23:34:54,870 basehttp "GET /log_incident/?filter=annee HTTP/1.1" 200 31157
+INFO 2025-01-05 23:34:58,134 basehttp "GET /incident-detail/20/ HTTP/1.1" 200 198
+INFO 2025-01-05 23:35:00,170 basehttp "GET /incident/ HTTP/1.1" 200 8110
+INFO 2025-01-05 23:35:06,553 basehttp "GET /index/ HTTP/1.1" 200 10796
+INFO 2025-01-05 23:35:17,550 basehttp "GET /index/ HTTP/1.1" 200 10796
+INFO 2025-01-05 23:35:28,600 basehttp "GET /index/ HTTP/1.1" 200 10796
+INFO 2025-01-05 23:35:39,610 basehttp "GET /index/ HTTP/1.1" 200 10796
+INFO 2025-01-05 23:35:50,554 basehttp "GET /index/ HTTP/1.1" 200 10796
+INFO 2025-01-05 23:35:59,514 basehttp "GET /index/ HTTP/1.1" 200 10832
+INFO 2025-01-05 23:36:02,936 basehttp "GET /table/ HTTP/1.1" 200 100617
+INFO 2025-01-05 23:36:02,975 basehttp "GET /static/css/global.css HTTP/1.1" 304 0
+INFO 2025-01-05 23:36:05,426 basehttp "GET /table/?filter=jour HTTP/1.1" 200 17823
+INFO 2025-01-05 23:36:11,743 basehttp "GET /myChartTemp/ HTTP/1.1" 200 11791
+INFO 2025-01-05 23:36:11,848 basehttp "GET /chart-data/ HTTP/1.1" 200 33491
+INFO 2025-01-05 23:36:40,317 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2025-01-05 23:36:40,420 basehttp "GET /admin/ HTTP/1.1" 200 9417
+INFO 2025-01-05 23:36:40,493 basehttp "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+INFO 2025-01-05 23:36:40,503 basehttp "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2810
+INFO 2025-01-05 23:36:40,504 basehttp "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2682
+INFO 2025-01-05 23:36:40,505 basehttp "GET /static/admin/css/base.css HTTP/1.1" 200 21544
+INFO 2025-01-05 23:36:40,508 basehttp "GET /static/admin/css/responsive.css HTTP/1.1" 200 17905
+INFO 2025-01-05 23:36:40,520 basehttp "GET /static/admin/js/theme.js HTTP/1.1" 200 1943
+INFO 2025-01-05 23:36:40,520 basehttp "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+INFO 2025-01-05 23:36:40,520 basehttp "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+INFO 2025-01-05 23:36:40,520 basehttp "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 304 0
+INFO 2025-01-05 23:36:40,520 basehttp "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+INFO 2025-01-05 23:36:41,972 basehttp "GET /admin/auth/user/ HTTP/1.1" 200 12993
+INFO 2025-01-05 23:36:42,014 basehttp "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+INFO 2025-01-05 23:36:42,020 basehttp "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2025-01-05 23:36:42,020 basehttp "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2025-01-05 23:36:42,025 basehttp "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2025-01-05 23:36:42,025 basehttp "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2025-01-05 23:36:42,028 basehttp "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2025-01-05 23:36:42,030 basehttp "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2025-01-05 23:36:42,031 basehttp "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2025-01-05 23:36:42,031 basehttp "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2025-01-05 23:36:42,033 basehttp "GET /static/admin/img/search.svg HTTP/1.1" 304 0
+INFO 2025-01-05 23:36:42,033 basehttp "GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+INFO 2025-01-05 23:36:42,042 basehttp "GET /static/admin/img/icon-no.svg HTTP/1.1" 304 0
+INFO 2025-01-05 23:36:42,049 basehttp "GET /static/admin/js/filters.js HTTP/1.1" 304 0
+INFO 2025-01-05 23:36:42,063 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-01-05 23:36:42,102 basehttp "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+INFO 2025-01-05 23:36:42,104 basehttp "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 304 0
+INFO 2025-01-05 23:36:42,104 basehttp "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 304 0
+INFO 2025-01-05 23:38:01,167 basehttp "GET /myChartTemp/ HTTP/1.1" 200 12080
+INFO 2025-01-05 23:38:01,202 basehttp "GET /static/css/global.css HTTP/1.1" 304 0
+INFO 2025-01-05 23:38:01,240 basehttp "GET /chart-data/ HTTP/1.1" 200 33491
+INFO 2025-01-05 23:38:02,226 basehttp "GET /myChartTemp/ HTTP/1.1" 200 12080
+INFO 2025-01-05 23:38:02,291 basehttp "GET /chart-data/ HTTP/1.1" 200 33491
+INFO 2025-01-05 23:38:02,740 basehttp "GET /myChartTemp/ HTTP/1.1" 200 12080
+INFO 2025-01-05 23:38:02,814 basehttp "GET /chart-data/ HTTP/1.1" 200 33491
+INFO 2025-01-05 23:38:03,430 basehttp "GET /myChartTemp/ HTTP/1.1" 200 12080
+INFO 2025-01-05 23:38:03,505 basehttp "GET /chart-data/ HTTP/1.1" 200 33491
+INFO 2025-01-05 23:38:04,110 basehttp "GET /myChartHum/ HTTP/1.1" 200 12374
+INFO 2025-01-05 23:38:04,208 basehttp "GET /chart-data/ HTTP/1.1" 200 33491
+INFO 2025-01-05 23:38:05,097 basehttp "GET /myChartTemp/ HTTP/1.1" 200 12080
+INFO 2025-01-05 23:38:05,190 basehttp "GET /chart-data/ HTTP/1.1" 200 33491
+INFO 2025-01-05 23:38:06,075 basehttp "GET /myChartTemp/ HTTP/1.1" 200 12080
+INFO 2025-01-05 23:38:06,150 basehttp "GET /chart-data/ HTTP/1.1" 200 33491
+INFO 2025-01-05 23:38:06,290 basehttp "GET /myChartTemp/ HTTP/1.1" 200 12080
+INFO 2025-01-05 23:38:06,390 basehttp "GET /chart-data/ HTTP/1.1" 200 33491
+INFO 2025-01-05 23:38:06,481 basehttp "GET /myChartTemp/ HTTP/1.1" 200 12080
+INFO 2025-01-05 23:38:06,541 basehttp "GET /chart-data/ HTTP/1.1" 200 33491
+INFO 2025-01-05 23:38:06,680 basehttp "GET /myChartTemp/ HTTP/1.1" 200 12080
+INFO 2025-01-05 23:38:06,740 basehttp "GET /chart-data/ HTTP/1.1" 200 33491
+INFO 2025-01-05 23:38:06,850 basehttp "GET /myChartTemp/ HTTP/1.1" 200 12080
+INFO 2025-01-05 23:38:06,930 basehttp "GET /chart-data/ HTTP/1.1" 200 33491
+INFO 2025-01-05 23:38:07,050 basehttp "GET /myChartTemp/ HTTP/1.1" 200 12080
+INFO 2025-01-05 23:38:07,113 basehttp "GET /chart-data/ HTTP/1.1" 200 33491
+INFO 2025-01-05 23:38:07,210 basehttp "GET /myChartTemp/ HTTP/1.1" 200 12080
+INFO 2025-01-05 23:38:07,270 basehttp "GET /chart-data/ HTTP/1.1" 200 33491
+INFO 2025-01-05 23:38:07,400 basehttp "GET /myChartTemp/ HTTP/1.1" 200 12080
+INFO 2025-01-05 23:38:07,467 basehttp "GET /chart-data/ HTTP/1.1" 200 33491
+INFO 2025-01-05 23:39:00,231 basehttp "GET /myChartTemp/ HTTP/1.1" 200 12611
+INFO 2025-01-05 23:39:00,294 basehttp "GET /chart-data/ HTTP/1.1" 200 33491
+INFO 2025-01-05 23:39:03,332 basehttp "GET /table/ HTTP/1.1" 200 101437
+INFO 2025-01-05 23:39:04,960 basehttp "GET /myChartTemp/ HTTP/1.1" 200 12611
+INFO 2025-01-05 23:39:05,040 basehttp "GET /chart-data/ HTTP/1.1" 200 33491
+INFO 2025-01-05 23:39:06,930 basehttp "GET /chart-data-jour/ HTTP/1.1" 200 3002
+INFO 2025-01-05 23:39:12,430 basehttp "GET /chart-data/ HTTP/1.1" 200 33491
+INFO 2025-01-05 23:39:13,412 basehttp "GET /chart-data/ HTTP/1.1" 200 33491
+INFO 2025-01-05 23:39:14,072 basehttp "GET /chart-data/ HTTP/1.1" 200 33491
+INFO 2025-01-05 23:39:15,102 basehttp "GET /chart-data-semaine/ HTTP/1.1" 200 5208
+INFO 2025-01-05 23:39:16,090 basehttp "GET /chart-data-mois/ HTTP/1.1" 200 8704
+INFO 2025-01-05 23:44:17,232 basehttp "GET /myChartTemp/ HTTP/1.1" 200 12180
+INFO 2025-01-05 23:44:17,314 basehttp "GET /static/css/global.css HTTP/1.1" 304 0
+INFO 2025-01-05 23:44:17,684 basehttp "GET /chart-data/ HTTP/1.1" 200 33491
+INFO 2025-01-05 23:45:14,918 basehttp "GET /myChartTemp/ HTTP/1.1" 200 12408
+INFO 2025-01-05 23:45:14,980 basehttp "GET /chart-data/ HTTP/1.1" 200 33491
+INFO 2025-01-05 23:45:17,659 basehttp "GET /myChartTemp/ HTTP/1.1" 200 12408
+INFO 2025-01-05 23:45:17,714 basehttp "GET /chart-data/ HTTP/1.1" 200 33491
+INFO 2025-01-05 23:45:17,870 basehttp "GET /myChartTemp/ HTTP/1.1" 200 12408
+INFO 2025-01-05 23:45:17,933 basehttp "GET /chart-data/ HTTP/1.1" 200 33491
+INFO 2025-01-05 23:45:18,060 basehttp "GET /myChartTemp/ HTTP/1.1" 200 12408
+INFO 2025-01-05 23:45:18,138 basehttp "GET /chart-data/ HTTP/1.1" 200 33491
+INFO 2025-01-05 23:45:19,255 basehttp "GET /myChartTemp/ HTTP/1.1" 200 12408
+INFO 2025-01-05 23:45:19,340 basehttp "GET /chart-data/ HTTP/1.1" 200 33491
+INFO 2025-01-05 23:45:19,890 basehttp "GET /myChartHum/ HTTP/1.1" 200 12356
+INFO 2025-01-05 23:45:20,002 basehttp "GET /chart-data/ HTTP/1.1" 200 33491
+INFO 2025-01-05 23:46:33,584 basehttp "GET /chart-data-semaine/ HTTP/1.1" 200 5208
+INFO 2025-01-05 23:46:34,398 basehttp "GET /chart-data-jour/ HTTP/1.1" 200 3002
+INFO 2025-01-05 23:46:34,852 basehttp "GET /chart-data-mois/ HTTP/1.1" 200 8704
+INFO 2025-01-05 23:46:35,101 basehttp "GET /chart-data-mois/ HTTP/1.1" 200 8704
+INFO 2025-01-05 23:46:35,270 basehttp "GET /chart-data-mois/ HTTP/1.1" 200 8704
+INFO 2025-01-05 23:46:47,102 basehttp "GET /myChartHum/ HTTP/1.1" 200 12356
+INFO 2025-01-05 23:46:47,342 basehttp "GET /chart-data/ HTTP/1.1" 200 33491
+INFO 2025-01-05 23:49:13,350 basehttp "GET /myChartHum/ HTTP/1.1" 200 12856
+INFO 2025-01-05 23:49:13,392 basehttp "GET /static/css/global.css HTTP/1.1" 304 0
+INFO 2025-01-05 23:49:13,592 basehttp "GET /chart-data/ HTTP/1.1" 200 33491
+INFO 2025-01-05 23:49:17,930 basehttp "GET /chart-data-jour/ HTTP/1.1" 200 3002
+INFO 2025-01-05 23:49:23,060 basehttp "GET /chart-data-semaine/ HTTP/1.1" 200 5208
+INFO 2025-01-05 23:49:24,388 basehttp "GET /chart-data-mois/ HTTP/1.1" 200 8704
+INFO 2025-01-05 23:49:27,292 basehttp "GET /chart-data/ HTTP/1.1" 200 33491
+INFO 2025-01-05 23:50:08,310 basehttp "GET /chart-data-semaine/ HTTP/1.1" 200 5208
+INFO 2025-01-05 23:50:29,021 basehttp "GET /chart-data-semaine/ HTTP/1.1" 200 5208
+INFO 2025-01-05 23:50:29,853 basehttp "GET /chart-data-mois/ HTTP/1.1" 200 8704
+INFO 2025-01-05 23:50:36,093 basehttp "GET /myChartTemp/ HTTP/1.1" 200 12908
+INFO 2025-01-05 23:50:36,313 basehttp "GET /chart-data/ HTTP/1.1" 200 33491
+INFO 2025-01-05 23:50:41,124 basehttp "GET /chart-data-jour/ HTTP/1.1" 200 3002
+INFO 2025-01-05 23:53:44,722 basehttp "GET /myChartTemp/ HTTP/1.1" 200 10738
+INFO 2025-01-05 23:53:44,796 basehttp "GET /static/css/global.css HTTP/1.1" 304 0
+INFO 2025-01-05 23:53:44,910 basehttp "GET /chart-data/ HTTP/1.1" 200 33491
+INFO 2025-01-05 23:53:50,364 basehttp "GET / HTTP/1.1" 200 7255
+WARNING 2025-01-05 23:53:50,511 basehttp "GET /static/images/developers.png HTTP/1.1" 404 1822
+INFO 2025-01-05 23:54:16,884 basehttp "GET /myChartTemp/ HTTP/1.1" 200 10738
+INFO 2025-01-05 23:54:16,959 basehttp "GET /chart-data/ HTTP/1.1" 200 33491
+INFO 2025-01-05 23:54:33,955 basehttp "GET /myChartTemp/ HTTP/1.1" 200 12908
+INFO 2025-01-05 23:54:34,013 basehttp "GET /chart-data/ HTTP/1.1" 200 33491
+INFO 2025-01-05 23:58:01,656 basehttp "GET /myChartTemp/ HTTP/1.1" 200 15740
+INFO 2025-01-05 23:58:01,702 basehttp "GET /static/css/global.css HTTP/1.1" 304 0
+INFO 2025-01-05 23:58:01,763 basehttp "GET /chart-data/ HTTP/1.1" 200 33491
+INFO 2025-01-05 23:58:03,853 basehttp "GET /index/ HTTP/1.1" 200 14221
+INFO 2025-01-05 23:58:14,028 basehttp "GET /index/ HTTP/1.1" 200 14221
+INFO 2025-01-05 23:58:24,150 basehttp "GET /index/ HTTP/1.1" 200 14221
+INFO 2025-01-05 23:58:34,285 basehttp "GET /index/ HTTP/1.1" 200 14221
+INFO 2025-01-05 23:58:44,404 basehttp "GET /index/ HTTP/1.1" 200 14221
+INFO 2025-01-05 23:58:54,380 basehttp "GET /index/ HTTP/1.1" 200 14221
+INFO 2025-01-05 23:58:56,049 basehttp "GET /myChartTemp/ HTTP/1.1" 200 15740
+INFO 2025-01-05 23:58:56,116 basehttp "GET /chart-data/ HTTP/1.1" 200 33491
+INFO 2025-01-05 23:58:56,570 basehttp "GET /table/ HTTP/1.1" 200 104005
+WARNING 2025-01-06 00:01:48,052 log Not Found: /template/index.html
+WARNING 2025-01-06 00:01:48,056 basehttp "GET /template/index.html HTTP/1.1" 404 6842
+INFO 2025-01-06 00:02:02,660 basehttp "GET / HTTP/1.1" 200 7255
+WARNING 2025-01-06 00:02:02,760 basehttp "GET /static/images/developers.png HTTP/1.1" 404 1822
+INFO 2025-01-06 00:02:49,480 basehttp "GET /index/ HTTP/1.1" 200 14221
+INFO 2025-01-06 00:02:49,560 basehttp "GET /static/css/global.css HTTP/1.1" 304 0
+INFO 2025-01-06 00:02:52,340 basehttp "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-01-06 00:02:52,376 basehttp "GET / HTTP/1.1" 200 7255
+WARNING 2025-01-06 00:02:52,472 basehttp "GET /static/images/developers.png HTTP/1.1" 404 1822
+INFO 2025-01-06 00:02:55,517 basehttp "GET /index/ HTTP/1.1" 302 0
+INFO 2025-01-06 00:02:55,535 basehttp "GET /login/?next=/index/ HTTP/1.1" 200 7420
+INFO 2025-01-06 00:03:03,280 basehttp "GET /login/ HTTP/1.1" 200 7420
+INFO 2025-01-06 00:05:07,401 basehttp "GET /login/ HTTP/1.1" 200 7444
+INFO 2025-01-06 00:05:16,415 basehttp "GET /login/ HTTP/1.1" 200 7448
+INFO 2025-01-06 00:05:23,252 basehttp "GET /login/ HTTP/1.1" 200 7456
+INFO 2025-01-06 00:09:36,009 basehttp "GET /login/ HTTP/1.1" 200 7456
+INFO 2025-01-06 00:09:36,085 basehttp "GET /static/css/global.css HTTP/1.1" 304 0
+INFO 2025-01-06 00:09:58,713 basehttp "POST /login/ HTTP/1.1" 302 0
+INFO 2025-01-06 00:09:58,777 basehttp "GET /index HTTP/1.1" 301 0
+INFO 2025-01-06 00:09:58,885 basehttp "GET /index/ HTTP/1.1" 200 14258
+INFO 2025-01-06 00:10:01,391 basehttp "GET /table/ HTTP/1.1" 200 104041
+INFO 2025-01-06 00:10:02,866 basehttp "GET /myChartTemp/ HTTP/1.1" 200 15776
+INFO 2025-01-06 00:10:03,054 basehttp "GET /chart-data/ HTTP/1.1" 200 33491
+INFO 2025-01-06 00:10:04,853 basehttp "GET /chart-data-jour/ HTTP/1.1" 200 2962
+INFO 2025-01-06 00:13:32,254 basehttp "GET /myChartTemp/ HTTP/1.1" 200 15776
+INFO 2025-01-06 00:13:32,418 basehttp "GET /chart-data/ HTTP/1.1" 200 33491
+INFO 2025-01-06 00:13:33,709 basehttp "GET /chart-data-semaine/ HTTP/1.1" 200 5208
+INFO 2025-01-06 00:13:35,271 basehttp "GET /myChartHum/ HTTP/1.1" 200 16430
+INFO 2025-01-06 00:13:35,390 basehttp "GET /chart-data-jour/ HTTP/1.1" 200 2962
+INFO 2025-01-06 00:13:36,280 basehttp "GET /chart-data-semaine/ HTTP/1.1" 200 5208
+INFO 2025-01-06 00:13:37,373 basehttp "GET /chart-data-mois/ HTTP/1.1" 200 8704
+INFO 2025-01-06 00:13:38,938 basehttp "GET /chart-data-jour/ HTTP/1.1" 200 2962
+INFO 2025-01-06 00:14:05,788 basehttp "GET /myChartHum/ HTTP/1.1" 200 16430
+INFO 2025-01-06 00:14:05,889 basehttp "GET /chart-data-jour/ HTTP/1.1" 200 2962
+INFO 2025-01-06 00:14:07,901 basehttp "GET /chart-data-semaine/ HTTP/1.1" 200 5208
+INFO 2025-01-06 00:14:08,969 basehttp "GET /chart-data-mois/ HTTP/1.1" 200 8704
+INFO 2025-01-06 00:14:10,168 basehttp "GET /chart-data-mois/ HTTP/1.1" 200 8704
+INFO 2025-01-06 00:14:10,651 basehttp "GET /chart-data-semaine/ HTTP/1.1" 200 5208
+INFO 2025-01-06 00:14:11,515 basehttp "GET /chart-data-jour/ HTTP/1.1" 200 2962
+INFO 2025-01-06 00:14:14,928 basehttp "GET /chart-data-jour/ HTTP/1.1" 200 2962
+INFO 2025-01-06 00:14:18,715 basehttp "GET /myChartTemp/ HTTP/1.1" 200 16482
+INFO 2025-01-06 00:14:18,851 basehttp "GET /chart-data-jour/ HTTP/1.1" 200 2962
+INFO 2025-01-06 00:14:19,782 basehttp "GET /chart-data-jour/ HTTP/1.1" 200 2962
+INFO 2025-01-06 00:14:45,270 basehttp "GET /incident/ HTTP/1.1" 200 11570
+INFO 2025-01-06 00:16:41,259 basehttp "GET /myChartTemp/ HTTP/1.1" 200 16482
+INFO 2025-01-06 00:16:41,335 basehttp "GET /static/css/global.css HTTP/1.1" 304 0
+INFO 2025-01-06 00:16:41,392 basehttp "GET /chart-data-jour/ HTTP/1.1" 200 2922
+INFO 2025-01-06 00:16:43,045 basehttp "GET /chart-data-semaine/ HTTP/1.1" 200 5208
+INFO 2025-01-06 00:16:44,034 basehttp "GET /chart-data-mois/ HTTP/1.1" 200 8704
+INFO 2025-01-06 00:16:45,618 basehttp "GET /table/ HTTP/1.1" 200 104041
+INFO 2025-01-06 00:16:46,298 basehttp "GET /myChartHum/ HTTP/1.1" 200 16430
+INFO 2025-01-06 00:16:46,430 basehttp "GET /chart-data-jour/ HTTP/1.1" 200 2922
+INFO 2025-01-06 00:16:47,854 basehttp "GET /chart-data-semaine/ HTTP/1.1" 200 5208
+INFO 2025-01-06 00:16:48,736 basehttp "GET /chart-data-mois/ HTTP/1.1" 200 8704
+INFO 2025-01-06 00:16:50,534 basehttp "GET /table/ HTTP/1.1" 200 104041
+INFO 2025-01-06 00:16:52,470 basehttp "GET /table/?filter=jour HTTP/1.1" 200 21021
+INFO 2025-01-06 00:16:53,999 basehttp "GET /table/?filter=all HTTP/1.1" 200 104041
+INFO 2025-01-06 00:16:56,339 basehttp "GET /myChartHum/ HTTP/1.1" 200 16430
+INFO 2025-01-06 00:16:56,472 basehttp "GET /chart-data-jour/ HTTP/1.1" 200 2922
+INFO 2025-01-06 00:16:57,526 basehttp "GET /chart-data-semaine/ HTTP/1.1" 200 5208
+INFO 2025-01-06 00:16:58,561 basehttp "GET /chart-data-jour/ HTTP/1.1" 200 2922
+INFO 2025-01-06 00:17:00,045 basehttp "GET /chart-data-jour/ HTTP/1.1" 200 2922
+INFO 2025-01-06 00:17:32,208 basehttp "GET /myChartHum/ HTTP/1.1" 200 16430
+INFO 2025-01-06 00:17:32,276 basehttp "GET /chart-data-jour/ HTTP/1.1" 200 2922
+INFO 2025-01-06 00:17:33,676 basehttp "GET /chart-data-semaine/ HTTP/1.1" 200 5208
+INFO 2025-01-06 00:17:34,774 basehttp "GET /chart-data-mois/ HTTP/1.1" 200 8704
+INFO 2025-01-06 00:17:39,145 basehttp "GET /chart-data-jour/ HTTP/1.1" 200 2922
+INFO 2025-01-06 00:17:39,915 basehttp "GET /chart-data-semaine/ HTTP/1.1" 200 5208
+INFO 2025-01-06 00:17:40,420 basehttp "GET /chart-data-mois/ HTTP/1.1" 200 8704
+INFO 2025-01-06 00:17:42,134 basehttp "GET /myChartTemp/ HTTP/1.1" 200 16482
+INFO 2025-01-06 00:17:42,300 basehttp "GET /chart-data-jour/ HTTP/1.1" 200 2922
+INFO 2025-01-06 00:17:42,878 basehttp "GET /chart-data-semaine/ HTTP/1.1" 200 5208
+INFO 2025-01-06 00:17:43,721 basehttp "GET /chart-data-mois/ HTTP/1.1" 200 8704
+INFO 2025-01-06 00:19:49,511 basehttp "GET /myChartTemp/ HTTP/1.1" 200 16813
+INFO 2025-01-06 00:19:49,572 basehttp "GET /chart-data-jour/ HTTP/1.1" 200 2922
+INFO 2025-01-06 00:19:53,904 basehttp "GET /index/ HTTP/1.1" 200 14589
+INFO 2025-01-06 00:19:56,535 basehttp "GET /table/ HTTP/1.1" 200 104372
+INFO 2025-01-06 00:20:02,157 basehttp "GET /myChartTemp/ HTTP/1.1" 200 16813
+INFO 2025-01-06 00:20:02,304 basehttp "GET /chart-data-jour/ HTTP/1.1" 200 2922
+INFO 2025-01-06 00:20:10,019 basehttp "GET /myChartHum/ HTTP/1.1" 200 16761
+INFO 2025-01-06 00:20:10,170 basehttp "GET /chart-data-jour/ HTTP/1.1" 200 2922
+INFO 2025-01-06 00:20:13,011 basehttp "GET /api/post HTTP/1.1" 200 142469
+INFO 2025-01-06 00:20:15,016 basehttp "GET /index/ HTTP/1.1" 200 14589
+INFO 2025-01-06 00:20:17,169 basehttp "GET /table/ HTTP/1.1" 200 104372
+INFO 2025-01-06 00:21:53,654 basehttp "GET /export_pdf_data/?filter=all HTTP/1.1" 200 100138
+INFO 2025-01-06 00:22:09,606 basehttp "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-01-06 00:22:09,639 basehttp "GET / HTTP/1.1" 200 7255
+WARNING 2025-01-06 00:22:09,718 basehttp "GET /static/images/developers.png HTTP/1.1" 404 1822
+INFO 2025-01-06 00:28:37,689 basehttp "GET / HTTP/1.1" 200 9660
+WARNING 2025-01-06 00:28:37,812 basehttp "GET /static/images/abdellah.jpg HTTP/1.1" 404 1816
+WARNING 2025-01-06 00:28:37,834 basehttp "GET /static/images/salma.jpg HTTP/1.1" 404 1807
+INFO 2025-01-06 00:37:10,879 basehttp "GET / HTTP/1.1" 200 9662
+WARNING 2025-01-06 00:37:10,941 basehttp "GET /static/images/bousslama.jpg HTTP/1.1" 404 1819
+INFO 2025-01-06 00:37:10,947 basehttp "GET /static/images/aazdag.jpg HTTP/1.1" 200 73268
+INFO 2025-01-06 00:37:12,554 basehttp "GET / HTTP/1.1" 200 9662
+WARNING 2025-01-06 00:37:12,652 basehttp "GET /static/images/bousslama.jpg HTTP/1.1" 404 1819
+INFO 2025-01-06 00:37:32,583 basehttp "GET / HTTP/1.1" 200 9663
+INFO 2025-01-06 00:37:32,634 basehttp "GET /static/images/aazdag.jpg HTTP/1.1" 304 0
+INFO 2025-01-06 00:37:32,646 basehttp "GET /static/images/bousslama.jpeg HTTP/1.1" 200 109193
+INFO 2025-01-06 00:39:40,634 basehttp "GET /index/ HTTP/1.1" 302 0
+INFO 2025-01-06 00:39:40,703 basehttp "GET /login/?next=/index/ HTTP/1.1" 200 7787
+INFO 2025-01-06 00:39:40,799 basehttp "GET /static/css/global.css HTTP/1.1" 304 0
+INFO 2025-01-06 00:39:49,841 basehttp "POST /login/?next=/index/ HTTP/1.1" 302 0
+INFO 2025-01-06 00:39:49,841 basehttp "GET /index/ HTTP/1.1" 200 14589
+INFO 2025-01-06 00:39:52,893 basehttp "GET /register/ HTTP/1.1" 200 12051
+INFO 2025-01-06 00:40:50,820 basehttp "POST /register/ HTTP/1.1" 302 0
+INFO 2025-01-06 00:40:50,837 basehttp "GET /register/ HTTP/1.1" 200 12216
+INFO 2025-01-06 00:41:06,537 basehttp "GET /register/ HTTP/1.1" 200 12051
+INFO 2025-01-06 00:41:17,954 basehttp "GET /admin/ HTTP/1.1" 200 9417
+INFO 2025-01-06 00:41:20,206 basehttp "GET /admin/auth/user/ HTTP/1.1" 200 12993
+INFO 2025-01-06 00:41:20,267 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-01-06 00:47:55,502 basehttp "GET /admin/ HTTP/1.1" 200 9417
+INFO 2025-01-06 00:47:57,162 basehttp "GET / HTTP/1.1" 200 13597
+INFO 2025-01-06 00:47:57,246 basehttp "GET /static/images/aazdag.jpg HTTP/1.1" 304 0
+INFO 2025-01-06 00:47:57,252 basehttp "GET /static/images/bousslama.jpeg HTTP/1.1" 304 0
+WARNING 2025-01-06 00:47:57,268 basehttp "GET /static/images/arduino.png HTTP/1.1" 404 1813
+WARNING 2025-01-06 00:47:57,270 basehttp "GET /static/images/python.png HTTP/1.1" 404 1810
+WARNING 2025-01-06 00:47:57,271 basehttp "GET /static/images/mqtt.png HTTP/1.1" 404 1804
+WARNING 2025-01-06 00:47:57,272 basehttp "GET /static/images/django.png HTTP/1.1" 404 1810
+WARNING 2025-01-06 00:47:57,275 basehttp "GET /static/images/bootstrap.png HTTP/1.1" 404 1819
+INFO 2025-01-06 00:47:59,416 basehttp "GET / HTTP/1.1" 200 13597
+WARNING 2025-01-06 00:47:59,628 basehttp "GET /static/images/python.png HTTP/1.1" 404 1810
+WARNING 2025-01-06 00:47:59,654 basehttp "GET /static/images/django.png HTTP/1.1" 404 1810
+WARNING 2025-01-06 00:47:59,669 basehttp "GET /static/images/arduino.png HTTP/1.1" 404 1813
+WARNING 2025-01-06 00:47:59,676 basehttp "GET /static/images/mqtt.png HTTP/1.1" 404 1804
+WARNING 2025-01-06 00:47:59,693 basehttp "GET /static/images/bootstrap.png HTTP/1.1" 404 1819
+INFO 2025-01-06 00:53:54,983 basehttp "GET / HTTP/1.1" 200 13518
+INFO 2025-01-06 00:53:55,042 basehttp "GET /static/images/aazdag.jpg HTTP/1.1" 304 0
+INFO 2025-01-06 00:53:55,045 basehttp "GET /static/images/bousslama.jpeg HTTP/1.1" 304 0
+WARNING 2025-01-06 00:53:55,056 basehttp "GET /static/images/arduino.png HTTP/1.1" 404 1813
+INFO 2025-01-06 00:53:55,060 basehttp "GET /static/images/django.png HTTP/1.1" 200 16735
+INFO 2025-01-06 00:53:55,067 basehttp "GET /static/images/python.png HTTP/1.1" 200 115770
+WARNING 2025-01-06 00:53:55,068 basehttp "GET /static/images/bootstrap.png HTTP/1.1" 404 1819
+INFO 2025-01-06 00:57:08,502 basehttp "GET / HTTP/1.1" 200 13518
+INFO 2025-01-06 00:57:08,572 basehttp "GET /static/images/aazdag.jpg HTTP/1.1" 304 0
+INFO 2025-01-06 00:57:08,579 basehttp "GET /static/images/bousslama.jpeg HTTP/1.1" 304 0
+INFO 2025-01-06 00:57:08,609 basehttp "GET /static/images/python.png HTTP/1.1" 304 0
+WARNING 2025-01-06 00:57:08,658 basehttp "GET /static/images/arduino.png HTTP/1.1" 404 1813
+WARNING 2025-01-06 00:57:08,668 basehttp "GET /static/images/bootstrap.png HTTP/1.1" 404 1819
+INFO 2025-01-06 00:57:08,673 basehttp "GET /static/images/django.png HTTP/1.1" 200 24433
+INFO 2025-01-06 00:58:54,574 basehttp "GET / HTTP/1.1" 200 13518
+INFO 2025-01-06 00:58:54,652 basehttp "GET /static/images/python.png HTTP/1.1" 304 0
+INFO 2025-01-06 00:58:54,667 basehttp "GET /static/images/django.png HTTP/1.1" 304 0
+WARNING 2025-01-06 00:58:54,703 basehttp "GET /static/images/bootstrap.png HTTP/1.1" 404 1819
+INFO 2025-01-06 00:58:54,734 basehttp "GET /static/images/arduino.png HTTP/1.1" 200 293014
+INFO 2025-01-06 00:59:59,841 basehttp "GET / HTTP/1.1" 200 13518
+INFO 2025-01-06 00:59:59,906 basehttp "GET /static/images/aazdag.jpg HTTP/1.1" 304 0
+INFO 2025-01-06 00:59:59,919 basehttp "GET /static/images/bousslama.jpeg HTTP/1.1" 304 0
+INFO 2025-01-06 00:59:59,920 basehttp "GET /static/images/django.png HTTP/1.1" 304 0
+INFO 2025-01-06 00:59:59,921 basehttp "GET /static/images/python.png HTTP/1.1" 304 0
+INFO 2025-01-06 00:59:59,925 basehttp "GET /static/images/arduino.png HTTP/1.1" 304 0
+WARNING 2025-01-06 00:59:59,947 basehttp "GET /static/images/bootstrap.png HTTP/1.1" 404 1819
+INFO 2025-01-06 01:00:01,179 basehttp "GET / HTTP/1.1" 200 13518
+WARNING 2025-01-06 01:00:01,280 basehttp "GET /static/images/bootstrap.png HTTP/1.1" 404 1819
+INFO 2025-01-06 01:00:24,892 basehttp "GET / HTTP/1.1" 200 13518
+INFO 2025-01-06 01:00:24,944 basehttp "GET /static/images/django.png HTTP/1.1" 304 0
+INFO 2025-01-06 01:00:24,947 basehttp "GET /static/images/arduino.png HTTP/1.1" 304 0
+WARNING 2025-01-06 01:00:24,950 basehttp "GET /static/images/Bootstrap.png HTTP/1.1" 404 1819
+INFO 2025-01-06 01:00:47,605 basehttp "GET / HTTP/1.1" 200 13517
+INFO 2025-01-06 01:00:47,654 basehttp "GET /static/images/python.png HTTP/1.1" 304 0
+INFO 2025-01-06 01:00:47,659 basehttp "GET /static/images/arduino.png HTTP/1.1" 304 0
+INFO 2025-01-06 01:00:47,668 basehttp "GET /static/images/Bootsrap.png HTTP/1.1" 200 52160
+INFO 2025-01-06 01:04:42,891 basehttp "GET / HTTP/1.1" 200 14246
+INFO 2025-01-06 01:04:42,973 basehttp "GET /static/images/aazdag.jpg HTTP/1.1" 304 0
+INFO 2025-01-06 01:04:42,989 basehttp "GET /static/images/bousslama.jpeg HTTP/1.1" 304 0
+INFO 2025-01-06 01:04:42,991 basehttp "GET /static/images/arduino.png HTTP/1.1" 304 0
+INFO 2025-01-06 01:04:42,992 basehttp "GET /static/images/django.png HTTP/1.1" 304 0
+INFO 2025-01-06 01:04:42,994 basehttp "GET /static/images/python.png HTTP/1.1" 304 0
+INFO 2025-01-06 01:04:43,001 basehttp "GET /static/images/Bootsrap.png HTTP/1.1" 304 0
+INFO 2025-01-06 01:11:11,493 basehttp "GET / HTTP/1.1" 200 14246
+INFO 2025-01-06 01:11:11,597 basehttp "GET /static/images/aazdag.jpg HTTP/1.1" 304 0
+INFO 2025-01-06 01:11:11,624 basehttp "GET /static/images/django.png HTTP/1.1" 304 0
+INFO 2025-01-06 01:11:11,627 basehttp "GET /static/images/python.png HTTP/1.1" 304 0
+INFO 2025-01-06 01:11:11,631 basehttp "GET /static/images/bousslama.jpeg HTTP/1.1" 304 0
+INFO 2025-01-06 01:11:11,639 basehttp "GET /static/images/arduino.png HTTP/1.1" 304 0
+INFO 2025-01-06 01:11:11,639 basehttp "GET /static/images/Bootsrap.png HTTP/1.1" 304 0
+INFO 2025-01-06 01:11:14,307 basehttp "GET / HTTP/1.1" 200 14246
+INFO 2025-01-06 01:11:52,134 autoreload Watching for file changes with StatReloader
+INFO 2025-01-06 01:11:55,767 basehttp "GET / HTTP/1.1" 200 14246
+INFO 2025-01-06 01:12:05,938 basehttp "GET / HTTP/1.1" 200 14246
+INFO 2025-01-06 01:12:38,579 autoreload Watching for file changes with StatReloader
+INFO 2025-01-06 01:12:40,867 basehttp "GET / HTTP/1.1" 200 14246
+INFO 2025-01-06 01:12:40,911 basehttp "GET /static/images/django.png HTTP/1.1" 304 0
+INFO 2025-01-06 01:12:40,916 basehttp "GET /static/images/Bootsrap.png HTTP/1.1" 304 0
+INFO 2025-01-06 01:12:40,916 basehttp "GET /static/images/arduino.png HTTP/1.1" 304 0
+INFO 2025-01-06 01:12:44,083 basehttp "GET / HTTP/1.1" 200 14246
+INFO 2025-01-06 01:17:38,765 basehttp "GET / HTTP/1.1" 200 14260
+INFO 2025-01-06 01:17:38,837 basehttp "GET /static/images/aazdag.jpg HTTP/1.1" 304 0
+INFO 2025-01-06 01:17:38,843 basehttp "GET /static/images/bousslama.jpeg HTTP/1.1" 304 0
+INFO 2025-01-06 01:17:38,849 basehttp "GET /static/images/python.png HTTP/1.1" 304 0
+INFO 2025-01-06 01:17:38,850 basehttp "GET /static/images/django.png HTTP/1.1" 304 0
+INFO 2025-01-06 01:17:38,851 basehttp "GET /static/images/Bootsrap.png HTTP/1.1" 304 0
+INFO 2025-01-06 01:17:38,853 basehttp "GET /static/images/arduino.png HTTP/1.1" 304 0
+INFO 2025-01-06 01:18:53,690 basehttp "GET / HTTP/1.1" 200 14260
+INFO 2025-01-06 01:18:55,235 basehttp "GET / HTTP/1.1" 200 14260
+INFO 2025-01-06 01:18:56,411 basehttp "GET / HTTP/1.1" 200 14260
+INFO 2025-01-06 01:20:24,072 basehttp "GET / HTTP/1.1" 200 14260
+INFO 2025-01-06 01:20:24,140 basehttp "GET /static/images/python.png HTTP/1.1" 304 0
+INFO 2025-01-06 01:20:24,147 basehttp "GET /static/images/django.png HTTP/1.1" 304 0
+INFO 2025-01-06 01:20:24,149 basehttp "GET /static/images/Bootsrap.png HTTP/1.1" 304 0
+INFO 2025-01-06 01:20:24,149 basehttp "GET /static/images/arduino.png HTTP/1.1" 304 0
+INFO 2025-01-06 01:20:25,547 basehttp "GET / HTTP/1.1" 200 14260
+INFO 2025-01-06 01:20:25,810 basehttp "GET / HTTP/1.1" 200 14260
+INFO 2025-01-06 01:20:26,033 basehttp "GET / HTTP/1.1" 200 14260
+INFO 2025-01-06 01:20:26,282 basehttp "GET / HTTP/1.1" 200 14260
+INFO 2025-01-06 01:21:21,076 autoreload Watching for file changes with StatReloader
+INFO 2025-01-06 01:21:23,308 basehttp "GET / HTTP/1.1" 200 14260
+INFO 2025-01-06 01:21:27,761 basehttp "GET / HTTP/1.1" 200 14260
+INFO 2025-01-06 01:21:28,448 basehttp "GET / HTTP/1.1" 200 14260
+INFO 2025-01-06 01:22:00,705 basehttp "GET / HTTP/1.1" 200 14260
+INFO 2025-01-06 01:22:00,778 basehttp "GET /static/images/aazdag.jpg HTTP/1.1" 304 0
+INFO 2025-01-06 01:22:00,790 basehttp "GET /static/images/bousslama.jpeg HTTP/1.1" 200 4338
+INFO 2025-01-06 01:22:46,890 basehttp "GET / HTTP/1.1" 200 14261
+INFO 2025-01-06 01:22:46,959 basehttp "GET /static/images/bousslama.jpeg HTTP/1.1" 304 0
+INFO 2025-01-06 01:22:46,963 basehttp "GET /static/images/arduino.png HTTP/1.1" 304 0
+INFO 2025-01-06 01:22:46,963 basehttp "GET /static/images/Bootsrap.png HTTP/1.1" 304 0
+INFO 2025-01-06 01:23:42,931 basehttp "GET / HTTP/1.1" 200 14264
+INFO 2025-01-06 01:23:43,046 basehttp "GET /static/images/bousslama.jpeg HTTP/1.1" 304 0
+INFO 2025-01-06 01:23:43,050 basehttp "GET /static/images/django.png HTTP/1.1" 304 0
+INFO 2025-01-06 01:23:43,051 basehttp "GET /static/images/python.png HTTP/1.1" 304 0
+INFO 2025-01-06 01:23:43,064 basehttp "GET /static/images/image.png HTTP/1.1" 200 1457568
+INFO 2025-01-06 01:24:40,054 basehttp "GET /index/ HTTP/1.1" 200 14589
+INFO 2025-01-06 01:24:40,188 basehttp "GET /static/css/global.css HTTP/1.1" 304 0
+INFO 2025-01-06 01:24:42,806 basehttp "GET /table/ HTTP/1.1" 200 104372
+INFO 2025-01-06 01:24:45,010 basehttp "GET /myChartTemp/ HTTP/1.1" 200 16813
+INFO 2025-01-06 01:24:45,146 basehttp "GET /chart-data-jour/ HTTP/1.1" 200 2802
+INFO 2025-01-06 01:24:48,304 basehttp "GET /chart-data-jour/ HTTP/1.1" 200 2802
+INFO 2025-01-06 01:24:51,209 basehttp "GET /chart-data-semaine/ HTTP/1.1" 200 4923
+INFO 2025-01-06 01:24:52,715 basehttp "GET /chart-data-mois/ HTTP/1.1" 200 8704
+INFO 2025-01-06 01:24:55,021 basehttp "GET /chart-data/ HTTP/1.1" 200 33491
+INFO 2025-01-06 01:24:55,886 basehttp "GET /chart-data/ HTTP/1.1" 200 33491
+INFO 2025-01-06 01:24:57,541 basehttp "GET /chart-data-jour/ HTTP/1.1" 200 2802
+INFO 2025-01-06 01:25:00,826 basehttp "GET /chart-data/ HTTP/1.1" 200 33491
+INFO 2025-01-06 01:25:01,467 basehttp "GET /chart-data/ HTTP/1.1" 200 33491
+INFO 2025-01-06 01:25:02,486 basehttp "GET /chart-data/ HTTP/1.1" 200 33491
+INFO 2025-01-06 01:25:03,747 basehttp "GET /chart-data/ HTTP/1.1" 200 33491
+INFO 2025-01-06 01:25:06,627 basehttp "GET /chart-data-semaine/ HTTP/1.1" 200 4923
+INFO 2025-01-06 01:25:07,948 basehttp "GET /myChartHum/ HTTP/1.1" 200 16761
+INFO 2025-01-06 01:25:08,105 basehttp "GET /chart-data-jour/ HTTP/1.1" 200 2802
+INFO 2025-01-06 01:25:11,071 basehttp "GET /api/post HTTP/1.1" 200 142469
+INFO 2025-01-06 01:25:25,595 basehttp "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-01-06 01:25:25,605 basehttp "GET / HTTP/1.1" 200 14264
+INFO 2025-01-06 01:25:25,696 basehttp "GET /static/images/image.png HTTP/1.1" 304 0
+INFO 2025-01-06 01:25:25,711 basehttp "GET /static/images/bousslama.jpeg HTTP/1.1" 304 0
+INFO 2025-01-06 01:25:25,727 basehttp "GET /static/images/arduino.png HTTP/1.1" 304 0
+INFO 2025-01-06 01:25:25,727 basehttp "GET /static/images/Bootsrap.png HTTP/1.1" 304 0
+INFO 2025-01-06 01:26:02,183 basehttp "GET /index/ HTTP/1.1" 302 0
+INFO 2025-01-06 01:26:02,200 basehttp "GET /login/?next=/index/ HTTP/1.1" 200 7787
+INFO 2025-01-06 01:26:11,540 basehttp "POST /login/?next=/index/ HTTP/1.1" 302 0
+INFO 2025-01-06 01:26:11,555 basehttp "GET /index/ HTTP/1.1" 200 14589
+INFO 2025-01-06 01:26:13,493 basehttp "GET /incident/ HTTP/1.1" 200 11901
+INFO 2025-01-06 01:26:15,460 basehttp "GET /log_incident/ HTTP/1.1" 200 34944
+INFO 2025-01-06 01:26:16,933 basehttp "GET /incident-detail/20/ HTTP/1.1" 200 198
+INFO 2025-01-06 01:27:26,561 basehttp "GET /log_incident/ HTTP/1.1" 200 34942
+INFO 2025-01-06 01:27:36,941 basehttp "GET / HTTP/1.1" 200 14264
+INFO 2025-01-06 01:27:36,999 basehttp "GET /static/images/image.png HTTP/1.1" 304 0
+INFO 2025-01-06 01:27:37,004 basehttp "GET /static/images/python.png HTTP/1.1" 304 0
+INFO 2025-01-06 01:27:37,011 basehttp "GET /static/images/aazdag.jpg HTTP/1.1" 304 0
+INFO 2025-01-06 01:27:37,012 basehttp "GET /static/images/arduino.png HTTP/1.1" 304 0
+INFO 2025-01-06 01:27:37,017 basehttp "GET /static/images/django.png HTTP/1.1" 304 0
+INFO 2025-01-06 01:27:37,019 basehttp "GET /static/images/bousslama.jpeg HTTP/1.1" 200 4338
+INFO 2025-01-06 01:27:38,580 basehttp "GET / HTTP/1.1" 200 14264
+INFO 2025-01-06 01:27:44,098 basehttp "GET /table/ HTTP/1.1" 200 104370
+INFO 2025-01-06 01:27:45,551 basehttp "GET / HTTP/1.1" 200 14264
+>>>>>>> fdf6efc6dd231a8442e406ae8b38c5cc707b0b6a

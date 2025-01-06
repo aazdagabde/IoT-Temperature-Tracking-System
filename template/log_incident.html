@@ -73,13 +73,41 @@
   h2.text-center.mb-4 {
     color: #ff7f50; /* accent sur le titre */
   }
+
+  /* Styles pour le modal */
+  .modal-content {
+    background-color: #2c3e50;
+    color: #fff;
+  }
+
+  .modal-header {
+    background-color: #1a252f;
+    border-bottom: 1px solid #34495e;
+  }
+
+  .modal-title {
+    color: #ff7f50;
+  }
+
+  .modal-body {
+    background-color: #2c3e50;
+    color: #fff;
+  }
+
+  .modal-footer {
+    background-color: #1a252f;
+    border-top: 1px solid #34495e;
+  }
+
+  .btn-close {
+    filter: invert(1);
+  }
 </style>
 
 <!-- CSS de bootstrap-table -->
 <link rel="stylesheet"
       href="https://unpkg.com/bootstrap-table@1.21.2/dist/bootstrap-table.min.css">
 {% endblock extra_css %}
-
 
 {% block content %}
 <div class="container my-5">

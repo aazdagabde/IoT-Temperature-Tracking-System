@@ -472,9 +472,9 @@ def export_incidents_pdf(request):
     })
 
     # Sur PythonAnywhere, wkhtmltopdf se trouve généralement ici :
-    config = pdfkit.configuration(wkhtmltopdf='/usr/bin/wkhtmltopdf')
+    #config = pdfkit.configuration(wkhtmltopdf='/usr/bin/wkhtmltopdf')
     #Sur windows
-    #config = pdfkit.configuration(wkhtmltopdf=r'C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe')
+    config = pdfkit.configuration(wkhtmltopdf=r'C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe')
 
 
     # Générer le PDF en mémoire (False signifie "ne pas écrire sur disque")
@@ -555,9 +555,9 @@ def export_pdf_data(request):
     # 2) Configurer pdfkit
     # Sur PythonAnywhere ou Linux : /usr/bin/wkhtmltopdf
 
-    config = pdfkit.configuration(wkhtmltopdf='/usr/bin/wkhtmltopdf')
+    #config = pdfkit.configuration(wkhtmltopdf='/usr/bin/wkhtmltopdf')
     # sur windows
-    #config = pdfkit.configuration(wkhtmltopdf=r'C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe')
+    config = pdfkit.configuration(wkhtmltopdf=r'C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe')
 
 
     # 3) Générer le PDF en bytes (False = on ne sauvegarde pas de fichier temporaire)

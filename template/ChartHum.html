@@ -5,7 +5,7 @@
 
 <!-- Boutons de sélection de période -->
 <div class="mb-3">
-    <button id="jour-btn" class="btn btn-primary">Aujourd'hui</button>
+    <button id="jour-btn" class="btn btn-primary active">Aujourd'hui</button>
     <button id="semaine-btn" class="btn btn-secondary">Cette semaine</button>
     <button id="mois-btn" class="btn btn-secondary">Ce mois</button>
 </div>
@@ -18,6 +18,7 @@
     <button id="reset-zoom-btn" class="btn btn-secondary">Réinitialiser zoom</button>
 </div>
 
+<!-- Card contenant le graphique -->
 <div class="card mb-4">
     <div class="card-body">
         <h5 class="card-title">Humidité (%)</h5>
@@ -30,23 +31,24 @@
 
 {% block extra_js %}
 <script>
-let currentTimeUnit = 'hour'; // 'hour' ou 'day'
+let currentTimeUnit = 'hour'; // Échelle initiale : heure
+let humChart; // Variable globale pour stocker l'instance du graphique
 
+// Fonction pour charger les données d'humidité
 function loadHumData(url, borderWidth) {
     fetch(url)
         .then(response => response.json())
         .then(data => {
-            const labels = data.temps.map(t => moment(t));
+            const labels = data.temps.map(t => moment(t)); // Formatage des dates avec Moment.js
             const humData = data.humidity;
 
             // Détruit l'ancien graphique s'il existe
-            if (window.humChart) {
-                window.humChart.destroy();
+            if (humChart) {
+                humChart.destroy();
             }
 
             const humCtx = document.getElementById('graphique-hum').getContext('2d');
-
-            window.humChart = new Chart(humCtx, {
+            humChart = new Chart(humCtx, {
                 type: 'line',
                 data: {
                     labels: labels,
@@ -62,7 +64,7 @@ function loadHumData(url, borderWidth) {
                 options: {
                     maintainAspectRatio: false,
                     scales: {
-                        xAxes: [{
+                        x: {
                             type: 'time',
                             time: {
                                 unit: currentTimeUnit,
@@ -75,15 +77,15 @@ function loadHumData(url, borderWidth) {
                                 maxRotation: 45,
                                 minRotation: 0
                             }
-                        }],
-                        yAxes: [{
+                        },
+                        y: {
                             ticks: {
                                 beginAtZero: true,
                                 callback: function(value) {
                                     return value + '%';
                                 }
                             }
-                        }]
+                        }
                     },
                     plugins: {
                         zoom: {
@@ -92,7 +94,15 @@ function loadHumData(url, borderWidth) {
                                 mode: 'x'
                             },
                             zoom: {
-                                enabled: true,
+                                wheel: {
+                                    enabled: true,
+                                },
+                                drag: {
+                                    enabled: true,
+                                },
+                                pinch: {
+                                    enabled: true,
+                                },
                                 mode: 'x'
                             }
                         }
@@ -103,39 +113,52 @@ function loadHumData(url, borderWidth) {
         .catch(error => console.error("Erreur lors du chargement des données:", error));
 }
 
-// Boutons de période
-document.getElementById('jour-btn').addEventListener('click', () => loadHumData('/chart-data-jour/', 1));
-document.getElementById('semaine-btn').addEventListener('click', () => loadHumData('/chart-data-semaine/', 2));
-document.getElementById('mois-btn').addEventListener('click', () => loadHumData('/chart-data-mois/', 3));
+// Fonction pour gérer l'état actif des boutons
+function setActiveButton(activeButton) {
+    const buttons = document.querySelectorAll('.btn-period');
+    buttons.forEach(button => {
+        if (button === activeButton) {
+            button.classList.remove('btn-secondary');
+            button.classList.add('btn-primary', 'active');
+        } else {
+            button.classList.remove('btn-primary', 'active');
+            button.classList.add('btn-secondary');
+        }
+    });
+}
 
-// Bouton pour changer l'échelle
+// Gestion des boutons
+document.getElementById('jour-btn').addEventListener('click', () => {
+    loadHumData('/chart-data-jour/', 1);
+    setActiveButton(document.getElementById('jour-btn'));
+});
+
+document.getElementById('semaine-btn').addEventListener('click', () => {
+    loadHumData('/chart-data-semaine/', 2);
+    setActiveButton(document.getElementById('semaine-btn'));
+});
+
+document.getElementById('mois-btn').addEventListener('click', () => {
+    loadHumData('/chart-data-mois/', 3);
+    setActiveButton(document.getElementById('mois-btn'));
+});
+
 document.getElementById('toggle-scale-btn').addEventListener('click', () => {
     currentTimeUnit = (currentTimeUnit === 'hour') ? 'day' : 'hour';
-    // Recharge les données actuelles
-    loadHumData('/chart-data/', 4);
+    loadHumData('/chart-data/', 4); // Recharge les données avec la nouvelle échelle
 });
 
-// Boutons de zoom
 document.getElementById('zoom-in-btn').addEventListener('click', () => {
-    if (window.humChart) {
-        window.humChart.zoom(1.1);
-    }
+    if (humChart) humChart.zoom({ x: 1.1, y: 1 });
 });
 document.getElementById('zoom-out-btn').addEventListener('click', () => {
-    if (window.humChart) {
-        window.humChart.zoom(0.9);
-    }
+    if (humChart) humChart.zoom({ x: 0.9, y: 1 });
 });
 document.getElementById('reset-zoom-btn').addEventListener('click', () => {
-    if (window.humChart) {
-        window.humChart.resetZoom();
-    }
+    if (humChart) humChart.resetZoom();
 });
 
-// Chargement initial
-loadHumData('/chart-data/', 4);
+// Chargement initial des données
+loadHumData('/chart-data-jour/', 1);
 </script>
-<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom@0.7.7/dist/chartjs-plugin-zoom.min.js"></script>
-
 {% endblock extra_js %}
