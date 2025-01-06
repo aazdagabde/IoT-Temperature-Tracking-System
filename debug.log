@@ -10675,3 +10675,12 @@ ERROR 2025-01-05 19:09:12,828 alerts Erreur lors de l'envoi de l'alerte Telegram
 ERROR 2025-01-05 19:09:13,083 alerts Erreur lors de l'envoi de l'alerte WhatsApp : HTTP 401 error: Unable to create record: Authentication Error - invalid username
 INFO 2025-01-05 19:09:14,053 alerts Alerte e-mail envoyée avec succès.
 WARNING 2025-01-05 20:51:33,111 log Not Found: /home/aazdagbousslamaiot/provesoire/static/images/developers.png
+WARNING 2025-01-05 21:58:04,347 log Not Found: /home/aazdagbousslamaiot/provesoire/static/images/developers.png
+WARNING 2025-01-05 21:58:09,673 log Not Found: /home/aazdagbousslamaiot/provesoire/static/images/developers.png
+WARNING 2025-01-05 21:58:11,504 log Not Found: /home/aazdagbousslamaiot/provesoire/static/css/custom.css
+WARNING 2025-01-05 22:10:01,559 log Not Found: /home/aazdagbousslamaiot/provesoire/static/images/developers.png
+WARNING 2025-01-05 22:10:03,561 log Not Found: /home/aazdagbousslamaiot/provesoire/static/images/developers.png
+WARNING 2025-01-05 23:05:04,790 log Not Found: /home/aazdagbousslamaiot/provesoire/static/images/developers.png
+WARNING 2025-01-06 00:11:30,946 log Not Found: /home/aazdagbousslamaiot/provesoire/static/images/developers.png
+WARNING 2025-01-06 00:29:43,092 log Not Found: /home/aazdagbousslamaiot/provesoire/static/images/developers.png
+WARNING 2025-01-06 00:29:45,975 log Not Found: /home/aazdagbousslamaiot/provesoire/static/css/custom.css
