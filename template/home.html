@@ -12,58 +12,300 @@
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
   />
 
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+  />
+
+  <!-- Animate.css -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+
   <style>
-    /* Style personnalisé */
-    .hero {
-      background: #2c3e50;
-      color: #fff;
-      /* Diminuer la hauteur minimale ici */
-      min-height: 60vh;
-      padding: 60px 0;
-    }
-    .hero h1 {
-      font-size: 3rem;
-    }
-    .hero ul {
-      list-style-type: disc;
-      margin-left: 20px;
+    /* Custom Styles */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f8f9fa;
     }
 
-    /* Pour l’image de la colonne droite */
+    .hero {
+      background: linear-gradient(135deg, #2c3e50, #34495e);
+      color: #fff;
+      min-height: 70vh;
+      padding: 80px 0;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      animation: fadeInDown 1s;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      line-height: 1.8;
+      animation: fadeInUp 1s;
+    }
+
+    .hero ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    .hero ul li {
+      margin-bottom: 10px;
+      font-size: 1.1rem;
+      animation: fadeInUp 1s;
+    }
+
+    .hero ul li i {
+      color: #ff7f50;
+      margin-right: 10px;
+    }
+
     .hero-img {
-      /* width:100% et height:auto assurent la réactivité */
       width: 100%;
       height: auto;
-      object-fit: cover;
-      /* object-fit:cover recadre l'image si besoin, sinon vous pouvez l’enlever */
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      animation: fadeInRight 1s;
+    }
+
+    .about {
+      padding: 80px 0;
+      background-color: #fff;
+    }
+
+    .about h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      animation: fadeInDown 1s;
+    }
+
+    .about p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      animation: fadeInUp 1s;
     }
 
     .about img {
       max-width: 100%;
-      border-radius: 8px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      animation: fadeInLeft 1s;
     }
-    footer {
+
+    .features {
+      padding: 80px 0;
+      background-color: #f8f9fa;
+    }
+
+    .features h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 40px;
+      animation: fadeInDown 1s;
+    }
+
+    .features .card {
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .features .card:hover {
+      transform: translateY(-10px);
+    }
+
+    .features .card i {
+      font-size: 2rem;
+      color: #ff7f50;
+      margin-bottom: 20px;
+    }
+
+    .technologies {
+      padding: 80px 0;
+      background-color: #fff;
+    }
+
+    .technologies h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 40px;
+      animation: fadeInDown 1s;
+    }
+
+    .technologies .tech-logo {
+      width: 100px;
+      height: 100px;
+      margin: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    .technologies .tech-logo:hover {
+      transform: scale(1.1);
+    }
+
+    .contact {
+      padding: 80px 0;
       background-color: #2c3e50;
-      color: white;
+      color: #fff;
     }
-    footer a {
-      color: #f8f9fa;
-      text-decoration: none;
+
+    .contact h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      animation: fadeInDown 1s;
     }
-    /* Style pour le bouton personnalisé */
-    .btn-custom {
-      background-color: #ff7f50; /* Exemple de couleur personnalisée */
+
+    .contact ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    .contact ul li {
+      margin-bottom: 10px;
+      font-size: 1.1rem;
+    }
+
+    .contact ul li a {
+      color: #ff7f50; /* Couleur orange pour les liens */
+      text-decoration: none; /* Supprime le soulignement par défaut */
+      transition: color 0.3s ease; /* Animation de transition pour le survol */
+    }
+
+    .contact ul li a:hover {
+      color: #ff6347; /* Couleur orange plus claire au survol */
+      text-decoration: underline; /* Soulignement au survol */
+    }
+
+    .contact form {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .contact form .form-control {
+      border-radius: 5px;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+
+    .contact form .btn-custom {
+      background-color: #ff7f50;
       border: none;
       color: white;
+      padding: 12px 24px;
+      font-size: 1.1rem;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
     }
+
+    .contact form .btn-custom:hover {
+      background-color: #ff6347;
+    }
+
+    footer {
+      background-color: #1a252f;
+      color: white;
+      padding: 20px 0;
+    }
+
+    footer a {
+      color: #ff7f50;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    .btn-custom {
+      background-color: #ff7f50;
+      border: none;
+      color: white;
+      padding: 12px 24px;
+      font-size: 1.1rem;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
     .btn-custom:hover {
-      background-color: #ff6347; /* Couleur au survol */
+      background-color: #ff6347;
+    }
+
+    /* Flip Card Styles */
+    .flip-card {
+      background-color: transparent;
+      width: 300px;
+      height: 300px;
+      perspective: 1000px;
+      margin: 20px;
+    }
+
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      border-radius: 10px;
+    }
+
+    .flip-card:hover .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .flip-card-front, .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 10px;
+    }
+
+    .flip-card-front {
+      background-color: #fff;
+      color: #2c3e50;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .flip-card-back {
+      background-color: #2c3e50;
+      color: white;
+      transform: rotateY(180deg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 20px;
+    }
+
+    .flip-card-back p {
+      margin: 5px 0;
+    }
+
+    .developer-cards {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
     }
   </style>
 </head>
 <body>
-  <!-- Barre de navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
       <a class="navbar-brand fw-bold" href="#">Projet IoT</a>
       <button
@@ -81,95 +323,183 @@
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="#home">Accueil</a></li>
           <li class="nav-item"><a class="nav-link" href="#about">À propos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#features">Fonctionnalités</a></li>
+          <li class="nav-item"><a class="nav-link" href="#technologies">Technologies</a></li>
           <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- Section Hero (Accueil) -->
-  <section class="hero d-flex align-items-center" id="home">
+  <!-- Hero Section -->
+  <section class="hero" id="home">
     <div class="container">
-      <div class="row">
-        <!-- Colonne gauche : texte -->
-        <div class="col-lg-6 d-flex flex-column justify-content-center">
-          <h1 class="display-4 fw-bold">Bonjour et bienvenue sur notre site</h1>
-          <p class="lead mt-3">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h1>Bonjour et bienvenue sur notre site</h1>
+          <p class="mt-4">
             Un système innovant de surveillance de la température et de l'humidité.
           </p>
           <p>
-            Notre projet IoT permet de surveiller en temps réel les conditions environnementales, offrant une détection automatique d'incidents critiques et des alertes configurables via email, Telegram et WhatsApp. Grâce à des technologies modernes telles que Python, Django, Arduino, MQTT et Bootstrap, nous fournissons une solution fiable et efficace pour répondre aux défis actuels.
+            Notre projet IoT permet de surveiller en temps réel les conditions environnementales, offrant une détection automatique d'incidents critiques et des alertes configurables via email, Telegram et WhatsApp. Grâce à des technologies modernes telles que Python, Django, Arduino et Bootstrap, nous fournissons une solution fiable et efficace pour répondre aux défis actuels.
           </p>
-          <ul>
-            <li>Suivi en temps réel de la température et de l'humidité</li>
-            <li>Détection automatique d'incidents critiques</li>
-            <li>Alertes configurables par email, Telegram, et WhatsApp</li>
+          <ul class="mt-4">
+            <li><i class="fas fa-check-circle"></i>Suivi en temps réel de la température et de l'humidité</li>
+            <li><i class="fas fa-check-circle"></i>Détection automatique d'incidents critiques</li>
+            <li><i class="fas fa-check-circle"></i>Alertes configurables par email, Telegram, et WhatsApp</li>
           </ul>
-          <h4 class="mt-4">Technologies Utilisées</h4>
-          <p>Python, Django, Arduino, MQTT, Bootstrap</p>
           <div class="mt-4">
-            <a href="{% url 'value_view' %}" class="btn btn-custom btn-lg mt-3">Accéder à l'application</a>
+            <a href="{% url 'value_view' %}" class="btn btn-custom">Accéder à l'application</a>
           </div>
         </div>
-        <!-- Colonne droite : illustration -->
         <div class="col-lg-6">
-          <!-- Remarquez la classe hero-img et l’utilisation de w-100 pour remplir la colonne -->
           <img
-            src="{% static 'images/im.png' %}"
+            src="{% static 'images/image.png' %}"
             alt="IoT Illustration"
-            class="hero-img img-fluid w-100"
+            class="hero-img"
           />
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Section About (À propos de nous) -->
-  <section class="about py-5" id="about">
+  <!-- About Section -->
+  <section class="about" id="about">
     <div class="container">
+      <h2>À propos de nous</h2>
+      <p>
+        Nous sommes une équipe de passionnés en ingénierie informatique, dédiée à fournir des solutions IoT fiables et innovantes.
+      </p>
+      <h4 class="mt-4">Développeurs</h4>
+      <div class="developer-cards">
+        <!-- Abdellah Aazdag Card -->
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="{% static 'images/aazdag.jpg' %}" alt="Abdellah Aazdag" style="width: 100%; height: 100%; border-radius: 10px;">
+            </div>
+            <div class="flip-card-back">
+              <h3>Abdellah Aazdag</h3>
+              <p>Étudiant ingénieur en ITIRC</p>
+              <p>ENSA Oujda</p>
+              <p>Email: abdellah.aazdag.23@ump.ac.ma</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Salma Bousslama Card -->
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="{% static 'images/bousslama.jpeg' %}" alt="Salma Bousslama" style="width: 100%; height: 100%; border-radius: 10px;">
+            </div>
+            <div class="flip-card-back">
+              <h3>Salma Bousslama</h3>
+              <p>Étudiante ingénieure en ITIRC</p>
+              <p>ENSA Oujda</p>
+              <p>Email: salma.bousslama21@ump.ac.ma</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="mt-4">Encadré par <strong>Professeur Elmoussati Ali</strong>, ENSA Oujda.</p>
+      <p>Notre objectif est de mettre en œuvre des technologies intelligentes pour résoudre les défis du monde réel.</p>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features" id="features">
+    <div class="container">
+      <h2>Fonctionnalités</h2>
       <div class="row">
-        <!-- Colonne gauche : texte -->
-        <div class="col-lg-6 mb-4">
-          <h2>À propos de nous</h2>
-          <p>
-            Nous sommes une équipe de passionnés en ingénierie informatique, dédiée à fournir des solutions IoT fiables et innovantes.
-          </p>
-          <h4 class="mt-4">Développeurs</h4>
-          <ul>
-            <li><strong>Abdellah Aazdag</strong> - Étudiant ingénieur en ITIRC, ENSA Oujda</li>
-            <li><strong>Salma Bousslama</strong> - Étudiante ingénieure en ITIRC, ENSA Oujda</li>
-          </ul>
-          <p>Encadré par <strong>Professeur Elmoussati Ali</strong>, ENSA Oujda.</p>
-          <p>Notre objectif est de mettre en œuvre des technologies intelligentes pour résoudre les défis du monde réel.</p>
+        <div class="col-md-4">
+          <div class="card text-center p-4">
+            <i class="fas fa-temperature-high"></i>
+            <h3>Surveillance en temps réel</h3>
+            <p>Suivez la température et l'humidité en temps réel avec des graphiques interactifs.</p>
+          </div>
         </div>
-        <!-- Colonne droite : illustration -->
-        <div class="col-lg-6">
-          <img
-            src="{% static 'images/developers.png' %}"
-            alt="Développeurs Illustration"
-            class="img-fluid rounded"
-          />
+        <div class="col-md-4">
+          <div class="card text-center p-4">
+            <i class="fas fa-bell"></i>
+            <h3>Alertes personnalisées</h3>
+            <p>Recevez des alertes par email, Telegram ou WhatsApp en cas d'incident critique.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card text-center p-4">
+            <i class="fas fa-chart-line"></i>
+            <h3>Analyse des données</h3>
+            <p>Analysez les données historiques pour prendre des décisions éclairées.</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Section Contact (Optionnel) -->
-  <section class="contact py-5" id="contact">
+  <!-- Technologies Section -->
+  <section class="technologies" id="technologies">
     <div class="container">
-      <h2 class="mb-4">Contactez-nous</h2>
+      <h2>Technologies Utilisées</h2>
+      <div class="d-flex justify-content-center flex-wrap">
+        <img src="{% static 'images/python.png' %}" alt="Python" class="tech-logo">
+        <img src="{% static 'images/django.png' %}" alt="Django" class="tech-logo">
+        <img src="{% static 'images/arduino.png' %}" alt="Arduino" class="tech-logo">
+        <img src="{% static 'images/Bootsrap.png' %}" alt="Bootstrap" class="tech-logo">
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <h2>Contactez-nous</h2>
       <p>Pour toute question ou suggestion, n'hésitez pas à nous contacter via :</p>
-      <ul>
-        <li>Email : <a href="mailto:contact@projetiotensaoujda.com">contact@projetiotensaoujda.com</a></li>
-        <li>LinkedIn :
-          <a href="https://www.linkedin.com/company/projet-iot-ensa-oujda" target="_blank">Notre Page LinkedIn</a>
-        </li>
-      </ul>
+      <div class="row">
+        <div class="col-md-6">
+          <h4>Abdellah Aazdag</h4>
+          <ul>
+            <li>
+              <i class="fas fa-envelope"></i> Email :
+              <a href="mailto:abdellah.aazdag.23@ump.ac.ma">abdellah.aazdag.23@ump.ac.ma</a>
+            </li>
+            <li>
+              <i class="fab fa-linkedin"></i> LinkedIn :
+              <a href="https://www.linkedin.com/in/aazdag-abdellah/" target="_blank">Abdellah Aazdag</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <h4>Salma Bousslama</h4>
+          <ul>
+            <li>
+              <i class="fas fa-envelope"></i> Email :
+              <a href="mailto:salma.bousslama21@ump.ac.ma">salma.bousslama21@ump.ac.ma</a>
+            </li>
+            <li>
+              <i class="fab fa-linkedin"></i> LinkedIn :
+              <a href="https://www.linkedin.com/in/bousslama-salma-35857529b/" target="_blank">Salma Bousslama</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <form>
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Votre nom" required>
+        </div>
+        <div class="form-group">
+          <input type="email" class="form-control" placeholder="Votre email" required>
+        </div>
+        <div class="form-group">
+          <textarea class="form-control" rows="5" placeholder="Votre message" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-custom">Envoyer</button>
+      </form>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="py-4 text-center">
+  <footer class="text-center py-4">
     <p class="mb-0">&copy; 2025 Projet IoT ENSA Oujda. Tous droits réservés.</p>
     <p>
       <a href="#home">Retour en haut</a>

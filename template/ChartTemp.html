@@ -5,7 +5,7 @@
 
 <!-- Boutons de sélection de période -->
 <div class="mb-3">
-    <button id="jour-btn" class="btn btn-primary">Aujourd'hui</button>
+    <button id="jour-btn" class="btn btn-primary active">Aujourd'hui</button>
     <button id="semaine-btn" class="btn btn-secondary">Cette semaine</button>
     <button id="mois-btn" class="btn btn-secondary">Ce mois</button>
 </div>
@@ -31,30 +31,32 @@
 
 {% block extra_js %}
 <script>
-let currentTimeUnit = 'hour'; // Échelle initiale
+let currentTimeUnit = 'hour'; // Échelle initiale : heure
+let tempChart; // Variable globale pour stocker l'instance du graphique
 
+// Fonction pour charger les données de température
 function loadTempData(url, borderWidth) {
     fetch(url)
         .then(response => response.json())
         .then(data => {
-            const labels = data.temps.map(t => moment(t)); // Dates formatées
+            const labels = data.temps.map(t => moment(t)); // Formatage des dates avec Moment.js
             const tempData = data.temperature;
 
             // Détruit l'ancien graphique s'il existe
-            if (window.tempChart) {
-                window.tempChart.destroy();
+            if (tempChart) {
+                tempChart.destroy();
             }
 
             const tempCtx = document.getElementById('graphique-temp').getContext('2d');
-            window.tempChart = new Chart(tempCtx, {
+            tempChart = new Chart(tempCtx, {
                 type: 'line',
                 data: {
                     labels: labels,
                     datasets: [{
                         label: 'Température (°C)',
                         data: tempData,
-                        backgroundColor: 'rgba(0, 123, 255, 0.1)', // Bleu clair
-                        borderColor: 'rgb(0, 123, 255)',           // Bleu
+                        backgroundColor: 'rgba(255, 99, 132, 0.1)', // Rouge translucide
+                        borderColor: 'rgb(255, 99, 132)',           // Rouge
                         borderWidth: borderWidth,
                         pointRadius: 3
                     }]
@@ -62,26 +64,28 @@ function loadTempData(url, borderWidth) {
                 options: {
                     maintainAspectRatio: false,
                     scales: {
-                        xAxes: [{
+                        x: {
                             type: 'time',
                             time: {
                                 unit: currentTimeUnit,
-                                displayFormats: currentTimeUnit === 'hour' ? { hour: 'HH:mm' } : { day: 'YYYY-MM-DD' }
+                                displayFormats: (currentTimeUnit === 'hour')
+                                    ? { hour: 'HH:mm' }
+                                    : { day: 'YYYY-MM-DD' }
                             },
                             ticks: {
                                 autoSkip: true,
                                 maxRotation: 45,
                                 minRotation: 0
                             }
-                        }],
-                        yAxes: [{
+                        },
+                        y: {
                             ticks: {
                                 beginAtZero: true,
                                 callback: function(value) {
-                                    return value + '°';
+                                    return value + '°C';
                                 }
                             }
-                        }]
+                        }
                     },
                     plugins: {
                         zoom: {
@@ -90,7 +94,15 @@ function loadTempData(url, borderWidth) {
                                 mode: 'x'
                             },
                             zoom: {
-                                enabled: true,
+                                wheel: {
+                                    enabled: true,
+                                },
+                                drag: {
+                                    enabled: true,
+                                },
+                                pinch: {
+                                    enabled: true,
+                                },
                                 mode: 'x'
                             }
                         }
@@ -101,25 +113,52 @@ function loadTempData(url, borderWidth) {
         .catch(error => console.error("Erreur lors du chargement des données:", error));
 }
 
+// Fonction pour gérer l'état actif des boutons
+function setActiveButton(activeButton) {
+    const buttons = document.querySelectorAll('.btn-period');
+    buttons.forEach(button => {
+        if (button === activeButton) {
+            button.classList.remove('btn-secondary');
+            button.classList.add('btn-primary', 'active');
+        } else {
+            button.classList.remove('btn-primary', 'active');
+            button.classList.add('btn-secondary');
+        }
+    });
+}
+
 // Gestion des boutons
-document.getElementById('jour-btn').addEventListener('click', () => loadTempData('/chart-data-jour/', 1));
-document.getElementById('semaine-btn').addEventListener('click', () => loadTempData('/chart-data-semaine/', 2));
-document.getElementById('mois-btn').addEventListener('click', () => loadTempData('/chart-data-mois/', 3));
-document.getElementById('toggle-scale-btn').addEventListener('click', () => {
-    currentTimeUnit = (currentTimeUnit === 'hour') ? 'day' : 'hour';
-    loadTempData('/chart-data/', 4);
-});
-document.getElementById('zoom-in-btn').addEventListener('click', () => {
-    if (window.tempChart) window.tempChart.zoom({ x: 1.1, y: 1 });
-});
-document.getElementById('zoom-out-btn').addEventListener('click', () => {
-    if (window.tempChart) window.tempChart.zoom({ x: 0.9, y: 1 });
-});
-document.getElementById('reset-zoom-btn').addEventListener('click', () => {
-    if (window.tempChart) window.tempChart.resetZoom();
+document.getElementById('jour-btn').addEventListener('click', () => {
+    loadTempData('/chart-data-jour/', 1);
+    setActiveButton(document.getElementById('jour-btn'));
 });
 
-// Chargement initial
-loadTempData('/chart-data/', 4);
+document.getElementById('semaine-btn').addEventListener('click', () => {
+    loadTempData('/chart-data-semaine/', 2);
+    setActiveButton(document.getElementById('semaine-btn'));
+});
+
+document.getElementById('mois-btn').addEventListener('click', () => {
+    loadTempData('/chart-data-mois/', 3);
+    setActiveButton(document.getElementById('mois-btn'));
+});
+
+document.getElementById('toggle-scale-btn').addEventListener('click', () => {
+    currentTimeUnit = (currentTimeUnit === 'hour') ? 'day' : 'hour';
+    loadTempData('/chart-data/', 4); // Recharge les données avec la nouvelle échelle
+});
+
+document.getElementById('zoom-in-btn').addEventListener('click', () => {
+    if (tempChart) tempChart.zoom({ x: 1.1, y: 1 });
+});
+document.getElementById('zoom-out-btn').addEventListener('click', () => {
+    if (tempChart) tempChart.zoom({ x: 0.9, y: 1 });
+});
+document.getElementById('reset-zoom-btn').addEventListener('click', () => {
+    if (tempChart) tempChart.resetZoom();
+});
+
+// Chargement initial des données
+loadTempData('/chart-data-jour/', 1);
 </script>
 {% endblock extra_js %}

@@ -1,10 +1,9 @@
 {% extends 'base.html' %}
 {% block title %}Dernière Valeur{% endblock title %}
-
 {% block content %}
-    <h3 class="mb-4">
-        <i class="fas fa-microchip"></i> Dernière valeur enregistrée
-    </h3>
+<h3 class="mb-4">
+    <i class="fas fa-microchip"></i> Dernière valeur enregistrée
+</h3>
 <div class="d-flex justify-content-between align-items-center mb-3">
     <div>
         <i class="fas fa-clock"></i> Heure actuelle :
@@ -14,91 +13,91 @@
         <i class="fas fa-sensor"></i>
     </div>
 </div>
-    <p>
-        <i class="fas fa-info-circle"></i> Ce tableau présente la dernière mesure enregistrée par le capteur DHT11, incluant la température et l'humidité.
-    </p>
+<p>
+    <i class="fas fa-info-circle"></i> Ce tableau présente la dernière mesure enregistrée par le capteur DHT11, incluant la température et l'humidité.
+</p>
 
-    <div class="card">
-        <div class="card-header">
-            <i class="fas fa-database"></i> Dernière mesure
-        </div>
-        <div class="card-body">
-            <table class="table table-striped align-middle">
-                <thead>
-                    <tr>
-                        <th>
-                            <i class="fas fa-microchip"></i> Capteur
-                        </th>
-                        <th>
-                            <i class="fas fa-thermometer-half"></i> Température
-                        </th>
-                        <th>
-                            <i class="fas fa-tint"></i> Humidité
-                        </th>
-                        <th>
-                            <i class="fas fa-clock"></i> Date
-                        </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>
-                            <a href="{% url 'myChartTemp' %}">
-                                <i class="fas fa-microchip"></i> DHT11
-                            </a>
-                        </td>
-                        <td>
-                            {% if valeurs.temp != '-' %}
-                                <i class="fas fa-thermometer-half"></i> {{ valeurs.temp }} °C
-                            {% else %}
-                                <i class="fas fa-times-circle text-danger"></i> -
-                            {% endif %}
-                        </td>
-                        <td>
-                            {% if valeurs.hum != '-' %}
-                                <i class="fas fa-tint"></i> {{ valeurs.hum }} %
-                            {% else %}
-                                <i class="fas fa-times-circle text-danger"></i> -
-                            {% endif %}
-                        </td>
-                        <td>
-                            <i class="fas fa-clock"></i> {{ valeurs.date }}
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <button id="csv" class="btn btn-primary">
-                <i class="fas fa-download"></i> Télécharger CSV
-            </button>
-        </div>
+<div class="card">
+    <div class="card-header">
+        <i class="fas fa-database"></i> Dernière mesure
     </div>
+    <div class="card-body">
+        <table class="table table-striped align-middle">
+            <thead>
+                <tr>
+                    <th>
+                        <i class="fas fa-microchip"></i> Capteur
+                    </th>
+                    <th>
+                        <i class="fas fa-thermometer-half"></i> Température
+                    </th>
+                    <th>
+                        <i class="fas fa-tint"></i> Humidité
+                    </th>
+                    <th>
+                        <i class="fas fa-clock"></i> Date
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <a href="{% url 'myChartTemp' %}">
+                            <i class="fas fa-microchip"></i> DHT11
+                        </a>
+                    </td>
+                    <td>
+                        {% if valeurs.temp != '-' %}
+                            <i class="fas fa-thermometer-half"></i> {{ valeurs.temp }} °C
+                        {% else %}
+                            <i class="fas fa-times-circle text-danger"></i> -
+                        {% endif %}
+                    </td>
+                    <td>
+                        {% if valeurs.hum != '-' %}
+                            <i class="fas fa-tint"></i> {{ valeurs.hum }} %
+                        {% else %}
+                            <i class="fas fa-times-circle text-danger"></i> -
+                        {% endif %}
+                    </td>
+                    <td>
+                        <i class="fas fa-clock"></i> {{ valeurs.date }}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <button id="csv" class="btn btn-custom">
+            <i class="fas fa-download"></i> Télécharger CSV
+        </button>
+    </div>
+</div>
 {% endblock content %}
 
 {% block extra_js %}
-    <script>
-        document.getElementById('csv').addEventListener('click', function() {
-            var xhr = new XMLHttpRequest();
-            xhr.open('GET', '/download_csv/', true);
-            xhr.responseType = 'blob';
-            xhr.onload = function() {
-                if (xhr.status === 200) {
-                    var url = window.URL.createObjectURL(xhr.response);
-                    var a = document.createElement('a');
-                    a.href = url;
-                    a.download = 'dht.csv';
-                    document.body.appendChild(a);
-                    a.click();
-                    document.body.removeChild(a);
-                }
-            };
-            xhr.send();
-        });
+<script>
+    document.getElementById('csv').addEventListener('click', function() {
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', '/download_csv/', true);
+        xhr.responseType = 'blob';
+        xhr.onload = function() {
+            if (xhr.status === 200) {
+                var url = window.URL.createObjectURL(xhr.response);
+                var a = document.createElement('a');
+                a.href = url;
+                a.download = 'dht.csv';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+            }
+        };
+        xhr.send();
+    });
 
-        // Rafraîchissement automatique toutes les 10s (facultatif)
-        setInterval(function() {
-            location.reload();
-        }, 10000);
-    </script>
+    // Rafraîchissement automatique toutes les 10s (facultatif)
+    setInterval(function() {
+        location.reload();
+    }, 10000);
+</script>
 <script>
     // Script to update the current time dynamically
     function updateTime() {
