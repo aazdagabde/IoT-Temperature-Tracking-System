@@ -12086,3 +12086,45 @@ INFO 2025-01-06 01:27:38,580 basehttp "GET / HTTP/1.1" 200 14264
 INFO 2025-01-06 01:27:44,098 basehttp "GET /table/ HTTP/1.1" 200 104370
 INFO 2025-01-06 01:27:45,551 basehttp "GET / HTTP/1.1" 200 14264
 >>>>>>> fdf6efc6dd231a8442e406ae8b38c5cc707b0b6a
+WARNING 2025-01-06 00:38:49,540 log Not Found: /home/aazdagbousslamaiot/provesoire/static/images/python.png
+WARNING 2025-01-06 00:39:05,390 log Not Found: /home/aazdagbousslamaiot/provesoire/static/images/python.png
+WARNING 2025-01-06 00:39:29,188 log Not Found: /home/aazdagbousslamaiot/provesoire/static/images/python.png
+WARNING 2025-01-06 00:41:12,936 log Not Found: /home/aazdagbousslamaiot/provesoire/static/images/python.png
+WARNING 2025-01-06 00:41:23,878 log Not Found: /home/aazdagbousslamaiot/provesoire/static/images/python.png
+WARNING 2025-01-06 00:41:25,601 log Not Found: /home/aazdagbousslamaiot/provesoire/static/images/python.png
+WARNING 2025-01-06 00:41:56,842 log Not Found: /favicon.ico
+ERROR 2025-01-06 00:46:12,632 alerts Erreur lors de l'envoi de l'alerte Telegram : HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot7859262503:AAGScp5W3u876LlZk1kcA7_S-dK1bmcuMVw/sendMessage (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7ece8ebea5f0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+ERROR 2025-01-06 00:46:13,101 alerts Erreur lors de l'envoi de l'alerte WhatsApp : HTTP 401 error: Unable to create record: Authentication Error - invalid username
+INFO 2025-01-06 00:46:15,114 alerts Alerte e-mail envoyée avec succès.
+WARNING 2025-01-06 01:38:36,080 log Not Found: /favicon.ico
+WARNING 2025-01-06 01:41:52,993 log Not Found: /favicon.ico
+WARNING 2025-01-06 07:28:08,313 log Not Found: /favicon.ico
+WARNING 2025-01-06 08:37:47,718 log Not Found: /favicon.ico
+WARNING 2025-01-06 10:35:13,966 log Not Found: /favicon.ico
+WARNING 2025-01-06 10:55:48,208 log Not Found: /favicon.ico
+WARNING 2025-01-06 14:53:58,539 log Not Found: /favicon.ico
+WARNING 2025-01-06 15:17:14,799 log Not Found: /sitemap.txt
+WARNING 2025-01-06 18:11:12,377 log Not Found: /favicon.ico
+WARNING 2025-01-06 18:38:42,029 log Not Found: /favicon.ico
+WARNING 2025-01-06 18:49:18,471 log Not Found: /favicon.ico
+WARNING 2025-01-07 07:26:21,853 log Not Found: /favicon.ico
+WARNING 2025-01-07 08:02:56,644 log Not Found: /favicon.ico
+WARNING 2025-01-07 10:16:05,296 log Not Found: /robots.txt
+WARNING 2025-01-07 10:16:05,394 log Not Found: /robots.txt
+ERROR 2025-01-07 12:49:31,895 alerts Erreur lors de l'envoi de l'alerte Telegram : HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot7859262503:AAGScp5W3u876LlZk1kcA7_S-dK1bmcuMVw/sendMessage (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7169afd98160>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+ERROR 2025-01-07 12:49:32,477 alerts Erreur lors de l'envoi de l'alerte WhatsApp : HTTP 401 error: Unable to create record: Authentication Error - invalid username
+INFO 2025-01-07 12:49:33,720 alerts Alerte e-mail envoyée avec succès.
+ERROR 2025-01-07 13:03:26,549 alerts Erreur lors de l'envoi de l'alerte Telegram : HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot7859262503:AAGScp5W3u876LlZk1kcA7_S-dK1bmcuMVw/sendMessage (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7c64f7b98130>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+INFO 2025-01-07 13:03:28,023 alerts Alerte e-mail envoyée avec succès.
+ERROR 2025-01-07 13:08:49,734 alerts Erreur lors de l'envoi de l'alerte Telegram : HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot7852205995:AAHeF8A_WPbY4rfSYmfgZc3OSc_OSTbOues/sendMessage (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7107772e8b50>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+INFO 2025-01-07 13:08:51,236 alerts Alerte e-mail envoyée avec succès.
+WARNING 2025-01-07 22:18:46,913 log Not Found: /favicon.ico
+WARNING 2025-01-08 00:56:24,926 log Not Found: /favicon.ico
+ERROR 2025-01-08 00:56:46,474 alerts Erreur lors de l'envoi de l'alerte Telegram : HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot7852205995:AAHeF8A_WPbY4rfSYmfgZc3OSc_OSTbOues/sendMessage (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x70f2f5efb8b0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+INFO 2025-01-08 00:56:47,960 alerts Alerte e-mail envoyée avec succès.
+INFO 2025-01-08 01:01:24,177 alerts Alerte Telegram envoyée.
+INFO 2025-01-08 01:01:25,001 alerts Alerte e-mail envoyée avec succès.
+WARNING 2025-01-08 01:21:30,420 log Not Found: /home/aazdagbousslamaiot/provesoire/static/images/python.png
+WARNING 2025-01-08 01:22:39,693 log Not Found: /home/aazdagbousslamaiot/provesoire/static/images/python.png
+WARNING 2025-01-08 07:28:32,405 log Not Found: /favicon.ico
+WARNING 2025-01-08 08:10:36,396 log Not Found: /favicon.ico

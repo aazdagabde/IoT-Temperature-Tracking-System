@@ -177,14 +177,14 @@
     }
 
     .contact ul li a {
-      color: #ff7f50; /* Couleur orange pour les liens */
-      text-decoration: none; /* Supprime le soulignement par défaut */
-      transition: color 0.3s ease; /* Animation de transition pour le survol */
+      color: #ff7f50;
+      text-decoration: none;
+      transition: color 0.3s ease;
     }
 
     .contact ul li a:hover {
-      color: #ff6347; /* Couleur orange plus claire au survol */
-      text-decoration: underline; /* Soulignement au survol */
+      color: #ff6347;
+      text-decoration: underline;
     }
 
     .contact form {
@@ -301,6 +301,38 @@
       justify-content: center;
       flex-wrap: wrap;
     }
+
+    /* New Styles for Improved Sections */
+    .hover-effect {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .hover-effect:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .tech-card {
+      text-align: center;
+      margin: 20px;
+    }
+
+    .tech-description {
+      margin-top: 10px;
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    .social-links a {
+      color: #ff7f50;
+      margin: 0 10px;
+      font-size: 1.5rem;
+      transition: color 0.3s ease;
+    }
+
+    .social-links a:hover {
+      color: #ff6347;
+    }
   </style>
 </head>
 <body>
@@ -413,22 +445,22 @@
       <h2>Fonctionnalités</h2>
       <div class="row">
         <div class="col-md-4">
-          <div class="card text-center p-4">
-            <i class="fas fa-temperature-high"></i>
+          <div class="card text-center p-4 hover-effect">
+            <i class="fas fa-temperature-high fa-3x mb-3"></i>
             <h3>Surveillance en temps réel</h3>
             <p>Suivez la température et l'humidité en temps réel avec des graphiques interactifs.</p>
           </div>
         </div>
         <div class="col-md-4">
-          <div class="card text-center p-4">
-            <i class="fas fa-bell"></i>
+          <div class="card text-center p-4 hover-effect">
+            <i class="fas fa-bell fa-3x mb-3"></i>
             <h3>Alertes personnalisées</h3>
             <p>Recevez des alertes par email, Telegram ou WhatsApp en cas d'incident critique.</p>
           </div>
         </div>
         <div class="col-md-4">
-          <div class="card text-center p-4">
-            <i class="fas fa-chart-line"></i>
+          <div class="card text-center p-4 hover-effect">
+            <i class="fas fa-chart-line fa-3x mb-3"></i>
             <h3>Analyse des données</h3>
             <p>Analysez les données historiques pour prendre des décisions éclairées.</p>
           </div>
@@ -441,11 +473,27 @@
   <section class="technologies" id="technologies">
     <div class="container">
       <h2>Technologies Utilisées</h2>
-      <div class="d-flex justify-content-center flex-wrap">
-        <img src="{% static 'images/python.png' %}" alt="Python" class="tech-logo">
-        <img src="{% static 'images/django.png' %}" alt="Django" class="tech-logo">
-        <img src="{% static 'images/arduino.png' %}" alt="Arduino" class="tech-logo">
-        <img src="{% static 'images/Bootsrap.png' %}" alt="Bootstrap" class="tech-logo">
+      <div class="row justify-content-center">
+        <div class="col-md-3 text-center mb-4">
+          <img src="{% static 'images/Python.png' %}" alt="Python" class="tech-logo">
+          <h4 class="mt-3">Python</h4>
+          <p class="tech-description">Langage de programmation utilisé pour le backend et le traitement des données.</p>
+        </div>
+        <div class="col-md-3 text-center mb-4">
+          <img src="{% static 'images/django.png' %}" alt="Django" class="tech-logo">
+          <h4 class="mt-3">Django</h4>
+          <p class="tech-description">Framework web pour développer des applications robustes et sécurisées.</p>
+        </div>
+        <div class="col-md-3 text-center mb-4">
+          <img src="{% static 'images/arduino.png' %}" alt="Arduino" class="tech-logo">
+          <h4 class="mt-3">Arduino</h4>
+          <p class="tech-description">Plateforme de prototypage pour la collecte de données en temps réel.</p>
+        </div>
+        <div class="col-md-3 text-center mb-4">
+          <img src="{% static 'images/Bootsrap.png' %}" alt="Bootstrap" class="tech-logo">
+          <h4 class="mt-3">Bootstrap</h4>
+          <p class="tech-description">Framework CSS pour créer des interfaces utilisateur modernes et responsives.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -467,6 +515,10 @@
               <i class="fab fa-linkedin"></i> LinkedIn :
               <a href="https://www.linkedin.com/in/aazdag-abdellah/" target="_blank">Abdellah Aazdag</a>
             </li>
+            <li>
+              <i class="fab fa-github"></i> GitHub :
+              <a href="https://github.com/aazdag-abdellah" target="_blank">aazdag-abdellah</a>
+            </li>
           </ul>
         </div>
         <div class="col-md-6">
@@ -480,10 +532,14 @@
               <i class="fab fa-linkedin"></i> LinkedIn :
               <a href="https://www.linkedin.com/in/bousslama-salma-35857529b/" target="_blank">Salma Bousslama</a>
             </li>
+            <li>
+              <i class="fab fa-github"></i> GitHub :
+              <a href="https://github.com/salma-bousslama" target="_blank">salma-bousslama</a>
+            </li>
           </ul>
         </div>
       </div>
-      <form>
+      <form id="contact-form">
         <div class="form-group">
           <input type="text" class="form-control" placeholder="Votre nom" required>
         </div>
@@ -500,10 +556,22 @@
 
   <!-- Footer -->
   <footer class="text-center py-4">
-    <p class="mb-0">&copy; 2025 Projet IoT ENSA Oujda. Tous droits réservés.</p>
-    <p>
-      <a href="#home">Retour en haut</a>
-    </p>
+    <div class="container">
+      <p class="mb-0">&copy; 2025 Projet IoT ENSA Oujda. Tous droits réservés.</p>
+      <p>
+        <a href="#home">Retour en haut</a> |
+        <a href="#about">À propos</a> |
+        <a href="#features">Fonctionnalités</a> |
+        <a href="#technologies">Technologies</a> |
+        <a href="#contact">Contact</a>
+      </p>
+      <div class="social-links mt-3">
+        <a href="https://www.linkedin.com/in/aazdag-abdellah/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/aazdag-abdellah" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/bousslama-salma-35857529b/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/salma-bousslama" target="_blank"><i class="fab fa-github"></i></a>
+      </div>
+    </div>
   </footer>
 
   <!-- Bootstrap JS -->

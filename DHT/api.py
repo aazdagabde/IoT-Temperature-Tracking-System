@@ -146,11 +146,12 @@ def notify_user(user, message: str):
         return
 
     # Telegram
-    telegram_bot_token = "7859262503:AAGScp5W3u876LlZk1kcA7_S-dK1bmcuMVw"
+    telegram_bot_token = "7852205995:AAHeF8A_WPbY4rfSYmfgZc3OSc_OSTbOues"
     if profile.telegram_id:
         send_telegram_alert(telegram_bot_token, profile.telegram_id, message)
 
     # WhatsApp
+    """
     if (
         profile.twilio_account_sid and
         profile.twilio_auth_token and
@@ -163,6 +164,7 @@ def notify_user(user, message: str):
             to_whatsapp=f'whatsapp:{profile.whatsapp_number}',
             message=message
         )
+    """
 
     # E-mail
     if user.email:

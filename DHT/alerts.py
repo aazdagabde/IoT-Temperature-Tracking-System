@@ -9,18 +9,13 @@ import telepot
 logger = logging.getLogger('DHT')
 
 
-def send_telegram_alert(bot_token, chat_id, message):
-    """
-    Envoie un message Telegram via un bot.
 
-    Args:
-        bot_token (str): Le token du bot Telegram.
-        chat_id (int): L'ID du chat où envoyer le message.
-        message (str): Le contenu du message à envoyer.
-    """
-    if not bot_token or not chat_id:
-        logger.warning("send_telegram_alert: Token ou chat_id manquant.")
-        return
+from telepot.api import set_proxy
+
+# Configurer le proxy pour PythonAnywhere
+set_proxy('http://proxy.server:3128')
+
+def send_telegram_alert(bot_token, chat_id, message):
     try:
         bot = telepot.Bot(bot_token)
         bot.sendMessage(chat_id, message)
