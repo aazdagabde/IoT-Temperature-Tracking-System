@@ -163,14 +163,14 @@ LOGGING = {
     },
 }
 ######################
-#STATIC_URL = 'static/'
-#STATICFILES_DIRS = [
-#  os.path.join(BASE_DIR, 'static')
-#]
-#STATIC_ROOT=os.path.join(BASE_DIR,'staticfiles')
+STATIC_URL = 'static/'
+STATICFILES_DIRS = [
+  os.path.join(BASE_DIR, 'static')
+]
+STATIC_ROOT=os.path.join(BASE_DIR,'staticfiles')
 ##conf python any where##
-STATIC_URL='/home/aazdagbousslamaiot/provesoire/static'
-STATIC_ROOT="/home/aazdagbousslamaiot/provesoire/static"
+#STATIC_URL='/home/aazdagbousslamaiot/provesoire/static'
+#STATIC_ROOT="/home/aazdagbousslamaiot/provesoire/static"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
@@ -184,3 +184,4 @@ EMAIL_USE_TLS = True # ou False, selon la configuration de votrefournisseur de m
 EMAIL_HOST_USER = 'aazdagbousslama@gmail.com' # remplacer avec votre adresse email
 EMAIL_HOST_PASSWORD = 'rznj cmub mwye fodd'
 
+TELEGRAM_BOT_TOKEN = "7852205995:AAHeF8A_WPbY4rfSYmfgZc3OSc_OSTbOues"

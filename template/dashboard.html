@@ -1,149 +1,357 @@
-{% extends 'base.html' %}
+{% extends 'base2.html' %}
 {% block title %}Dashboard{% endblock %}
+
 {% block content %}
 <div class="container my-5">
     <h2 class="text-center mb-4">Dashboard Administratif</h2>
 
-    <!-- Cartes Statistiques -->
+    <!-- Cartes Statistiques (3 colonnes sur desktop, 1 sur mobile) -->
+    <div class="row row-cols-1 row-cols-md-3 g-4 mb-4">
+        <div class="col">
+            <div class="card text-white bg-primary mb-3 hover-effect">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <i class="fas fa-users fa-2x me-2"></i>
+                        Utilisateurs
+                    </h5>
+                    <p class="card-text fs-4">{{ total_users }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card text-white bg-success mb-3 hover-effect">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <i class="fas fa-clipboard-list fa-2x me-2"></i>
+                        Incidents
+                    </h5>
+                    <p class="card-text fs-4">{{ total_incidents }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card text-white bg-warning mb-3 hover-effect">
+                <div class="card-body">
+                    <h5 class="card-title text-dark">
+                        <i class="fas fa-exclamation-triangle fa-2x me-2"></i>
+                        Incidents en Cours
+                    </h5>
+                    <p class="card-text fs-4 text-dark">{{ active_incidents }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Disposition des graphiques -->
     <div class="row mb-4">
-        <div class="col-md-4">
-            <div class="card text-white bg-primary mb-3">
+        <div class="col-md-6">
+            <!-- Graphique 1 : Nombre d'Incidents par Mois (Bar Chart) -->
+            <div class="card mb-4 hover-effect">
                 <div class="card-body">
-                    <h5 class="card-title"><i class="fas fa-users"></i> Utilisateurs</h5>
-                    <p class="card-text">{{ total_users }}</p>
+                    <h5 class="card-title text-center">
+                        <i class="fas fa-chart-bar"></i> Nombre d'Incidents par Mois
+                    </h5>
+                    <canvas id="incidentsBarChart" style="max-height: 300px;"></canvas>
                 </div>
             </div>
         </div>
-        <div class="col-md-4">
-            <div class="card text-white bg-success mb-3">
+        <div class="col-md-6">
+            <!-- Graphique 2 : Répartition des Incidents (Pie Chart) -->
+            <div class="card mb-4 hover-effect">
                 <div class="card-body">
-                    <h5 class="card-title"><i class="fas fa-clipboard-list"></i> Incidents</h5>
-                    <p class="card-text">{{ total_incidents }}</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card text-white bg-warning mb-3">
-                <div class="card-body">
-                    <h5 class="card-title"><i class="fas fa-exclamation-triangle"></i> Incidents en Cours</h5>
-                    <p class="card-text">{{ active_incidents }}</p>
+                    <h5 class="card-title text-center">
+                        <i class="fas fa-chart-pie"></i> Répartition des Incidents
+                    </h5>
+                    <canvas id="incidentsPieChart" style="max-height: 300px;"></canvas>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Graphique des Incidents (Optionnel) -->
-    <div class="card mb-4">
+    <div class="row mb-4">
+        <div class="col-md-6">
+            <!-- Graphique 3 : Tendances des Incidents (Line Chart) -->
+            <div class="card mb-4 hover-effect">
+                <div class="card-body">
+                    <h5 class="card-title text-center">
+                        <i class="fas fa-chart-line"></i> Tendances des Incidents
+                    </h5>
+                    <canvas id="incidentsLineChart" style="max-height: 300px;"></canvas>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <!-- Graphique 4 : Température et Humidité (Dual Axis Line Chart) -->
+            <div class="card mb-4 hover-effect">
+                <div class="card-body">
+                    <h5 class="card-title text-center mb-3">
+                        <i class="fas fa-thermometer-half"></i> Température et Humidité
+                    </h5>
+
+                    <!-- Boutons pour l'exemple avancé -->
+                    <button id="resetZoomBtn" class="btn btn-sm btn-secondary mb-2">
+                        Réinitialiser Zoom
+                    </button>
+                    <button id="downloadChartBtn" class="btn btn-sm btn-secondary mb-2">
+                        Télécharger en PNG
+                    </button>
+
+                    <canvas id="tempHumidityChart" style="max-height: 300px;"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section des Derniers Incidents -->
+    <div class="card mb-4 hover-effect">
         <div class="card-body">
-            <h5 class="card-title text-center">Nombre d'Incidents par Mois</h5>
-            <canvas id="incidentsChart" width="400" height="200"></canvas>
+            <h5 class="card-title text-center">
+                <i class="fas fa-history"></i> Derniers Incidents
+            </h5>
+            <div class="table-responsive">
+                <table class="table table-striped table-hover align-middle">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Début</th>
+                            <th>Fin</th>
+                            <th>Durée</th>
+                            <th>Itération</th>
+                            <th>Remarques</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for incident in latest_incidents %}
+                        <tr>
+                            <td>{{ incident.id }}</td>
+                            <td>{{ incident.start_dt|date:"d/m/Y H:i" }}</td>
+                            <td>
+                                {% if incident.end_dt %}
+                                    {{ incident.end_dt|date:"d/m/Y H:i" }}
+                                {% else %}
+                                    <span class="badge bg-danger">En cours</span>
+                                {% endif %}
+                            </td>
+                            <td>
+                                {% if incident.duration %}
+                                    {{ incident.duration }}
+                                {% else %}
+                                    --
+                                {% endif %}
+                            </td>
+                            <td>{{ incident.iteration }}</td>
+                            <td>{{ incident.remarks|default:"---" }}</td>
+                        </tr>
+                        {% empty %}
+                        <tr>
+                            <td colspan="6" class="text-center">Aucun incident enregistré.</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
         </div>
-    </div>
-
-    <!-- Table des Derniers Incidents -->
-    <div class="table-responsive">
-        <h4 class="mb-3">Derniers Incidents</h4>
-        <table id="latestIncidentsTable" class="table table-striped table-bordered table-hover">
-            <thead class="table-dark">
-                <tr>
-                    <th>ID</th>
-                    <th>Début</th>
-                    <th>Fin</th>
-                    <th>Durée</th>
-                    <th>Itération</th>
-                    <th>Remarques</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for incident in latest_incidents %}
-                <tr>
-                    <td>{{ incident.id }}</td>
-                    <td>{{ incident.start_dt|date:"d/m/Y H:i" }}</td>
-                    <td>
-                        {% if incident.end_dt %}
-                            {{ incident.end_dt|date:"d/m/Y H:i" }}
-                        {% else %}
-                            <span class="text-danger">En cours</span>
-                        {% endif %}
-                    </td>
-                    <td>
-                        {% if incident.duration %}
-                            {{ incident.duration }}
-                        {% else %}
-                            --
-                        {% endif %}
-                    </td>
-                    <td>{{ incident.iteration }}</td>
-                    <td>
-                        {% if incident.remarks %}
-                            {{ incident.remarks }}
-                        {% else %}
-                            ---
-                        {% endif %}
-                    </td>
-                </tr>
-                {% empty %}
-                <tr>
-                    <td colspan="6" class="text-center">Aucun incident enregistré.</td>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
     </div>
 </div>
 {% endblock content %}
 
 {% block scripts %}
-<!-- Chart.js -->
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
-    // Initialisation du graphique des incidents
-    const ctx = document.getElementById('incidentsChart').getContext('2d');
-    const incidentsData = {
-        labels: [
-            {% for month in months %}
-                "{{ month }}",
-            {% endfor %}
-        ],
+    console.log("Dashboard JS chargé.");
+
+    // ========== Graphique 1 : Bar Chart ==========
+    const barCtx = document.getElementById('incidentsBarChart').getContext('2d');
+    const barData = {
+        labels: {{ months|safe }},    // ex: ["Jan 2025", "Fév 2025", "Mar 2025", ...]
         datasets: [{
-            label: 'Nombre d\'Incidents',
-            data: [
-                {% for count in incidents_per_month %}
-                    {{ count }},
-                {% endfor %}
-            ],
+            label: "Nombre d'Incidents",
+            data: {{ incidents_per_month|safe }}, // ex: [5, 8, 2, 6, ...]
             backgroundColor: 'rgba(54, 162, 235, 0.5)',
             borderColor: 'rgba(54, 162, 235, 1)',
             borderWidth: 1
         }]
     };
-    const incidentsChart = new Chart(ctx, {
+    new Chart(barCtx, {
         type: 'bar',
-        data: incidentsData,
+        data: barData,
         options: {
+            responsive: true,
+            maintainAspectRatio: false,
             scales: {
                 y: {
-                    beginAtZero: true,
-                    precision: 0
+                    beginAtZero: true
                 }
             },
             plugins: {
-                legend: {
-                    display: false
+                legend: { display: false }
+            }
+        }
+    });
+
+    // ========== Graphique 2 : Pie Chart ==========
+    const pieCtx = document.getElementById('incidentsPieChart').getContext('2d');
+    const pieData = {
+        labels: ['Incidents Résolus', 'Incidents en Cours'],
+        datasets: [{
+            data: [{{ resolved_incidents }}, {{ active_incidents }}],
+            backgroundColor: ['rgba(75, 192, 192, 0.5)', 'rgba(255, 99, 132, 0.5)'],
+            borderColor: ['rgba(75, 192, 192, 1)', 'rgba(255, 99, 132, 1)'],
+            borderWidth: 1
+        }]
+    };
+    new Chart(pieCtx, {
+        type: 'pie',
+        data: pieData,
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: { position: 'top' },
+                title: {
+                    display: true,
+                    text: 'Répartition des Incidents'
                 }
             }
         }
     });
 
-    // Initialisation de DataTables pour la table des derniers incidents
-    $(document).ready(function() {
-        $('#latestIncidentsTable').DataTable({
-            "language": {
-                "url": "https://cdn.datatables.net/plug-ins/1.13.4/i18n/fr-FR.json"
+    // ========== Graphique 3 : Line Chart ==========
+    const lineCtx = document.getElementById('incidentsLineChart').getContext('2d');
+    const lineData = {
+        labels: {{ months|safe }},
+        datasets: [{
+            label: 'Tendances des Incidents',
+            data: {{ incidents_per_month|safe }},
+            fill: false,
+            borderColor: 'rgb(75, 192, 192)',
+            tension: 0.1
+        }]
+    };
+    new Chart(lineCtx, {
+        type: 'line',
+        data: lineData,
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+
+    // ========== Graphique 4 : Dual Axis (Temp/Hum) + Zoom + Annotation ==========
+    const tempHumidityCtx = document.getElementById('tempHumidityChart').getContext('2d');
+    // dht_data : [{"temp":30,"hum":42,"dt":"2025-01-05T10:00:00Z"}, ...]
+    const dhtData = JSON.parse('{{ dht_data|escapejs }}');
+    const labelsTH = dhtData.map(item => item.dt);
+    const tempValues = dhtData.map(item => item.temp);
+    const humValues = dhtData.map(item => item.hum);
+
+    const myTempHumidityChart = new Chart(tempHumidityCtx, {
+        type: 'line',
+        data: {
+            labels: labelsTH,
+            datasets: [
+                {
+                    label: 'Température (°C)',
+                    data: tempValues,
+                    borderColor: 'rgb(255, 99, 132)',
+                    yAxisID: 'y'
+                },
+                {
+                    label: 'Humidité (%)',
+                    data: humValues,
+                    borderColor: 'rgb(54, 162, 235)',
+                    yAxisID: 'y1'
+                }
+            ]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            interaction: {
+                mode: 'index',
+                intersect: false
             },
-            "order": [[ 1, "desc" ]],
-            "pageLength": 5
-        });
+            scales: {
+                y: {
+                    type: 'linear',
+                    display: true,
+                    position: 'left',
+                    title: {
+                        display: true,
+                        text: 'Température (°C)'
+                    }
+                },
+                y1: {
+                    type: 'linear',
+                    display: true,
+                    position: 'right',
+                    title: {
+                        display: true,
+                        text: 'Humidité (%)'
+                    },
+                    grid: {
+                        drawOnChartArea: false
+                    }
+                }
+            },
+            plugins: {
+                // Activation du plugin d'annotation : exemple d'une ligne horizontale à 40°C
+                annotation: {
+                    annotations: {
+                        criticalTemp: {
+                            type: 'line',
+                            yMin: 40,
+                            yMax: 40,
+                            borderColor: 'red',
+                            borderWidth: 2,
+                            borderDash: [6, 4],
+                            label: {
+                                content: 'Seuil 40°C',
+                                enabled: true,
+                                position: 'end'
+                            }
+                        }
+                    }
+                },
+                // Activation du plugin zoom
+                zoom: {
+                    zoom: {
+                        wheel: {
+                            enabled: true
+                        },
+                        pinch: {
+                            enabled: true
+                        },
+                        mode: 'xy'
+                    },
+                    pan: {
+                        enabled: true,
+                        mode: 'xy'
+                    }
+                }
+            }
+        }
+    });
+
+    // Bouton "Réinitialiser Zoom"
+    const resetZoomBtn = document.getElementById('resetZoomBtn');
+    resetZoomBtn.addEventListener('click', () => {
+        myTempHumidityChart.resetZoom();
+    });
+
+    // Bouton "Télécharger en PNG"
+    const downloadChartBtn = document.getElementById('downloadChartBtn');
+    downloadChartBtn.addEventListener('click', () => {
+        // Génère une URL data: en PNG
+        const url = myTempHumidityChart.toBase64Image();
+        const link = document.createElement('a');
+        link.download = 'tempHumidityChart.png';
+        link.href = url;
+        link.click();
     });
 </script>
-{% endblock %}
+{% endblock scripts %}

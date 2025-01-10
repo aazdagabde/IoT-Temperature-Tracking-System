@@ -13,7 +13,7 @@ logger = logging.getLogger('DHT')
 from telepot.api import set_proxy
 
 # Configurer le proxy pour PythonAnywhere
-set_proxy('http://proxy.server:3128')
+#set_proxy('http://proxy.server:3128')
 
 def send_telegram_alert(bot_token, chat_id, message):
     try:

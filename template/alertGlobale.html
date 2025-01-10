@@ -1,0 +1,147 @@
+<!-- alertGlobale.html -->
+
+{% extends 'base.html' %}
+
+{% block title %}Paramètres des alertes globales{% endblock title %}
+
+{% block extra_css %}
+<style>
+    /* Styles spécifiques pour le formulaire */
+    .form-container {
+        background-color: #ffffff; /* Fond blanc */
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    }
+
+    .form-group {
+        margin-bottom: 1.5rem;
+    }
+
+    .form-label {
+        font-weight: 500;
+        color: #333333; /* Couleur du texte */
+    }
+
+    .form-control {
+        background-color: #f8f9fa; /* Fond clair pour les champs */
+        border: 1px solid #ced4da; /* Bordure légère */
+        border-radius: 5px;
+        padding: 0.75rem;
+        font-size: 1rem;
+        color: #495057; /* Couleur du texte */
+    }
+
+    .form-control:focus {
+        border-color: #80bdff; /* Bordure bleue au focus */
+        box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Effet de focus */
+    }
+
+    .form-check-input {
+        margin-top: 0.3rem;
+    }
+
+    .btn-custom {
+        background-color: #007bff; /* Bouton bleu */
+        border: none;
+        color: white;
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn-custom:hover {
+        background-color: #0056b3; /* Bouton bleu foncé au survol */
+    }
+
+    h2 {
+        color: #2c3e50; /* Couleur du titre */
+        margin-bottom: 1.5rem;
+    }
+
+    h4 {
+        color: #34495e; /* Couleur des sous-titres */
+        margin-bottom: 1rem;
+    }
+</style>
+{% endblock extra_css %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="form-container">
+        <h2>Paramètres des alertes globales</h2>
+
+        <!-- Formulaire pour les paramètres des alertes -->
+        <form method="post">
+            {% csrf_token %}
+
+            <!-- Section pour le token Telegram -->
+            <div class="mb-4">
+                <h4>Configuration Telegram</h4>
+                <div class="form-group">
+                    <label for="telegram_token" class="form-label">Token du bot Telegram</label>
+                    <input type="text" class="form-control" id="telegram_token" name="telegram_token" value="{{ form.telegram_token.value|default_if_none:'' }}">
+                </div>
+                <div class="form-group">
+                    <label for="telegram_bot_link" class="form-label">Lien du bot Telegram</label>
+                    <input type="text" class="form-control" id="telegram_bot_link" name="telegram_bot_link" value="{{ form.telegram_bot_link.value|default_if_none:'' }}">
+                    <small class="form-text text-muted">
+                        Le lien du bot Telegram que les utilisateurs utiliseront pour s'abonner aux alertes.
+                    </small>
+                </div>
+            </div>
+
+            <!-- Section pour les paramètres SMTP -->
+            <div class="mb-4">
+                <h4>Configuration SMTP pour les e-mails</h4>
+                <div class="form-group">
+                    <label for="smtp_host" class="form-label">Serveur SMTP</label>
+                    <input type="text" class="form-control" id="smtp_host" name="smtp_host" value="{{ form.smtp_host.value|default_if_none:'' }}">
+                </div>
+                <div class="form-group">
+                    <label for="smtp_port" class="form-label">Port SMTP</label>
+                    <input type="number" class="form-control" id="smtp_port" name="smtp_port" value="{{ form.smtp_port.value|default_if_none:'' }}">
+                </div>
+                <div class="form-group">
+                    <label for="smtp_user" class="form-label">Utilisateur SMTP</label>
+                    <input type="text" class="form-control" id="smtp_user" name="smtp_user" value="{{ form.smtp_user.value|default_if_none:'' }}">
+                </div>
+                <div class="form-group">
+                    <label for="smtp_password" class="form-label">Mot de passe SMTP</label>
+                    <input type="password" class="form-control" id="smtp_password" name="smtp_password" value="{{ form.smtp_password.value|default_if_none:'' }}">
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="smtp_use_tls" name="smtp_use_tls" {% if form.smtp_use_tls.value %}checked{% endif %}>
+                    <label class="form-check-label" for="smtp_use_tls">Utiliser TLS</label>
+                </div>
+            </div>
+
+            <!-- Section pour les températures -->
+            <div class="mb-4">
+                <h4>Configuration des températures</h4>
+                <div class="form-group">
+                    <label for="min_temperature" class="form-label">Température minimale</label>
+                    <input type="number" step="0.1" class="form-control" id="min_temperature" name="min_temperature" value="{{ form.min_temperature.value|default_if_none:'' }}">
+                </div>
+                <div class="form-group">
+                    <label for="max_temperature" class="form-label">Température maximale</label>
+                    <input type="number" step="0.1" class="form-control" id="max_temperature" name="max_temperature" value="{{ form.max_temperature.value|default_if_none:'' }}">
+                </div>
+            </div>
+
+            <!-- Section pour le message d'alerte -->
+            <div class="mb-4">
+                <h4>Message d'alerte</h4>
+                <div class="form-group">
+                    <label for="alert_message" class="form-label">Message d'alerte par défaut</label>
+                    <textarea class="form-control" id="alert_message" name="alert_message" rows="4">{{ form.alert_message.value|default_if_none:'' }}</textarea>
+                </div>
+            </div>
+
+            <!-- Bouton de soumission -->
+            <button type="submit" class="btn btn-custom">Enregistrer les paramètres</button>
+        </form>
+    </div>
+</div>
+{% endblock content %}

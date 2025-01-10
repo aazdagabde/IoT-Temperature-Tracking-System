@@ -5,7 +5,7 @@ from django.contrib.auth import views as auth_views
 
 from django.conf.urls import handler404
 from .views import custom_404_view
-
+from .views import alert_globale_view ,stop_alerts
 handler404 =custom_404_view
 
 urlpatterns = [
@@ -44,4 +44,6 @@ urlpatterns = [
     path('export/incidents/pdf/', views.export_incidents_pdf, name='export_incidents_pdf'),
     path('export_pdf_data/', views.export_pdf_data, name='export_pdf_data'),
 
+    path('alert-globale/', alert_globale_view, name='alert_globale_view'),
+    path('stop-alerts/', stop_alerts, name='stop_alerts')
 ]

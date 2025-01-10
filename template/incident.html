@@ -1,5 +1,8 @@
+<!-- incident.html -->
+
 {% extends 'base.html' %}
 {% load static %}
+{% load group_filters %}  <!-- Charger le filtre personnalisé -->
 
 {% block content %}
 <div class="container my-5">
@@ -44,6 +47,24 @@
                 <i class="fas fa-info-circle me-2"></i> Vous avez déjà acquitté cet incident.
             </div>
         {% endif %}
+    {% endif %}
+
+    <!-- Bouton "Arrêter/Activer les alertes" pour les admins -->
+    {% if request.user|has_group:"admin" %}
+        <div class="d-flex justify-content-center mt-4">
+            <form method="POST" action="{% url 'stop_alerts' %}">
+                {% csrf_token %}
+                {% if settings.alerts_enabled %}
+                    <button type="submit" class="btn btn-danger d-flex align-items-center" data-bs-toggle="tooltip" data-bs-placement="top" title="Arrêter toutes les alertes">
+                        <i class="fas fa-stop-circle me-2"></i> Arrêter les alertes
+                    </button>
+                {% else %}
+                    <button type="submit" class="btn btn-success d-flex align-items-center" data-bs-toggle="tooltip" data-bs-placement="top" title="Activer les alertes">
+                        <i class="fas fa-play-circle me-2"></i> Activer les alertes
+                    </button>
+                {% endif %}
+            </form>
+        </div>
     {% endif %}
 
     <!-- Bouton Historique des Incidents -->

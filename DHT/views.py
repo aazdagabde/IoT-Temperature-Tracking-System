@@ -161,14 +161,16 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from django.utils import timezone
 from django.contrib import messages
-from .models import Dht11, Incident ,Profile, Acknowledgment
-
+from .models import Dht11, Incident, Profile, Acknowledgment, GlobalAlertSettings
 from .alerts import send_telegram_alert, send_whatsapp_alert, send_email_alert
 
 @login_required
 def incident(request):
-    # On récupère le plus récent incident "en cours" (end_dt est null)
+    # Récupérer le plus récent incident "en cours" (end_dt est null)
     open_incident = Incident.objects.filter(end_dt__isnull=True).order_by('-start_dt').first()
+
+    # Récupérer les paramètres globaux des alertes
+    settings = GlobalAlertSettings.objects.first()
 
     # Par défaut
     flag_color = 'green'
@@ -208,13 +210,14 @@ def incident(request):
             user=request.user
         ).exists()
 
-    # On renvoie 'open_incident' dans le contexte pour y accéder dans incident.html
+    # On renvoie 'open_incident' et 'settings' dans le contexte pour y accéder dans incident.html
     return render(request, 'incident.html', {
         'flag': flag_color,
         'message': message,
         'incident_in_progress': incident_in_progress,
         'user_acknowledged': user_acknowledged,
         'open_incident': open_incident,  # IMPORTANT
+        'settings': settings,  # Passer les paramètres globaux au template
     })
 
 ####################3333333333333
@@ -280,58 +283,70 @@ def alertConf_view(request):
         messages.success(request, "Paramètres mis à jour avec succès.")
         return redirect('alertConf_view')
 
-    return render(request, 'alertConf.html', {'profile': profile})
+    # Récupérer le lien du bot Telegram depuis les paramètres globaux
+    global_settings = GlobalAlertSettings.objects.first()
+    profile.telegram_bot_link = global_settings.telegram_bot_link if global_settings else ""
 
+    return render(request, 'alertConf.html', {'profile': profile})
 def custom_logout(request):
     logout(request)
     return redirect('/')
 
 
 ##########################################""
-# DHT/views.py
+from collections import defaultdict
+from datetime import datetime
+from django.core.serializers.json import DjangoJSONEncoder
+import json
 
 from django.shortcuts import render
-from django.contrib.auth.decorators import login_required, user_passes_test
-from django.contrib.auth.models import User, Group
-from django.utils import timezone
-from datetime import timedelta, datetime
-from collections import defaultdict
-from .models import Incident
+from django.contrib.auth.models import User
+from django.contrib.auth.decorators import login_required
 
-def is_admin(user):
-    return user.is_authenticated and user.groups.filter(name='admin').exists()
+# Importez vos modèles depuis votre application
+from .models import Incident, Dht11
 
-@login_required
-@user_passes_test(is_admin)
+@login_required  # Facultatif si vous voulez que seules les personnes connectées accèdent au dashboard
 def dashboard(request):
-    # Statistiques
-    total_users = User.objects.count()
-    total_incidents = Incident.objects.count()
-    active_incidents = Incident.objects.filter(end_dt__isnull=True).count()
-    latest_incidents = Incident.objects.order_by('-start_dt')[:5]
-
-    # Données pour le graphique (Nombre d'incidents par mois)
+    # 1. Comptabiliser les incidents par mois
     incidents_per_month = defaultdict(int)
     for incident in Incident.objects.all():
+        # Exemple: "Jan 2025", "Feb 2025", etc.
         month_label = incident.start_dt.strftime('%b %Y')
         incidents_per_month[month_label] += 1
 
-    # Trier les mois chronologiquement
-    sorted_months = sorted(incidents_per_month.keys(), key=lambda x: datetime.strptime(x, '%b %Y'))
-    sorted_counts = [incidents_per_month[month] for month in sorted_months]
+    # 2. Trier les labels de mois chronologiquement
+    #    (nécessite la fonction datetime.strptime pour retransformer '%b %Y' en objet datetime)
+    sorted_months = sorted(
+        incidents_per_month.keys(),
+        key=lambda x: datetime.strptime(x, '%b %Y')
+    )
+    sorted_counts = [incidents_per_month[m] for m in sorted_months]
 
+    # 3. Récupérer les dernières mesures DHT (température, humidité, date)
+    dht_data = list(
+        Dht11.objects
+             .values('temp', 'hum', 'dt')
+             .order_by('-dt')[:20]
+    )
+    # Note: [:20] -> on limite aux 20 dernières mesures (vous pouvez ajuster)
+
+    # 4. Contexte pour le template
     context = {
-        'total_users': total_users,
-        'total_incidents': total_incidents,
-        'active_incidents': active_incidents,
-        'latest_incidents': latest_incidents,
-        'months': sorted_months,
-        'incidents_per_month': sorted_counts,
+        'total_users': User.objects.count(),
+        'total_incidents': Incident.objects.count(),
+        'active_incidents': Incident.objects.filter(end_dt__isnull=True).count(),
+        'resolved_incidents': Incident.objects.filter(end_dt__isnull=False).count(),
+
+        # Convertir les listes Python en JSON pour Chart.js
+        'months': json.dumps(sorted_months),
+        'incidents_per_month': json.dumps(sorted_counts),
+
+        # Exemple: [{"temp": 25, "hum": 45, "dt": "2025-01-05T10:30:00Z"}, ...]
+        'dht_data': json.dumps(dht_data, cls=DjangoJSONEncoder),
     }
-
     return render(request, 'dashboard.html', context)
-
-
+##################################
 #def is_admin(user):
 #    return user.groups.filter(name='admin').exists()
 
@@ -472,9 +487,9 @@ def export_incidents_pdf(request):
     })
 
     # Sur PythonAnywhere, wkhtmltopdf se trouve généralement ici :
-    config = pdfkit.configuration(wkhtmltopdf='/usr/bin/wkhtmltopdf')
+    #config = pdfkit.configuration(wkhtmltopdf='/usr/bin/wkhtmltopdf')
     #Sur windows
-    #config = pdfkit.configuration(wkhtmltopdf=r'C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe')
+    config = pdfkit.configuration(wkhtmltopdf=r'C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe')
 
 
     # Générer le PDF en mémoire (False signifie "ne pas écrire sur disque")
@@ -555,9 +570,9 @@ def export_pdf_data(request):
     # 2) Configurer pdfkit
     # Sur PythonAnywhere ou Linux : /usr/bin/wkhtmltopdf
 
-    config = pdfkit.configuration(wkhtmltopdf='/usr/bin/wkhtmltopdf')
+    #config = pdfkit.configuration(wkhtmltopdf='/usr/bin/wkhtmltopdf')
     # sur windows
-    #config = pdfkit.configuration(wkhtmltopdf=r'C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe')
+    config = pdfkit.configuration(wkhtmltopdf=r'C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe')
 
 
     # 3) Générer le PDF en bytes (False = on ne sauvegarde pas de fichier temporaire)
@@ -574,3 +589,53 @@ from django.shortcuts import render
 
 def custom_404_view(request, exception):
     return render(request, '404.html', status=404)
+
+###################""
+
+# DHT/views.py
+
+from django.shortcuts import render, redirect
+from django.contrib import messages
+from .forms import GlobalAlertSettingsForm
+from .models import GlobalAlertSettings
+
+
+@login_required
+def alert_globale_view(request):
+    # Récupérer ou créer les paramètres globaux
+    settings, created = GlobalAlertSettings.objects.get_or_create()
+
+    if request.method == 'POST':
+        form = GlobalAlertSettingsForm(request.POST, instance=settings)
+        if form.is_valid():
+            form.save()
+            messages.success(request, "Paramètres globaux mis à jour avec succès.")
+            return redirect('alert_globale_view')
+    else:
+        form = GlobalAlertSettingsForm(instance=settings)
+
+    return render(request, 'alertGlobale.html', {'form': form})
+#######################
+from django.shortcuts import redirect
+from django.contrib import messages
+from django.contrib.auth.decorators import login_required, user_passes_test
+
+@login_required
+@user_passes_test(lambda u: u.groups.filter(name='admin').exists())
+def stop_alerts(request):
+    # Récupérer les paramètres globaux
+    settings = GlobalAlertSettings.objects.first()
+    if settings:
+        # Basculer l'état des alertes
+        settings.alerts_enabled = not settings.alerts_enabled
+        settings.save()
+
+        # Afficher un message en fonction de l'état
+        if settings.alerts_enabled:
+            messages.success(request, "Les alertes ont été activées.")
+        else:
+            messages.success(request, "Les alertes ont été désactivées.")
+    else:
+        messages.error(request, "Aucun paramètre global trouvé.")
+
+    return redirect('incident')

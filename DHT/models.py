@@ -44,6 +44,7 @@ class Acknowledgment(models.Model):
         return f"{self.user.username} a acquitté l'incident {self.incident.id}"
 
 
+
 class Profile(models.Model):
     """
     Extension de l’utilisateur pour stocker les identifiants d’alerte
@@ -51,11 +52,29 @@ class Profile(models.Model):
     """
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     telegram_id = models.CharField(max_length=255, null=True, blank=True)
+    telegram_bot_link = models.CharField(max_length=255, null=True, blank=True, help_text="Lien du bot Telegram")
     twilio_account_sid = models.CharField(max_length=255, null=True, blank=True)
     twilio_auth_token = models.CharField(max_length=255, null=True, blank=True)
     whatsapp_number = models.CharField(max_length=50, null=True, blank=True)
 
-    # Ajoutez d’autres champs si besoin
-
     def __str__(self):
         return f"Profil de {self.user.username}"
+
+###############""
+
+
+class GlobalAlertSettings(models.Model):
+    telegram_token = models.CharField(max_length=255, null=True, blank=True, help_text="Token du bot Telegram")
+    telegram_bot_link = models.CharField(max_length=255, null=True, blank=True, help_text="Lien du bot Telegram")
+    smtp_host = models.CharField(max_length=255, null=True, blank=True, help_text="Adresse du serveur SMTP")
+    smtp_port = models.IntegerField(null=True, blank=True, help_text="Port SMTP")
+    smtp_user = models.CharField(max_length=255, null=True, blank=True, help_text="Utilisateur SMTP")
+    smtp_password = models.CharField(max_length=255, null=True, blank=True, help_text="Mot de passe SMTP")
+    smtp_use_tls = models.BooleanField(default=True, help_text="Utiliser TLS pour SMTP")
+    alert_message = models.TextField(null=True, blank=True, help_text="Message d'alerte par défaut")
+    min_temperature = models.FloatField(null=True, blank=True, help_text="Température minimale pour déclencher une alerte")
+    max_temperature = models.FloatField(null=True, blank=True, help_text="Température maximale pour déclencher une alerte")
+    alerts_enabled = models.BooleanField(default=True, help_text="Activer ou désactiver les alertes")
+
+    def __str__(self):
+        return "Paramètres globaux des alertes"

@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+{% block title %}Ajouter une Mesure{% endblock %}
+{% block content %}
+<div class="container my-5">
+    <h2 class="text-center mb-4">Ajouter une Mesure</h2>
+
+    <!-- Affichage des messages -->
+    {% if messages %}
+    <div class="mb-4">
+        {% for message in messages %}
+        <div class="alert {% if message.tags == 'success' %}alert-success{% else %}alert-danger{% endif %}">
+            {{ message }}
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    <!-- Formulaire pour soumettre des données -->
+    <div class="card mb-4 hover-effect">
+        <div class="card-body">
+            <form method="POST" action="{% url 'api_post' %}" onsubmit="return validateForm()">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label for="temp" class="form-label">Température (°C)</label>
+                    <input type="number" step="0.1" class="form-control" id="temp" name="temp" required>
+                </div>
+                <div class="mb-3">
+                    <label for="hum" class="form-label">Humidité (%)</label>
+                    <input type="number" step="0.1" class="form-control" id="hum" name="hum" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Soumettre</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Affichage des dernières mesures -->
+    <div class="card mb-4 hover-effect">
+        <div class="card-body">
+            <h5 class="card-title text-center">Dernières Mesures</h5>
+            <div class="table-responsive">
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Température (°C)</th>
+                            <th>Humidité (%)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for measure in latest_measures %}
+                        <tr>
+                            <td>{{ measure.dt|date:"d/m/Y H:i" }}</td>
+                            <td>{{ measure.temp }}</td>
+                            <td>{{ measure.hum }}</td>
+                        </tr>
+                        {% empty %}
+                        <tr>
+                            <td colspan="3" class="text-center">Aucune mesure enregistrée.</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Liens de navigation -->
+    <div class="text-center">
+        <a href="{% url 'value_view' %}" class="btn btn-secondary me-2">
+            <i class="fas fa-arrow-left"></i> Retour à l'accueil
+        </a>
+        <a href="{% url 'dashboard' %}" class="btn btn-info">
+            <i class="fas fa-chart-line"></i> Tableau de bord
+        </a>
+    </div>
+</div>
+
+<!-- Validation côté client -->
+<script>
+    function validateForm() {
+        const temp = document.getElementById('temp').value;
+        const hum = document.getElementById('hum').value;
+
+        if (temp === "" || hum === "") {
+            alert("Veuillez remplir tous les champs.");
+            return false;
+        }
+
+        if (isNaN(temp) || isNaN(hum)) {
+            alert("La température et l'humidité doivent être des nombres.");
+            return false;
+        }
+
+        return true;
+    }
+</script>
+{% endblock content %}
