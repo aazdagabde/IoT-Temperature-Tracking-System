@@ -2,20 +2,30 @@
 {% block content %}
 <div class="container mt-5">
   <div class="row justify-content-center">
-    <div class="col-md-4">
-      <h3 class="text-center">Connexion</h3>
-      <form method="post">
-        {% csrf_token %}
-        <div class="form-group mb-3">
-          <label for="username">Nom d'utilisateur :</label>
-          <input type="text" class="form-control" id="username" name="username">
+    <div class="col-md-6">
+      <div class="card shadow-lg p-4">
+        <h3 class="text-center mb-4">Connexion</h3>
+        <form method="post">
+          {% csrf_token %}
+          <div class="form-group mb-3">
+            <label for="username" class="form-label">
+              <i class="fas fa-user"></i> Nom d'utilisateur :
+            </label>
+            <input type="text" class="form-control" id="username" name="username" required>
+          </div>
+          <div class="form-group mb-3">
+            <label for="password" class="form-label">
+              <i class="fas fa-lock"></i> Mot de passe :
+            </label>
+            <input type="password" class="form-control" id="password" name="password" required>
+          </div>
+          <button type="submit" class="btn btn-custom w-100 btn-lg">Se connecter</button>
+        </form>
+        <div class="text-center mt-3">
+          <a href="{% url 'forgot_password' %}" class="text-decoration-none">Mot de passe oublié ?</a>
+
         </div>
-        <div class="form-group mb-3">
-          <label for="password">Mot de passe :</label>
-          <input type="password" class="form-control" id="password" name="password">
-        </div>
-        <button type="submit" class="btn btn-primary w-100">Se connecter</button>
-      </form>
+      </div>
     </div>
   </div>
 </div>

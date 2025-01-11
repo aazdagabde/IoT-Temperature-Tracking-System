@@ -1,24 +1,22 @@
-<!-- incident.html -->
-
 {% extends 'base.html' %}
 {% load static %}
-{% load group_filters %}  <!-- Charger le filtre personnalisé -->
+{% load group_filters %}
 
 {% block content %}
 <div class="container my-5">
-    <h2 class="text-center mb-4">
+    <h2 class="text-center mb-4 animate__animated animate__fadeInDown">
         <i class="fas fa-exclamation-triangle text-warning me-2"></i> Gestion des Incidents
     </h2>
 
     <!-- Drapeau et Message -->
-    <div class="d-flex flex-column align-items-center mb-4">
+    <div class="d-flex flex-column align-items-center mb-4 animate__animated animate__fadeInUp">
         {% if incident_in_progress %}
             <img src="{% static 'images/red_flag.png' %}" alt="Drapeau rouge" width="100" class="mb-3">
             <div class="alert alert-danger d-flex align-items-center text-center" role="alert" style="width: 100%; max-width: 500px;">
                 <i class="fas fa-times-circle me-2"></i> {{ message }}
             </div>
         {% else %}
-            <img src="{% static 'images/green_flag.png' %}" alt="Drapeau vert" width="100" class="mb-3">
+            <img src="{% static 'images/green_flag1.png' %}" alt="Drapeau vert" width="150" class="mb-3">
             <div class="alert alert-success d-flex align-items-center text-center" role="alert" style="width: 100%; max-width: 500px;">
                 <i class="fas fa-check-circle me-2"></i> {{ message }}
             </div>
@@ -28,7 +26,7 @@
     <!-- Formulaire d'Acquittement ou Message -->
     {% if incident_in_progress %}
         {% if not user_acknowledged %}
-            <div class="d-flex justify-content-center">
+            <div class="d-flex justify-content-center animate__animated animate__fadeInUp">
                 <form method="POST" class="w-100" style="max-width: 500px;">
                     {% csrf_token %}
                     <div class="mb-3">
@@ -43,7 +41,7 @@
                 </form>
             </div>
         {% else %}
-            <div class="alert alert-info d-flex align-items-center justify-content-center" role="alert">
+            <div class="alert alert-info d-flex align-items-center justify-content-center animate__animated animate__fadeInUp" role="alert">
                 <i class="fas fa-info-circle me-2"></i> Vous avez déjà acquitté cet incident.
             </div>
         {% endif %}
@@ -51,7 +49,7 @@
 
     <!-- Bouton "Arrêter/Activer les alertes" pour les admins -->
     {% if request.user|has_group:"admin" %}
-        <div class="d-flex justify-content-center mt-4">
+        <div class="d-flex justify-content-center mt-4 animate__animated animate__fadeInUp">
             <form method="POST" action="{% url 'stop_alerts' %}">
                 {% csrf_token %}
                 {% if settings.alerts_enabled %}
@@ -68,7 +66,7 @@
     {% endif %}
 
     <!-- Bouton Historique des Incidents -->
-    <div class="d-flex justify-content-center mt-4">
+    <div class="d-flex justify-content-center mt-4 animate__animated animate__fadeInUp">
         <a href="{% url 'log_incident' %}" class="btn btn-secondary d-flex align-items-center" data-bs-toggle="tooltip" data-bs-placement="top" title="Consulter l'historique des incidents">
             <i class="fas fa-history me-2"></i> Historique des Incidents
         </a>

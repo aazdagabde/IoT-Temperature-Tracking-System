@@ -2,24 +2,26 @@
 {% block content %}
 <div class="container mt-5">
   <div class="row justify-content-center">
-    <div class="col-md-4">
-      <h3 class="text-center">Ajouter un utilisateur</h3>
-      <form method="post">
-        {% csrf_token %}
-        <div class="form-group mb-3">
-          <label for="username">Nom d'utilisateur :</label>
-          <input type="text" class="form-control" id="username" name="username">
-        </div>
-        <div class="form-group mb-3">
-          <label for="email">Email :</label>
-          <input type="email" class="form-control" id="email" name="email">
-        </div>
-        <div class="form-group mb-3">
-          <label for="password">Mot de passe :</label>
-          <input type="password" class="form-control" id="password" name="password">
-        </div>
-        <button type="submit" class="btn btn-primary w-100">Ajouter</button>
-      </form>
+    <div class="col-md-6">
+      <div class="card shadow-lg p-4">
+        <h3 class="text-center mb-4">Ajouter un utilisateur</h3>
+        <form method="post">
+          {% csrf_token %}
+          <div class="form-group mb-3">
+            <label for="username" class="form-label">Nom d'utilisateur :</label>
+            <input type="text" class="form-control" id="username" name="username" required>
+          </div>
+          <div class="form-group mb-3">
+            <label for="email" class="form-label">Email :</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+          </div>
+          <div class="form-group mb-3">
+            <label for="password" class="form-label">Mot de passe :</label>
+            <input type="password" class="form-control" id="password" name="password" required>
+          </div>
+          <button type="submit" class="btn btn-primary w-100 btn-lg">Ajouter</button>
+        </form>
+      </div>
     </div>
   </div>
 </div>

@@ -5,8 +5,9 @@
 <div class="container my-5">
     <h2 class="text-center mb-4">Dashboard Administratif</h2>
 
-    <!-- Cartes Statistiques (3 colonnes sur desktop, 1 sur mobile) -->
-    <div class="row row-cols-1 row-cols-md-3 g-4 mb-4">
+    <!-- Cartes Statistiques (4 colonnes sur desktop, 1 sur mobile) -->
+    <div class="row row-cols-1 row-cols-md-4 g-4 mb-4">
+        <!-- Carte 1 : Utilisateurs -->
         <div class="col">
             <div class="card text-white bg-primary mb-3 hover-effect">
                 <div class="card-body">
@@ -18,25 +19,42 @@
                 </div>
             </div>
         </div>
+
+        <!-- Carte 2 : Incidents Actifs -->
+        <div class="col">
+            <div class="card text-white bg-danger mb-3 hover-effect">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <i class="fas fa-exclamation-triangle fa-2x me-2"></i>
+                        Incidents Actifs
+                    </h5>
+                    <p class="card-text fs-4">{{ active_incidents }}</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Carte 3 : Incidents Résolus -->
         <div class="col">
             <div class="card text-white bg-success mb-3 hover-effect">
                 <div class="card-body">
                     <h5 class="card-title">
-                        <i class="fas fa-clipboard-list fa-2x me-2"></i>
-                        Incidents
+                        <i class="fas fa-check-circle fa-2x me-2"></i>
+                        Incidents Résolus
                     </h5>
-                    <p class="card-text fs-4">{{ total_incidents }}</p>
+                    <p class="card-text fs-4">{{ resolved_incidents }}</p>
                 </div>
             </div>
         </div>
+
+        <!-- Carte 4 : Temps Moyen de Résolution -->
         <div class="col">
             <div class="card text-white bg-warning mb-3 hover-effect">
                 <div class="card-body">
-                    <h5 class="card-title text-dark">
-                        <i class="fas fa-exclamation-triangle fa-2x me-2"></i>
-                        Incidents en Cours
+                    <h5 class="card-title">
+                        <i class="fas fa-clock fa-2x me-2"></i>
+                        Temps Moyen de Résolution
                     </h5>
-                    <p class="card-text fs-4 text-dark">{{ active_incidents }}</p>
+                    <p class="card-text fs-4">{{ average_resolution_time }}</p>
                 </div>
             </div>
         </div>

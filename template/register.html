@@ -2,29 +2,89 @@
 {% block content %}
 <div class="container mt-5">
   <div class="row justify-content-center">
-    <div class="col-md-4">
-      <h3 class="text-center">Inscription</h3>
-      <form method="post">
-        {% csrf_token %}
-        <div class="form-group mb-3">
-          <label for="username">Nom d'utilisateur :</label>
-          <input type="text" class="form-control" id="username" name="username">
+    <div class="col-md-6">
+      <div class="card shadow-lg p-4">
+        <h3 class="text-center mb-4">Inscription</h3>
+        <form method="post">
+          {% csrf_token %}
+          <div class="form-group mb-3">
+            <label for="username" class="form-label">
+              <i class="fas fa-user"></i> Nom d'utilisateur :
+            </label>
+            <input type="text" class="form-control" id="username" name="username" required>
+            <small class="text-danger" id="username-error"></small>
+          </div>
+          <div class="form-group mb-3">
+            <label for="email" class="form-label">
+              <i class="fas fa-envelope"></i> Email :
+            </label>
+            <input type="email" class="form-control" id="email" name="email" required>
+            <small class="text-danger" id="email-error"></small>
+          </div>
+          <div class="form-group mb-3">
+            <label for="first_name" class="form-label">
+              <i class="fas fa-id-card"></i> Prénom :
+            </label>
+            <input type="text" class="form-control" id="first_name" name="first_name" required>
+          </div>
+          <div class="form-group mb-3">
+            <label for="last_name" class="form-label">
+              <i class="fas fa-id-card"></i> Nom :
+            </label>
+            <input type="text" class="form-control" id="last_name" name="last_name" required>
+          </div>
+          <div class="form-group mb-3">
+            <label for="password" class="form-label">
+              <i class="fas fa-lock"></i> Mot de passe :
+            </label>
+            <input type="password" class="form-control" id="password" name="password" required>
+            <small class="text-danger" id="password-error"></small>
+          </div>
+          <div class="form-group mb-3">
+            <label for="password_confirm" class="form-label">
+              <i class="fas fa-lock"></i> Confirmer le mot de passe :
+            </label>
+            <input type="password" class="form-control" id="password_confirm" name="password_confirm" required>
+            <small class="text-danger" id="password-confirm-error"></small>
+          </div>
+          <button type="submit" class="btn btn-primary w-100 btn-lg">S'inscrire</button>
+        </form>
+        <div class="text-center mt-3">
+          <p>Déjà inscrit ? <a href="{% url 'login' %}" class="text-decoration-none">Connectez-vous ici</a></p>
         </div>
-        <div class="form-group mb-3">
-          <label for="email">Email :</label>
-          <input type="email" class="form-control" id="email" name="email">
-        </div>
-        <div class="form-group mb-3">
-          <label for="password">Mot de passe :</label>
-          <input type="password" class="form-control" id="password" name="password">
-        </div>
-        <div class="form-group mb-3">
-          <label for="password_confirm">Confirmer le mot de passe :</label>
-          <input type="password" class="form-control" id="password_confirm" name="password_confirm">
-        </div>
-        <button type="submit" class="btn btn-primary w-100">S'inscrire</button>
-      </form>
+      </div>
     </div>
   </div>
 </div>
+
+<!-- Script pour la validation en temps réel -->
+<script>
+  document.getElementById('username').addEventListener('input', function() {
+    const usernameError = document.getElementById('username-error');
+    if (this.value.length < 3) {
+      usernameError.textContent = 'Le nom d\'utilisateur doit contenir au moins 3 caractères.';
+    } else {
+      usernameError.textContent = '';
+    }
+  });
+
+  document.getElementById('password').addEventListener('input', function() {
+    const passwordError = document.getElementById('password-error');
+    if (this.value.length < 8) {
+      passwordError.textContent = 'Le mot de passe doit contenir au moins 8 caractères.';
+    } else {
+      passwordError.textContent = '';
+    }
+  });
+
+  document.getElementById('password_confirm').addEventListener('input', function() {
+    const passwordConfirmError = document.getElementById('password-confirm-error');
+    const password = document.getElementById('password').value;
+    if (this.value !== password) {
+      passwordConfirmError.textContent = 'Les mots de passe ne correspondent pas.';
+    } else {
+      passwordConfirmError.textContent = '';
+    }
+  });
+</script>
 {% endblock %}

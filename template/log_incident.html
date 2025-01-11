@@ -111,12 +111,12 @@
 
 {% block content %}
 <div class="container my-5">
-  <h2 class="text-center mb-4">
+  <h2 class="text-center mb-4 animate__animated animate__fadeInDown">
     <i class="fas fa-history text-primary me-2"></i> Historique des Incidents
   </h2>
 
   <!-- Boutons de filtrage par période -->
-  <div class="d-flex justify-content-center mb-4">
+  <div class="d-flex justify-content-center mb-4 animate__animated animate__fadeInUp">
     <div class="btn-group" role="group">
       <a href="?filter=jour"
          class="btn btn-outline-primary btn-sm {% if request.GET.filter == 'jour' %}active{% endif %}">
@@ -143,7 +143,7 @@
   </div>
 
   <!-- Table des incidents -->
-  <table class="table table-bordered table-hover"
+  <table class="table table-bordered table-hover animate__animated animate__fadeInUp"
          id="tableIncidents"
          data-toggle="table"
          data-search="true"
@@ -217,7 +217,7 @@
     </tbody>
   </table>
 
-  <div class="d-flex justify-content-center mb-3">
+  <div class="d-flex justify-content-center mb-3 animate__animated animate__fadeInUp">
     <!-- Le paramètre 'filter' est transmis dans l'URL -->
     <a href="{% url 'export_incidents_excel' %}?filter={{ filter_param }}"
        class="btn btn-success me-2">
@@ -230,7 +230,7 @@
   </div>
 
   <!-- Bouton Retour à la page des incidents -->
-  <div class="d-flex justify-content-center mt-4">
+  <div class="d-flex justify-content-center mt-4 animate__animated animate__fadeInUp">
     <a href="{% url 'incident' %}" class="btn btn-secondary d-flex align-items-center">
       <i class="fas fa-arrow-left me-2"></i> Retour à la Gestion des Incidents
     </a>

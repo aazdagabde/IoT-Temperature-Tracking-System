@@ -15278,3 +15278,667 @@ INFO 2025-01-10 03:16:25,483 basehttp "GET /index/ HTTP/1.1" 200 13783
 INFO 2025-01-10 03:16:27,137 basehttp "GET / HTTP/1.1" 200 16739
 INFO 2025-01-10 03:16:59,970 autoreload C:\Users\aabde\OneDrive\Desktop\DHT11project-master\DHT11project-master\DHT\api.py changed, reloading.
 INFO 2025-01-10 03:17:01,270 autoreload Watching for file changes with StatReloader
+INFO 2025-01-10 03:33:34,674 autoreload Watching for file changes with StatReloader
+INFO 2025-01-10 03:33:40,304 basehttp "GET / HTTP/1.1" 200 16739
+INFO 2025-01-10 03:33:42,334 basehttp "GET /index/ HTTP/1.1" 200 13784
+INFO 2025-01-10 03:33:49,115 basehttp "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-01-10 03:33:49,140 basehttp "GET / HTTP/1.1" 200 16739
+INFO 2025-01-10 03:33:52,904 basehttp "GET /index/ HTTP/1.1" 302 0
+INFO 2025-01-10 03:33:52,934 basehttp "GET /login/?next=/index/ HTTP/1.1" 200 7762
+INFO 2025-01-10 03:34:03,917 basehttp "POST /login/?next=/index/ HTTP/1.1" 302 0
+INFO 2025-01-10 03:34:04,000 basehttp "GET /index/ HTTP/1.1" 200 14841
+INFO 2025-01-10 03:34:14,161 basehttp "GET /index/ HTTP/1.1" 200 14841
+INFO 2025-01-10 03:34:17,280 basehttp "GET /alert-globale/ HTTP/1.1" 200 16902
+INFO 2025-01-10 03:36:35,610 basehttp "GET /alert-globale/ HTTP/1.1" 200 16902
+INFO 2025-01-10 03:36:49,658 basehttp "GET /alert-globale/ HTTP/1.1" 200 16902
+INFO 2025-01-10 03:36:52,418 basehttp "GET /alertConf/ HTTP/1.1" 200 15017
+INFO 2025-01-11 20:04:31,874 autoreload Watching for file changes with StatReloader
+INFO 2025-01-11 20:04:53,182 basehttp "GET / HTTP/1.1" 200 16739
+INFO 2025-01-11 20:04:53,271 basehttp "GET /static/images/image.png HTTP/1.1" 304 0
+INFO 2025-01-11 20:04:53,289 basehttp "GET /static/images/bousslama.jpeg HTTP/1.1" 304 0
+INFO 2025-01-11 20:04:53,337 basehttp "GET /static/images/aazdag.jpg HTTP/1.1" 304 0
+INFO 2025-01-11 20:04:53,339 basehttp "GET /static/images/Python.png HTTP/1.1" 304 0
+INFO 2025-01-11 20:04:53,351 basehttp "GET /static/images/Bootsrap.png HTTP/1.1" 304 0
+INFO 2025-01-11 20:04:53,356 basehttp "GET /static/images/django.png HTTP/1.1" 304 0
+INFO 2025-01-11 20:04:53,368 basehttp "GET /static/images/arduino.png HTTP/1.1" 304 0
+WARNING 2025-01-11 20:04:54,769 log Not Found: /favicon.ico
+WARNING 2025-01-11 20:04:54,778 basehttp "GET /favicon.ico HTTP/1.1" 404 7185
+INFO 2025-01-11 20:04:56,726 basehttp "GET /index/ HTTP/1.1" 200 14844
+INFO 2025-01-11 20:04:56,767 basehttp "GET /static/css/global.css HTTP/1.1" 304 0
+INFO 2025-01-11 20:05:06,915 basehttp "GET /index/ HTTP/1.1" 200 14844
+INFO 2025-01-11 20:05:17,047 basehttp "GET /index/ HTTP/1.1" 200 14844
+INFO 2025-01-11 20:05:26,271 basehttp "GET /incident/ HTTP/1.1" 200 13874
+INFO 2025-01-11 20:05:26,396 basehttp "GET /static/images/red_flag.png HTTP/1.1" 304 0
+INFO 2025-01-11 20:05:31,074 basehttp "GET /api/post HTTP/1.1" 200 15984
+INFO 2025-01-11 20:05:39,359 basehttp "POST /api/post HTTP/1.1" 302 0
+INFO 2025-01-11 20:05:39,430 basehttp "GET /api/post HTTP/1.1" 200 16326
+INFO 2025-01-11 20:05:57,763 basehttp "GET /api/post HTTP/1.1" 200 15985
+INFO 2025-01-11 20:06:00,221 basehttp "GET /incident/ HTTP/1.1" 200 12862
+INFO 2025-01-11 20:06:00,304 basehttp "GET /static/images/green_flag.png HTTP/1.1" 304 0
+INFO 2025-01-11 20:06:02,320 basehttp "POST /stop-alerts/ HTTP/1.1" 302 0
+INFO 2025-01-11 20:06:02,390 basehttp "GET /incident/ HTTP/1.1" 200 13028
+INFO 2025-01-11 20:06:05,455 basehttp "GET /incident/ HTTP/1.1" 200 12870
+INFO 2025-01-11 20:12:01,695 basehttp "GET /incident/ HTTP/1.1" 200 12870
+INFO 2025-01-11 20:12:05,392 basehttp "GET /incident/ HTTP/1.1" 200 12870
+INFO 2025-01-11 20:12:13,986 basehttp "GET /incident/ HTTP/1.1" 200 12870
+INFO 2025-01-11 20:12:14,955 basehttp "GET /incident/ HTTP/1.1" 200 12870
+INFO 2025-01-11 20:12:15,315 basehttp "GET /incident/ HTTP/1.1" 200 12870
+INFO 2025-01-11 20:12:15,665 basehttp "GET /incident/ HTTP/1.1" 200 12870
+INFO 2025-01-11 20:12:15,816 basehttp "GET /incident/ HTTP/1.1" 200 12870
+INFO 2025-01-11 20:12:16,039 basehttp "GET /incident/ HTTP/1.1" 200 12870
+INFO 2025-01-11 20:12:16,678 basehttp "GET /incident/ HTTP/1.1" 200 12870
+INFO 2025-01-11 20:12:58,428 basehttp "GET /incident/ HTTP/1.1" 200 13047
+INFO 2025-01-11 20:15:13,704 basehttp "GET /incident/ HTTP/1.1" 200 12917
+INFO 2025-01-11 20:19:23,280 basehttp "GET /api/post HTTP/1.1" 200 15985
+INFO 2025-01-11 20:21:41,294 basehttp "GET /incident/ HTTP/1.1" 200 12870
+INFO 2025-01-11 20:21:42,993 basehttp "GET /incident/ HTTP/1.1" 200 12870
+INFO 2025-01-11 20:21:43,690 basehttp "GET /incident/ HTTP/1.1" 200 12870
+INFO 2025-01-11 20:21:43,860 basehttp "GET /incident/ HTTP/1.1" 200 12870
+INFO 2025-01-11 20:21:44,029 basehttp "GET /incident/ HTTP/1.1" 200 12870
+INFO 2025-01-11 20:21:44,363 basehttp "GET /incident/ HTTP/1.1" 200 12870
+INFO 2025-01-11 20:21:44,527 basehttp "GET /incident/ HTTP/1.1" 200 12870
+INFO 2025-01-11 20:21:53,756 basehttp "GET /incident/ HTTP/1.1" 200 12870
+INFO 2025-01-11 20:21:54,276 basehttp "GET /incident/ HTTP/1.1" 200 12870
+INFO 2025-01-11 20:21:54,455 basehttp "GET /incident/ HTTP/1.1" 200 12870
+INFO 2025-01-11 20:21:54,643 basehttp "GET /incident/ HTTP/1.1" 200 12870
+INFO 2025-01-11 20:21:55,002 basehttp "GET /incident/ HTTP/1.1" 200 12870
+INFO 2025-01-11 21:34:30,566 basehttp "GET /incident/ HTTP/1.1" 200 12870
+INFO 2025-01-11 21:34:48,509 basehttp "GET /incident/ HTTP/1.1" 200 12870
+INFO 2025-01-11 21:34:50,454 basehttp "GET / HTTP/1.1" 200 16739
+INFO 2025-01-11 21:34:52,891 basehttp "GET /index/ HTTP/1.1" 200 14844
+INFO 2025-01-11 21:35:02,843 basehttp "GET /incident/ HTTP/1.1" 200 12870
+INFO 2025-01-11 21:36:53,073 basehttp "GET /incident/ HTTP/1.1" 200 12871
+INFO 2025-01-11 21:36:53,168 basehttp "GET /static/images/green_flag1.png HTTP/1.1" 200 1520019
+INFO 2025-01-11 21:37:19,125 basehttp "GET /incident/ HTTP/1.1" 200 12871
+INFO 2025-01-11 21:41:34,583 basehttp "GET /index/ HTTP/1.1" 200 14844
+INFO 2025-01-11 21:41:44,692 basehttp "GET /index/ HTTP/1.1" 200 14844
+INFO 2025-01-11 21:41:54,850 basehttp "GET /index/ HTTP/1.1" 200 14844
+INFO 2025-01-11 21:42:04,998 basehttp "GET /index/ HTTP/1.1" 200 14844
+INFO 2025-01-11 21:42:15,122 basehttp "GET /index/ HTTP/1.1" 200 14844
+INFO 2025-01-11 21:42:25,262 basehttp "GET /index/ HTTP/1.1" 200 14844
+INFO 2025-01-11 21:42:35,419 basehttp "GET /index/ HTTP/1.1" 200 14844
+INFO 2025-01-11 21:42:45,555 basehttp "GET /index/ HTTP/1.1" 200 14844
+INFO 2025-01-11 21:42:55,682 basehttp "GET /index/ HTTP/1.1" 200 14844
+INFO 2025-01-11 21:43:05,798 basehttp "GET /index/ HTTP/1.1" 200 14844
+INFO 2025-01-11 21:43:15,935 basehttp "GET /index/ HTTP/1.1" 200 14844
+INFO 2025-01-11 21:43:26,088 basehttp "GET /index/ HTTP/1.1" 200 14844
+INFO 2025-01-11 21:43:34,522 basehttp "GET /myChartHum/ HTTP/1.1" 200 17016
+INFO 2025-01-11 21:43:34,662 basehttp "GET /chart-data-jour/ HTTP/1.1" 200 82
+INFO 2025-01-11 21:43:41,441 basehttp "GET /myChartHum/ HTTP/1.1" 200 17016
+INFO 2025-01-11 21:43:41,543 basehttp "GET /chart-data-jour/ HTTP/1.1" 200 82
+INFO 2025-01-11 21:43:42,993 basehttp "GET /chart-data-semaine/ HTTP/1.1" 200 6186
+INFO 2025-01-11 21:43:47,670 basehttp "GET /chart-data-semaine/ HTTP/1.1" 200 6186
+INFO 2025-01-11 21:43:49,126 basehttp "GET /chart-data-mois/ HTTP/1.1" 200 9808
+INFO 2025-01-11 22:04:04,383 basehttp "GET / HTTP/1.1" 200 16739
+INFO 2025-01-11 22:04:07,742 basehttp "GET /index/ HTTP/1.1" 200 14844
+INFO 2025-01-11 22:04:11,767 basehttp "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-01-11 22:04:11,800 basehttp "GET / HTTP/1.1" 200 16739
+INFO 2025-01-11 22:04:18,025 basehttp "GET /index/ HTTP/1.1" 302 0
+INFO 2025-01-11 22:04:18,195 basehttp "GET /login/?next=/index/ HTTP/1.1" 200 7762
+INFO 2025-01-11 22:11:09,025 autoreload C:\Users\aabde\OneDrive\Desktop\DHT11project-master\DHT11project-master\DHT\models.py changed, reloading.
+INFO 2025-01-11 22:11:10,139 autoreload Watching for file changes with StatReloader
+INFO 2025-01-11 22:14:42,897 autoreload C:\Users\aabde\OneDrive\Desktop\DHT11project-master\DHT11project-master\DHT\views.py changed, reloading.
+INFO 2025-01-11 22:14:43,852 autoreload Watching for file changes with StatReloader
+INFO 2025-01-11 22:17:51,213 autoreload C:\Users\aabde\OneDrive\Desktop\DHT11project-master\DHT11project-master\DHT\urls.py changed, reloading.
+INFO 2025-01-11 22:17:51,976 autoreload Watching for file changes with StatReloader
+INFO 2025-01-11 22:18:39,175 autoreload C:\Users\aabde\OneDrive\Desktop\DHT11project-master\DHT11project-master\DHT\urls.py changed, reloading.
+INFO 2025-01-11 22:18:39,739 autoreload Watching for file changes with StatReloader
+INFO 2025-01-11 22:22:54,049 autoreload C:\Users\aabde\OneDrive\Desktop\DHT11project-master\DHT11project-master\DHT\views.py changed, reloading.
+INFO 2025-01-11 22:22:55,073 autoreload Watching for file changes with StatReloader
+INFO 2025-01-11 22:23:22,612 basehttp "GET /login/?next=/index/ HTTP/1.1" 200 7762
+INFO 2025-01-11 22:23:23,914 basehttp "GET /login/?next=/index/ HTTP/1.1" 200 7762
+INFO 2025-01-11 22:23:26,520 basehttp "GET / HTTP/1.1" 200 16739
+INFO 2025-01-11 22:23:29,113 basehttp "GET /index/ HTTP/1.1" 302 0
+INFO 2025-01-11 22:23:29,141 basehttp "GET /login/?next=/index/ HTTP/1.1" 200 7762
+INFO 2025-01-11 22:23:43,362 basehttp "GET /login/?next=/index/ HTTP/1.1" 200 7762
+INFO 2025-01-11 22:25:18,249 basehttp "GET /login/?next=/index/ HTTP/1.1" 200 7875
+INFO 2025-01-11 22:25:21,310 basehttp "GET /forgot-password/ HTTP/1.1" 200 7585
+INFO 2025-01-11 22:25:43,300 basehttp "POST /login/?next=/index/ HTTP/1.1" 200 8050
+INFO 2025-01-11 22:25:58,984 basehttp "GET /forgot-password/ HTTP/1.1" 200 7585
+INFO 2025-01-11 22:26:21,379 basehttp "POST /forgot-password/ HTTP/1.1" 200 7763
+ERROR 2025-01-11 22:26:28,199 log Internal Server Error: /forgot-password/
+Traceback (most recent call last):
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: DHT_otp
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\OneDrive\Desktop\DHT11project-master\DHT11project-master\DHT\views.py", line 680, in forgot_password
+    OTP.objects.filter(user=user).delete()
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\query.py", line 1188, in delete
+    deleted, _rows_count = collector.delete()
+                           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\deletion.py", line 472, in delete
+    count = qs._raw_delete(using=self.using)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\query.py", line 1210, in _raw_delete
+    cursor = query.get_compiler(using).execute_sql(CURSOR)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: DHT_otp
+ERROR 2025-01-11 22:26:28,241 basehttp "POST /forgot-password/ HTTP/1.1" 500 128790
+INFO 2025-01-11 22:27:31,144 autoreload Watching for file changes with StatReloader
+INFO 2025-01-11 22:27:43,998 basehttp "POST /forgot-password/ HTTP/1.1" 302 0
+INFO 2025-01-11 22:27:44,101 basehttp "GET /verify-otp/ HTTP/1.1" 200 7745
+INFO 2025-01-11 22:28:23,301 basehttp "POST /verify-otp/ HTTP/1.1" 200 7722
+INFO 2025-01-11 22:28:29,248 basehttp "POST /verify-otp/ HTTP/1.1" 200 7722
+INFO 2025-01-11 22:28:37,099 basehttp "POST /verify-otp/ HTTP/1.1" 302 0
+INFO 2025-01-11 22:28:37,150 basehttp "GET /reset-password/ HTTP/1.1" 200 7862
+INFO 2025-01-11 22:28:51,304 basehttp "GET /login/ HTTP/1.1" 200 7875
+INFO 2025-01-11 22:29:11,665 basehttp "POST /login/ HTTP/1.1" 302 0
+INFO 2025-01-11 22:29:11,694 basehttp "GET / HTTP/1.1" 200 16739
+INFO 2025-01-11 22:37:47,358 autoreload C:\Users\aabde\OneDrive\Desktop\DHT11project-master\DHT11project-master\DHT\views.py changed, reloading.
+INFO 2025-01-11 22:37:48,111 autoreload Watching for file changes with StatReloader
+INFO 2025-01-11 22:38:45,789 autoreload C:\Users\aabde\OneDrive\Desktop\DHT11project-master\DHT11project-master\DHT\views.py changed, reloading.
+INFO 2025-01-11 22:38:46,552 autoreload Watching for file changes with StatReloader
+INFO 2025-01-11 22:38:47,917 basehttp "GET /index/ HTTP/1.1" 200 13787
+INFO 2025-01-11 22:38:50,086 basehttp "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-01-11 22:38:50,129 basehttp "GET / HTTP/1.1" 200 16739
+INFO 2025-01-11 22:38:51,705 basehttp "GET /index/ HTTP/1.1" 302 0
+INFO 2025-01-11 22:38:51,713 basehttp "GET /login/?next=/index/ HTTP/1.1" 200 8056
+INFO 2025-01-11 22:39:02,579 basehttp "GET /forgot-password/ HTTP/1.1" 200 7585
+INFO 2025-01-11 22:39:19,692 basehttp "POST /login/?next=/index/ HTTP/1.1" 200 8231
+INFO 2025-01-11 22:39:48,095 basehttp "POST /login/?next=/index/ HTTP/1.1" 200 8231
+INFO 2025-01-11 22:39:59,871 basehttp "POST /login/?next=/index/ HTTP/1.1" 302 0
+INFO 2025-01-11 22:39:59,905 basehttp "GET / HTTP/1.1" 200 16739
+INFO 2025-01-11 22:40:02,735 basehttp "GET /index/ HTTP/1.1" 200 14844
+INFO 2025-01-11 22:43:01,721 autoreload C:\Users\aabde\OneDrive\Desktop\DHT11project-master\DHT11project-master\DHT\views.py changed, reloading.
+INFO 2025-01-11 22:43:02,454 autoreload Watching for file changes with StatReloader
+INFO 2025-01-11 22:43:03,753 basehttp "GET /index/ HTTP/1.1" 200 14844
+INFO 2025-01-11 22:43:05,649 basehttp "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-01-11 22:43:05,663 basehttp "GET / HTTP/1.1" 200 16739
+INFO 2025-01-11 22:43:07,113 basehttp "GET /index/ HTTP/1.1" 302 0
+INFO 2025-01-11 22:43:07,134 basehttp "GET /login/?next=/index/ HTTP/1.1" 200 8056
+INFO 2025-01-11 22:43:18,694 basehttp "POST /login/?next=/index/ HTTP/1.1" 302 0
+INFO 2025-01-11 22:43:18,765 basehttp "GET /index/ HTTP/1.1" 200 14844
+INFO 2025-01-11 22:43:21,828 basehttp "GET /incident/ HTTP/1.1" 200 12871
+INFO 2025-01-11 22:43:21,900 basehttp "GET /static/images/green_flag1.png HTTP/1.1" 304 0
+INFO 2025-01-11 22:43:27,393 basehttp "GET /index/ HTTP/1.1" 200 14844
+INFO 2025-01-11 22:43:37,692 basehttp "GET /index/ HTTP/1.1" 200 14844
+INFO 2025-01-11 22:43:49,325 basehttp "GET /index/ HTTP/1.1" 200 14844
+INFO 2025-01-11 22:44:01,679 basehttp "GET /index/ HTTP/1.1" 200 14844
+INFO 2025-01-11 22:44:07,430 basehttp "GET /register/ HTTP/1.1" 200 12969
+INFO 2025-01-11 22:46:58,841 basehttp "GET /register/ HTTP/1.1" 200 14916
+INFO 2025-01-11 22:47:21,467 basehttp "GET /register/ HTTP/1.1" 200 14916
+INFO 2025-01-11 22:51:04,139 basehttp "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-01-11 22:51:04,171 basehttp "GET / HTTP/1.1" 200 16739
+INFO 2025-01-11 22:51:08,299 basehttp "GET /index/ HTTP/1.1" 302 0
+ERROR 2025-01-11 22:51:09,156 log Internal Server Error: /login/
+Traceback (most recent call last):
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\OneDrive\Desktop\DHT11project-master\DHT11project-master\DHT\views.py", line 680, in login_view
+    return render(request, 'login.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'register' not found. 'register' is not a valid view function or pattern name.
+ERROR 2025-01-11 22:51:09,246 basehttp "GET /login/?next=/index/ HTTP/1.1" 500 167598
+INFO 2025-01-11 22:51:18,825 basehttp "GET /login/?next=/index/ HTTP/1.1" 200 8179
+INFO 2025-01-11 22:51:31,726 basehttp "POST /login/?next=/index/ HTTP/1.1" 302 0
+INFO 2025-01-11 22:51:31,793 basehttp "GET /index/ HTTP/1.1" 200 14844
+INFO 2025-01-11 22:51:49,231 basehttp "GET / HTTP/1.1" 200 16739
+INFO 2025-01-11 22:52:10,616 basehttp "GET /index/ HTTP/1.1" 200 14844
+INFO 2025-01-11 22:52:14,484 basehttp "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-01-11 22:52:14,507 basehttp "GET / HTTP/1.1" 200 16739
+INFO 2025-01-11 22:52:17,228 basehttp "GET /index/ HTTP/1.1" 302 0
+INFO 2025-01-11 22:52:17,244 basehttp "GET /login/?next=/index/ HTTP/1.1" 200 8179
+INFO 2025-01-11 22:53:49,586 basehttp "POST /login/?next=/index/ HTTP/1.1" 200 8354
+INFO 2025-01-11 22:54:32,282 basehttp "POST /login/?next=/index/ HTTP/1.1" 200 8343
+INFO 2025-01-11 22:54:39,410 basehttp "POST /login/?next=/index/ HTTP/1.1" 200 8343
+INFO 2025-01-11 22:54:52,596 basehttp "POST /login/?next=/index/ HTTP/1.1" 302 0
+INFO 2025-01-11 22:54:52,662 basehttp "GET /index/ HTTP/1.1" 200 14844
+INFO 2025-01-11 22:55:00,181 basehttp "GET /register/ HTTP/1.1" 200 14916
+INFO 2025-01-11 22:56:54,645 basehttp "GET /incident/ HTTP/1.1" 200 12871
+INFO 2025-01-11 23:04:24,798 basehttp "GET /index/ HTTP/1.1" 200 14844
+INFO 2025-01-11 23:04:26,786 basehttp "GET /table/ HTTP/1.1" 200 108453
+INFO 2025-01-11 23:04:27,869 basehttp "GET /myChartTemp/ HTTP/1.1" 200 18367
+INFO 2025-01-11 23:04:27,977 basehttp "GET /chart-data-jour/ HTTP/1.1" 200 82
+INFO 2025-01-11 23:04:31,095 basehttp "GET /chart-data-semaine/ HTTP/1.1" 200 6186
+INFO 2025-01-11 23:04:33,273 basehttp "GET /chart-data-mois/ HTTP/1.1" 200 9808
+INFO 2025-01-11 23:05:02,508 basehttp "GET /chart-data/ HTTP/1.1" 200 34835
+INFO 2025-01-11 23:09:12,850 basehttp "GET /myChartTemp/ HTTP/1.1" 200 21761
+INFO 2025-01-11 23:09:13,014 basehttp "GET /chart-data-jour/ HTTP/1.1" 200 82
+INFO 2025-01-11 23:09:23,920 basehttp "GET /chart-data-semaine/ HTTP/1.1" 200 6186
+INFO 2025-01-11 23:09:25,373 basehttp "GET /chart-data-semaine/ HTTP/1.1" 200 6186
+INFO 2025-01-11 23:09:26,199 basehttp "GET /chart-data-mois/ HTTP/1.1" 200 9808
+INFO 2025-01-11 23:09:37,372 basehttp "GET /myChartHum/ HTTP/1.1" 200 21696
+INFO 2025-01-11 23:09:37,479 basehttp "GET /chart-data-jour/ HTTP/1.1" 200 82
+INFO 2025-01-11 23:09:42,233 basehttp "GET /chart-data-semaine/ HTTP/1.1" 200 6186
+INFO 2025-01-11 23:09:42,776 basehttp "GET /chart-data-mois/ HTTP/1.1" 200 9808
+WARNING 2025-01-11 23:10:29,888 log Not Found: /chart-data-custom/
+WARNING 2025-01-11 23:10:29,892 basehttp "GET /chart-data-custom/?start=2024-11-06&end=2024-01-01 HTTP/1.1" 404 7791
+INFO 2025-01-11 23:10:33,420 basehttp "GET /chart-data/ HTTP/1.1" 200 34835
+WARNING 2025-01-11 23:10:37,351 log Not Found: /chart-data-custom/
+WARNING 2025-01-11 23:10:37,358 basehttp "GET /chart-data-custom/?start=2024-11-06&end=2024-01-01 HTTP/1.1" 404 7791
+WARNING 2025-01-11 23:10:47,488 log Not Found: /chart-data-custom/
+WARNING 2025-01-11 23:10:47,496 basehttp "GET /chart-data-custom/?start=2024-11-06&end=2025-01-01 HTTP/1.1" 404 7791
+WARNING 2025-01-11 23:10:48,139 log Not Found: /chart-data-custom/
+WARNING 2025-01-11 23:10:48,146 basehttp "GET /chart-data-custom/?start=2024-11-06&end=2025-01-01 HTTP/1.1" 404 7791
+WARNING 2025-01-11 23:10:48,341 log Not Found: /chart-data-custom/
+WARNING 2025-01-11 23:10:48,349 basehttp "GET /chart-data-custom/?start=2024-11-06&end=2025-01-01 HTTP/1.1" 404 7791
+INFO 2025-01-11 23:11:31,104 basehttp "GET /index/ HTTP/1.1" 200 14843
+INFO 2025-01-11 23:11:41,696 basehttp "GET /index/ HTTP/1.1" 200 14843
+INFO 2025-01-11 23:11:52,706 basehttp "GET /index/ HTTP/1.1" 200 14843
+INFO 2025-01-11 23:12:03,717 basehttp "GET /index/ HTTP/1.1" 200 14843
+INFO 2025-01-11 23:12:14,690 basehttp "GET /index/ HTTP/1.1" 200 14843
+INFO 2025-01-11 23:12:25,721 basehttp "GET /index/ HTTP/1.1" 200 14843
+INFO 2025-01-11 23:12:28,373 autoreload C:\Users\aabde\OneDrive\Desktop\DHT11project-master\DHT11project-master\DHT\urls.py changed, reloading.
+INFO 2025-01-11 23:12:29,044 autoreload Watching for file changes with StatReloader
+INFO 2025-01-11 23:14:01,844 autoreload Watching for file changes with StatReloader
+INFO 2025-01-11 23:14:20,383 autoreload C:\Users\aabde\OneDrive\Desktop\DHT11project-master\DHT11project-master\DHT\urls.py changed, reloading.
+INFO 2025-01-11 23:14:21,197 autoreload Watching for file changes with StatReloader
+INFO 2025-01-11 23:14:34,412 autoreload C:\Users\aabde\OneDrive\Desktop\DHT11project-master\DHT11project-master\DHT\urls.py changed, reloading.
+INFO 2025-01-11 23:14:35,687 autoreload Watching for file changes with StatReloader
+INFO 2025-01-11 23:14:38,578 basehttp "GET /myChartTemp/ HTTP/1.1" 200 21761
+INFO 2025-01-11 23:14:38,791 basehttp "GET /chart-data-jour/ HTTP/1.1" 200 82
+INFO 2025-01-11 23:15:02,681 basehttp "GET /chart-data-custom/?start=2025-01-01&end=2025-01-03 HTTP/1.1" 200 139
+INFO 2025-01-11 23:15:08,970 basehttp "GET /chart-data-mois/ HTTP/1.1" 200 9808
+INFO 2025-01-11 23:15:09,499 basehttp "GET /chart-data-semaine/ HTTP/1.1" 200 6186
+INFO 2025-01-11 23:18:55,771 basehttp "GET /myChartTemp/ HTTP/1.1" 200 21806
+INFO 2025-01-11 23:18:55,848 basehttp "GET /chart-data-jour/ HTTP/1.1" 200 82
+INFO 2025-01-11 23:18:57,709 basehttp "GET /chart-data-semaine/ HTTP/1.1" 200 6186
+INFO 2025-01-11 23:18:58,748 basehttp "GET /chart-data-mois/ HTTP/1.1" 200 9808
+INFO 2025-01-11 23:18:59,885 basehttp "GET /chart-data-jour/ HTTP/1.1" 200 82
+INFO 2025-01-11 23:20:14,823 basehttp "GET /myChartHum/ HTTP/1.1" 200 21741
+INFO 2025-01-11 23:20:14,924 basehttp "GET /chart-data-jour/ HTTP/1.1" 200 82
+INFO 2025-01-11 23:20:15,785 basehttp "GET /chart-data-mois/ HTTP/1.1" 200 9808
+INFO 2025-01-11 23:20:19,969 basehttp "GET /chart-data-semaine/ HTTP/1.1" 200 6186
+INFO 2025-01-11 23:20:23,474 basehttp "GET /myChartTemp/ HTTP/1.1" 200 21806
+INFO 2025-01-11 23:20:23,614 basehttp "GET /chart-data-jour/ HTTP/1.1" 200 82
+INFO 2025-01-11 23:20:24,667 basehttp "GET /incident/ HTTP/1.1" 200 12871
+INFO 2025-01-11 23:20:24,788 basehttp "GET /static/images/green_flag1.png HTTP/1.1" 304 0
+INFO 2025-01-11 23:20:26,596 basehttp "GET /index/ HTTP/1.1" 200 14844
+INFO 2025-01-11 23:20:28,577 basehttp "GET /table/ HTTP/1.1" 200 108453
+INFO 2025-01-11 23:20:31,284 basehttp "GET /incident/ HTTP/1.1" 200 12871
+INFO 2025-01-11 23:25:47,838 basehttp "GET /incident/ HTTP/1.1" 200 12993
+INFO 2025-01-11 23:25:50,004 basehttp "GET /incident/ HTTP/1.1" 200 12993
+INFO 2025-01-11 23:25:50,561 basehttp "GET /incident/ HTTP/1.1" 200 12993
+INFO 2025-01-11 23:25:50,863 basehttp "GET /incident/ HTTP/1.1" 200 12993
+INFO 2025-01-11 23:25:51,315 basehttp "GET /incident/ HTTP/1.1" 200 12993
+INFO 2025-01-11 23:25:53,803 basehttp "GET /incident/ HTTP/1.1" 200 12993
+INFO 2025-01-11 23:25:56,281 basehttp "GET /log_incident/ HTTP/1.1" 200 44326
+INFO 2025-01-11 23:25:58,226 basehttp "GET /log_incident/?filter=annee HTTP/1.1" 200 44330
+INFO 2025-01-11 23:26:10,562 basehttp "GET /log_incident/?filter=jour HTTP/1.1" 200 19533
+INFO 2025-01-11 23:26:14,147 basehttp "GET /incident/ HTTP/1.1" 200 12993
+INFO 2025-01-11 23:26:25,098 autoreload Watching for file changes with StatReloader
+INFO 2025-01-11 23:26:27,552 basehttp "GET /incident/ HTTP/1.1" 200 12993
+INFO 2025-01-11 23:26:28,525 basehttp "GET /incident/ HTTP/1.1" 200 12993
+INFO 2025-01-11 23:26:28,825 basehttp "GET /incident/ HTTP/1.1" 200 12993
+INFO 2025-01-11 23:26:29,129 basehttp "GET /incident/ HTTP/1.1" 200 12993
+INFO 2025-01-11 23:26:29,474 basehttp "GET /incident/ HTTP/1.1" 200 12993
+INFO 2025-01-11 23:27:18,855 basehttp "GET /incident/ HTTP/1.1" 200 12993
+INFO 2025-01-11 23:27:19,544 basehttp "GET /incident/ HTTP/1.1" 200 12993
+INFO 2025-01-11 23:27:19,753 basehttp "GET /incident/ HTTP/1.1" 200 12993
+INFO 2025-01-11 23:27:36,251 basehttp "GET /log_incident/ HTTP/1.1" 200 44326
+INFO 2025-01-11 23:27:39,251 basehttp "GET /incident-detail/28/ HTTP/1.1" 200 377
+INFO 2025-01-11 23:27:43,530 basehttp "GET /incident-detail/31/ HTTP/1.1" 200 198
+INFO 2025-01-11 23:30:18,537 basehttp "GET /index/ HTTP/1.1" 200 14844
+INFO 2025-01-11 23:30:29,679 basehttp "GET /index/ HTTP/1.1" 200 14844
+INFO 2025-01-11 23:30:40,683 basehttp "GET /index/ HTTP/1.1" 200 14844
+INFO 2025-01-11 23:30:51,666 basehttp "GET /index/ HTTP/1.1" 200 14844
+INFO 2025-01-11 23:30:53,670 basehttp "GET /incident/ HTTP/1.1" 200 12993
+INFO 2025-01-11 23:31:02,850 basehttp "GET /api/post HTTP/1.1" 200 15985
+INFO 2025-01-11 23:31:10,058 alerts Alerte Telegram envoyée.
+INFO 2025-01-11 23:31:12,184 alerts Alerte WhatsApp envoyée.
+INFO 2025-01-11 23:31:16,423 alerts Alerte e-mail envoyée avec succès.
+INFO 2025-01-11 23:31:16,435 basehttp "POST /api/post HTTP/1.1" 302 0
+INFO 2025-01-11 23:31:16,513 basehttp "GET /api/post HTTP/1.1" 200 16327
+INFO 2025-01-11 23:31:26,126 basehttp "GET /incident/ HTTP/1.1" 200 14040
+INFO 2025-01-11 23:31:35,297 basehttp "GET /log_incident/ HTTP/1.1" 200 45117
+INFO 2025-01-11 23:32:03,957 basehttp "GET /log_incident/ HTTP/1.1" 200 45117
+INFO 2025-01-11 23:32:04,925 basehttp "GET /log_incident/ HTTP/1.1" 200 45117
+INFO 2025-01-11 23:32:05,218 basehttp "GET /log_incident/ HTTP/1.1" 200 45117
+INFO 2025-01-11 23:32:05,426 basehttp "GET /log_incident/ HTTP/1.1" 200 45117
+INFO 2025-01-11 23:32:05,591 basehttp "GET /log_incident/ HTTP/1.1" 200 45117
+INFO 2025-01-11 23:32:05,818 basehttp "GET /log_incident/ HTTP/1.1" 200 45117
+INFO 2025-01-11 23:32:20,851 basehttp "GET /incident-detail/32/ HTTP/1.1" 200 131
+INFO 2025-01-11 23:32:23,760 basehttp "GET /incident-detail/30/ HTTP/1.1" 200 198
+INFO 2025-01-11 23:32:29,230 basehttp "GET /incident-detail/31/ HTTP/1.1" 200 198
+INFO 2025-01-11 23:33:50,738 basehttp "GET /incident/ HTTP/1.1" 200 15071
+INFO 2025-01-11 23:34:48,330 basehttp "GET /log_incident/ HTTP/1.1" 200 45117
+INFO 2025-01-11 23:34:49,982 basehttp "GET /log_incident/?filter=jour HTTP/1.1" 200 20158
+INFO 2025-01-11 23:34:54,197 basehttp "GET /log_incident/?filter=semaine HTTP/1.1" 200 30601
+INFO 2025-01-11 23:34:56,572 basehttp "GET /incident-detail/32/ HTTP/1.1" 200 131
+INFO 2025-01-11 23:35:01,390 basehttp "GET /incident-detail/31/ HTTP/1.1" 200 198
+INFO 2025-01-11 23:35:04,782 basehttp "GET /incident/ HTTP/1.1" 200 15071
+INFO 2025-01-11 23:35:17,448 basehttp "GET /log_incident/ HTTP/1.1" 200 45117
+INFO 2025-01-11 23:35:25,728 basehttp "GET /log_incident/ HTTP/1.1" 200 45117
+INFO 2025-01-11 23:35:45,497 basehttp "GET /log_incident/?filter=semaine HTTP/1.1" 200 30601
+INFO 2025-01-11 23:35:47,112 basehttp "GET /log_incident/?filter=mois HTTP/1.1" 200 45119
+INFO 2025-01-11 23:35:48,801 basehttp "GET /log_incident/?filter=annee HTTP/1.1" 200 45121
+INFO 2025-01-11 23:35:53,129 basehttp "GET /export/incidents/pdf/?filter=annee HTTP/1.1" 200 23237
+INFO 2025-01-11 23:37:26,316 basehttp "GET /incident/ HTTP/1.1" 200 16226
+INFO 2025-01-11 23:38:30,438 basehttp "GET /log_incident/ HTTP/1.1" 200 45117
+INFO 2025-01-11 23:38:32,124 basehttp "GET /incident-detail/32/ HTTP/1.1" 200 131
+INFO 2025-01-11 23:38:36,174 basehttp "GET /log_incident/?filter=annee HTTP/1.1" 200 45121
+INFO 2025-01-11 23:38:37,381 basehttp "GET /log_incident/?filter=jour HTTP/1.1" 200 20158
+INFO 2025-01-11 23:38:39,141 basehttp "GET /log_incident/?filter=semaine HTTP/1.1" 200 30601
+INFO 2025-01-11 23:39:08,751 basehttp "GET /incident/ HTTP/1.1" 200 16226
+INFO 2025-01-11 23:43:30,727 autoreload C:\Users\aabde\OneDrive\Desktop\DHT11project-master\DHT11project-master\DHT\views.py changed, reloading.
+INFO 2025-01-11 23:43:31,457 autoreload Watching for file changes with StatReloader
+INFO 2025-01-11 23:43:47,353 basehttp "GET /incident/ HTTP/1.1" 200 15071
+INFO 2025-01-11 23:43:57,603 basehttp "GET /incident/ HTTP/1.1" 200 14040
+INFO 2025-01-11 23:44:07,248 basehttp "GET /dashboard/ HTTP/1.1" 200 25446
+INFO 2025-01-11 23:47:34,268 autoreload C:\Users\aabde\OneDrive\Desktop\DHT11project-master\DHT11project-master\DHT\views.py changed, reloading.
+INFO 2025-01-11 23:47:35,302 autoreload Watching for file changes with StatReloader
+INFO 2025-01-11 23:48:10,593 basehttp "GET /dashboard/ HTTP/1.1" 200 31574
+INFO 2025-01-11 23:49:09,213 basehttp "GET /incident/ HTTP/1.1" 200 14040
+INFO 2025-01-11 23:49:12,315 basehttp "GET /log_incident/ HTTP/1.1" 200 45117
+INFO 2025-01-11 23:49:16,738 basehttp "GET /myChartHum/ HTTP/1.1" 200 21741
+INFO 2025-01-11 23:49:16,851 basehttp "GET /chart-data-jour/ HTTP/1.1" 200 122
+INFO 2025-01-11 23:49:18,139 basehttp "GET /table/ HTTP/1.1" 200 108566
+INFO 2025-01-11 23:49:22,031 basehttp "GET /incident/ HTTP/1.1" 200 14040
+INFO 2025-01-11 23:49:23,857 basehttp "GET /table/ HTTP/1.1" 200 108566
+INFO 2025-01-11 23:49:26,407 basehttp "GET /table/?filter=jour HTTP/1.1" 200 13697
+INFO 2025-01-11 23:49:27,649 basehttp "GET /table/?filter=semaine HTTP/1.1" 200 25775
+INFO 2025-01-11 23:49:28,459 basehttp "GET /table/?filter=mois HTTP/1.1" 200 40797
+INFO 2025-01-11 23:49:29,455 basehttp "GET /myChartTemp/ HTTP/1.1" 200 21806
+INFO 2025-01-11 23:49:29,597 basehttp "GET /chart-data-jour/ HTTP/1.1" 200 122
+INFO 2025-01-11 23:49:37,963 basehttp "GET /api/post HTTP/1.1" 200 15986
+INFO 2025-01-11 23:49:44,958 basehttp "GET /dashboard/ HTTP/1.1" 200 31574
+INFO 2025-01-11 23:54:16,760 autoreload C:\Users\aabde\OneDrive\Desktop\DHT11project-master\DHT11project-master\DHT\views.py changed, reloading.
+INFO 2025-01-11 23:54:17,594 autoreload Watching for file changes with StatReloader
+ERROR 2025-01-11 23:54:58,406 log Internal Server Error: /dashboard/
+Traceback (most recent call last):
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\OneDrive\Desktop\DHT11project-master\DHT11project-master\DHT\views.py", line 373, in dashboard
+    .annotate(total_acknowledgments=Count('acknowledgments'))
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\query.py", line 1630, in annotate
+    return self._annotate(args, kwargs, select=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\query.py", line 1680, in _annotate
+    clone.query.add_annotation(
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\sql\query.py", line 1198, in add_annotation
+    annotation = annotation.resolve_expression(self, allow_joins=True, reuse=None)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\aggregates.py", line 65, in resolve_expression
+    c = super().resolve_expression(query, allow_joins, reuse, summarize)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\expressions.py", line 975, in resolve_expression
+    c.source_expressions[pos] = arg.resolve_expression(
+                                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\expressions.py", line 854, in resolve_expression
+    return query.resolve_ref(self.name, allow_joins, reuse, summarize)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\sql\query.py", line 2014, in resolve_ref
+    join_info = self.setup_joins(
+                ^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\sql\query.py", line 1867, in setup_joins
+    path, final_field, targets, rest = self.names_to_path(
+                                       ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\sql\query.py", line 1772, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'acknowledgments' into field. Choices are: acknowledgment, date_joined, email, first_name, groups, id, is_active, is_staff, is_superuser, last_login, last_name, logentry, otp, password, profile, user_permissions, username
+ERROR 2025-01-11 23:54:58,415 basehttp "GET /dashboard/ HTTP/1.1" 500 131293
+INFO 2025-01-11 23:56:45,777 autoreload C:\Users\aabde\OneDrive\Desktop\DHT11project-master\DHT11project-master\DHT\views.py changed, reloading.
+INFO 2025-01-11 23:56:46,746 autoreload Watching for file changes with StatReloader
+ERROR 2025-01-11 23:56:50,575 log Internal Server Error: /dashboard/
+Traceback (most recent call last):
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\OneDrive\Desktop\DHT11project-master\DHT11project-master\DHT\views.py", line 391, in dashboard
+    return render(request, 'dashboard.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 481, in parse
+    raise self.error(token, e)
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 479, in parse
+    filter_expression = self.compile_filter(token.contents)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 597, in compile_filter
+    return FilterExpression(token, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 693, in __init__
+    filter_func = parser.find_filter(filter_name)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 603, in find_filter
+    raise TemplateSyntaxError("Invalid filter: '%s'" % filter_name)
+django.template.exceptions.TemplateSyntaxError: Invalid filter: 'map'
+ERROR 2025-01-11 23:56:50,584 basehttp "GET /dashboard/ HTTP/1.1" 500 206981
+INFO 2025-01-11 23:59:06,810 basehttp "GET /dashboard/ HTTP/1.1" 200 23790
+INFO 2025-01-11 23:59:13,006 basehttp "GET /dashboard/ HTTP/1.1" 200 23790
+INFO 2025-01-11 23:59:44,268 basehttp "GET /dashboard/ HTTP/1.1" 200 23790
+INFO 2025-01-11 23:59:44,823 basehttp "GET /dashboard/ HTTP/1.1" 200 23790
+INFO 2025-01-11 23:59:45,033 basehttp "GET /dashboard/ HTTP/1.1" 200 23790
+INFO 2025-01-12 00:00:49,629 autoreload C:\Users\aabde\OneDrive\Desktop\DHT11project-master\DHT11project-master\DHT\views.py changed, reloading.
+INFO 2025-01-12 00:00:50,692 autoreload Watching for file changes with StatReloader
+ERROR 2025-01-12 00:03:48,334 log Internal Server Error: /dashboard/
+Traceback (most recent call last):
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\OneDrive\Desktop\DHT11project-master\DHT11project-master\DHT\views.py", line 390, in dashboard
+    return render(request, 'dashboard.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 481, in parse
+    raise self.error(token, e)
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 479, in parse
+    filter_expression = self.compile_filter(token.contents)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 597, in compile_filter
+    return FilterExpression(token, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 693, in __init__
+    filter_func = parser.find_filter(filter_name)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aabde\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 603, in find_filter
+    raise TemplateSyntaxError("Invalid filter: '%s'" % filter_name)
+django.template.exceptions.TemplateSyntaxError: Invalid filter: 'map'
+ERROR 2025-01-12 00:03:48,341 basehttp "GET /dashboard/ HTTP/1.1" 500 206922
+INFO 2025-01-12 00:03:59,986 basehttp "GET /dashboard/ HTTP/1.1" 200 31574
+INFO 2025-01-12 00:04:04,612 basehttp "GET /dashboard/ HTTP/1.1" 200 31574
+INFO 2025-01-12 00:04:08,015 basehttp "GET /incident/ HTTP/1.1" 200 14040
+INFO 2025-01-12 00:04:09,567 basehttp "GET /log_incident/ HTTP/1.1" 200 45117
+INFO 2025-01-12 00:04:14,487 basehttp "GET /index/ HTTP/1.1" 200 14842
+INFO 2025-01-12 00:04:16,125 basehttp "GET /table/ HTTP/1.1" 200 108566
+INFO 2025-01-12 00:04:16,919 basehttp "GET /index/ HTTP/1.1" 200 14842
+INFO 2025-01-12 00:04:20,350 basehttp "GET /index/ HTTP/1.1" 200 14842
+INFO 2025-01-12 00:04:24,365 basehttp "GET /index/ HTTP/1.1" 200 14842
+INFO 2025-01-12 00:04:34,255 basehttp "GET /alert-globale/ HTTP/1.1" 200 16902
+INFO 2025-01-12 00:05:29,952 basehttp "GET /alert-globale/ HTTP/1.1" 200 16726
+INFO 2025-01-12 00:05:32,513 basehttp "GET /alertConf/ HTTP/1.1" 200 14841
+INFO 2025-01-12 00:05:36,065 basehttp "GET /alert-globale/ HTTP/1.1" 200 16726
+INFO 2025-01-12 00:05:39,590 basehttp "GET /alertConf/ HTTP/1.1" 200 14841
+INFO 2025-01-12 00:05:51,079 basehttp "GET /index/ HTTP/1.1" 200 14666
+INFO 2025-01-12 00:06:01,127 basehttp "GET /index/ HTTP/1.1" 200 14666
+INFO 2025-01-12 00:06:02,613 basehttp "GET /table/ HTTP/1.1" 200 108390
+INFO 2025-01-12 00:06:03,645 basehttp "GET /myChartTemp/ HTTP/1.1" 200 21630
+INFO 2025-01-12 00:06:03,787 basehttp "GET /chart-data-jour/ HTTP/1.1" 200 122

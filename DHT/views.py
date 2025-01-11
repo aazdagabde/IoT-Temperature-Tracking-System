@@ -111,35 +111,48 @@ def chart_data_mois(request):
     }
     return JsonResponse(data)
 
+
+from django.shortcuts import render, redirect
+from django.contrib.auth.models import User
+from django.contrib import messages
 @login_required
 def register_view(request):
-    # Si besoin d'une page d'enregistrement, à adapter.
-    if request.user.username not in ["admin", "admin2"]:
-        return HttpResponseForbidden("Vous n'avez pas la permission d'accéder à cette page.")
     if request.method == 'POST':
         username = request.POST.get('username')
         email = request.POST.get('email')
-        first_name = request.POST.get('first_name')
-        last_name = request.POST.get('last_name')
+        first_name = request.POST.get('first_name')  # Récupérer le prénom
+        last_name = request.POST.get('last_name')    # Récupérer le nom
         password = request.POST.get('password')
         password_confirm = request.POST.get('password_confirm')
 
+        # Vérifier si les mots de passe correspondent
         if password != password_confirm:
             messages.error(request, "Les mots de passe ne correspondent pas.")
             return redirect('register_view')
+
+        # Vérifier si l'utilisateur existe déjà
+        if User.objects.filter(username=username).exists():
+            messages.error(request, "Ce nom d'utilisateur est déjà pris.")
+            return redirect('register_view')
+
+        if User.objects.filter(email=email).exists():
+            messages.error(request, "Cet email est déjà utilisé.")
+            return redirect('register_view')
+
+        # Créer un nouvel utilisateur
         try:
             user = User.objects.create_user(
                 username=username,
                 email=email,
-                first_name=first_name,
-                last_name=last_name,
+                first_name=first_name,  # Ajouter le prénom
+                last_name=last_name,    # Ajouter le nom
                 password=password
             )
             user.save()
-            messages.success(request, "Utilisateur ajouté avec succès !")
-            return redirect('/index')
+            messages.success(request, "Utilisateur créé avec succès ! Vous pouvez maintenant vous connecter.")
+            return redirect('login')  # Rediriger vers la page de connexion
         except Exception as e:
-            messages.error(request, f"Erreur : {e}")
+            messages.error(request, f"Erreur lors de la création de l'utilisateur : {e}")
             return redirect('register_view')
 
     return render(request, 'register.html')
@@ -305,18 +318,27 @@ from django.contrib.auth.decorators import login_required
 
 # Importez vos modèles depuis votre application
 from .models import Incident, Dht11
+from django.utils import timezone
+from datetime import timedelta
+from django.shortcuts import render
+from django.contrib.auth.decorators import login_required
+from django.utils import timezone
+from datetime import timedelta, datetime
+from collections import defaultdict
+from django.core.serializers.json import DjangoJSONEncoder
+import json
+from .models import Incident, Dht11, User, Acknowledgment
+from django.db.models import Count
 
-@login_required  # Facultatif si vous voulez que seules les personnes connectées accèdent au dashboard
+@login_required
 def dashboard(request):
     # 1. Comptabiliser les incidents par mois
     incidents_per_month = defaultdict(int)
     for incident in Incident.objects.all():
-        # Exemple: "Jan 2025", "Feb 2025", etc.
         month_label = incident.start_dt.strftime('%b %Y')
         incidents_per_month[month_label] += 1
 
     # 2. Trier les labels de mois chronologiquement
-    #    (nécessite la fonction datetime.strptime pour retransformer '%b %Y' en objet datetime)
     sorted_months = sorted(
         incidents_per_month.keys(),
         key=lambda x: datetime.strptime(x, '%b %Y')
@@ -329,23 +351,45 @@ def dashboard(request):
              .values('temp', 'hum', 'dt')
              .order_by('-dt')[:20]
     )
-    # Note: [:20] -> on limite aux 20 dernières mesures (vous pouvez ajuster)
 
-    # 4. Contexte pour le template
+    # 4. Calculer le temps moyen de résolution
+    resolved_incidents = Incident.objects.filter(end_dt__isnull=False)
+    total_resolution_time = timedelta()
+    for incident in resolved_incidents:
+        total_resolution_time += incident.end_dt - incident.start_dt
+
+    average_resolution_time = total_resolution_time / resolved_incidents.count() if resolved_incidents.count() > 0 else timedelta()
+
+    # 5. Récupérer les derniers incidents (par exemple, les 10 derniers)
+    latest_incidents = Incident.objects.order_by('-start_dt')[:10]
+
+    # 6. Nombre de personnes qui ont acquitté un incident
+    total_acknowledgments = Acknowledgment.objects.count()
+
+    # 7. Classement des utilisateurs par nombre total d'acquittements
+    user_acknowledgments = (
+        User.objects
+        .annotate(total_acknowledgments=Count('acknowledgment'))  # Utilisez 'acknowledgment' au lieu de 'acknowledgments'
+        .order_by('-total_acknowledgments')[:5]  # Top 5 utilisateurs
+    )
+
+    # 8. Contexte pour le template
     context = {
         'total_users': User.objects.count(),
         'total_incidents': Incident.objects.count(),
         'active_incidents': Incident.objects.filter(end_dt__isnull=True).count(),
-        'resolved_incidents': Incident.objects.filter(end_dt__isnull=False).count(),
-
-        # Convertir les listes Python en JSON pour Chart.js
+        'resolved_incidents': resolved_incidents.count(),
+        'average_resolution_time': str(average_resolution_time).split(".")[0],  # Format HH:MM:SS
         'months': json.dumps(sorted_months),
         'incidents_per_month': json.dumps(sorted_counts),
-
-        # Exemple: [{"temp": 25, "hum": 45, "dt": "2025-01-05T10:30:00Z"}, ...]
         'dht_data': json.dumps(dht_data, cls=DjangoJSONEncoder),
+        'latest_incidents': latest_incidents,
+        'total_acknowledgments': total_acknowledgments,
+        'user_acknowledgments': user_acknowledgments,
     }
     return render(request, 'dashboard.html', context)
+
+
 ##################################
 #def is_admin(user):
 #    return user.groups.filter(name='admin').exists()
@@ -639,3 +683,123 @@ def stop_alerts(request):
         messages.error(request, "Aucun paramètre global trouvé.")
 
     return redirect('incident')
+
+################################""
+#################################
+# views.py
+
+from django.shortcuts import render, redirect
+from django.contrib.auth import login, authenticate
+from django.contrib import messages
+from django.core.mail import send_mail
+from django.utils import timezone
+from datetime import timedelta
+import random
+from .models import OTP, User, GlobalAlertSettings
+
+
+def login_view(request):
+    if request.method == 'POST':
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+        user = authenticate(request, username=username, password=password)
+        if user is not None:
+            login(request, user)
+            return redirect('value_view')
+        else:
+            messages.error(request, "Nom d'utilisateur ou mot de passe incorrect.")
+    return render(request, 'login.html')
+
+
+def forgot_password(request):
+    if request.method == 'POST':
+        email = request.POST.get('email')
+        user = User.objects.filter(email=email).first()
+        if user:
+            # Generate a random 6-digit OTP
+            otp_code = str(random.randint(100000, 999999))
+            expires_at = timezone.now() + timedelta(minutes=10)
+
+            # Delete any existing OTP for this user
+            OTP.objects.filter(user=user).delete()
+
+            # Create a new OTP
+            OTP.objects.create(user=user, code=otp_code, expires_at=expires_at)
+
+            # Récupérer les paramètres SMTP depuis GlobalAlertSettings
+            settings = GlobalAlertSettings.objects.first()
+            if settings:
+                # Envoyer le code OTP par e-mail
+                send_mail(
+                    'Réinitialisation de votre mot de passe',
+                    f'Votre code OTP est : {otp_code}. Ce code est valide pendant 10 minutes.',
+                    settings.smtp_user,  # Utiliser l'e-mail SMTP configuré
+                    [user.email],
+                    fail_silently=False,
+                    auth_user=settings.smtp_user,  # Utilisateur SMTP
+                    auth_password=settings.smtp_password,  # Mot de passe SMTP
+                    connection=None,
+                )
+                messages.success(request, "Un code OTP a été envoyé à votre adresse e-mail.")
+                return redirect('verify_otp')
+            else:
+                messages.error(request, "Les paramètres SMTP ne sont pas configurés.")
+        else:
+            messages.error(request, "Aucun utilisateur trouvé avec cette adresse e-mail.")
+    return render(request, 'forgot_password.html')
+
+
+def verify_otp(request):
+    if request.method == 'POST':
+        otp_code = request.POST.get('otp')
+        user_otp = OTP.objects.filter(code=otp_code).first()
+        if user_otp and user_otp.is_valid():
+            request.session['reset_user_id'] = user_otp.user.id
+            return redirect('reset_password')
+        else:
+            messages.error(request, "Code OTP invalide ou expiré.")
+    return render(request, 'verify_otp.html')
+
+
+def reset_password(request):
+    if request.method == 'POST':
+        user_id = request.session.get('reset_user_id')
+        if user_id:
+            user = User.objects.get(id=user_id)
+            new_password = request.POST.get('new_password')
+            confirm_password = request.POST.get('confirm_password')
+            if new_password == confirm_password:
+                user.set_password(new_password)
+                user.save()
+                messages.success(request, "Votre mot de passe a été réinitialisé avec succès.")
+                return redirect('login')
+            else:
+                messages.error(request, "Les mots de passe ne correspondent pas.")
+        else:
+            messages.error(request, "Session expirée. Veuillez réessayer.")
+    return render(request, 'reset_password.html')
+
+
+def chart_data_custom(request):
+    # Récupérer les dates de début et de fin depuis les paramètres de la requête
+    start_date_str = request.GET.get('start')
+    end_date_str = request.GET.get('end')
+
+    # Convertir les dates en objets datetime
+    try:
+        start_date = datetime.strptime(start_date_str, '%Y-%m-%d')
+        end_date = datetime.strptime(end_date_str, '%Y-%m-%d')
+    except (ValueError, TypeError):
+        return JsonResponse({'error': 'Format de date invalide. Utilisez YYYY-MM-DD.'}, status=400)
+
+    # Filtrer les données dans la plage de dates
+    dht_data = Dht11.objects.filter(dt__range=(start_date, end_date)).order_by('dt')
+
+    # Préparer les données pour le graphique
+    data = {
+        'temps': [record.dt.isoformat() for record in dht_data],  # Format ISO pour JavaScript
+        'temperature': [record.temp for record in dht_data],
+        'humidity': [record.hum for record in dht_data]
+    }
+
+    return JsonResponse(data)

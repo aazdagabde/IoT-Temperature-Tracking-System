@@ -5,7 +5,7 @@ from django.contrib.auth import views as auth_views
 
 from django.conf.urls import handler404
 from .views import custom_404_view
-from .views import alert_globale_view ,stop_alerts
+from .views import alert_globale_view ,stop_alerts,chart_data_custom
 handler404 =custom_404_view
 
 urlpatterns = [
@@ -19,8 +19,9 @@ urlpatterns = [
     path('chart-data-jour/', views.chart_data_jour, name='chart-data-jour'),
     path('chart-data-semaine/', views.chart_data_semaine, name='chart-data-semaine'),
     path('chart-data-mois/', views.chart_data_mois, name='chart-data-mois'),
+    path('chart-data-custom/', views.chart_data_custom, name='chart-data-custom'),
     path('', views.home, name='home'),
-    path('login/', auth_views.LoginView.as_view(template_name='login.html'), name='login'),
+    #path('login/', auth_views.LoginView.as_view(template_name='login.html'), name='login'),
     path('logout/', views.custom_logout, name='logout'),
     path('register/', views.register_view, name='register_view'),
     path('index/', views.value_view, name='value_view'),
@@ -45,5 +46,9 @@ urlpatterns = [
     path('export_pdf_data/', views.export_pdf_data, name='export_pdf_data'),
 
     path('alert-globale/', alert_globale_view, name='alert_globale_view'),
-    path('stop-alerts/', stop_alerts, name='stop_alerts')
+    path('stop-alerts/', stop_alerts, name='stop_alerts'),
+    path('login/', views.login_view, name='login'),
+    path('forgot-password/', views.forgot_password, name='forgot_password'),
+    path('verify-otp/', views.verify_otp, name='verify_otp'),
+    path('reset-password/', views.reset_password, name='reset_password'),
 ]

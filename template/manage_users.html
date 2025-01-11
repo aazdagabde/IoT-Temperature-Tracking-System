@@ -1,31 +1,33 @@
 {% extends 'base.html' %}
 {% block content %}
-<div class="container">
-    <h2>Gérer les Utilisateurs</h2>
+<div class="container mt-5">
+  <div class="card shadow-lg p-4">
+    <h2 class="text-center mb-4">Gérer les Utilisateurs</h2>
     <table class="table table-striped">
-        <thead>
-            <tr>
-                <th>Nom d'utilisateur</th>
-                <th>Email</th>
-                <th>Prénom</th>
-                <th>Nom</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for user in users %}
-            <tr>
-                <td>{{ user.username }}</td>
-                <td>{{ user.email }}</td>
-                <td>{{ user.first_name }}</td>
-                <td>{{ user.last_name }}</td>
-                <td>
-                    <a href="{% url 'edit_user' user.id %}" class="btn btn-sm btn-primary">Éditer</a>
-                    <a href="{% url 'delete_user' user.id %}" class="btn btn-sm btn-danger">Supprimer</a>
-                </td>
-            </tr>
-            {% endfor %}
-        </tbody>
+      <thead>
+        <tr>
+          <th>Nom d'utilisateur</th>
+          <th>Email</th>
+          <th>Prénom</th>
+          <th>Nom</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for user in users %}
+        <tr>
+          <td>{{ user.username }}</td>
+          <td>{{ user.email }}</td>
+          <td>{{ user.first_name }}</td>
+          <td>{{ user.last_name }}</td>
+          <td>
+            <a href="{% url 'edit_user' user.id %}" class="btn btn-sm btn-primary">Éditer</a>
+            <a href="{% url 'delete_user' user.id %}" class="btn btn-sm btn-danger">Supprimer</a>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
     </table>
+  </div>
 </div>
 {% endblock content %}
