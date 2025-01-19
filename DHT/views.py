@@ -531,9 +531,9 @@ def export_incidents_pdf(request):
     })
 
     # Sur PythonAnywhere, wkhtmltopdf se trouve généralement ici :
-    #config = pdfkit.configuration(wkhtmltopdf='/usr/bin/wkhtmltopdf')
+    config = pdfkit.configuration(wkhtmltopdf='/usr/bin/wkhtmltopdf')
     #Sur windows
-    config = pdfkit.configuration(wkhtmltopdf=r'C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe')
+    #config = pdfkit.configuration(wkhtmltopdf=r'C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe')
 
 
     # Générer le PDF en mémoire (False signifie "ne pas écrire sur disque")
@@ -614,9 +614,9 @@ def export_pdf_data(request):
     # 2) Configurer pdfkit
     # Sur PythonAnywhere ou Linux : /usr/bin/wkhtmltopdf
 
-    #config = pdfkit.configuration(wkhtmltopdf='/usr/bin/wkhtmltopdf')
+    config = pdfkit.configuration(wkhtmltopdf='/usr/bin/wkhtmltopdf')
     # sur windows
-    config = pdfkit.configuration(wkhtmltopdf=r'C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe')
+    #config = pdfkit.configuration(wkhtmltopdf=r'C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe')
 
 
     # 3) Générer le PDF en bytes (False = on ne sauvegarde pas de fichier temporaire)
@@ -803,3 +803,39 @@ def chart_data_custom(request):
     }
 
     return JsonResponse(data)
+    #######################################
+    from django.core.mail import send_mail
+from django.conf import settings
+from django.shortcuts import redirect
+from django.contrib import messages
+from .models import GlobalAlertSettings
+
+def send_contact_email(request):
+    if request.method == 'POST':
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        message = request.POST.get('message')
+
+        # Récupérer les paramètres SMTP depuis GlobalAlertSettings
+        settings = GlobalAlertSettings.objects.first()
+        if settings:
+            subject = f"Message de contact de {name}"
+            body = f"Vous avez reçu un nouveau message de contact :\n\nNom: {name}\nEmail: {email}\nMessage: {message}"
+
+            try:
+                send_mail(
+                    subject=subject,
+                    message=body,
+                    from_email=settings.smtp_user,
+                    recipient_list=[settings.smtp_user],  # Envoyer à l'administrateur
+                    fail_silently=False,
+                    auth_user=settings.smtp_user,
+                    auth_password=settings.smtp_password,
+                )
+                messages.success(request, "Votre message a été envoyé avec succès.")
+            except Exception as e:
+                messages.error(request, f"Erreur lors de l'envoi du message : {e}")
+        else:
+            messages.error(request, "Les paramètres SMTP ne sont pas configurés.")
+
+    return redirect('home')

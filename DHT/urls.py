@@ -5,7 +5,7 @@ from django.contrib.auth import views as auth_views
 
 from django.conf.urls import handler404
 from .views import custom_404_view
-from .views import alert_globale_view ,stop_alerts,chart_data_custom
+from .views import alert_globale_view ,stop_alerts,chart_data_custom,send_contact_email
 handler404 =custom_404_view
 
 urlpatterns = [
@@ -51,4 +51,5 @@ urlpatterns = [
     path('forgot-password/', views.forgot_password, name='forgot_password'),
     path('verify-otp/', views.verify_otp, name='verify_otp'),
     path('reset-password/', views.reset_password, name='reset_password'),
+    path('send-contact-email/', send_contact_email, name='send_contact_email'),
 ]

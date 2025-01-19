@@ -15942,3 +15942,44 @@ INFO 2025-01-12 00:06:01,127 basehttp "GET /index/ HTTP/1.1" 200 14666
 INFO 2025-01-12 00:06:02,613 basehttp "GET /table/ HTTP/1.1" 200 108390
 INFO 2025-01-12 00:06:03,645 basehttp "GET /myChartTemp/ HTTP/1.1" 200 21630
 INFO 2025-01-12 00:06:03,787 basehttp "GET /chart-data-jour/ HTTP/1.1" 200 122
+WARNING 2025-01-11 23:35:07,654 log Not Found: /favicon.ico
+WARNING 2025-01-11 23:36:55,574 log Not Found: /alertConf/t.me/aazdagBousslamaIot_bot
+WARNING 2025-01-11 23:37:00,006 log Not Found: /alertConf/t.me/aazdagBousslamaIot_bot
+WARNING 2025-01-11 23:37:00,312 log Not Found: /alertConf/t.me/aazdagBousslamaIot_bot
+WARNING 2025-01-11 23:37:00,545 log Not Found: /alertConf/t.me/aazdagBousslamaIot_bot
+ERROR 2025-01-13 06:20:24,428 alerts Erreur lors de l'envoi de l'alerte Telegram : HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot7852205995:AAHeF8A_WPbY4rfSYmfgZc3OSc_OSTbOues/sendMessage (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7262889b5ff0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+INFO 2025-01-13 06:20:24,888 alerts Alerte WhatsApp envoyée.
+INFO 2025-01-13 06:20:26,832 alerts Alerte e-mail envoyée avec succès.
+WARNING 2025-01-13 08:04:32,134 log Not Found: /favicon.ico
+WARNING 2025-01-13 08:12:39,963 log Not Found: /favicon.ico
+WARNING 2025-01-13 09:30:44,593 log Not Found: /favicon.ico
+WARNING 2025-01-13 09:44:50,409 log Not Found: /log_incident/lm
+WARNING 2025-01-13 09:44:50,630 log Not Found: /log_incident/styles.css
+WARNING 2025-01-13 10:27:19,718 log Not Found: /favicon.ico
+WARNING 2025-01-13 18:08:07,222 log Not Found: /robots.txt
+WARNING 2025-01-13 22:02:30,425 log Not Found: /favicon.ico
+WARNING 2025-01-14 16:52:01,558 log Not Found: /favicon.ico
+WARNING 2025-01-14 23:11:27,977 log Not Found: /favicon.ico
+WARNING 2025-01-15 08:15:25,849 log Not Found: /favicon.ico
+WARNING 2025-01-15 09:36:40,708 log Not Found: /favicon.ico
+WARNING 2025-01-15 20:43:20,274 log Not Found: /favicon.ico
+WARNING 2025-01-15 20:46:53,398 log Not Found: /robots.txt
+WARNING 2025-01-16 23:14:48,646 log Not Found: /robots.txt
+WARNING 2025-01-16 23:14:52,785 log Not Found: /atom.xml
+WARNING 2025-01-16 23:14:52,810 log Not Found: /sitemap.xml.gz
+WARNING 2025-01-16 23:14:52,865 log Not Found: /sitemaps.xml
+WARNING 2025-01-16 23:14:58,553 log Not Found: /sitemap_index.xml
+WARNING 2025-01-18 04:04:38,700 log Not Found: /favicon.ico
+WARNING 2025-01-18 11:57:40,827 log Not Found: /robots.txt
+WARNING 2025-01-19 01:08:34,928 log Not Found: /robots.txt
+WARNING 2025-01-19 13:44:56,831 log Not Found: /favicon.ico
+WARNING 2025-01-19 15:14:44,250 log Not Found: /favicon.ico
+WARNING 2025-01-19 18:21:24,272 log Not Found: /favicon.ico
+WARNING 2025-01-19 18:29:43,783 log Not Found: /k
+WARNING 2025-01-19 18:29:44,012 log Not Found: /styles.css
+WARNING 2025-01-19 21:23:38,473 log Not Found: /favicon.ico
+WARNING 2025-01-19 21:55:35,062 log Not Found: /favicon.ico
+WARNING 2025-01-19 21:56:50,631 log Not Found: /favicon.ico
+WARNING 2025-01-19 21:58:00,027 log Not Found: /favicon.ico
+WARNING 2025-01-19 21:58:00,753 log Not Found: /favicon.ico
+WARNING 2025-01-19 22:01:44,546 log Not Found: /home/aazdagbousslamaiot/provesoire/static/images/salama.jpg
